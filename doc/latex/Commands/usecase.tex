@@ -10,6 +10,15 @@
  \hhline{|-|-|-|-|-|-|}
 }
 
+\newcommand{\addTextCollum}[2]{
+    \cellcolor{black!25}#1 & \multicolumn{5}{l|}{
+        \begin{minipage}{12cm}
+            \vskip 4pt
+                #2\\
+        \end{minipage}}\tabularnewline
+    \hhline{|-|-|-|-|-|-|}
+}
+
 \newcommand{\mylabel}[2]{\label{#1:#2}}
 \newcommand{\ucref}[1]{\ref{uc:#1}}
 
