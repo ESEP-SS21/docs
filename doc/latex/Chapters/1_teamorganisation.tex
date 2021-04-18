@@ -52,20 +52,21 @@ Die Verantwortlichkeiten gehen aus Tabelle~\ref{tab:verantwortlichkeiten} hervor
 
 \paragraph{Branching Strategie}
 %% Welche Regeln wollen Sie beim Umgang mit Branches
-Für unsere Branching-Strategie verwenden wir als Grundlage \textit{GitLab Flow}.
+Für unsere Branching-Strategie verwenden wir als Grundlage
+\href{https://docs.gitlab.com/ee/topics/gitlab_flow.html}{GitLab Flow}.
 Der default Branch ist der \textit{master}-Branch, es können keine Commits direkt auf diesem
 gepusht werden.
 Um Änderungen vorzunehmen wird ein Feature-Branch erstellt.
 In diesem werden die nötigen Änderungen vorgenommen.
-Sobald das Feature abgeschlossen ist, wird dieser wieder in den master Branch gemerged.
+Sobald das Feature abgeschlossen ist, wird dieser wieder in den \textit{master}-Branch gemerged.
 Die Feature-Branches sind vom Umfang jeweils möglichst klein zuhalten, dies ermöglicht einen
 genaueren Review Prozess, der weiter in Abschnitt~\ref{subsec:gitlab} ausgeführt wird.
 
 Für das Pflichtenheft besteht außerdem ein eigener Branch mit dem Namen \textit{latex}, um den
-Master-Branch übersichtlicher und Code-basierter zu halten.
-In diesem können direkt Änderungen vorgenommen werden, dies ist jedoch nur für kleine Fixes, wie z
-.\ B.\ Rechtschreibung, Formatierung usw., vorgesehen.
-Für neue Abschnitte, oder das für Ändern des Inhaltes bestehender Abschnitte ist ein neuer Branch
+\textit{master}-Branch übersichtlicher und Code-basiert zu halten.
+In diesem können direkt Änderungen vorgenommen werden, dies ist jedoch nur für kleine Fixes, wie
+z.\ B.\ Rechtschreibung, Formatierung usw., vorgesehen.
+Für neue Abschnitte, oder für das Ändern des Inhaltes bestehender Abschnitte ist ein neuer Branch
 anzulegen, sodass die Änderung reviewt werden können.
 
 \paragraph{Commits}
@@ -77,17 +78,21 @@ Der Zustand des Repositories bzw.\ Codes soll optimalerweise nach jedem Commit f
 Dies hat den Vorteil, dass Änderung leicht rückgängig gemacht und mithilfe von
 \textit{git cherry-pick} ausgewählt werden können.
 
-Commitmessages sind aussagekräftig zu wählen.
+Commit-Messages sind aussagekräftig zu wählen.
 Es soll beschrieben werden was geändert wurde bzw.\ warum es geändert wurde.
 Wie etwas geändert wurde, geht hingegen aus dem Inhalt des Commits selber hervor und soll somit
 nicht erwähnt werden.
-Wir habens uns darauf geeinigt die Commit-Messages in Englisch im Imperativ zu verfassen.
+Wir habens uns darauf geeinigt die Commit-Messages in Englisch im Imperativ zu verfassen, sodass
+diese mit Standard Commit-Messages von Git konsistent sind.
 
-\subsection{Auslieferungen}\label{subsec:auslieferungen}
+\paragraph{Auslieferungen}\label{subsec:auslieferungen}
 %% Welche Regeln wollen Sie beim Umgang mit Auslieferungen
-Für Auslieferungen benutzten wir Git Tags, das genaue Vorgehen muss noch festgelegt werden.
+Für Auslieferungen benutzten wir Git Tags in Kombination mit GitLab Releases, das genaue Vorgehen
+muss noch festgelegt werden.
 Die zwei möglichen Varianten hierbei sind einmal wie in Gitflow beschrieben ein
-Production-Branch, alternativ kann auch direkt im master Branch ein Commit getaggt werden.
+Production-Branch, in den der \textit{master} gemerged wird und der den Stand der aktuellen Auslieferung
+widerspiegelt.
+Alternativ kann auch direkt im \textit{master}-Branch ein Commit getaggt werden.
 
 \subsection{GitLab}\label{subsec:gitlab}
 %% TODO beschreiben von
