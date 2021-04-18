@@ -5,14 +5,58 @@
 
 \section{Prozess}\label{sec:prozess}
 
-%% Legen Sie den Prozess fest, nach dem Sie das Projekt umsetzen wollen. Geben Sie ggf. grobe Schritte an, wie Planungsrunden, Sprints, oder ähnliches.
+%% Legen Sie den Prozess fest, nach dem Sie das Projekt umsetzen wollen.
+%% Geben Sie ggf. grobe Schritte an, wie Planungsrunden, Sprints, oder ähnliches.
 
 
 \section{Projektplan}\label{sec:projektplan}
 
-%% User Stories/Projektstrukturplan, Ressourcenplan, Zeitplan, Abhängigkeiten von Arbeitspaketen, eventueller Zeitverzug, Visualisierung des Projektstandes, etc.
+%% User Stories/Projektstrukturplan, Ressourcenplan, Zeitplan, Abhängigkeiten von Arbeitspaketen,
+%% eventueller Zeitverzug, Visualisierung des Projektstandes, etc.
+Wir verwenden einen agilen Ansatz für das Umsetzten des Projektes und setzten diesen auf GitLab um.
+Dabei orientieren wir uns an dem
+\href{https://about.gitlab.com/blog/2018/03/05/gitlab-for-agile-software-development/}{Guide
+zur Verwendung von GitLab für agile Software Entwicklung}:
+\begin{itemize}
+    \item Die Tasks aus dem Projektplanung-Template wurden auf
+    \href{https://git.haw-hamburg.de/groups/ss21-esep-gruppe-2.3/-/epics}{GitLab als Epics} angelegt.
+    Es wird jeweils eine Verantwortlichkeit mithilfe eines Labels zugeordnet.
+    \item Falls Epics größere Unteraufgaben beinhalten, werden diese als Subepics formuliert.
+    \item Für die festen Phasen werden
+    \href{https://git.haw-hamburg.de/groups/ss21-esep-gruppe-2.3/-/milestones}{Milestones} verwendet.
+    \item Für einzelne Aufgaben werden
+    \href{https://git.haw-hamburg.de/groups/ss21-esep-gruppe-2.3/-/issues}{Issues}
+    verwendet, die, soweit möglich, einem Epic und Milestone zugeordnet werden.
+    In einem Issue kann mit Kommentaren über das Issue selber diskutiert werden.
+    Über die Assignee Funktion können einem Issue beliebig viele Personen zugeteilt werden, die für
+    für das Lösen dieses verantwortlich sind.
+\end{itemize}
+Sobald an einem Issue gearbeitet wird, wird, falls ein eigener Branch nötig ist, ein Draft MR
+erstellt.
+In diesem sammeln sich alle Änderungen für dieses Issue.
+Jegliche implementierungsspezifische Kommentare können direkt in Commits an den jeweiligen
+Codezeilen hinterlassen werden und werden im MR angezeigt.
+Sobald der Branch gemerged werden soll, wird der MR als \textit{ready} markiert, was den anderen
+Teammitgliedern signalisiert, dass sie mit dem Reviewprozess wie in
+Abschnitt~\ref{sec:qualitaetssicherung} beschrieben beginnen können.
 
 
 \section{Qualitätssicherung}\label{sec:qualitaetssicherung}
 
-%% Überlegen Sie, wie Sie Qualität in Ihrem Projekt sicherstellen wollen. Listen Sie die Maßnahmen hier auf. Beachten Sie, dass diese Maßnahmen für die unterschiedlichen Artefakte und Ebenen entsprechend unterschiedlich sein können.
+Die Qualität wird mithilfe eines Review bzw.\ Approval Prozesses bei MR sichergestellt.
+Für einen Merge in den Master-Branch werden 3 Approvals benötigt.
+Für einen Merge in den Latex-Branch werden 2 Approvals benötigt.
+Die Anzahl an nötigen Approves kann bei jedem MR bearbeitet werden.
+Wir haben uns darauf geeinigt, diese nicht herunter zu setzten,
+sondern im Einzelfall zu erhöhen, falls dieses nötig erscheint.
+Jeder aus dem Team kann einen MR approven.
+
+Wenn ein MR approved wird, übernimmt der Approver neben dem Implementierer die volle Verantwortung
+über die Korrektheit und Fehlerfreiheit der Änderungen.
+Somit ist der Code Zeile für Zeile durchzugehen und auf Fehler sowie Abweichung von
+unseren Codingstyle-Guidelines zu überprüfen.
+
+
+%% Überlegen Sie, wie Sie Qualität in Ihrem Projekt sicherstellen wollen.
+%% Listen Sie die Maßnahmen hier auf. Beachten Sie, dass diese Maßnahmen für die unterschiedlichen
+%% Artefakte und Ebenen entsprechend unterschiedlich sein können.
