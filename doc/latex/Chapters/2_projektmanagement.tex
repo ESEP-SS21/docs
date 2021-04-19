@@ -9,6 +9,23 @@
 %% Geben Sie ggf. grobe Schritte an, wie Planungsrunden, Sprints, oder ähnliches.
 
 
+\section{Absprachen}\label{sec:absprachen}
+
+\begin{itemize}
+    \item Die Kommunikation läuft über unseren Discord Server, für dringenden Angelgelegenheiten
+    wird eine WhatsApp-Gruppe genutzt
+    \item Zweimal pro Woche wird ein Meeting gehalten.
+    Die Agenda wird in
+    \href{https://git.haw-hamburg.de/ss21-esep-gruppe-2.3/esep/-/boards/2082?label_name[]=Protokoll}
+    {GitLab in je einem Issue} geführt.
+    Es ist ein tabellarisches Protokoll zu führen, welches die Ergebnisse festhält, dieses wird
+    in das Issue gestellt.
+    \item Wir verwenden den Google C++ Coding Style Guide
+\end{itemize}
+
+%% Listen Sie hier die Absprachen im Team auf, z. B. Jour Fixe, Kommunikation, Respond-Latenz, ....
+
+
 \section{Projektplan}\label{sec:projektplan}
 
 %% User Stories/Projektstrukturplan, Ressourcenplan, Zeitplan, Abhängigkeiten von Arbeitspaketen,
@@ -36,7 +53,10 @@ erstellt.
 In diesem sammeln sich alle Änderungen für dieses Issue.
 Jegliche implementierungsspezifische Kommentare können direkt in Commits an den jeweiligen
 Codezeilen hinterlassen werden und werden im MR angezeigt.
-Sobald der Branch gemerged werden soll, wird der MR als \textit{ready} markiert, was den anderen
+Bei Änderungsvorschlägen ist ein neuer Thread statt eines Kommentars zu eröffnen, sodass diese im MR
+auf den ersten Blick über \glqq unresolved threads\grqq{} zu sehen sind.
+Sobald der Branch gemerged werden soll, wird der MR als \textit{ready} markiert und das Label
+\textit{workflow::pending review} zugewiesen, was den anderen
 Teammitgliedern signalisiert, dass sie mit dem Reviewprozess wie in
 Abschnitt~\ref{sec:qualitaetssicherung} beschrieben beginnen können.
 
