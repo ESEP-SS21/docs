@@ -3,13 +3,13 @@ image: registry.gitlab.com/islandoftex/images/texlive:latest
 build:
   stage: build
   script:
-    - cd doc/latex/
+    - cd latex/
     - sed -i 's/setboolean{DEBUG}{true}/setboolean{DEBUG}{false}/' main.tex
     - pdflatex main.tex
     - pdflatex main.tex
   after_script:
-    - cat doc/latex/main.log
-    - mv doc/latex/main.pdf main.pdf
+    - cat latex/main.log
+    - mv latex/main.pdf main.pdf
   artifacts:
     paths:
       - main.pdf
