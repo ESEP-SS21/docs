@@ -1,7 +1,11 @@
 \documentclass[11pt, a4paper]{report} %article does not support chapters
 
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
+\usepackage[colorlinks = true,
+    linkcolor = black,
+    urlcolor  = blue,
+    citecolor = black,
+    anchorcolor = black]{hyperref}
 \usepackage{graphicx}
 \usepackage[ngerman]{babel}
 \usepackage{float}
@@ -24,17 +28,17 @@
 \setboolean{DEBUG}{true}
 %% --------------------------------
 \ifthenelse{\boolean{DEBUG}}{
-  \usepackage{showlabels}
+    \usepackage{showlabels}
 }
 
 % customize chapter style
 % https://tex.stackexchange.com/questions/339559/uppercase-bold-and-underlined-chapter-title
 \titleformat{\chapter}
-  {\normalfont\Large\bfseries}{\thechapter \quad \MakeUppercase{#1}}{.5em}{\vspace{.5ex}}[\titlerule]
+{\normalfont\Large\bfseries}{\thechapter \quad \MakeUppercase{#1}}{.5em}{\vspace{.5ex}}[\titlerule]
 \titlespacing*{\chapter}
-  {0pt}{0pt}{15pt}
-  
-  %% -----------------------------------------------------------------------------
+{0pt}{0pt}{15pt}
+
+%% -----------------------------------------------------------------------------
 %% Custom Commands importieren
 %% -----------------------------------------------------------------------------
 \input{Commands/usecase}
@@ -43,35 +47,35 @@
 %% Dokument Start
 %% -----------------------------------------------------------------------------
 \begin{document}
-\input{title}
-\renewcommand*\contentsname{Inhalt}
-\tableofcontents
-\newpage
+    \input{title}
+    \renewcommand*\contentsname{Inhalt}
+    \tableofcontents
+    \newpage
 
 
 %% -----------------------------------------------------------------------------
 %% Chapters importieren
 %% -----------------------------------------------------------------------------
-\clearpage %include doesn't work for some reason
-\input{Chapters/1_teamorganisation}
-\clearpage
-\input{Chapters/2_projektmanagement}
-\clearpage
-\input{Chapters/3_requirements}
-\clearpage
-\input{Chapters/4_design}
-\clearpage
-\input{Chapters/5_implementierung}
-\clearpage
-\input{Chapters/6_testen}
-\clearpage
-\input{Chapters/7_lessons_learned}
-\clearpage
-\appendix
-\input{Chapters/A_glossar}
-\clearpage
-\input{Chapters/B_abkuerzungen}
-\clearpage
+    \clearpage %include doesn't work for some reason
+    \input{Chapters/1_teamorganisation}
+    \clearpage
+    \input{Chapters/2_projektmanagement}
+    \clearpage
+    \input{Chapters/3_requirements}
+    \clearpage
+    \input{Chapters/4_design}
+    \clearpage
+    \input{Chapters/5_implementierung}
+    \clearpage
+    \input{Chapters/6_testen}
+    \clearpage
+    \input{Chapters/7_lessons_learned}
+    \clearpage
+    \appendix
+    \input{Chapters/A_glossar}
+    \clearpage
+    \input{Chapters/B_abkuerzungen}
+    \clearpage
 
 \end{document}
 
