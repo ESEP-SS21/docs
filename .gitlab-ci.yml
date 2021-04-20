@@ -1,5 +1,18 @@
 image: registry.gitlab.com/islandoftex/images/texlive:latest
 
+compile_umlet:
+  image: coenvl/umlet
+  stage: build
+  before_script:
+  - apk update && apk add bash
+  script:
+    - chmod +x /Umlet/umlet.sh
+    - chmod +x diagrams/compile.sh
+    - bash diagrams/compile.sh
+  artifacts:
+    paths:
+      - out
+
 build:
   stage: build
   script:
