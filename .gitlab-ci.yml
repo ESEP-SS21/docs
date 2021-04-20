@@ -1,8 +1,10 @@
-image: registry.gitlab.com/islandoftex/images/texlive:latest
+stages:
+  - build_extras
+  - build
 
 compile_umlet:
   image: coenvl/umlet
-  stage: build
+  stage: build_extras
   before_script:
   - apk update && apk add bash
   script:
@@ -14,7 +16,13 @@ compile_umlet:
       - out
 
 build:
+  image: registry.gitlab.com/islandoftex/images/texlive:latest
   stage: build
+  before_script:
+    - ls
+    - cd out
+    - ls
+    - cd ..
   script:
     - cd latex/
     - sed -i 's/setboolean{DEBUG}{true}/setboolean{DEBUG}{false}/' main.tex
