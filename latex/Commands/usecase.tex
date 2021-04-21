@@ -31,6 +31,7 @@
     \subsubsection[UC#1]{UC#1: #2}\label{uc:#1}
     \begin{figure}[h!]
         \centering
+        \begin{adjustbox}{max width=1.2\linewidth,center}
         \begin{tabular}{ |p{2.5cm}|p{1cm}|p{1cm}|p{4cm}|p{1.5cm}|p{1cm}|}
             \hhline{|-|-|-|-|-|-|}
             \rowcolor{black!25}\multicolumn{6}{|c|}{Use Case} \tabularnewline
@@ -40,6 +41,7 @@
             }
             {% end code
         \end{tabular}
+        \end{adjustbox}
     \end{figure}
     \renewcommand{\arraystretch}{1}
 }
