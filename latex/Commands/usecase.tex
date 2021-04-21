@@ -1,7 +1,7 @@
 \newcommand{\addCollum}[2]{
     \cellcolor{black!25}#1 & \multicolumn{5}{l|}{
         \begin{minipage}{12cm}
-            \vskip 4pt
+            \vskip 6pt
             \begin{itemize}
                 #2
             \end{itemize}
@@ -13,9 +13,10 @@
 \newcommand{\addTextCollum}[2]{
     \cellcolor{black!25}#1 & \multicolumn{5}{l|}{
         \begin{minipage}{12cm}
-            \vskip 4pt
+            \vskip 10pt
             #2\\
-        \end{minipage}}\tabularnewline
+        \end{minipage}
+    }\tabularnewline
     \hhline{|-|-|-|-|-|-|}
 }
 
@@ -35,9 +36,9 @@
             \hhline{|-|-|-|-|-|-|}
             \cellcolor{black!25}ID & UC#1 & \cellcolor{black!25}Name & #2 & \cellcolor{lightgray}Priorität & #3\tabularnewline
             \hhline{|-|-|-|-|-|-|}
-}
-{% end code
-    \end{tabular}
+            }
+            {% end code
+        \end{tabular}
     \end{figure}
     \renewcommand{\arraystretch}{1}
 }
