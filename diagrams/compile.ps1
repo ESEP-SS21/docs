@@ -24,6 +24,6 @@ foreach ($file in $fileNames)
     else
     {
         Start-Process -FilePath "Umlet.exe" -ArgumentList "-action=convert -format=pdf -filename=$file" -Wait
+        Remove-Item $file
     }
-    Remove-Item $file
 }
