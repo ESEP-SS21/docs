@@ -7,7 +7,8 @@ $outDir = "$homeDir/out"
 $diaDir = "$homeDir/out/diagrams"
 
 Write-Output "Clearing $diaDir"
-Remove-Item "$diaDir/*" -Recurse -Force
+New-Item $diaDir -ItemType "directory" -ErrorAction Ignore
+Remove-Item "$diaDir/*" -Recurse -Force -ErrorAction Ignore
 Copy-Item $PSScriptRoot $outDir -Force -Recurse
 Set-Location $diaDir
 
