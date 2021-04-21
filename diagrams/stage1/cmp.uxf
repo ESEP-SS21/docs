@@ -207,7 +207,7 @@ Foerderband</panel_attributes>
       <w>704</w>
       <h>776</h>
     </coordinates>
-    <panel_attributes>id Komponentendiagramm</panel_attributes>
+    <panel_attributes>cmp Komponentendiagramm</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
