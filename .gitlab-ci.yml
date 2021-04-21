@@ -15,14 +15,9 @@ compile_umlet:
     paths:
       - out
 
-build:
+build_latex:
   image: registry.gitlab.com/islandoftex/images/texlive:latest
   stage: build
-  before_script:
-    - ls
-    - cd out
-    - ls
-    - cd ..
   script:
     - cd latex/
     - sed -i 's/setboolean{DEBUG}{true}/setboolean{DEBUG}{false}/' main.tex
