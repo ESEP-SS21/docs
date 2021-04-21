@@ -11,23 +11,24 @@
         \item[2)] Herstellen einer Verbindung zu FTS\_2
         \item[3)] Kontrolleuchte 1 auf Control\_Panel Blink\_Slow aktivieren
         \item[4)] Warten auf Drücken des Startknopfes auf dem ControlPanel
-        \item[5)] EVNT\_SW\_COMM\_PRI\_REQ an FTS\_2 schicken
-        \item[6)] Warten auf EVNT\_SW\_COMM\_SEC\_AKC von FTS\_2
+        \item[5)] Primary-Anfrage an FTS\_2  schicken
+        \item[6)] Warten auf Bestätigung von FTS\_2
         \item[7)] Eigenen Betriebsmodus auf PRIMARY setzen
         \item[8)] Kontrolleuchte 1 auf Control\_Panel dauerhaft aktivieren
     }
     \addCollum{Alternate flow 1}{
+
         \item at step 4 of Mainflow
-        \item[1)] Event EVNT\_SW\_COMM\_PRI\_REQ von FTS\_2 Empfangen
+        \item[1)] Event Primary-Anfrage von FTS\_2 Empfangen
         \item[2)] Eigenen Betriebsmodus auf SECONDARY setzen
-        \item[3)] EVNT\_SW\_COMM\_SEC\_AKC an FTS\_2 senden
+        \item[3)] Bestätigung an FTS\_2 senden
         \item[5)] Eigenen Betriebsmodus auf SECONDARY setzen
         \item[6)] Kontrolleuchte 1 auf Control\_Panel dauerhaft aktivieren
     }
     \addCollum{Alternate flow 2}{
         \item at step 2 of Mainflow
         \item[1)] Verbindung schlägt fehl
-        \item[3)] Zurück in Schritt 2 Mainflow
+        \item[2)] Zurück in Schritt 2 Mainflow
     }
     \addCollum{Postconditions}{
         \item[1)] HAL ist initialisiert
@@ -42,13 +43,11 @@
     }
     \addCollum{Exceptional flow 2}{
         \item at step 6 of Mainflow
-        \item[1)] Timeout beim Empfangen von EVNT\_SW\_COMM\_SEC\_AKC
-        \item[2)] Fehler COMM\_ERROR auslösen
+        \item[1)] Timeout beim Empfangen
+        \item[2)] Fehler auslösen
     }
     \addTextCollum{Description}{
         Dieser Use Case beschreibt die Initialisierung des Systems, sowie die Bestimmung von Primary und Secondary-Anlage.
-        Das Primary System wird bestimmt
-        Verwendete Signale sind EVNT\_SW\_COMM\_PRI\_REQ (Sendendes System will Primary sein),
-        EVNT\_SW\_COMM\_SEC\_AKC (Acknoledgement vom Secondary nach Empfang)
+        Das Primary System wird durch drücken des Startknopfes der entsprechenden Anlage bestimmt
     }
 \end{usecase}
