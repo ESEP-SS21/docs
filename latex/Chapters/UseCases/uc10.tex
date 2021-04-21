@@ -1,0 +1,61 @@
+\begin{usecase}{10}{UseCase Bootup Configuration}{hoch}
+    \addCollum{Actors}{
+        \item[] FTS_2
+        \item[] Control_Panel
+    }
+    \addCollum{Preconditions}{
+        \item[] System ist mit Strom versorgt und Hochgefahren
+    }
+    \addCollum{Mainflow}{
+        \item[1)] HAL wird initialisiert
+        \item[2)] Herstellen einer Verbindung zu FTS_2
+        \item[3)] Kontrolleuchte 1 auf Control_Panel Blink_Slow aktivieren
+        \item[4)] Warten auf Drücken des Startknopfes auf dem ControlPanel
+        \item[5)] EVNT_SW_COMM_PRI_REQ an FTS_2 schicken
+        \item[6)] Warten auf EVNT_SW_COMM_SEC_AKC von FTS_2
+        \item[7)] Eigenen Betriebsmodus auf PRIMARY setzen
+        \item[8)] EVNT_SW_COMM_PRI_AKC an FTS_2 schicken
+        \item[9)] Kontrolleuchte 1 auf Control_Panel dauerhaft aktivieren
+    }
+    \addCollum{Alternate flow 1}{
+        \item[] at step 4 of Mainflow
+        \item[1)] Event EVNT_SW_COMM_PRI_REQ von FTS_2 Empfangen
+        \item[2)] Eigenen Betriebsmodus auf SECONDARY setzen
+        \item[3)] EVNT_SW_COMM_SEC_AKC an FTS_2 senden
+        \item[4)] auf EVNT_SW_COMM_PRI_AKC von FTS_2 warten
+        \item[5)] Eigenen Betriebsmodus auf SECONDARY setzen
+        \item[6)] Kontrolleuchte 1 auf Control_Panel dauerhaft aktivieren 
+    }
+    \addCollum{Alternate flow 2}{
+        \item[] at step 2 of Mainflow
+        \item[1)] Verbindung schlägt fehl
+        \item[3)] Zurück in Schritt 2 Mainflow 
+    }
+    \addCollum{Postconditions}{
+        \item[1)] HAL ist initialisiert
+        \item[2)] Verbindung mit FTS_2 hergestellt
+        \item[3)] Betriebsmodus der Anlage ist festgelegt
+    }
+    \addCollum{Exceptional flow 1}{
+        \item[] at step 1 of Mainflow
+        \item[1)] Initialisierung der HAL schlägt fehl
+        \item[2)] Fehlermeldung ausgeben
+        \item[3)] System abschalten
+    }
+    \addCollum{Exceptional flow 2}{
+        \item[] at step 6 of Mainflow
+        \item[1)] Timeout beim Empfangen von EVNT_SW_COMM_SEC_AKC
+        \item[2)] Fehler COMM_ERROR auslösen
+    }
+    \addCollum{Exceptional flow 3}{
+        \item[] at step 4 of Alternate flow
+        \item[1)] Timeout beim Empfangen von auf EVNT_SW_COMM_PRI_AKC
+        \item[2)] Fehler COMM_ERROR auslösen
+    }
+\addTextCollum{Description}{
+    Dieser Use Case beschreibt die Initialisierung des Systems, sowie die Bestimmung von Primary und Secondary-Anlage.
+    Das Primary System wird bestimmt
+    Verwendete Signale sind EVNT_SW_COMM_PRI_REQ (Sendendes System will Primary sein), 
+    EVNT_SW_COMM_SEC_AKC (Acknoledgement vom Secondary nach Empfang) und EVNT_SW_COMM_PRI_AKC (Abschließender Handshake)
+}
+\end{usecase}
