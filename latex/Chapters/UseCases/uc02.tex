@@ -10,32 +10,32 @@
         Dafür muss der Vorgänger workpiece\_type gespeichert werden.
     }
     \addCollum{Main flow}{
-        \item[1)] Der aktuelle workpiece\_type wird mit dem letzten verglichen.
-        Wenn der aktuelle mit dem nach REQ-2 zyklischen Nachfolger des vorherigen übereinstimmt,
-        wird das workpieces mit
-        do\_not\_discard% <- TODO namen festlegen
-        markiert und der use case endet hier.
-        \item[2)] Das workpiece muss aussortiert werden. Es wird überprüft, ob die Rampe voll
-        ist, indem LightBarrier\_Ramp überprüft wird. % <- das funktioniert noch nicht so ganz
-        Wenn die Rampe voll ist, folgt alternative flow 2.
-        \item[3)] Das workpiece wird mit discard markiert.
+        \item[1)] Der aktuelle workpiece\_type wird mit dem erwarteten verglichen
+        \item[2)] Das workpiece stimmt nicht überein, das workpiece muss aussortiert werden \textbullet
+        \item[3)] Das workpiece wird mit discard markiert \textbullet
     }
     \addCollum{Alternative flow 1}{
-        \item[1a)] Wenn es noch keinen Vorgänger gibt, und das erste Teil der Liste vorkommt
-        wird das workpieces mit
-        do\_not\_discard % <- TODO namen festlegen
-        markiert und der use case endet hier, ansonsten folgt 2).
+        \item at step 2 of main flow
+        \item[2a)] Das workpiece stimmt überein
+        \begin{itemize}
+            \item[2a1)] Das workpiece wird mit do\_not\_discard markiert
+            \item[2a2)] Ende des use case
+        \end{itemize}
+
+%        Es wird überprüft, ob die Rampe voll ist, indem LightBarrier\_Ramp überprüft wird. % <- das funktioniert noch nicht so ganz
+%        Wenn die Rampe voll ist, folgt alternative flow 2.
     }
     \addCollum{Alternative flow 2}{
-        \item[2a)] Befindet sich in Primary mode
+        \item at step 3 of main flow
+        \item[3a)] Rutsche ist voll und in Primary mode
         \begin{itemize}
-            \item[2a1)] Wenn FB2 Rampe voll wird der Gesamtbetrieb gestoppt (REQ-6),
-            sonst wird das Teil mit do\_not\_discard % <- TODO namen festlegen
-            markiert.
+            \item[3a1)]
+            das Teil mit do\_not\_discard % <- TODO namen festlegen
+            markiert
         \end{itemize}
-        \item[2b)] Befindet sich in Secondary mode
+        \item[3b)] Rutsche ist voll und in Secondary mode
         \begin{itemize}
-            \item[2b1)] Gesamtbetrieb wird gestoppt (REQ-6)
+            \item[3b1)] Gesamtbetrieb wird gestoppt (REQ-6)
         \end{itemize}
     %TODO wie soll das genau funktionieren
     }
