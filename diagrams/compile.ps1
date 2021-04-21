@@ -1,14 +1,29 @@
-Write-Output $PSScriptRoot
+Param(
+    [switch]$p
+)
+
 $homeDir = Split-Path -Path $PSScriptRoot -Parent
-Copy-Item $PSScriptRoot $homeDir/out -Force -Recurse
-Set-Location $homeDir/out/diagrams
+$outDir = "$homeDir/out"
+$diaDir = "$homeDir/out/diagrams"
 
-Remove-Item "$(Get-Location)/compile.*"
+Write-Output "Clearing $diaDir"
+Remove-Item "$diaDir/*" -Recurse -Force
+Copy-Item $PSScriptRoot $outDir -Force -Recurse
+Set-Location $diaDir
+
+Remove-Item "$diaDir/compile.*"
 Write-Output " - - - Compiling .uxf files in '$homeDir' - - - "
-$fileNames = Get-ChildItem -Path $(Get-Location) -Recurse -Include *.uxf -Name
-foreach ($file in $fileNames){
-
-    Write-Output "converting '$file' to PDF"
-    Start-Process -FilePath "Umlet.exe" -ArgumentList "-action=convert -format=pdf -filename=$file"
+$fileNames = Get-ChildItem -Path $diaDir -Recurse -Include *.uxf -Name
+foreach ($file in $fileNames)
+{
+    Write-Output "converting '$file' to PDF, saving to '$diaDir"
+    if ($p)
+    {
+        Start-Process -FilePath "Umlet.exe" -ArgumentList "-action=convert -format=pdf -filename=$file"
+    }
+    else
+    {
+        Start-Process -FilePath "Umlet.exe" -ArgumentList "-action=convert -format=pdf -filename=$file" -Wait
+    }
     Remove-Item $file
 }
