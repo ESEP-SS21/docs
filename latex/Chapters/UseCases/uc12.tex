@@ -1,0 +1,35 @@
+\begin{usecase}{12}{Handle Error}{hoch}
+    \addTextCollum{Actors}{
+    Stoplight
+    }\addTextCollum{Description}{
+    Dieser Use Case beschreibt den Umgang mit Fehlern, die während des betriebes auftauchen können.
+    Wenn ein Fehler auftritt, dann wechselt das System in den Fehlerzustand.
+    Dieser muss quittiert und behoben werden, dann wird der Zustand wieder verlassen
+    }\addTextCollum{Precondition}{
+    Ein Fehler im System ist neu aufgetreten
+    }
+    \addCollum{Mainflow}{
+    \item[1)] Das System geht in den Fehlerzustand astehend\_unqittiert
+    \item[2)] Rote LED blinkt schnell(1Hz)
+    \item[3)] UC13 Acknowledge Error
+    \item[4)] Fehlerzustand wechselt zu astehend\_qittiert
+    \item[5)] Rote LED leuchtet dauerhaft
+    \item[6)] Fehler wird behoben
+    \item[7)] System verlässt Fehlerzustand
+    \item[8)] Rote LED wird ausgeschaltet
+
+    }\addCollum{Alternate flow}{
+    \item at step 3 of Mainflow
+    \item[3a)] Fehler repariert sich selbst
+    \begin{itemize}
+        \item[3a1)] Fehlerzustand wechselt gegangen\_unqittiert
+        \item[3a2)] Rote LED blinkt langsam(0,5Hz)
+        \item[3a3)] UC13 Acknowledge Error.
+        \item[3a4)] Zum Schritt 7 des main flow zurückkehren
+    \end{itemize}
+    }
+    \addTextCollum{Postcondition}{
+    \item[1)] Fehlerzustand behoben
+    \item[2)] System wieder im Normalbetrieb
+    }
+\end{usecase}
