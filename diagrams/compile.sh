@@ -10,3 +10,4 @@ do
 	/Umlet/umlet.sh -action=convert -format=pdf -filename="$f" -output="$output"
 	rm "$f"
 done
+mv ./* diagrams/
