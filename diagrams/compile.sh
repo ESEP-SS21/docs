@@ -1,7 +1,7 @@
 #!/bin/bash
-cp -r diagrams out/diagrams
-cd out/diagrams
-rm compile.sh
+cp -r diagrams out
+cd out
+rm compile.*
 for f in $(find -name '*.uxf')
 do 
 	echo "$f"
