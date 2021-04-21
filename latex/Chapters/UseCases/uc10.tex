@@ -14,15 +14,13 @@
         \item[5)] EVNT\_SW\_COMM\_PRI\_REQ an FTS\_2 schicken
         \item[6)] Warten auf EVNT\_SW\_COMM\_SEC\_AKC von FTS\_2
         \item[7)] Eigenen Betriebsmodus auf PRIMARY setzen
-        \item[8)] EVNT\_SW\_COMM\_PRI\_AKC an FTS\_2 schicken
-        \item[9)] Kontrolleuchte 1 auf Control\_Panel dauerhaft aktivieren
+        \item[8)] Kontrolleuchte 1 auf Control\_Panel dauerhaft aktivieren
     }
     \addCollum{Alternate flow 1}{
         \item at step 4 of Mainflow
         \item[1)] Event EVNT\_SW\_COMM\_PRI\_REQ von FTS\_2 Empfangen
         \item[2)] Eigenen Betriebsmodus auf SECONDARY setzen
         \item[3)] EVNT\_SW\_COMM\_SEC\_AKC an FTS\_2 senden
-        \item[4)] auf EVNT\_SW\_COMM\_PRI\_AKC von FTS\_2 warten
         \item[5)] Eigenen Betriebsmodus auf SECONDARY setzen
         \item[6)] Kontrolleuchte 1 auf Control\_Panel dauerhaft aktivieren
     }
@@ -47,15 +45,10 @@
         \item[1)] Timeout beim Empfangen von EVNT\_SW\_COMM\_SEC\_AKC
         \item[2)] Fehler COMM\_ERROR auslösen
     }
-    \addCollum{Exceptional flow 3}{
-        \item at step 4 of Alternate flow
-        \item[1)] Timeout beim Empfangen von auf EVNT\_SW\_COMM\_PRI\_AKC
-        \item[2)] Fehler COMM\_ERROR auslösen
-    }
     \addTextCollum{Description}{
         Dieser Use Case beschreibt die Initialisierung des Systems, sowie die Bestimmung von Primary und Secondary-Anlage.
         Das Primary System wird bestimmt
         Verwendete Signale sind EVNT\_SW\_COMM\_PRI\_REQ (Sendendes System will Primary sein),
-        EVNT\_SW\_COMM\_SEC\_AKC (Acknoledgement vom Secondary nach Empfang) und EVNT\_SW\_COMM\_PRI\_AKC (Abschließender Handshake)
+        EVNT\_SW\_COMM\_SEC\_AKC (Acknoledgement vom Secondary nach Empfang)
     }
 \end{usecase}
