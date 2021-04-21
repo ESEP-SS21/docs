@@ -1,12 +1,12 @@
 \begin{usecase}{02}{Determine Sorting Action}{hoch}
     \addCollum{Precondition}{
-        \item Dem workpice ist ein workpice\_type zugeordnet
+        \item Dem workpiece ist ein workpiece\_type zugeordnet
     }
     \addCollum{Actors}{
         \item LightBarrier\_Ramp
     }
     \addTextCollum{Description}{
-        Es wird bestimmt, ob ein workpice aussortiert werden soll, oder nicht.
+        Es wird bestimmt, ob ein workpiece aussortiert werden soll, oder nicht.
         Dafür muss der Vorgänger workpiece\_type gespeichert werden.
     }
     \addCollum{Main flow}{
@@ -18,7 +18,7 @@
         \item[2)] Das workpiece muss aussortiert werden. Es wird überprüft, ob die Rampe voll
         ist, indem LightBarrier\_Ramp überprüft wird. % <- das funktioniert noch nicht so ganz
         Wenn die Rampe voll ist, folgt alternative flow 2.
-        \item[3)] Das workpice wird mit discard markiert.
+        \item[3)] Das workpiece wird mit discard markiert.
     }
     \addCollum{Alternative flow 1}{
         \item[1a)] Wenn es noch keinen Vorgänger gibt, und das erste Teil der Liste vorkommt
