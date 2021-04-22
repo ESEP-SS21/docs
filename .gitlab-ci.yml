@@ -10,7 +10,8 @@ compile_umlet:
   script:
     - chmod +x /Umlet/umlet.sh
     - chmod +x diagrams/compile.sh
-    - bash diagrams/compile.sh
+    - cd diagrams
+    - bash compile.sh
   artifacts:
     paths:
       - out
