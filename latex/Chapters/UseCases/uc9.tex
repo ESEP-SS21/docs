@@ -1,4 +1,7 @@
-\begin{usecase}{9}{UseCase Run Service}{hoch}
+\begin{usecase}{9}{Run Service}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        REQ-11, REQ-15, REQ-40
+    }
     \addTextCollum{Description}{
         Dieser Usecase betreibt das Durchführen des Servicemode. 
         Dieser kann durch das lange drücken des Starttasters von beiden Anlagen aus aktiviert werden.
@@ -19,7 +22,7 @@
     }
     \addCollum{Mainflow}{
         \item[1)] Mitteilung an FTS\_2 über Betreten des Service senden
-        \item[1)] Stoplight langsam gelb blinken lassen
+        \item[1)] Stoplight grün blinken lassen
         \item[2)] Messung bei Height\_Measurement anfragen
         \item[3)] Auf Rückmeldung warten
         \item[4)] Bestimmten Wert als Nullwert im Height\_Measurement eintragen
