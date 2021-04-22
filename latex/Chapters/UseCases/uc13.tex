@@ -1,0 +1,16 @@
+\begin{usecase}{13}{Acknowledge Error}{mittel}
+    \addTextCollum{Actors}{
+    Controll\_Panel
+    }\addTextCollum{Description}{
+    Die Fehlerquittierung wird ausgeführt
+    }
+    \addTextCollum{Precondition}{
+    Fehler sind nicht quittiert
+    }
+    \addCollum{Mainflow}{
+    \item[1)] Reset-Taster wird gedrückt
+    \item[2)] Fehler werden protokolliert
+    }\addTextCollum{Postcondition}{
+    Fehler sind quittiert
+    }
+\end{usecase}
