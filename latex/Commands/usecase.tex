@@ -1,8 +1,9 @@
 \newcommand{\addCollum}[2]{
     \cellcolor{black!25}#1 & \multicolumn{5}{l|}{
         \begin{minipage}{12cm}
-            \vskip 4pt
+            \vskip 6pt
             \begin{itemize}
+                \setlength\itemsep{-0.2em}
                 #2
             \end{itemize}
             \vskip 4pt
@@ -13,9 +14,10 @@
 \newcommand{\addTextCollum}[2]{
     \cellcolor{black!25}#1 & \multicolumn{5}{l|}{
         \begin{minipage}{12cm}
-            \vskip 4pt
+            \vskip 10pt
             #2\\
-        \end{minipage}}\tabularnewline
+        \end{minipage}
+    }\tabularnewline
     \hhline{|-|-|-|-|-|-|}
 }
 
@@ -26,18 +28,21 @@
 {% begin code
     \setlength{\tabcolsep}{10pt}
     \renewcommand{\arraystretch}{1.6}
+    \clearpage
     \subsubsection[UC#1]{UC#1: #2}\label{uc:#1}
     \begin{figure}[h!]
         \centering
+        \begin{adjustbox}{max width=1.2\linewidth,center}
         \begin{tabular}{ |p{2.5cm}|p{1cm}|p{1cm}|p{4cm}|p{1.5cm}|p{1cm}|}
             \hhline{|-|-|-|-|-|-|}
             \rowcolor{black!25}\multicolumn{6}{|c|}{Use Case} \tabularnewline
             \hhline{|-|-|-|-|-|-|}
             \cellcolor{black!25}ID & UC#1 & \cellcolor{black!25}Name & #2 & \cellcolor{lightgray}Priorität & #3\tabularnewline
             \hhline{|-|-|-|-|-|-|}
-}
-{% end code
-    \end{tabular}
+            }
+            {% end code
+        \end{tabular}
+        \end{adjustbox}
     \end{figure}
     \renewcommand{\arraystretch}{1}
 }
