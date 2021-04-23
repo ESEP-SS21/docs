@@ -4,7 +4,7 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>546</x>
+      <x>553</x>
       <y>441</y>
       <w>98</w>
       <h>28</h>
@@ -197,14 +197,14 @@ bg=light_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>588</x>
+      <x>595</x>
       <y>462</y>
-      <w>98</w>
+      <w>91</w>
       <h>161</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0;120.0;100.0;120.0;210.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;110.0;100.0;110.0;210.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -342,13 +342,13 @@ LightBarrier_Height</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>595</x>
+      <x>602</x>
       <y>126</y>
-      <w>420</w>
+      <w>413</w>
       <h>329</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;450.0;10.0;330.0;580.0;330.0;580.0;10.0</additional_attributes>
+    <additional_attributes>10.0;450.0;10.0;330.0;570.0;330.0;570.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -518,11 +518,11 @@ Switch</panel_attributes>
     <coordinates>
       <x>224</x>
       <y>126</y>
-      <w>378</w>
+      <w>385</w>
       <h>329</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>520.0;450.0;520.0;400.0;10.0;400.0;10.0;10.0</additional_attributes>
+    <additional_attributes>530.0;450.0;530.0;400.0;10.0;400.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
@@ -1081,5 +1081,16 @@ bg=gray</panel_attributes>
     <panel_attributes>lt=.&gt;
 &lt;&lt;includes&gt;&gt;</panel_attributes>
     <additional_attributes>100.0;70.0;100.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>112</y>
+      <w>273</w>
+      <h>455</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>370.0;630.0;360.0;630.0;360.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
