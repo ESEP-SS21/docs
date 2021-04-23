@@ -9,6 +9,9 @@
 
     }
     \addCollum{Precondition}{
+    \item Die Anlage befindet sich im Betriebszustand
+    }
+    \addCollum{Trigger}{
     \item
     }
     \addCollum{Mainflow}{
@@ -23,26 +26,5 @@
     \addCollum{Postcondition}{
     \item Werkstück liegt in der Rampe
     \item LightBarrier\_Switch nicht mehr unterbrochen
-    }
-
-    \addCollum{Exceptional flow 1}{
-    \item at step 5) of Mainflow
-    \item[5a)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht unterbrochen worden
-    \item[5a1)] Warnung wird gesendet
-    }
-    \addCollum{Postcondition of e.f.1}{
-    \item LightBarrier\_Switch nicht mehr unterbrochen
-    \item Eine Warnung über das Feststecken des Werkstückes liegt vor
-    }
-
-    \addCollum{Exceptional flow 2}{
-    \item at step 2) of Alternative Flow 1
-    \item[2b)] Das Förderband ist in Secondary Mode
-    \item[2b1)] Die Anlage geht im Fehlerzustand
-    }
-
-    \addCollum{Postcondition of e.f.2}{
-    \item LightBarrier\_Ramp unterbrochen
-    \item Die Anlage befindet sich im Fehlerzustand
     }
 \end{usecase}
