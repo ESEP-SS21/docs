@@ -14,7 +14,7 @@
     }
     \addCollum{Mainflow}{
     \item[1)] Die Kapazität wird überprüft
-    \item[2)] Die Kapazität der Rutsche ist nicht ausgelastet, LightBarrier\_Ramp also nicht unterbrochen\textbullet
+    \item[2)] Die Kapazität der Rutsche ist nicht ausgelastet \textbullet
     \item[3)] Führe Aussortierung mit SortingMechanism durch
     \item[4)] Warte auf Unterbrechung von LightBarrier\_Ramp
     \item[5)] LightBarrier\_Ramp wurde ausgelöst
@@ -22,9 +22,9 @@
 
     \addCollum{Alternative Flow 1}{
     \item at step 2) of Mainflow
-    \item[1)] Die Kapazität der Rutsche ist ausgelastet, LightBarrier\_Ramp also unterbrochen
-    \item[2)] Das Förderband ist in Primary Mode\textbullet
-    \item[3)] UC01: Do not discard
+    \item[2a)] Die Kapazität der Rutsche ist ausgelastet
+    \item[2a1)] Das Förderband ist in Primary Mode \textbullet
+    \item[2a2)] UC01: Do not discard
     }
 
     \addCollum{Postcondition}{
@@ -34,8 +34,8 @@
 
     \addCollum{Exceptional flow 1}{
         \item at step 5) of Mainflow
-        \item[1)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht ausgelöst worden
-        \item[2)] Warnung wird gesendet
+        \item[5a)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht unterbrochen worden
+        \item[5a1)] Warnung wird gesendet
     }
     \addCollum{Postcondition of e.f.1}{
         \item LightBarrier\_Switch nicht mehr unterbrochen
@@ -44,8 +44,8 @@
 
     \addCollum{Exceptional flow 2}{
     \item at step 2) of Alternative Flow 1
-    \item[1)] Das Förderband ist in Secondary Mode
-    \item[2)] Die Anlage geht im Fehlerzustand
+    \item[2b)] Das Förderband ist in Secondary Mode
+    \item[2b1)] Die Anlage geht im Fehlerzustand
     }
 
     \addCollum{Postcondition of e.f.2}{
