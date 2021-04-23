@@ -1,27 +1,55 @@
-\begin{usecase}{1}{UseCase Name}{hoch}
+\begin{usecase}{05}{Receive Workpiece}{hoch}
     \addTextCollum{Verwandte Requirements}{
 
     }
-    \addCollum{Mainflow}{
-    \item[1)] do something
-    \item[2)] do this
-    \item[2a)] or tihs
-    }\addCollum{Alternate flow}{
-    \item[1)] do something
-    \item[2)] do this
-    \begin{itemize}
-        \item[1)] Very long text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        \item[2)] do this
-    \end{itemize}
-    \item[2a)] or tihs
-    }
     \addTextCollum{Description}{
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-    deserunt mollit anim id est laborum
+    In diesem Use-Case bewegt der Aussortiertmechanismus der Anlage ein Werkstück vom Förderband in die Rutsche
+    }
+    \addTextCollum{Actors}{
+    LightBarrier\_Switch, LightBarrier\_Ramp, SortingMechanism
+    }
+    \addCollum{Precondition}{
+    \item Anlage befindet sich im Betriebszustand
+    \item Das betroffene Werkstück ist als 'discard' markiert
+    }
+    \addCollum{Mainflow}{
+    \item[1)] Die Kapazität wird überprüft
+    \item[2)] Die Kapazität der Rutsche ist nicht ausgelastet \textbullet
+    \item[3)] Führe Aussortierung mit SortingMechanism durch
+    \item[4)] Warte auf Unterbrechung von LightBarrier\_Ramp
+    \item[5)] LightBarrier\_Ramp wurde ausgelöst
+    }
+
+    \addCollum{Alternative Flow 1}{
+    \item at step 2) of Mainflow
+    \item[2a)] Die Kapazität der Rutsche ist ausgelastet
+    \item[2a1)] Das Förderband ist in Primary Mode \textbullet
+    \item[2a2)] UC01: Do not discard
+    }
+
+    \addCollum{Postcondition}{
+    \item Werkstück liegt in der Rampe
+    \item LightBarrier\_Switch nicht mehr unterbrochen
+    }
+
+    \addCollum{Exceptional flow 1}{
+    \item at step 5) of Mainflow
+    \item[5a)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht unterbrochen worden
+    \item[5a1)] Warnung wird gesendet
+    }
+    \addCollum{Postcondition of e.f.1}{
+    \item LightBarrier\_Switch nicht mehr unterbrochen
+    \item Eine Warnung über das Feststecken des Werkstückes liegt vor
+    }
+
+    \addCollum{Exceptional flow 2}{
+    \item at step 2) of Alternative Flow 1
+    \item[2b)] Das Förderband ist in Secondary Mode
+    \item[2b1)] Die Anlage geht im Fehlerzustand
+    }
+
+    \addCollum{Postcondition of e.f.2}{
+    \item LightBarrier\_Ramp unterbrochen
+    \item Die Anlage befindet sich im Fehlerzustand
     }
 \end{usecase}
