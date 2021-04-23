@@ -1,47 +1,41 @@
-\begin{usecase}{1}{UseCase Name}{hoch}
+\begin{usecase}{06}{Discard workpiece}{hoch}
     \addTextCollum{Verwandte Requirements}{
-    REQ-11, REQ-15, REQ-40
+        REQ-3, REQ-5, REQ-23, REQ-30, REQ-38, REQ-39
     }
     \addTextCollum{Description}{
-    Dieser Usecase betreibt das Durchführen des Servicemode.
-    Dieser kann durch das lange drücken des Starttasters von beiden Anlagen aus aktiviert werden.
-    Im Servicemode werden die Höhenmesser kalibriert sowie die korrekte Funktion des Aussortiermechanismus geprüft
+    In diesem Use-Case bewegt der Aussortiertmechanismus der Anlage ein Werkstück vom Förderband in die Rutsche
     }
     \addCollum{Actors}{
-    \item Stoplight
-    \item Height\_Measurement
-    \item Control\_Panel
-    \item Sorting\_Mechanism
+    LightBarrier\_Switch, LightBarrier\_Ramp, SortingMechanism
     }
-    \addCollum{Preconditions}{
-    \item System ist im Ruhezustand
+    \addCollum{Precondition}{
+    \item Anlage befindet sich im Betriebszustand
+    \item Dass das betroffene Werkstück aussortiert werden soll ist festgelegt
     }
-    \addCollum{Triggers}{
-    \item Start-taster wird lange gedrückt
-    \item Mitteilung von FTS\_2 über Betreten des Service
+    \addCollum{Trigger}{
+    \item LightBarrier\_Switch unterbrochen
     }
 
 
     \addCollum{Mainflow}{
-    \item[1)] do something
-    \item[2)] do this
-    \item[2a)] or tihs
-    }\addCollum{Alternate flow}{
-    \item[1)] do something
-    \item[2)] do this
-    \begin{itemize}
-        \item[1)] Very long text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        \item[2)] do this
-    \end{itemize}
-    \item[2a)] or tihs
+    \item[1)] Führe Aussortierung durch
+    \item[2)] Warte auf Unterbrechung von LightBarrier\_Ramp
+    \item[3)] LightBarrier\_Ramp wurde ausgelöst
     }
-    \addTextCollum{Description}{
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-    deserunt mollit anim id est laborum
+
+    \addTextCollum{Postcondition}{
+    \item Werkstück liegt in der Rampe
+    \item LightBarrier\_Switch nicht mehr unterbrochen
+    }
+
+
+    \addTextCollum{Exceptional flow 1}{
+        \item at step 3) of Mainflow
+        \item[1)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht ausgelöst worden
+        \item[2)] Warnung wird gesendet
+    }
+    \addTextCollum{Postcondition of e.f.}{
+        \item LightBarrier\_Switch nicht mehr unterbrochen
+        \item Eine Warnung über das Feststecken des Werkstückes liegt vor
     }
 \end{usecase}
