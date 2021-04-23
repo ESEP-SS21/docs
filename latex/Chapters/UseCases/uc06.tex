@@ -16,8 +16,8 @@
     \item[1)] Die Kapazität wird überprüft
     \item[2)] Die Kapazität der Rutsche ist nicht ausgelastet \textbullet
     \item[3)] Führe Aussortierung mit SortingMechanism durch
-    \item[4)] Warte auf Unterbrechung von LightBarrier\_Ramp
-    \item[5)] LightBarrier\_Ramp wurde ausgelöst
+    \item[4)] Warte auf Unterbrechung von LightBarrier\_Ramp \textbullet
+    \item[5)] Setze SortingMechanism zurück
     }
 
     \addCollum{Alternative Flow 1}{
@@ -29,25 +29,22 @@
     \end{itemize}
     }
 
+    \addCollum{Alternative flow 2}{
+    \item at step 4) of Mainflow
+    \item[4a)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht unterbrochen worden
+    \begin{itemize}
+        \item[4a1)] Warnung wird gesendet
+        \item[4a2)] Warte auf Unterbrechung von LightBarrier\_Ramp
+        \item[4a3)] Go back to step 5) of Mainflow
+    \end{itemize}
+    }
+
     \addCollum{Postcondition}{
     \item Werkstück liegt in der Rampe
     \item LightBarrier\_Switch nicht mehr unterbrochen
     }
 
-    \addCollum{Exceptional flow 1}{
-    \item at step 5) of Mainflow
-    \item[5a)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht unterbrochen worden
-    \begin{itemize}
-        \item[5a1)] Warnung wird gesendet
-    \end{itemize}
-    }
-
-    \addCollum{Postcondition of e.f.1}{
-        \item LightBarrier\_Switch nicht mehr unterbrochen
-        \item Eine Warnung über das Feststecken des Werkstückes liegt vor
-    }
-
-    \addCollum{Exceptional flow 2}{
+    \addCollum{Exceptional flow}{
     \item at step 2) of Alternative Flow 1
     \item[2b)] Das Förderband ist in Secondary Mode
     \begin{itemize}
@@ -56,7 +53,7 @@
 
     }
 
-    \addCollum{Postcondition of e.f.2}{
+    \addCollum{Postcondition of e.f.}{
     \item LightBarrier\_Ramp unterbrochen
     \item Die Anlage befindet sich im Fehlerzustand
     }
