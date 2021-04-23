@@ -23,8 +23,10 @@
     \addCollum{Alternative Flow 1}{
     \item at step 2) of Mainflow
     \item[2a)] Die Kapazität der Rutsche ist ausgelastet
-    \item[2a1)] Das Förderband ist in Primary Mode \textbullet
-    \item[2a2)] UC01: Do not discard
+    \begin{itemize}
+        \item[2a1)] Das Förderband ist in Primary Mode \textbullet
+        \item[2a2)] UC01: Do not discard
+    \end{itemize}
     }
 
     \addCollum{Postcondition}{
@@ -33,10 +35,13 @@
     }
 
     \addCollum{Exceptional flow 1}{
-        \item at step 5) of Mainflow
-        \item[5a)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht unterbrochen worden
+    \item at step 5) of Mainflow
+    \item[5a)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht unterbrochen worden
+    \begin{itemize}
         \item[5a1)] Warnung wird gesendet
+    \end{itemize}
     }
+
     \addCollum{Postcondition of e.f.1}{
         \item LightBarrier\_Switch nicht mehr unterbrochen
         \item Eine Warnung über das Feststecken des Werkstückes liegt vor
@@ -45,7 +50,10 @@
     \addCollum{Exceptional flow 2}{
     \item at step 2) of Alternative Flow 1
     \item[2b)] Das Förderband ist in Secondary Mode
-    \item[2b1)] Die Anlage geht im Fehlerzustand
+    \begin{itemize}
+        \item[2b1)] Die Anlage geht im Fehlerzustand
+    \end{itemize}
+
     }
 
     \addCollum{Postcondition of e.f.2}{
