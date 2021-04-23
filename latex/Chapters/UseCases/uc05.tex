@@ -3,28 +3,21 @@
 
     }
     \addTextCollum{Description}{
-    In diesem Use-Case bewegt der Aussortiertmechanismus der Anlage ein Werkstück vom Förderband in die Rutsche
+
     }
     \addTextCollum{Actors}{
-    LightBarrier\_Switch, LightBarrier\_Ramp, SortingMechanism
+
     }
     \addCollum{Precondition}{
-    \item Anlage befindet sich im Betriebszustand
-    \item Das betroffene Werkstück ist als 'discard' markiert
+    \item
     }
     \addCollum{Mainflow}{
     \item[1)] Die Kapazität wird überprüft
-    \item[2)] Die Kapazität der Rutsche ist nicht ausgelastet \textbullet
-    \item[3)] Führe Aussortierung mit SortingMechanism durch
-    \item[4)] Warte auf Unterbrechung von LightBarrier\_Ramp
-    \item[5)] LightBarrier\_Ramp wurde ausgelöst
     }
 
     \addCollum{Alternative Flow 1}{
     \item at step 2) of Mainflow
     \item[2a)] Die Kapazität der Rutsche ist ausgelastet
-    \item[2a1)] Das Förderband ist in Primary Mode \textbullet
-    \item[2a2)] UC01: Do not discard
     }
 
     \addCollum{Postcondition}{
