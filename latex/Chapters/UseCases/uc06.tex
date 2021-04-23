@@ -5,7 +5,7 @@
     \addTextCollum{Description}{
     In diesem Use-Case bewegt der Aussortiertmechanismus der Anlage ein Werkstück vom Förderband in die Rutsche
     }
-    \addCollum{Actors}{
+    \addTextCollum{Actors}{
     LightBarrier\_Switch, LightBarrier\_Ramp, SortingMechanism
     }
     \addCollum{Precondition}{
@@ -15,26 +15,24 @@
     \addCollum{Trigger}{
     \item LightBarrier\_Switch unterbrochen
     }
-
-
     \addCollum{Mainflow}{
     \item[1)] Führe Aussortierung durch
     \item[2)] Warte auf Unterbrechung von LightBarrier\_Ramp
     \item[3)] LightBarrier\_Ramp wurde ausgelöst
     }
 
-    \addTextCollum{Postcondition}{
+    \addCollum{Postcondition}{
     \item Werkstück liegt in der Rampe
     \item LightBarrier\_Switch nicht mehr unterbrochen
     }
 
 
-    \addTextCollum{Exceptional flow 1}{
+    \addCollum{Exceptional flow 1}{
         \item at step 3) of Mainflow
         \item[1)] LightBarrier\_Ramp ist nach der 1,5-fachen durchschnittlichen Aussortierzeit nicht ausgelöst worden
         \item[2)] Warnung wird gesendet
     }
-    \addTextCollum{Postcondition of e.f.}{
+    \addCollum{Postcondition of e.f.}{
         \item LightBarrier\_Switch nicht mehr unterbrochen
         \item Eine Warnung über das Feststecken des Werkstückes liegt vor
     }
