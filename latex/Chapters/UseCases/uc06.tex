@@ -14,7 +14,7 @@
     }
     \addCollum{Mainflow}{
     \item[1)] Die Kapazität wird überprüft
-    \item[2)] Die Kapazität der Rutsche ist nicht ausgelastet \textbullet
+    \item[2)] Die Kapazität der Rutsche ist nicht ausgelastet \textbullet \textbullet
     \item[3)] Führe Aussortierung mit SortingMechanism durch
     \item[4)] Warte auf Unterbrechung von LightBarrier\_Ramp \textbullet
     \item[5)] Setze SortingMechanism zurück
@@ -22,10 +22,9 @@
 
     \addCollum{Alternative Flow 1}{
     \item at step 2) of Mainflow
-    \item[2a)] Die Kapazität der Rutsche ist ausgelastet
+    \item[2a)] Die Kapazität der Rutsche ist ausgelastet und im Primary Modus
     \begin{itemize}
-        \item[2a1)] Das Förderband ist in Primary Mode \textbullet
-        \item[2a2)] UC01: Do not discard
+        \item[2a1)] UC01: Do not discard
     \end{itemize}
     }
 
@@ -45,10 +44,10 @@
     }
 
     \addCollum{Exceptional flow}{
-    \item at step 2) of Alternative Flow 1
-    \item[2b)] Das Förderband ist in Secondary Mode
+    \item at step 2) of Mainflow
+    \item[2b)] Die Kapazität der Rutsche ist ausgelastet und im Secondary Modus
     \begin{itemize}
-        \item[2b1)] Die Anlage geht im Fehlerzustand
+        \item[2b1)] Die Anlage sendet einen Fehler aus
     \end{itemize}
 
     }
