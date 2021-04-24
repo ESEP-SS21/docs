@@ -1,6 +1,6 @@
 \begin{usecase}{08}{Switch To Idle}{hoch}
     \addTextCollum{Verwandte Requirements}{
-        REQ-17
+        REQ-17,
     }
     \addTextCollum{Description}{
         Dieser Use-Case beschreibt, wie man in den Ruhezustand, bzw. idle wechselt.
@@ -12,27 +12,15 @@
         \item FTS\_2
     }
     \addCollum{Precondition}{
-        \item Keine Fehler oder Warnungen liegen vor
-        \item[1a)] System ist im E-Stopp Modus
-        \item[1b)] System ist im Betriebszustand
+        \item Es sind keine Fehler oder Warnungen vorhanden
+        \item System ist im Betriebszustand
     }
     \addCollum{Triggers}{
-        \item[1a)] Reset-Taster am Control\_Panel von FTS und FTS\_2 werden betätigt
-        \item[1b)] Stopp-Taster am Control\_Panel von FTS oder FTS\_2 wird betätigt
+        \item Stopp-Taster am Control\_Panel von FTS oder FTS\_2 wird betätigt
     }
     \addCollum{Mainflow}{
         \item[1)] Zustand sämtlicher Sensoren und Aktoren wird gespeichert
-        \item[2)] Lampen an FTS und FTS\_2 wechseln auf gelb leuchtend?
-        \item[3)]
-    }
-    \addCollum{Alternate flow}{
-        \item[1)] do something
-        \item[2)] do this
-        \begin{itemize}
-            \item[1)] Very long text: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            \item[2)] do this
-        \end{itemize}
-        \item[2a)] or tihs
+        \item[2)] Lampen an FTS und FTS\_2 wechseln auf gelb leuchtend
     }
     \addCollum{Postcondition}{
         \item System ist im Ruhezustand
