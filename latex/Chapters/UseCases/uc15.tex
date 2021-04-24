@@ -1,30 +1,25 @@
 \begin{usecase}{05}{Receive Workpiece}{hoch}
     \addTextCollum{Verwandte Requirements}{
-
+        REQ-2, REQ-27
     }
     \addTextCollum{Description}{
-
+        In diesem Use-Case wird ein Werkstück vom Aussortiermechanismus durchgelassen
     }
     \addTextCollum{Actors}{
-
+        Sorting_Mechanism
     }
     \addCollum{Precondition}{
     \item Die Anlage befindet sich im Betriebszustand
-    }
-    \addCollum{Trigger}{
-    \item
-    }
-    \addCollum{Mainflow}{
-    \item[1)] Die Kapazität wird überprüft
+    \item Das betroffene Werkstück ist als 'no discard' markiert
     }
 
-    \addCollum{Alternative Flow 1}{
-    \item at step 2) of Mainflow
-    \item[2a)] Die Kapazität der Rutsche ist ausgelastet
+    \addCollum{Mainflow}{
+    \item[1)] Öffne Sorting_Mechanism
+    \item[2)] Setze Sorting_Mechanism zurück
     }
 
     \addCollum{Postcondition}{
-    \item Werkstück liegt in der Rampe
-    \item LightBarrier\_Switch nicht mehr unterbrochen
+    \item Sorting_Mechanism zurückgesetzt
+    \item Werkstück nicht aussortiert
     }
 \end{usecase}
