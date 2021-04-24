@@ -1,30 +1,34 @@
 \begin{usecase}{05}{Receive Workpiece}{hoch}
     \addTextCollum{Verwandte Requirements}{
-
+        REQ-7, REQ-24, REQ-26
     }
     \addTextCollum{Description}{
-
+        In diesem Use-Case wird das Förderband einer Anlage gestartet, sobald sie ein Werkstück erreicht
     }
     \addTextCollum{Actors}{
-
+        Conveyor\_Belt, LightBarrier\_Start
     }
     \addCollum{Precondition}{
     \item Die Anlage befindet sich im Betriebszustand
     }
     \addCollum{Trigger}{
-    \item
+    \item LightBarrier\_Start
     }
     \addCollum{Mainflow}{
-    \item[1)] Die Kapazität wird überprüft
+    \item[1)] Zuweisung einer eindeutigen ID an das betroffene Werkstück
+    \item[2)] Der Conveyor\_Belt ist in Bewegung
     }
 
     \addCollum{Alternative Flow 1}{
     \item at step 2) of Mainflow
-    \item[2a)] Die Kapazität der Rutsche ist ausgelastet
+    \item[2a)] Der Conveyor\_Belt ist nicht in Bewegung
+    \begin{itemize}
+        \item[2a1)] Starten des Conveyor_Belt
+    \end{itemize}
     }
 
     \addCollum{Postcondition}{
-    \item Werkstück liegt in der Rampe
-    \item LightBarrier\_Switch nicht mehr unterbrochen
+    \item Der Conveyor\_Belt ist in Bewegung
+    \item LightBarrier\_Start nicht mehr unterbrochen
     }
 \end{usecase}
