@@ -1,6 +1,6 @@
-\begin{usecase}{07}{E-Stop}{hoch}
+\begin{usecase}{07}{E-Stop benutzen}{hoch}
     \addTextCollum{Verwandte Requirements}{
-        REQ-41, REQ-42, REQ-28, TODO
+        REQ-41, REQ-42, REQ-28, REQ-44
     }
     \addTextCollum{Description}{
         Dieser Use-Case beschreibt den Umgang des Systems bei Betätigung des E\_Stop-Schalters.
@@ -24,9 +24,9 @@
     \addCollum{Mainflow}{
         \item[1)] Der aktuelle Zustand sämtlicher Sensoren und Aktoren von FTS und FTS\_2 wird gespeichert
         \item[2)] Conveyor\_Belt, Sorting\_Mechanism von FTS und FTS\_2 werden abgeschaltet.
-        \item[3)] Lampe am FTS und FTS\_2 schaltet um auf rot blinkend.
+        \item[3)] Lampen am FTS und FTS\_2 schalten um auf rot blinkend mit 2Hz.
         \item[4)] E\_Stop-Schalter von FTS wird herausgezogen
-        \item[5)] Reset-Taster von FTS wird gedrückt
+        \item[5)] Reset-Taster am Control\_Panel von FTS und FTS\_2 werden gedrückt
         \item[6)] Switch\_To\_Idle
     }
     \addCollum{Alternate flow}{
@@ -34,7 +34,6 @@
         \item[2a)] E\_Stop-Schalter von FTS\_2 wurde betätigt (Trigger 1b))
         \begin{itemize}
             \item[1)] E\_Stop-Schalter von FTS\_2 wird herausgezogen
-            \item[2)] Reset-Taster von FTS\_2 wird gedrueckt
             \item[3)] weiter mit 6) von Mainflow
         \end{itemize}
     }
