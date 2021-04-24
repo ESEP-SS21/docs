@@ -1,8 +1,23 @@
 \begin{usecase}{08}{Switch To Idle}{hoch}
-    \addCollum{Description}{}
-    \addCollum{Actors}{}
-    \addCollum{Precondition}{}
-    \addCollum{Triggers}{}
+    \addTextCollum{Verwandte Requirements}{
+        REQ-17
+    }
+    \addTextCollum{Description}{
+    Dieser Usecase beschreibt, wie man in den Ruhezustand, bzw. idle wechselt.
+    }
+    \addCollum{Actors}{
+        \item Sorting\_Mechanism
+        \item Stoplight
+        \item Control\_Panel
+        \item FTS\_2
+    }
+    \addCollum{Precondition}{
+        \item System ist im E-Stopp Modus
+        \item System ist im Betriebszustand
+    }
+    \addCollum{Triggers}{
+
+    }
     \addCollum{Mainflow}{
         \item[1)] do something
         \item[2)] do this
