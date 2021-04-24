@@ -1,4 +1,7 @@
 \begin{usecase}{07}{E-Stop}{hoch}
+    \addCollum{Verwandte Requirements}{
+    \item REQ-41, REQ-42, REQ-28,
+    }
     \addTextCollum{Description}{
         Dieser Use-Case beschreibt den Umgang des Systems bei Betätigung des E-Stop-Schalters.
     }
@@ -13,7 +16,7 @@
     \addCollum{Mainflow}{
         \item[1)] Der aktuelle Zustand sämtlicher Sensoren und Aktoren von FTS und FTS\_2 wird gespeichert
         \item[2)] Conveyor\_Belt, Sorting\_Mechanism von FTS und FTS\_2 werden abgeschaltet.
-        \item[3)] Die rote LED am Stoplight an FTS und an FTS\_2 wird eingeschaltet.
+        \item[3)] Die Lampe am FTS und FTS\_2 leuchtet dauerhaft rot.
         \item[4)] E\_Stop-Schalter von FTS wird herausgezogen
         \item[5)] Reset-Taster von FTS wird gedrückt
     }
@@ -24,5 +27,8 @@
             \item[2a)] E\_Stop-Schalter von FTS\_2 wird herausgezogen
             \item[2b)] Reset-Taster von FTS\_2 wird gedrückt
         \end{itemize}
+    }
+    \addCollum{Postcondition}{
+    \item Das System befindet sich im Ruhezustand.
     }
 \end{usecase}
