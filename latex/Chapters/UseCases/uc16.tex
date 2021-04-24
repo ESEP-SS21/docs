@@ -1,0 +1,25 @@
+\begin{usecase}{16}{Answer Transfer Request}{mittel}
+    \addTextCollum{Verwandte Requirements}{
+    REQ-2, REQ-27
+    }
+    \addTextCollum{Description}{
+    In diesem Use-Case wird ein Werkstück vom Aussortiermechanismus durchgelassen
+    }
+    \addTextCollum{Actors}{
+    Sorting_Mechanism
+    }
+    \addCollum{Precondition}{
+    \item Die Anlage befindet sich im Betriebszustand
+    \item Das betroffene Werkstück ist als 'no discard' markiert
+    }
+
+    \addCollum{Mainflow}{
+    \item[1)] Öffne Sorting_Mechanism
+    \item[2)] Setze Sorting_Mechanism zurück
+    }
+
+    \addCollum{Postcondition}{
+    \item Sorting_Mechanism zurückgesetzt
+    \item Werkstück nicht aussortiert
+    }
+\end{usecase}
