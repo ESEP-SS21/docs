@@ -1,9 +1,9 @@
 \begin{usecase}{07}{E-Stop}{hoch}
     \addTextCollum{Verwandte Requirements}{
-        \item REQ-41, REQ-42, REQ-28
+        REQ-41, REQ-42, REQ-28
     }
     \addTextCollum{Description}{
-        \item Dieser Use-Case beschreibt den Umgang des Systems bei Betaetigung des E-Stop-Schalters.
+        Dieser Use-Case beschreibt den Umgang des Systems bei Betätigung des E-Stop-Schalters.
     }
     \addCollum{Actors}{
         \item E\_Stop
@@ -24,9 +24,10 @@
     \addCollum{Mainflow}{
         \item[1)] Der aktuelle Zustand sämtlicher Sensoren und Aktoren von FTS und FTS\_2 wird gespeichert
         \item[2)] Conveyor\_Belt, Sorting\_Mechanism von FTS und FTS\_2 werden abgeschaltet.
-        \item[3)] Die Lampe am FTS und FTS\_2 leuchtet dauerhaft rot.
+        \item[3)] Lampe am FTS und FTS\_2 schaltet um auf rot blinkend.
         \item[4)] E\_Stop-Schalter von FTS wird herausgezogen
         \item[5)] Reset-Taster von FTS wird gedrückt
+        \item[6)] Lampe am FTS und FTS\_2 schaltet um auf dauerhaft grün.
     }
     \addCollum{Alternate flow}{
         \item at step 4) of Mainflow
@@ -34,6 +35,7 @@
         \begin{itemize}
             \item[1)] E\_Stop-Schalter von FTS\_2 wird herausgezogen
             \item[2)] Reset-Taster von FTS\_2 wird gedrueckt
+            \item[3)] weiter mit 6) von Mainflow
         \end{itemize}
     }
     \addCollum{Postcondition}{
