@@ -1,37 +1,425 @@
-<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLGeneric</id><coordinates><x>610</x><y>490</y><w>220</w><h>60</h></coordinates><panel_attributes>&lt;&lt;System&gt;&gt;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>602</x>
+      <y>266</y>
+      <w>154</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;System&gt;&gt;
 FestoTransferSystem
 halign=center
-fontsize=20</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>589</x><y>360</y><w>100</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
+fontsize=20</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>539</x>
+      <y>175</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
 Control_Panel
-halign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>749</x><y>360</y><w>100</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>735</x>
+      <y>175</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
 Conveyor_Belt
-halign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>389</x><y>500</y><w>100</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>448</x>
+      <y>273</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
 Stoplight
-halign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>479</x><y>500</y><w>150</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>260</x><y>120</y><w>940</w><h>800</h></coordinates><panel_attributes>bdd Sytemkontext</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>629</x><y>390</y><w>30</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>789</x><y>390</y><w>30</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>939</x><y>430</y><w>100</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>511</x>
+      <y>273</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>357</x>
+      <y>7</y>
+      <w>658</w>
+      <h>560</h>
+    </coordinates>
+    <panel_attributes>bdd Sytemkontext</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>196</y>
+      <w>77</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0;90.0;50.0;90.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>196</y>
+      <w>70</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>80.0;10.0;80.0;50.0;10.0;50.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>826</x>
+      <y>224</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
 FTS_2
-halign=center</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>819</x><y>440</y><w>140</w><h>100</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;80;120;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>939</x><y>570</y><w>100</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>245</y>
+      <w>126</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;50.0;160.0;50.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>322</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
 E_Stop
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>539</x><y>640</y><w>130</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-Height_Measurement</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>779</x><y>640</y><w>100</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-Metal_Detector</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>819</x><y>510</y><w>140</w><h>100</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;120;80</additional_attributes></element><element><id>Relation</id><coordinates><x>599</x><y>540</y><w>30</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>819</x><y>540</y><w>30</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>649</x><y>290</y><w>140</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>371</y>
+      <w>91</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+Height_Measurement</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>371</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+Metal_Detector</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>280</y>
+      <w>126</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;160.0;20.0;160.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>301</y>
+      <w>56</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>60.0;10.0;60.0;50.0;10.0;50.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>301</y>
+      <w>49</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>50.0;100.0;50.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>623</x>
+      <y>126</y>
+      <w>98</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
 /Sorting_Mechanism/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>709</x><y>320</y><w>30</w><h>190</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>749</x><y>200</y><w>100</w><h>110</h></coordinates><panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>40;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>789</x><y>170</y><w>70</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-Switch</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>579</x><y>170</y><w>70</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-Ejector</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>639</x><y>200</y><w>100</w><h>110</h></coordinates><panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;10;40;90</additional_attributes></element><element><id>Relation</id><coordinates><x>639</x><y>170</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=.
-&lt;&lt;XOR&gt;&gt;</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>669</x><y>720</y><w>100</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>147</y>
+      <w>21</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>63</y>
+      <w>70</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>80.0;10.0;80.0;40.0;10.0;40.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>721</x>
+      <y>42</y>
+      <w>56</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+Switch</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>42</y>
+      <w>56</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+Ejector</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>63</y>
+      <w>70</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;80.0;40.0;80.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>42</y>
+      <w>119</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.
+&lt;&lt;XOR&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>637</x>
+      <y>427</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
 /Lightbarrier/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>709</x><y>540</y><w>30</w><h>200</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;180;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>999</x><y>840</y><w>140</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-LightBarrier_End</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>479</x><y>840</y><w>140</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-LightBarrier_Ramp</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>319</x><y>840</y><w>130</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-LightBarrier_Start</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>369</x><y>750</y><w>320</w><h>110</h></coordinates><panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;90;300;10</additional_attributes></element><element><id>Relation</id><coordinates><x>539</x><y>750</y><w>180</w><h>110</h></coordinates><panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;90;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>759</x><y>750</y><w>330</w><h>110</h></coordinates><panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>310;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>819</x><y>840</y><w>150</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-LightBarrier_Switch</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>649</x><y>840</y><w>140</w><h>40</h></coordinates><panel_attributes>&lt;&lt;actor&gt;&gt;
-LightBarrier_Height</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>709</x><y>750</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>739</x><y>750</y><w>170</w><h>110</h></coordinates><panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>150;90;10;10</additional_attributes></element></diagram>
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>301</y>
+      <w>21</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>868</x>
+      <y>511</y>
+      <w>98</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+LightBarrier_End</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>511</y>
+      <w>98</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+LightBarrier_Ramp</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>511</y>
+      <w>91</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+LightBarrier_Start</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>434</y>
+      <w>224</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;300.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>448</y>
+      <w>119</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;50.0;150.0;50.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>434</y>
+      <w>273</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>310.0;110.0;310.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>511</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+LightBarrier_Switch</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>623</x>
+      <y>525</y>
+      <w>98</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+LightBarrier_Height</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>448</y>
+      <w>63</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>448</y>
+      <w>119</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>150.0;90.0;150.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
