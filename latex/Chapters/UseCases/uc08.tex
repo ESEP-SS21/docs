@@ -3,7 +3,7 @@
         REQ-17
     }
     \addTextCollum{Description}{
-    Dieser Usecase beschreibt, wie man in den Ruhezustand, bzw. idle wechselt.
+        Dieser Use-Case beschreibt, wie man in den Ruhezustand, bzw. idle wechselt.
     }
     \addCollum{Actors}{
         \item Sorting\_Mechanism
@@ -12,16 +12,18 @@
         \item FTS\_2
     }
     \addCollum{Precondition}{
-        \item System ist im E-Stopp Modus
-        \item System ist im Betriebszustand
+        \item Keine Fehler oder Warnungen liegen vor
+        \item[1a)] System ist im E-Stopp Modus
+        \item[1b)] System ist im Betriebszustand
     }
     \addCollum{Triggers}{
-
+        \item[1a)] Reset-Taster am Control\_Panel von FTS und FTS\_2 werden betätigt
+        \item[1b)] Stopp-Taster am Control\_Panel von FTS oder FTS\_2 wird betätigt
     }
     \addCollum{Mainflow}{
-        \item[1)] do something
-        \item[2)] do this
-        \item[2a)] or tihs
+        \item[1)] Lampen an FTS und FTS\_2 wechseln auf
+        \item[2)]
+        \item[3)]
     }
     \addCollum{Alternate flow}{
         \item[1)] do something
@@ -32,5 +34,7 @@
         \end{itemize}
         \item[2a)] or tihs
     }
-    \addCollum{Postcondition}{}
+    \addCollum{Postcondition}{
+        \item System ist im Ruhezustand
+    }
 \end{usecase}
