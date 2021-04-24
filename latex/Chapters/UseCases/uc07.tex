@@ -25,18 +25,20 @@
         \item[1)] Der aktuelle Zustand sämtlicher Sensoren und Aktoren von FTS und FTS\_2 wird gespeichert
         \item[2)] Conveyor\_Belt, Sorting\_Mechanism von FTS und FTS\_2 werden abgeschaltet.
         \item[3)] Lampen am FTS und FTS\_2 schalten um auf rot blinkend mit 2Hz.
-        \item[4)] E\_Stop-Schalter von FTS wird herausgezogen
-        \item[5)] Reset-Taster am Control\_Panel von FTS und FTS\_2 werden gedrückt
+        \item[4)] Warte bis Interaktion zwischen Anlage und Benutzer abgeschlossen ist.
+        \item[5)] E\_Stop-Schalter von FTS wird herausgezogen \textbullet
+        \item[6)] Reset-Taster am Control\_Panel von FTS wird gedrückt
     }
     \addCollum{Alternate flow}{
-        \item at step 4) of Mainflow
+        \item at step 5) of Mainflow
         \item[2a)] E\_Stop-Schalter von FTS\_2 wurde betätigt (Trigger 1b))
         \begin{itemize}
-            \item[1)] E\_Stop-Schalter von FTS\_2 wird herausgezogen
-            \item[3)] weiter mit 6) von Mainflow
+            \item[2a1)] E\_Stop-Schalter von FTS\_2 wird herausgezogen
+            \item[2a2)] Reset-Taster am Control_Panel von FTS\_2 wird gedrückt
         \end{itemize}
     }
     \addCollum{Postcondition}{
-        \item Das System befindet sich im Ruhezustand.
+        \item[1a)] Das System befindet sich im Ruhezustand
+        \item[1b)] Das System befindet sich im Betriebszustand
     }
 \end{usecase}
