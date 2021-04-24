@@ -56,6 +56,62 @@
 
 \subsection{Systemkontext}\label{subsec:systemkontext2}
 
+Betrachte Abbildung ??.
+Die Systemsicht bringt umliegende Aktorik des Systemkontext und System selber miteinander in Beziehung.
+
+\paragraph{Akteure}
+
+\begin{itemize}
+    \item Control\_Panel\\
+    Steuerungspanel der Anlage.
+    Sie stellt einen START-, STOP- und RESET-Button zur Verfügung.
+
+    \item Conveyor\_Belt\\
+    Auf Förderband werden Werkstücke durch das System bewegt.
+    \item FTS\_2\\
+    Die jeweils andere Förderanlage, mit der das System kommuniziert.
+    \item E\_Stop\\
+    Ein Button zum Auslösen des Emergency-Stops.
+    \item Metal\_Detector\\
+    Metall-Sensor zum Erfassen des Materials eines Werkstückes.
+    \item Height\_Measurement\\
+    Höhen-Sensor zum Erfassen des Materials eines Werkstückes.
+    \item Stoplight\\
+    Ampel, die durch verschiedene LED-Einstellungen Zustandsinformationen der Anlage anzeigt.
+    \item Sorting\_Mechanism\\
+    Das System besitzt allgemein einen Aussortier-Mechanismus.
+    Dieser ist in einer von zwei Varianten in die Anlage eingebaut:
+    \begin{itemize}
+        \item Ejector\\
+        Ein Auswerfer, der sich bei Stromzufluss ausfährt und so Werkstücke in die Rampe stoßen soll.
+        Ohne Strom ist der Aussortiermechanismus offen.
+        \item Switch\\
+        Eine Weiche, die sich bei Stromzufluss öffnet und Werkstücke durchlässt.
+        Ohne Strom ist der Aussortiermechanismus geschlossen und befördert Werkstücke langsam in die Rampe.
+    \end{itemize}
+    \item LightBarrier\\
+    Das System besitzt diverse Lichtschranken als Trigger und zur Steuerung des Kontrollflusses
+    \begin{itemize}
+        \item LightBarrier\_Start\\
+        Lichtschranke am Anfang eines Förderbandes.
+        Die Unterbrechung dieser Lichtschranke setzt das Förderband in Bewegung.
+        \item LightBarrier\_Ramp\\
+        Lichtschranke an der Rampe, in der die Werkstücke aussortiert werden.
+        Die kurze Unterbrechung dieser Lichtschranke kann als erfolgreiche Aussortierung interpretiert werden.
+        Eine stetige Unterbrechung signalisiert eine volle Rutsche.
+        \item LightBarrier\_Height\\
+        Lichtschranke an der Position des Höhensensors.
+        Die Unterbrechung dieser Lichtschranke startet eine Höhenmessung.
+        \item LightBarrier\_Switch\\
+        Lichtschranke vor dem Aussortiermechanismus der Anlage.
+        Die Unterbrechung startet den Aussortieralgorithmus.
+        \item LightBarrier\_End\\
+        Lichtschranke am Ende eines Förderbandes.
+        Die Unterbrechung dieser Lichtschranke kann das transferieren des Werkstückes an die nächste Anlage einleiten.
+        Am Ende der zweiten Anlage werden bei Unterbrechung dieser Lichtschranke Werkstück-Informationen an der Konsole ausgegeben.
+    \end{itemize}
+\end{itemize}
+
 %% Use Cases werden aus einer bestimmten Sicht erstellt.
 %% Dokumentieren Sie diese mittels Kontextdiagramm oder Use Case Diagramm.
 %% Die Use Cases und Test Cases müssen zu der hier verwendeten Nomenklatur konsistent sein.
