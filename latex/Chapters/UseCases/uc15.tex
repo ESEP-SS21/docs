@@ -6,7 +6,7 @@
         In diesem Use-Case wird ein Werkstück vom Aussortiermechanismus durchgelassen
     }
     \addTextCollum{Actors}{
-        Sorting_Mechanism
+        Sorting_Mechanism, LightBarrier_Switch
     }
     \addCollum{Precondition}{
     \item Die Anlage befindet sich im Betriebszustand
@@ -15,7 +15,7 @@
 
     \addCollum{Mainflow}{
     \item[1)] Öffne Sorting_Mechanism
-    \item[2)] Setze Sorting_Mechanism zurück
+    \item[2)] Setze Sorting_Mechanism zurück, wenn LightBarrier_Switch nicht mehr unterbrochen
     }
 
     \addCollum{Postcondition}{
