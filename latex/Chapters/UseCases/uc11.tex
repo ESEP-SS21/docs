@@ -1,0 +1,47 @@
+\begin{usecase}{11}{Run Service}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        REQ-11, REQ-15, REQ-40
+    }
+    \addTextCollum{Description}{
+        Dieser Usecase betreibt das Durchführen des Servicemode. 
+        Dieser kann durch das lange drücken des Starttasters von beiden Anlagen aus aktiviert werden.
+        Im Servicemode werden die Höhenmesser kalibriert sowie die korrekte Funktion des Aussortiermechanismus geprüft
+    }
+    \addCollum{Actors}{
+        \item Stoplight
+        \item Height\_Measurement
+        \item Control\_Panel
+        \item Sorting\_Mechanism
+    }
+    \addCollum{Preconditions}{
+        \item System ist im Ruhezustand
+    }
+    \addCollum{Triggers}{
+        \item Start-Taster 3 Sekunden gedrückt
+        \item Mitteilung von FTS\_2 über Betreten des Service
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Mitteilung an FTS\_2 über Betreten des Service senden
+        \item[2)] Stoplight grün blinken lassen
+        \item[3)] Messung bei Height\_Measurement anfragen
+        \item[4)] Auf Rückmeldung warten
+        \item[5)] Bestimmten Wert als Nullwert im Height\_Measurement eintragen
+        \item[6)] Sorting Mechanism aktivieren
+        \item[7)] Auf Zustandsänderungssignal des Sorting\_Mechanism warten \textbullet
+        \item[8)] Sorting Mechanism deaktivieren
+        \item[9)] Auf Zustandsänderungssignal des Sorting\_Mechanism warten \textbullet
+        \item[10)] In Ruhezustand wechseln
+    }
+    \addCollum{Postconditions}{
+        \item[1)] System ist im Ruhezustand
+        \item[2)] Height\_Measurement wurde kalibriert
+    }
+    \addCollum{Exceptional flow 1}{
+        \item at step 6 or 8 of Mainflow
+        \item[1)] Timeout beim Empfang des Signals
+        \item[2)] Fehler auslösen
+    }
+    \addCollum{Postconditions of Exceptional Flow 1}{
+        \item[1)] System ist im Fehlerzustand
+    }
+\end{usecase}
