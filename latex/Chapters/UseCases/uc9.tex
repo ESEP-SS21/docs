@@ -1,0 +1,43 @@
+\begin{usecase}{9}{Start System}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        REQ-12, REQ-42
+    }
+    \addCollum{Actors}{
+        \item FTS\_2
+        \item Control\_Panel
+    }
+    \addCollum{Preconditions}{
+        \item System ist gestoppt
+        \item System ist nicht im Fehlerzustand
+    }
+    \addCollum{Trigger}{
+        \item Der Startknopf auf dem Steuerpanel wird gedrückt
+        \item FTS\_2 schickt signal zum Starten
+    }
+    \addCollum{Mainflow}{
+        \item[1)] System wechselt in den Betriebszustand \textbullet
+        \item[2)] LED im Stopptaster wird ausgeschaltet
+        \item[3)] LED im Starttaster wird eingeschaltet \textbullet
+    }
+    \addCollum{Alternate flow 1}{
+        \item at step 1 of Mainflow
+        \item[1)] Trigger ist Drücken des Knopfes
+        \item[2)] Signal zum Starten an FTS\_2 schicken 
+        \item[3)] Auf Bestätigung von FTS\_2 warten \textbullet
+        \item[4)] mit Mainflow Step 1 weitermachen
+    }
+    \addCollum{Alternate flow 2}{
+        \item at step 3 of Mainflow
+        \item[1)] Trigger ist Signal von FTS\_2 des Knopfes
+        \item[2)] Signal Bestätigung an FTS\_2 schicken
+    }
+    \addCollum{Postconditions}{
+        \item[2)] FTS\_2 ist im Betriebszustand
+        \item[3)] System ist im Betriebszustand
+    }
+    \addCollum{Exceptional flow 1}{
+        \item at step 3 of Alternate Flow 1
+        \item[1)] Timeout
+        \item[2)] In Fehlerzustand wechseln
+    }
+\end{usecase}
