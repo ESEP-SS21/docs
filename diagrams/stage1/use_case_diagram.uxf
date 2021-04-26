@@ -262,7 +262,7 @@ lw=2.5</panel_attributes>
     </coordinates>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
 /Lightbarrier/
-bg=#800080
+bg=magenta
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
@@ -304,7 +304,7 @@ lw=2.5</panel_attributes>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
 LightBarrier_Ramp
 bg=yellow
-bg=#800080
+bg=magenta
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
@@ -372,7 +372,7 @@ lw=2.5</panel_attributes>
     </coordinates>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
 LightBarrier_Switch
-bg=#800080
+bg=magenta
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
@@ -457,7 +457,8 @@ lw=2.5</panel_attributes>
       <h>49</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extends&gt;&gt;
+lw=2.5</panel_attributes>
     <additional_attributes>110.0;10.0;110.0;30.0;10.0;30.0;10.0;50.0</additional_attributes>
   </element>
   <element>
@@ -483,7 +484,8 @@ lw=2.5</panel_attributes>
       <h>49</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extends&gt;&gt;
+lw=2.5</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0;110.0;30.0;110.0;50.0</additional_attributes>
   </element>
   <element>
@@ -495,7 +497,8 @@ lw=2.5</panel_attributes>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=.
-&lt;&lt;XOR&gt;&gt;</panel_attributes>
+&lt;&lt;XOR&gt;&gt;
+lw=2.5</panel_attributes>
     <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
   </element>
   <element>
@@ -523,8 +526,8 @@ lw=2.5</panel_attributes>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
 Control_Panel
 halign=center
-bg=gray
-
+bg=black
+fg=white
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
@@ -539,7 +542,8 @@ lw=2.5</panel_attributes>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
 Conveyor_Belt
 halign=center
-bg=#009888
+bg=blue
+fg=white
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
@@ -548,13 +552,13 @@ lw=2.5</panel_attributes>
     <coordinates>
       <x>1050</x>
       <y>350</y>
-      <w>98</w>
+      <w>105</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
 FTS_2
 halign=center
-bg=magenta
+bg=#800080
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
@@ -563,7 +567,7 @@ lw=2.5</panel_attributes>
     <coordinates>
       <x>1050</x>
       <y>546</y>
-      <w>98</w>
+      <w>105</w>
       <h>28</h>
     </coordinates>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
@@ -576,15 +580,15 @@ lw=2.5
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>364</x>
+      <x>357</x>
       <y>714</y>
-      <w>98</w>
+      <w>105</w>
       <h>28</h>
     </coordinates>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
 Height_Measurement
-bg=blue
-fg=white
+bg=#009888
+fg=black
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
@@ -593,22 +597,22 @@ lw=2.5</panel_attributes>
     <coordinates>
       <x>1050</x>
       <y>714</y>
-      <w>98</w>
+      <w>105</w>
       <h>28</h>
     </coordinates>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
 Metal_Detector
-bg=black
-fg=white
+bg=gray
+fg=black
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>364</x>
+      <x>357</x>
       <y>497</y>
-      <w>98</w>
+      <w>105</w>
       <h>49</h>
     </coordinates>
     <panel_attributes>&lt;&lt;actor&gt;&gt;
@@ -627,7 +631,7 @@ lw=2.5
       <w>126</w>
       <h>84</h>
     </coordinates>
-    <panel_attributes>fg=#800080
+    <panel_attributes>fg=magenta
 lw=2.5</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;50.0;160.0;50.0;160.0;10.0</additional_attributes>
   </element>
@@ -663,7 +667,7 @@ lw=2.5</panel_attributes>
       <w>147</w>
       <h>35</h>
     </coordinates>
-    <panel_attributes>fg=black
+    <panel_attributes>fg=gray
 lw=2.5</panel_attributes>
     <additional_attributes>190.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
   </element>
@@ -675,7 +679,7 @@ lw=2.5</panel_attributes>
       <w>42</w>
       <h>133</h>
     </coordinates>
-    <panel_attributes>fg=#800080
+    <panel_attributes>fg=magenta
 lw=2.5</panel_attributes>
     <additional_attributes>40.0;170.0;40.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
   </element>
@@ -687,7 +691,7 @@ lw=2.5</panel_attributes>
       <w>147</w>
       <h>35</h>
     </coordinates>
-    <panel_attributes>fg=blue
+    <panel_attributes>fg=#009888
 lw=2.5</panel_attributes>
     <additional_attributes>10.0;30.0;190.0;30.0;190.0;10.0</additional_attributes>
   </element>
@@ -711,7 +715,7 @@ lw=2.5</panel_attributes>
       <w>182</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>fg=#009888
+    <panel_attributes>fg=blue
 lw=2.5</panel_attributes>
     <additional_attributes>240.0;10.0;240.0;100.0;130.0;100.0;130.0;180.0;10.0;180.0;10.0;160.0</additional_attributes>
   </element>
@@ -723,7 +727,7 @@ lw=2.5</panel_attributes>
       <w>322</w>
       <h>49</h>
     </coordinates>
-    <panel_attributes>fg=magenta
+    <panel_attributes>fg=#800080
 lw=2.5</panel_attributes>
     <additional_attributes>440.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
@@ -747,7 +751,7 @@ lw=2.5</panel_attributes>
       <w>98</w>
       <h>175</h>
     </coordinates>
-    <panel_attributes>fg=#009888
+    <panel_attributes>fg=blue
 lw=2.5</panel_attributes>
     <additional_attributes>110.0;160.0;110.0;230.0;10.0;230.0;10.0;110.0;120.0;110.0;120.0;10.0</additional_attributes>
   </element>
@@ -771,7 +775,7 @@ lw=2.5</panel_attributes>
       <w>98</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>fg=gray
+    <panel_attributes>fg=black
 lw=2.5</panel_attributes>
     <additional_attributes>110.0;160.0;110.0;180.0;10.0;180.0;10.0;110.0;120.0;110.0;120.0;10.0</additional_attributes>
   </element>
@@ -783,7 +787,7 @@ lw=2.5</panel_attributes>
       <w>476</w>
       <h>56</h>
     </coordinates>
-    <panel_attributes>fg=magenta
+    <panel_attributes>fg=#800080
 lw=2.5</panel_attributes>
     <additional_attributes>660.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
   </element>
@@ -807,7 +811,7 @@ lw=2.5</panel_attributes>
       <w>273</w>
       <h>231</h>
     </coordinates>
-    <panel_attributes>fg=gray
+    <panel_attributes>fg=black
 lw=2.5</panel_attributes>
     <additional_attributes>120.0;10.0;120.0;80.0;10.0;80.0;10.0;310.0;370.0;310.0;370.0;280.0</additional_attributes>
   </element>
@@ -819,7 +823,7 @@ lw=2.5</panel_attributes>
       <w>476</w>
       <h>259</h>
     </coordinates>
-    <panel_attributes>fg=magenta
+    <panel_attributes>fg=#800080
 lw=2.5</panel_attributes>
     <additional_attributes>660.0;10.0;120.0;10.0;120.0;350.0;10.0;350.0;10.0;330.0</additional_attributes>
   </element>
@@ -843,7 +847,7 @@ lw=2.5</panel_attributes>
       <w>413</w>
       <h>406</h>
     </coordinates>
-    <panel_attributes>fg=#009888
+    <panel_attributes>fg=blue
 lw=2.5</panel_attributes>
     <additional_attributes>570.0;10.0;570.0;80.0;220.0;80.0;220.0;460.0;10.0;460.0;10.0;560.0;90.0;560.0;90.0;540.0</additional_attributes>
   </element>
@@ -879,7 +883,7 @@ lw=2.5</panel_attributes>
       <w>490</w>
       <h>231</h>
     </coordinates>
-    <panel_attributes>fg=blue
+    <panel_attributes>fg=#009888
 lw=2.5</panel_attributes>
     <additional_attributes>10.0;310.0;80.0;310.0;80.0;70.0;680.0;70.0;680.0;10.0</additional_attributes>
   </element>
@@ -891,7 +895,7 @@ lw=2.5</panel_attributes>
       <w>133</w>
       <h>161</h>
     </coordinates>
-    <panel_attributes>fg=magenta
+    <panel_attributes>fg=#800080
 lw=2.5</panel_attributes>
     <additional_attributes>170.0;10.0;140.0;10.0;140.0;210.0;10.0;210.0;10.0;170.0</additional_attributes>
   </element>
@@ -903,7 +907,7 @@ lw=2.5</panel_attributes>
       <w>441</w>
       <h>315</h>
     </coordinates>
-    <panel_attributes>fg=gray
+    <panel_attributes>fg=black
 lw=2.5</panel_attributes>
     <additional_attributes>120.0;10.0;120.0;70.0;10.0;70.0;10.0;320.0;530.0;320.0;530.0;430.0;610.0;430.0;610.0;410.0</additional_attributes>
   </element>
@@ -939,7 +943,7 @@ lw=2.5</panel_attributes>
       <w>98</w>
       <h>315</h>
     </coordinates>
-    <panel_attributes>fg=gray
+    <panel_attributes>fg=black
 lw=2.5</panel_attributes>
     <additional_attributes>120.0;10.0;120.0;100.0;10.0;100.0;10.0;430.0;110.0;430.0;110.0;410.0</additional_attributes>
   </element>
@@ -987,7 +991,7 @@ lw=2.5</panel_attributes>
       <w>483</w>
       <h>98</h>
     </coordinates>
-    <panel_attributes>fg=magenta
+    <panel_attributes>fg=#800080
 lw=2.5</panel_attributes>
     <additional_attributes>670.0;10.0;630.0;10.0;630.0;120.0;10.0;120.0;10.0;50.0</additional_attributes>
   </element>
@@ -999,7 +1003,7 @@ lw=2.5</panel_attributes>
       <w>343</w>
       <h>252</h>
     </coordinates>
-    <panel_attributes>fg=#009888
+    <panel_attributes>fg=blue
 lw=2.5</panel_attributes>
     <additional_attributes>470.0;10.0;470.0;90.0;340.0;90.0;340.0;340.0;10.0;340.0;10.0;280.0</additional_attributes>
   </element>
@@ -1023,7 +1027,7 @@ lw=2.5</panel_attributes>
       <w>98</w>
       <h>224</h>
     </coordinates>
-    <panel_attributes>fg=gray
+    <panel_attributes>fg=black
 lw=2.5</panel_attributes>
     <additional_attributes>120.0;10.0;120.0;90.0;10.0;90.0;10.0;300.0;100.0;300.0;100.0;280.0</additional_attributes>
   </element>
@@ -1047,7 +1051,7 @@ lw=2.5</panel_attributes>
       <w>413</w>
       <h>224</h>
     </coordinates>
-    <panel_attributes>fg=gray
+    <panel_attributes>fg=black
 lw=2.5</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0;570.0;70.0;570.0;300.0;500.0;300.0;500.0;280.0</additional_attributes>
   </element>
@@ -1071,7 +1075,7 @@ lw=2.5</panel_attributes>
       <w>140</w>
       <h>84</h>
     </coordinates>
-    <panel_attributes>fg=magenta
+    <panel_attributes>fg=#800080
 lw=2.5</panel_attributes>
     <additional_attributes>180.0;10.0;130.0;10.0;130.0;100.0;10.0;100.0;10.0;60.0</additional_attributes>
   </element>
@@ -1090,9 +1094,9 @@ lw=2.5</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>350</x>
+      <x>343</x>
       <y>133</y>
-      <w>812</w>
+      <w>826</w>
       <h>784</h>
     </coordinates>
     <panel_attributes>uc Anwendungsfalldiagramm</panel_attributes>
