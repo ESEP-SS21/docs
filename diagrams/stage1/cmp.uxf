@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>744</x>
-      <y>1024</y>
-      <w>472</w>
-      <h>104</h>
+      <x>320</x>
+      <y>740</y>
+      <w>1000</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>symbol=component
 HAL</panel_attributes>
@@ -16,22 +16,22 @@ HAL</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>768</x>
-      <y>800</y>
-      <w>144</w>
-      <h>120</h>
+      <x>460</x>
+      <y>500</y>
+      <w>580</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>symbol=component
-Vermittler</panel_attributes>
+Dispatcher</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>696</x>
-      <y>448</y>
-      <w>568</w>
-      <h>712</h>
+      <x>170</x>
+      <y>40</y>
+      <w>1380</w>
+      <h>910</h>
     </coordinates>
     <panel_attributes>symbol=component
 FTS</panel_attributes>
@@ -40,10 +40,10 @@ FTS</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>776</x>
-      <y>536</y>
-      <w>128</w>
-      <h>40</h>
+      <x>820</x>
+      <y>310</y>
+      <w>220</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>symbol=component
 ErrorHandler</panel_attributes>
@@ -52,56 +52,56 @@ ErrorHandler</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1024</x>
-      <y>1056</y>
-      <w>128</w>
-      <h>40</h>
+      <x>870</x>
+      <y>780</y>
+      <w>400</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>symbol=component
-Aktoren</panel_attributes>
+Actuators</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>800</x>
-      <y>1056</y>
-      <w>128</w>
-      <h>40</h>
+      <x>340</x>
+      <y>780</y>
+      <w>450</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>symbol=component
-Sensoren</panel_attributes>
+Sensors</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>824</x>
-      <y>960</y>
-      <w>40</w>
-      <h>80</h>
+      <x>530</x>
+      <y>690</y>
+      <w>50</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=)-[]</panel_attributes>
-    <additional_attributes>20.0;20.0;20.0;80.0</additional_attributes>
+    <additional_attributes>20.0;20.0;20.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>912</y>
-      <w>24</w>
-      <h>64</h>
+      <x>540</x>
+      <y>640</y>
+      <w>30</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=()-[]</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>992</x>
-      <y>800</y>
-      <w>144</w>
-      <h>120</h>
+      <x>1220</x>
+      <y>500</y>
+      <w>180</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>symbol=component
 EventRecorder</panel_attributes>
@@ -110,67 +110,67 @@ EventRecorder</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>608</x>
-      <y>880</y>
-      <w>104</w>
-      <h>32</h>
+      <x>80</x>
+      <y>590</y>
+      <w>110</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=()-[]
 m1=Qnet</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>880</y>
-      <w>56</w>
-      <h>24</h>
+      <x>160</x>
+      <y>590</y>
+      <w>160</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-[]</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>880</y>
-      <w>56</w>
-      <h>24</h>
+      <x>300</x>
+      <y>590</y>
+      <w>180</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=()-[]</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>824</y>
-      <w>56</w>
-      <h>40</h>
+      <x>300</x>
+      <y>520</y>
+      <w>180</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=)-[]</panel_attributes>
-    <additional_attributes>20.0;20.0;50.0;20.0</additional_attributes>
+    <additional_attributes>20.0;20.0;160.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1064</x>
-      <y>536</y>
-      <w>120</w>
-      <h>136</h>
+      <x>240</x>
+      <y>110</y>
+      <w>440</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>symbol=component
-Sortiereinheit</panel_attributes>
+Datamodel</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>760</y>
-      <w>24</w>
-      <h>56</h>
+      <x>910</x>
+      <y>450</y>
+      <w>30</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=()-[]</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -178,163 +178,209 @@ Sortiereinheit</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>744</x>
-      <y>496</y>
-      <w>472</w>
-      <h>216</h>
+      <x>220</x>
+      <y>90</y>
+      <w>1100</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>symbol=component
-KontrollLogik</panel_attributes>
+Logic</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>928</x>
-      <y>536</y>
-      <w>120</w>
-      <h>136</h>
+      <x>800</x>
+      <y>110</y>
+      <w>500</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>symbol=component
-Foerderband</panel_attributes>
+Control</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>584</x>
-      <y>408</y>
-      <w>704</w>
-      <h>776</h>
+      <x>60</x>
+      <y>10</y>
+      <w>1520</w>
+      <h>970</h>
     </coordinates>
-    <panel_attributes>cmp Komponentendiagramm</panel_attributes>
+    <panel_attributes>cmp</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>776</x>
-      <y>584</y>
-      <w>128</w>
-      <h>40</h>
+      <x>820</x>
+      <y>150</y>
+      <w>460</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>symbol=component
-Steuerpanel</panel_attributes>
+MainControl</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>776</x>
-      <y>632</y>
-      <w>128</w>
-      <h>40</h>
+      <x>820</x>
+      <y>230</y>
+      <w>220</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>symbol=component
-Ampel</panel_attributes>
+Stoplight</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>824</x>
-      <y>704</y>
-      <w>40</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=)-[]
-</panel_attributes>
-    <additional_attributes>20.0;60.0;20.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>904</x>
-      <y>848</y>
-      <w>72</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=()-[]</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>960</x>
-      <y>840</y>
-      <w>48</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=)-[]</panel_attributes>
-    <additional_attributes>20.0;20.0;40.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1048</x>
-      <y>960</y>
-      <w>40</w>
+      <x>900</x>
+      <y>390</y>
+      <w>50</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=)-[]
 </panel_attributes>
-    <additional_attributes>20.0;20.0;20.0;80.0</additional_attributes>
+    <additional_attributes>20.0;50.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1168</x>
-      <y>704</y>
-      <w>24</w>
-      <h>272</h>
+      <x>1030</x>
+      <y>560</y>
+      <w>120</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=()-[]</panel_attributes>
-    <additional_attributes>10.0;320.0;10.0;10.0</additional_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>608</x>
-      <y>824</y>
-      <w>104</w>
-      <h>40</h>
+      <x>1130</x>
+      <y>550</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=)-[]</panel_attributes>
+    <additional_attributes>20.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1310</x>
+      <y>540</y>
+      <w>240</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=()-[]
+m1=HalInterface</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;300.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>520</y>
+      <w>110</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=)-[]
 m1=Qnet</panel_attributes>
-    <additional_attributes>20.0;20.0;110.0;20.0</additional_attributes>
+    <additional_attributes>20.0;20.0;90.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1056</x>
-      <y>912</y>
-      <w>24</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>lt=()-[]</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1160</x>
-      <y>960</y>
-      <w>40</w>
-      <h>80</h>
+      <x>1310</x>
+      <y>250</y>
+      <w>180</w>
+      <h>310</h>
     </coordinates>
     <panel_attributes>lt=)-[]
 </panel_attributes>
-    <additional_attributes>20.0;20.0;20.0;80.0</additional_attributes>
+    <additional_attributes>150.0;280.0;150.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>832</y>
-      <w>72</w>
-      <h>24</h>
+      <x>160</x>
+      <y>530</y>
+      <w>180</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-[]</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>240</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=()-[]</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>230</y>
+      <w>90</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=)-[]</panel_attributes>
+    <additional_attributes>20.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1060</x>
+      <y>230</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+WorkpieceTracking</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1060</x>
+      <y>310</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+ConnectionManagement</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>730</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>830</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
