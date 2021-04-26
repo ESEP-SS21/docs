@@ -6,12 +6,8 @@
         Dieser Use-Case beschreibt, wie vom Betriebszustand in den Ruhezustand, bzw. idle
         gewechselt wird.
     }
-    \addCollum{Actors}{
-        \item Sorting\_Mechanism
-        \item Stoplight
-        \item Control\_Panel
-        \item FTS\_2
-        \item Conveyor\_Belt
+    \addTextCollum{Actors}{
+        Sorting\_Mechanism, Stoplight, Control\_Panel, FTS\_2, Conveyor\_Belt
     }
     \addCollum{Precondition}{
         \item Es sind keine Fehler oder Warnungen vorhanden
@@ -32,7 +28,7 @@
         \item[1a)] Trigger war 1a)
         \begin{itemize}
             \item[2a1)] Request\_Idle wird an FTS\_2 gesendet
-            \item[2a2)] Auf Ackknowledge von FTS\_2 warten \textbullet
+            \item[2a2)] Auf Acknowledge von FTS\_2 warten \textbullet
             \item[2a3)] mit step 1 of Mainflow weitermachen
         \end{itemize}
     }
@@ -40,17 +36,17 @@
         \item at step 4 of Mainflow
         \item[4a)] Trigger war 1b)
         \begin{itemize}
-            \item[4a1)] Ackknowledge wird an FTS\_2 gesendet
+            \item[4a1)] Acknowledge wird an FTS\_2 gesendet
         \end{itemize}
     }
     \addCollum{Exceptional Flow 1}{
         \item at Step 2a2 of Alternative Flow 1
-        \item[2a)] Timeout beim Warten auf Ackknowledge
+        \item[2a)] Timeout beim Warten auf Acknowledge
         \begin{itemize}
             \item[2a1)] Fehler auslösen
         \end{itemize}
     }
-    \addCollum{Postcondition for Exceptional Flow 1}{
+    \addCollum{Postcondition Exceptional Flow 1}{
         \item System ist im Fehlerzustand
     }
     \addCollum{Postcondition}{
