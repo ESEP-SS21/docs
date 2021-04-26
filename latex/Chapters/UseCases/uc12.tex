@@ -3,8 +3,7 @@
     REQ-36, REQ-37
     }
     \addTextCollum{Description}{
-    Dieser Use Case beschreibt den Umgang mit Fehlern, die während des betriebes auftauchen können.
-    Wenn Fehler auftreten, dann wird damit in diesem Use Case umgegangen.
+    Dieser Use Case beschreibt die Fehlerzustände und Anzeige der roten LED beim Auftritt eines Fehlers
     Fehler müssen quittiert und behoben werden.
     }
     \addTextCollum{Actors}{
@@ -12,15 +11,19 @@
     }\addTextCollum{Precondition}{
     Ein Fehler im System ist neu aufgetreten
     }
+    \addTextCollum{Trigger}{
+    Ein Fehler aufgetreten
+    }
     \addCollum{Mainflow}{
     \item[1)] Das System geht in den Fehlerzustand astehend\_unqittiert
     \item[2)] Rote LED blinkt schnell(1Hz)
-    \item[3)] UC13 Acknowledge Error \textbullet
-    \item[4)] Fehlerzustand wechselt zu astehend\_qittiert
-    \item[5)] Rote LED leuchtet dauerhaft
-    \item[6)] Warte bis Fehler behoben
-    \item[7)] System verlässt Fehlerzustand
-    \item[8)] Rote LED wird ausgeschaltet
+    \item[3)] Warte bis Reset-Taster gedrückt wird  \textbullet
+    \item[4)] Fehler wurde acknowledged
+    \item[5)] Fehlerzustand wechselt zu astehend\_qittiert
+    \item[6)] Rote LED leuchtet dauerhaft
+    \item[7)] Warte bis alle Fehler behoben sind
+    \item[8)] System verlässt Fehlerzustand
+    \item[9)] Rote LED wird ausgeschaltet
     }
     \addCollum{Alternate flow 1}{
     \item at step 3 of Mainflow
@@ -28,16 +31,12 @@
     \begin{itemize}
         \item[3a1)] Fehlerzustand wechselt gegangen\_unqittiert
         \item[3a2)] Rote LED blinkt langsam(0,5Hz)
-        \item[3a3)] UC13 Acknowledge Error.
-        \item[3a4)] Zum Schritt 7 des main flow zurückkehren
+        \item[3a3)] Warte bis Reset-Taster gedrückt wird
+        \item[3a4)] Fehler wurde acknowledged
+        \item[3a5)] Zum Schritt 7 des main flow zurückkehren
     \end{itemize}
     }
-    \addCollum{Alternate flow 2}{
-    \item at any step of Use Case
-    \item[1)] Ein weiterer Fehler tritt auf
-    \item[2)] Zum Schritt 1 des main flow zurückkehren
-    }
     \addTextCollum{Postcondition}{
-    Aufgetretene Fehler wurden behoben und System ist wieder im Normalbetrieb
+    Aufgetretener Fehler wurden behoben und System ist wieder im Normalbetrieb
     }
 \end{usecase}
