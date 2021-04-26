@@ -701,11 +701,11 @@ lw=2.5</panel_attributes>
       <x>612</x>
       <y>747</y>
       <w>225</w>
-      <h>90</h>
+      <h>99</h>
     </coordinates>
     <panel_attributes>fg=red
 lw=2.5</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0;230.0;60.0;230.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;230.0;60.0;230.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -955,7 +955,7 @@ lw=2.5</panel_attributes>
       <w>378</w>
       <h>531</h>
     </coordinates>
-    <panel_attributes>fg=#800080
+    <panel_attributes>fg=magenta
 lw=2.5</panel_attributes>
     <additional_attributes>400.0;550.0;400.0;570.0;10.0;570.0;10.0;90.0;170.0;90.0;170.0;10.0</additional_attributes>
   </element>
