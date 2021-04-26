@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Compile Umlet" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="$PROJECT_DIR$/diagrams/compile.ps1" workingDirectory="$PROJECT_DIR$/diagrams/">
+    <method v="2" />
+  </configuration>
+</component>
