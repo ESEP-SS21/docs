@@ -1,33 +1,22 @@
 \begin{usecase}{03}{Handle Lightbarrier\_Switch}{hoch}
     \addTextCollum{Description}{
-        todo
+        Bindeglied zwischen UC2, UC6 und UC15.
     }
     \addTextCollum{Trigger}{
         Light\_Barrier\_Switch unterbrochen
     }
     \addCollum{Mainflow}{
-        \item[1)] Überprüfe Höhe des work\_pieces im Datenmodell
-        \item[2)] Höhe entspricht Bohrung \textbullet
-        \item[3)] UCxx detect material
-        \item[4)] Setze material von work\_piece auf das detektierte material
-        \item[5)] UCxx determine sorting action
-        \item[6)] Sorting action ist discard\_workpiece \textbullet
-        \item[7)] UCxx discard\_workpiece
-    }
-    \addCollum{Alternate flow}{
-        \item at step 2) of Mainflow
-        \item[2a)] Höhe entspricht niedrig oder hoch ohne Bohrung
-        \begin{itemize}
-            \item[2a1)] Material muss nicht erkannt werden
-            \item[2a2)] go to 5) of main flow
-        \end{itemize}
+        \item[1)] UC2 determine sorting action
+        \item[2)] Sorting action ist discard\_workpiece \textbullet
+        \item[3)] UC6 discard\_workpiece
     }
     \addCollum{Alternate flow 2}{
-        \item at step 6) of Mainflow
-        \item[6a)] Sorting action ist do\_not\_discard\_workpiece
+        \item at step 2) of Mainflow
+        \item[2a)] Sorting action ist do\_not\_discard\_workpiece
         \begin{itemize}
-            \item[6a1)] UCxx do\_not\_discard\_workpiece
-            \item[6a1)] Ende des use cases
+            \item[2a1)] UC15 do\_not\_discard\_workpiece
+            \item[2a1)] Ende des use cases
         \end{itemize}
     }
+    % postconditions sind in den jeweiligen unter UCs gehandelt.
 \end{usecase}
