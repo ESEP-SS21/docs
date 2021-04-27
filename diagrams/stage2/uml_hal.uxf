@@ -4,12 +4,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>804</x>
+      <x>612</x>
       <y>672</y>
       <w>252</w>
       <h>168</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+    <panel_attributes>&lt;&lt;class&gt;&gt;
 CBMotor
 --
 --
@@ -22,12 +22,12 @@ CBMotor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
+      <x>240</x>
       <y>900</y>
       <w>144</w>
       <h>108</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+    <panel_attributes>&lt;&lt;class&gt;&gt;
 Pusher
 --
 
@@ -39,7 +39,7 @@ Pusher
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>48</x>
       <y>396</y>
       <w>252</w>
       <h>144</h>
@@ -57,10 +57,10 @@ LEDs
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>636</x>
+      <x>372</x>
       <y>0</y>
-      <w>252</w>
-      <h>288</h>
+      <w>384</w>
+      <h>300</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
 GPIO
@@ -71,13 +71,13 @@ GPIO
 --
 +GPIO()
 +write(int bank, int pin): void
-+read(Pin): void
-+enableInterrupt(Pin): void
-+disableInterrupt(Pin): void
-+enableDebounce(Pin): void
-+setDebounceTime(int): void 
-+enableInterruptFalling(Pin: void
-+enableInterruptRising(Pin):void
++read(int bank, int pin): void
++enableInterrupt(int bank, int pin): void
++disableInterrupt(int bank, int pin): void
++enableDebounce(int bank, int pin): void
++setDebounceTime(int bank, int pin): void 
++enableInterruptFalling(int bank, int pin): void
++enableInterruptRising(int bank, int pin):void
 
 
 </panel_attributes>
@@ -86,7 +86,7 @@ GPIO
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
+      <x>888</x>
       <y>396</y>
       <w>252</w>
       <h>144</h>
@@ -104,10 +104,10 @@ Stoplight
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
+      <x>432</x>
       <y>396</y>
-      <w>288</w>
-      <h>156</h>
+      <w>312</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>&lt;&lt;singleton&gt;&gt;
 HAL
@@ -125,7 +125,7 @@ HAL
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
+      <x>288</x>
       <y>672</y>
       <w>252</w>
       <h>168</h>
@@ -144,12 +144,12 @@ EjectMechanism
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
+      <x>432</x>
       <y>900</y>
       <w>144</w>
       <h>108</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+    <panel_attributes>&lt;&lt;class&gt;&gt;
 Switch
 --
 
@@ -161,7 +161,7 @@ Switch
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>492</x>
+      <x>300</x>
       <y>828</y>
       <w>132</w>
       <h>96</h>
@@ -172,7 +172,7 @@ Switch
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>588</x>
+      <x>396</x>
       <y>828</y>
       <w>132</w>
       <h>96</h>
@@ -183,7 +183,7 @@ Switch
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>528</x>
+      <x>336</x>
       <y>864</y>
       <w>156</w>
       <h>36</h>
@@ -194,7 +194,7 @@ Switch
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
+      <x>288</x>
       <y>504</y>
       <w>168</w>
       <h>48</h>
@@ -206,45 +206,45 @@ m2=1 leds</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>540</y>
+      <x>456</x>
+      <y>552</y>
       <w>180</w>
-      <h>156</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1 eject_mechanism</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>852</x>
-      <y>540</y>
+      <x>660</x>
+      <y>552</y>
       <w>120</w>
-      <h>156</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1 cb_motor</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
+      <x>732</x>
       <y>504</y>
-      <w>204</w>
+      <w>180</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1 stoplight</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>276</x>
+      <x>84</x>
       <y>624</y>
-      <w>132</w>
+      <w>144</w>
       <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
@@ -260,7 +260,7 @@ Q2
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
+      <x>588</x>
       <y>900</y>
       <w>144</w>
       <h>108</h>
@@ -277,7 +277,7 @@ BACKWARDS
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
+      <x>648</x>
       <y>828</y>
       <w>72</w>
       <h>96</h>
@@ -289,7 +289,7 @@ uses</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
+      <x>744</x>
       <y>900</y>
       <w>144</w>
       <h>108</h>
@@ -307,7 +307,7 @@ FAST
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>996</x>
+      <x>804</x>
       <y>828</y>
       <w>72</w>
       <h>96</h>
@@ -319,7 +319,7 @@ uses</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
+      <x>156</x>
       <y>528</y>
       <w>72</w>
       <h>120</h>
@@ -331,10 +331,10 @@ uses</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1128</x>
+      <x>936</x>
       <y>612</y>
       <w>144</w>
-      <h>108</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 Color
@@ -349,7 +349,7 @@ RED
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1188</x>
+      <x>996</x>
       <y>528</y>
       <w>72</w>
       <h>108</h>
@@ -361,57 +361,57 @@ uses</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
+      <x>156</x>
       <y>120</y>
-      <w>312</w>
+      <w>240</w>
       <h>300</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;230.0;10.0;70.0;240.0;10.0</additional_attributes>
+    <additional_attributes>10.0;230.0;10.0;70.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>192</x>
+      <x>0</x>
       <y>72</y>
-      <w>468</w>
+      <w>396</w>
       <h>756</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>240.0;610.0;10.0;610.0;10.0;70.0;370.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>876</x>
-      <y>120</y>
-      <w>348</w>
-      <h>300</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>270.0;230.0;270.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>876</x>
-      <y>72</y>
-      <w>504</w>
-      <h>756</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>150.0;610.0;400.0;610.0;400.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>240.0;610.0;10.0;610.0;10.0;70.0;310.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>744</x>
-      <y>276</y>
+      <y>120</y>
+      <w>288</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>220.0;230.0;220.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>72</y>
+      <w>444</w>
+      <h>756</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;610.0;350.0;610.0;350.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>288</y>
       <w>84</w>
-      <h>144</h>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1 gpio</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
