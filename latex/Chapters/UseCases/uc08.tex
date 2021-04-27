@@ -7,49 +7,22 @@
         gewechselt wird.
     }
     \addTextCollum{Actors}{
-        Sorting\_Mechanism, Stoplight, Control\_Panel, FTS\_2, Conveyor\_Belt
+        Stoplight, Control\_Panel, FTS\_2
     }
     \addCollum{Precondition}{
-        \item Es sind keine Fehler oder Warnungen vorhanden
+        \item Es sind keine Fehler vorhanden
         \item System ist im Betriebszustand
     }
     \addCollum{Triggers}{
-        \item[1a)] Stopp-Taster am Control\_Panel betätigt
-        \item[1b)] Event Request\_Idle von FTS\_2
+        \item[1a)] Event Stopptaste empfangen
     }
     \addCollum{Mainflow}{
-        \item[1)] Zustand sämtlicher Sensoren und Aktoren wird gespeichert \textbullet
+        \item[1)] Wechseln in Ruhezustand
         \item[2)] Lampen an FTS und FTS\_2 wechseln auf gelb leuchtend
         \item[3)] LED am Start-Taster vom Control\_Panel ausschalten
-        \item[4)] LED am Stopp-Taster vom Control\_Panel einschalten \textbullet
-    }
-    \addCollum{Alternative FLow 1}{
-        \item at step 1 of Mainflow
-        \item[1a)] Trigger war 1a)
-        \begin{itemize}
-            \item[1a1)] Request\_Idle wird an FTS\_2 gesendet
-            \item[1a2)] Auf Acknowledge von FTS\_2 warten \textbullet
-            \item[1a3)] mit step 1 of Mainflow weitermachen
-        \end{itemize}
-    }
-    \addCollum{Alternative Flow 2}{
-        \item at step 4 of Mainflow
-        \item[4a)] Trigger war 1b)
-        \begin{itemize}
-            \item[4a1)] Acknowledge wird an FTS\_2 gesendet
-        \end{itemize}
+        \item[4)] LED am Stopp-Taster vom Control\_Panel einschalten
     }
     \addCollum{Postcondition}{
         \item System ist im Ruhezustand
-    }
-    \addCollum{Exceptional Flow 1}{
-        \item at Step 2a2 of Alternative Flow 1
-        \item[2a)] Timeout beim Warten auf Acknowledge
-        \begin{itemize}
-            \item[2a1)] Fehler auslösen
-        \end{itemize}
-    }
-    \addCollum{Postcondition of e.f.}{
-        \item System ist im Fehlerzustand
     }
 \end{usecase}
