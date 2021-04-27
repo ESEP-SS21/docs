@@ -1,0 +1,36 @@
+\begin{usecase}{06}{Discard workpiece}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        REQ-3, REQ-5, REQ-23, REQ-30, REQ-38, REQ-39
+    }
+    \addTextCollum{Description}{
+        In diesem Use-Case bewegt der Aussortiermechanismus der Anlage ein Werkstück vom Förderband in die Rutsche
+    }
+    \addTextCollum{Actors}{
+        LightBarrier\_Ramp, sorting\_mechanism
+    }
+    \addCollum{Precondition}{
+        \item Anlage befindet sich im Betriebszustand
+        \item Das betroffene Werkstück ist als 'discard' markiert
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Führe Aussortierung mit sorting\_mechanism durch
+        \item[2)] Warte auf Unterbrechung von LightBarrier\_Ramp \textbullet
+        \item[3)] Setze sorting\_mechanism zurück
+    }
+
+    \addCollum{Alternative flow 1}{
+        \item at step 4) of Mainflow
+        \item[4a)] LightBarrier\_Ramp ist nach zu langer Aussortierzeit nicht unterbrochen worden
+        \begin{itemize}
+            \item[4a1)] Warnung wird gesendet
+            \item[4a2)] Warte auf Unterbrechung von LightBarrier\_Ramp
+            \item[4a3)] Sende Nachricht, dass Warnung behoben ist
+            \item[4a4)] Go back to step 3) of Mainflow
+        \end{itemize}
+    }
+
+    \addCollum{Postcondition}{
+        \item Werkstück liegt in der Rampe
+        \item sorting\_mechanism ist zurückgesetzt
+    }
+\end{usecase}
