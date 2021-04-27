@@ -11,15 +11,14 @@
     welcher wie in der Statemachine~\ref{fig:stm_fehler} beschrieben ist.
     Wenn der Reset-Taster gedrückt wird, werden alle Fehler in der Fehlerliste quittiert.
     Fehler gelten als behoben, wenn ein Event die Behebung des Fehlers meldet.
-    Der Fehlerzustand der gesamten Anlage, somit auch die Anzeige der roten LED, wird durch den dem Fehler mit der höchsten Priorität in der Fehlerliste festgelegt. Die Fehlerzustände sind wie folgt priorisiert:
+    Der Fehlerzustand der gesamten Anlage, somit auch die Anzeige der roten LED,
+    wird durch den dem Fehler mit der höchsten Priorität in der Fehlerliste festgelegt. Die Fehlerzustände sind wie in Fehlerpriorität priorisiert.
+    Ist der globale Fehlerzustand anstehend\_unqittiert oder anstehend\_qittiert,
+    dann bleiben die Laufbänder beider Anlagen stehen und der Strom an den Aussortiermechanismen wird abgestellt.
     }
     \addCollum{Fehlerpriorität}{
-    \item[1)] astehend\_unqittiert. Wird durch ein dauerhaftes leuchten der roten LED signalisiert.
-    \item[2)] astehend\_qittiert. Wird durch wird durch schnelles Blinken (1 Hz) der roten LED signalisiert.
+    \item[1)] anstehend\_unqittiert. Wird durch ein dauerhaftes leuchten der roten LED signalisiert.
+    \item[2)] anstehend\_qittiert. Wird durch wird durch schnelles Blinken (1 Hz) der roten LED signalisiert.
     \item[3)] gegangen\_qittiert . Wird durch wird durch langsames Blinken (0,5 Hz) der roten LED signalisiert.
-    }
-    \addTextCollum{Description}{
-    Ist der globale Fehlerzustand astehend\_unqittiert oder astehend\_qittiert,
-    dann bleiben die Laufbänder beider Anlagen stehen und der Strom an den Aussortiermechanismen wird abgestellt.
     }
 \end{usecase}
