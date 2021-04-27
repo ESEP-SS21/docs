@@ -7,10 +7,9 @@
         gewechselt wird.
     }
     \addTextCollum{Actors}{
-        Stoplight, Control\_Panel, FTS\_2
+        Stoplight, Control\_Panel, FTS\_2, Conveyor\_Belt, Sorting\_Mechanism
     }
     \addCollum{Precondition}{
-        \item Es sind keine Fehler vorhanden
         \item System ist im Betriebszustand
     }
     \addCollum{Triggers}{
@@ -18,9 +17,11 @@
     }
     \addCollum{Mainflow}{
         \item[1)] Wechseln in Ruhezustand
-        \item[2)] Lampen an FTS und FTS\_2 wechseln auf gelb leuchtend
-        \item[3)] LED am Start-Taster vom Control\_Panel ausschalten
-        \item[4)] LED am Stopp-Taster vom Control\_Panel einschalten
+        \item[2)] Conveyor\_Belt abschalten
+        \item[3)] Sorting\_Mechanism in Ruhezustand
+        \item[4)] Lampen an FTS und FTS\_2 wechseln auf gelb leuchtend
+        \item[5)] LED am Start-Taster vom Control\_Panel ausschalten
+        \item[6)] LED am Stopp-Taster vom Control\_Panel einschalten
     }
     \addCollum{Postcondition}{
         \item System ist im Ruhezustand
