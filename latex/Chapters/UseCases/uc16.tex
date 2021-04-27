@@ -1,0 +1,35 @@
+\begin{usecase}{16}{Answer Transfer Request}{mittel}
+    \addTextCollum{Verwandte Requirements}{
+    REQ-9, REQ-14, REQ-16, REQ-18, REQ-31
+    }
+    \addTextCollum{Description}{
+    In diesem Use-Case wird eine Transfer Request, die von der Master-Anlage ausgeht, von der Slave-Anlage beantwortet
+    }
+    \addTextCollum{Actors}{
+    Conveyor\_Belt, FTS\_2, LightBarrier\_Height, LightBarrier\_Start
+    }
+    \addCollum{Precondition}{
+    \item Anlage ist im Betriebszustand
+    \item Anlage befindet sich im Secondary Mode
+    }
+    \addCollum{Trigger}{
+    \item Transfer Request mit Workpiece-Info von FTS\_2
+    }
+    \addCollum{Mainflow}{
+    \item[1)] Kein Werkstück befindet sich zwischen LightBarrier\_Start und LightBarrier\_Height \textbullet
+    \item[2)] Sende 'OK' an FTS\_2
+    }
+
+    \addCollum{Alternative Flow 1}{
+    \item at stept 1) of Mainflow
+    \item[1a)] Es befindet sich ein Werkstück zwischen LightBarrier\_Start und LightBarrier\_Height
+    \begin{itemize}
+        \item[1a1)] Warten auf Unterbrechung von LightBarrier\_Height
+        \item[1a1)] Go back to step 2) of Mainflow
+    \end{itemize}
+    }
+
+    \addCollum{Postcondition}{
+    \item Transfer Request beantwortet
+    }
+\end{usecase}
