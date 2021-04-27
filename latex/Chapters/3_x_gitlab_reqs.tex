@@ -4,7 +4,6 @@
     \begin{itemize}
         \item Es gibt flache Werkstücke (3), hohe Werkstücke mit Bohrung und Metalleinsatz (4), hohe Werkstücke
         mit Bohrung und ohne Metalleinsatz (5) und hohe Werkstücke ohne Bohrung (6).
-        Wenn das Werkstück 2.\ bzw\  3\. umgedreht wird, entspricht es Werkstück 4.
     \end{itemize}
     \item[REQ-2:] Am Ende des 2.\ Förderbandes sollen die Werkstücke in einer bestimmten Reihenfolge ankommen (1,7,8)
     \begin{itemize}
@@ -19,6 +18,7 @@
     \item[REQ-30:] Aussortierung soll mit Weiche funktionieren (41)
     \item[REQ-38:] Aussortierung soll mit Auswerfer funktionieren (41)
     \item[REQ-39:] Beliebige Kombinationen der Sortierer an den beiden Laufbändern sollen unterstützt werden. (42)
+    \item[REQ-47:] Wenn ein Werkstück mit Bohrung umgedreht wird, entspricht es einem hohen Werkstück ohne Bohrung.
 \end{itemize}
 
 \paragraph{Kapazität}
@@ -52,15 +52,15 @@
     \begin{itemize}
         \item Muss bei der Übergabe sichergestellt werden
     \end{itemize}
-    \item[REQ-18:] Falls bei der Übergabe zwischen den beiden Förderbändern sich ein Werkstücken
-    überschlägt, muss der Werkstücktyp beachtet werden. (20)
+    \item[REQ-18:] Falls sich bei der Übergabe zwischen den beiden Förderbändern ein Werkstücke
+    überschlägt, muss der neue Werkstücktyp beachtet werden. (20)
     \begin{itemize}
         \item Wir schließen den Fall aus, dass das Teil auf die Seite fällt, sodass es wegrollen könnte.
         Wenn sich das Werkstück überschlägt, ändert sich bei hohen Werkstücken der Typ.
     \end{itemize}
     \item[REQ-20:] Werkstücke dürfen nicht vom Band fallen (21)
-    \item[REQ-24:] Beim Einlegen eines Werkstückes in die Anlage soll diesem eine Eindeutige ID zugewiesen werden(28)
-    \item[REQ-26:] Wenn sich auf einem Förderband kein Wekstück befindet, stoppt dieses.
+    \item[REQ-24:] Beim Einlegen eines Werkstückes in die Anlage soll diesem eine eindeutige ID zugewiesen werden(28)
+    \item[REQ-26:] Wenn sich auf einem Förderband kein Werkstück befindet, stoppt dieses.
     \item[REQ-31:] Wenn ein Werkstück die Lichtschranke am Ende von FB2 erreicht,
     sollen Informationen dazu auf der Konsole ausgegeben werden (22, 23, 24, 25, 26, 27)
     \begin{itemize}
@@ -80,7 +80,7 @@
     \item[REQ-17:] Bei Betätigung des STOPP-Tasters wechselt die Anlage in den Ruhezustand (51, 52)
     \begin{itemize}
         \item Dafür müssen bestehende Fehler behoben und quittiert und gegangene Fehler quittiert sein.
-        Alles andere führt sowohl zu einer Fehlermeldung, als auch zu einem Nichtwechsel in den Ruhemodus.
+        Alles andere führt zu einer Fehlermeldung.
     \end{itemize}
     \item[REQ-21:] Bei Betätigung des RESET-Tasters werden sämtliche Fehler quittiert (53)
     \item[REQ-28:] Wenn die Anlage durch ESTOPP stillgelegt ist, kann der Betrieb durch Drücken des
@@ -114,8 +114,8 @@
         \item Anstehend unquittiert wird durch schnelles Blinken (1 Hz) signalisiert (74).
         Anstehend quittiert wird durch dauerhaftes Leuchten(75) signalisiert.
         Gegangen unquittiert wird durch langsames Blinken (0,5 Hz) signalisiert (z.B.\ wenn ein
-        Werkstück an einer Weiche zu langsam in die Rutsche geschoben wurde).
-        (76) Steht kein Fehleran, ist die Leuchte aus (73).
+        Werkstück an einer Weiche zu langsam in die Rutsche geschoben wurde) (76).
+        Steht kein Fehler an, ist die Leuchte aus (73).
     \end{itemize}
     \item[REQ-45:] Im Ruhezustand leuchtet die Lampe dauerhaft gelb
 \end{itemize}
@@ -130,7 +130,7 @@
     \end{itemize}
     \item[REQ-27:] Die Weiche darf nicht länger als 'x' auf offen stehen (35, 36)
     \begin{itemize}
-        \item Bei minutenlangen Stromflüss wird die Weiche beschädigt.
+        \item Bei minutenlangen Stromfluss wird die Weiche beschädigt.
     \end{itemize}
 \end{itemize}
 
@@ -141,7 +141,7 @@
     \item[REQ-29:] Die von der 'record'-Funktion vorgenommene Aufzeichnung soll menschenlesbar sein (91)
     \item[REQ-33:] Es soll eine 'replay'-Funktion bereitgestellt werden, mit der ein
     Benutzer eine zuvor aufgezeichnete Ereignissequenz abspielen lassen kann (93, 94)
-    \item[REQ-34:] Ereignissequenzen sollen per Hand angefertig werden können (95, 96)
+    \item[REQ-34:] Ereignissequenzen sollen per Hand angefertigt werden können (95, 96)
 \end{itemize}
 
 \paragraph{Höhenmessung}
@@ -164,8 +164,8 @@
     \item[REQ-46:] Der globale Fehlerzustand wird wie folgt festgelegt
     \begin{itemize}
         \item Der aktuell bestehende Fehler mit der höchsten Priorität entspricht dem Fehlerzustand der gesamten Anlage.
-        Die Fehlerzustände sind der folgenden Liste nach priorisiert: 1.\ Anstehend unquittiert 2\.
-        Anstehend quittiert \. Gegangen unquittiert 4.\ OK
+        Die Fehlerzustände sind der folgenden Liste nach priorisiert: 1.\ Anstehend unquittiert
+        2.\ Anstehend quittiert 3\ Gegangen unquittiert 4.\ OK
     \end{itemize}
 \end{itemize}
 
