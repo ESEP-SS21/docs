@@ -6,16 +6,16 @@
         In diesem Use-Case bewegt der Aussortiermechanismus der Anlage ein Werkstück vom Förderband in die Rutsche
     }
     \addTextCollum{Actors}{
-        LightBarrier\_Ramp, SortingMechanism
+        LightBarrier\_Ramp, sorting\_mechanism
     }
     \addCollum{Precondition}{
         \item Anlage befindet sich im Betriebszustand
         \item Das betroffene Werkstück ist als 'discard' markiert
     }
     \addCollum{Mainflow}{
-        \item[1)] Führe Aussortierung mit SortingMechanism durch
+        \item[1)] Führe Aussortierung mit sorting\_mechanism durch
         \item[2)] Warte auf Unterbrechung von LightBarrier\_Ramp \textbullet
-        \item[3)] Setze SortingMechanism zurück
+        \item[3)] Setze sorting\_mechanism zurück
     }
 
     \addCollum{Alternative flow 1}{
@@ -31,6 +31,6 @@
 
     \addCollum{Postcondition}{
         \item Werkstück liegt in der Rampe
-        \item LightBarrier\_Switch nicht mehr unterbrochen
+        \item sorting\_mechanism ist zurückgesetzt
     }
 \end{usecase}
