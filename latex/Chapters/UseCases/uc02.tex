@@ -1,13 +1,16 @@
 \begin{usecase}{02}{Determine Sorting Action}{hoch}
-    \addCollum{Precondition}{
-        \item Dem workpiece ist ein workpiece\_type zugeordnet
-    }
-    \addCollum{Actors}{
-        \item LightBarrier\_Ramp
+    \addTextCollum{Verwandte Requirements}{
+        REQ-1, REQ-2, REQ-3, REQ-6
     }
     \addTextCollum{Description}{
         Es wird bestimmt, ob ein workpiece aussortiert werden soll, oder nicht.
         Dafür muss der Vorgänger workpiece\_type gespeichert werden.
+    }
+    \addCollum{Actors}{
+        \item LightBarrier\_Ramp
+    }
+    \addCollum{Precondition}{
+        \item Dem workpiece ist ein workpiece\_type zugeordnet
     }
     \addCollum{Main flow}{
         \item[1)] Der aktuelle workpiece\_type wird mit dem erwarteten verglichen
@@ -35,8 +38,5 @@
     }    
     \addTextCollum{Postcondition}{
         Dem workpiece ist entweder do\_not\_discard oder discard zugeordnet
-    }
-    \addTextCollum{Verwandte Requirements}{
-        REQ-1, REQ-2, REQ-3, REQ-6
     }
 \end{usecase}

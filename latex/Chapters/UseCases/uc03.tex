@@ -1,0 +1,22 @@
+\begin{usecase}{03}{Handle Lightbarrier\_Switch}{hoch}
+    \addTextCollum{Description}{
+        Bindeglied zwischen \nameref{uc:02}, \nameref{uc:06} und \nameref{uc:15},
+    }
+    \addTextCollum{Trigger}{
+        Light\_Barrier\_Switch unterbrochen
+    }
+    \addCollum{Mainflow}{
+        \item[1)] UC2 determine sorting action
+        \item[2)] Sorting action ist discard\_workpiece \textbullet
+        \item[3)] UC6 discard\_workpiece
+    }
+    \addCollum{Alternate flow}{
+        \item at step 2) of Mainflow
+        \item[2a)] Sorting action ist do\_not\_discard\_workpiece
+        \begin{itemize}
+            \item[2a1)] UC15 do\_not\_discard\_workpiece
+            \item[2a1)] Ende des use cases
+        \end{itemize}
+    }
+    % postconditions sind in den jeweiligen unter UCs gehandelt.
+\end{usecase}
