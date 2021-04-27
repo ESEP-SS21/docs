@@ -3,10 +3,10 @@
         REQ-3, REQ-5, REQ-23, REQ-30, REQ-38, REQ-39
     }
     \addTextCollum{Description}{
-    In diesem Use-Case bewegt der Aussortiertmechanismus der Anlage ein Werkstück vom Förderband in die Rutsche
+    In diesem Use-Case bewegt der Aussortiermechanismus der Anlage ein Werkstück vom Förderband in die Rutsche
     }
     \addTextCollum{Actors}{
-    LightBarrier\_Switch, LightBarrier\_Ramp, SortingMechanism
+    LightBarrier\_Ramp, SortingMechanism
     }
     \addCollum{Precondition}{
     \item Anlage befindet sich im Betriebszustand
@@ -32,10 +32,5 @@
     \addCollum{Postcondition}{
     \item Werkstück liegt in der Rampe
     \item LightBarrier\_Switch nicht mehr unterbrochen
-    }
-
-    \addCollum{Postcondition of e.f.}{
-    \item LightBarrier\_Ramp unterbrochen
-    \item Die Anlage befindet sich im Fehlerzustand
     }
 \end{usecase}
