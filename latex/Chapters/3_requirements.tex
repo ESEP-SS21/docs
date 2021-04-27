@@ -1,6 +1,5 @@
 \chapter{Requirements und Use Cases}\label{ch:requirements-und-use-cases}
 
-
 \section{Systemebene}\label{sec:systemebene}
 
 %% Die Anforderungen aus der Aufgabenstellung sind nicht vollständig. Die Struktur der nachfolgenden Kapitel soll Sie bei der Strukturierung der Analyse unterstützen. Dokumentieren Sie die Ergebnisse der Analysen entsprechend.
@@ -56,6 +55,70 @@
 
 \subsection{Systemkontext}\label{subsec:systemkontext2}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{../out/diagrams/stage1/systemkontext.pdf}
+    \caption{Systemkontext}
+    \label{fig:systemkontext}
+\end{figure}
+
+
+Betrachte Abbildung \ref{fig:systemkontext}.
+Die Systemsicht bringt umliegende Aktorik des Systemkontext und System selber miteinander in Beziehung.
+
+\paragraph{Akteure}
+
+\begin{itemize}
+    \item Control\_Panel\\
+    Steuerungspanel der Anlage.
+    Sie stellt einen START-, STOP- und RESET-Button zur Verfügung.
+
+    \item Conveyor\_Belt\\
+    Auf Förderband werden Werkstücke durch das System bewegt.
+    \item FTS\_2\\
+    Die jeweils andere Förderanlage, mit der das System kommuniziert.
+    \item E\_Stop\\
+    Ein Button zum Auslösen des Emergency-Stops.
+    \item Metal\_Detector\\
+    Metall-Sensor zum Erfassen des Materials eines Werkstückes.
+    \item Height\_Measurement\\
+    Höhen-Sensor zum Erfassen des Materials eines Werkstückes.
+    \item Stoplight\\
+    Ampel, die durch verschiedene LED-Einstellungen Zustandsinformationen der Anlage anzeigt.
+    \item Sorting\_Mechanism\\
+    Das System besitzt allgemein einen Aussortier-Mechanismus.
+    Dieser ist in einer von zwei Varianten in die Anlage eingebaut:
+    \begin{itemize}
+        \item Ejector\\
+        Ein Auswerfer, der sich bei Stromzufluss ausfährt und so Werkstücke in die Rampe stoßen soll.
+        Ohne Strom ist der Aussortiermechanismus offen.
+        \item Switch\\
+        Eine Weiche, die sich bei Stromzufluss öffnet und Werkstücke durchlässt.
+        Ohne Strom ist der Aussortiermechanismus geschlossen und befördert Werkstücke langsam in die Rampe.
+    \end{itemize}
+    \item LightBarrier\\
+    Das System besitzt diverse Lichtschranken als Trigger und zur Steuerung des Kontrollflusses
+    \begin{itemize}
+        \item LightBarrier\_Start\\
+        Lichtschranke am Anfang eines Förderbandes.
+        Die Unterbrechung dieser Lichtschranke setzt das Förderband in Bewegung.
+        \item LightBarrier\_Ramp\\
+        Lichtschranke an der Rampe, in der die Werkstücke aussortiert werden.
+        Die kurze Unterbrechung dieser Lichtschranke kann als erfolgreiche Aussortierung interpretiert werden.
+        Eine stetige Unterbrechung signalisiert eine volle Rutsche.
+        \item LightBarrier\_Height\\
+        Lichtschranke an der Position des Höhensensors.
+        Die Unterbrechung dieser Lichtschranke startet eine Höhenmessung.
+        \item LightBarrier\_Switch\\
+        Lichtschranke vor dem Aussortiermechanismus der Anlage.
+        Die Unterbrechung startet den Aussortieralgorithmus.
+        \item LightBarrier\_End\\
+        Lichtschranke am Ende eines Förderbandes.
+        Die Unterbrechung dieser Lichtschranke kann das transferieren des Werkstückes an die nächste Anlage einleiten.
+        Am Ende der zweiten Anlage werden bei Unterbrechung dieser Lichtschranke Werkstück-Informationen an der Konsole ausgegeben.
+    \end{itemize}
+\end{itemize}
+
 %% Use Cases werden aus einer bestimmten Sicht erstellt.
 %% Dokumentieren Sie diese mittels Kontextdiagramm oder Use Case Diagramm.
 %% Die Use Cases und Test Cases müssen zu der hier verwendeten Nomenklatur konsistent sein.
@@ -69,10 +132,45 @@
 %% Pro Anforderung eine Tabelle benutzen. Die Tabelle nach Belieben vervielfältigen. >
 
 \input{Chapters/UseCases/uc1}
+\input{Chapters/UseCases/uc03}
 % eine referenz zu einem UC sieht so aus:
 siehe  \nameref{uc:1}.
 
+
 \input{Chapters/UseCases/uc08}
+
+\input{Chapters/UseCases/uc06.tex}
+
+
+\input{Chapters/UseCases/uc12}
+
+\input{Chapters/UseCases/uc07}
+
+\input{Chapters/UseCases/uc05}
+
+\input{Chapters/UseCases/uc11}
+
+\input{Chapters/UseCases/uc04}
+
+\input{Chapters/UseCases/uc9}
+
+\input{Chapters/UseCases/uc16}
+
+\input{Chapters/UseCases/uc02}
+
+\input{Chapters/UseCases/uc10}
+
+\input{Chapters/UseCases/uc17}
+
+\input{Chapters/UseCases/uc14}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{../out/diagrams/stage1/req-fehlerzustand.pdf}
+    \caption{Fehlerzustände}
+    \label{fig:stm_fehler}
+\end{figure}
+
 
 
 \section{Systemanalyse}\label{sec:systemanalyse}
@@ -82,6 +180,68 @@ siehe  \nameref{uc:1}.
 %% Verhalten und an Besonderheiten wissen?
 %% Wählen Sie eine Kapitelstruktur, die am besten zur Dokumentation Ihrer Ergebnisse geeignet ist.
 
+\subsection{Art des Systems}
+
+Bei dem zu entwerfenden System handelt es sich um die Steuerung eines Festo-Transfersystems, welche auf einem in die Anlage integrierten BeagleBoneBlack Einplatinencomputer zu realisieren ist.
+Daher handelt es sich um ein Embedded System. 
+Für das Zu entwickelnde Softwaresystem bedeutet dies, dass es zur Steuerung der Prozesse sehr nah an der in der Anlage verbauten Hardware arbeiten muss. 
+Ein weiterer wichtiger Punkt ist, dass das System mit einer weiteren gleichartigen Anlage über das Netzwerk kommunizieren muss. Dies ist ebenfalls im Entwurfsprozess zu berücksichtigen.
+
+\subsubsection{Eigenschaften des BeagleBoneBlack und Grundlagen QNX}
+
+Auf dem BeagleBoneBlack Einplatinencomputer läuft das Echtzeitbetriebssystem QNX, das Kommunikation zwischen Prozessen und Threads mittels Message Passing bevorzugt.
+Dieses Message Passing kann auch über das Netzwerk erfolgen, sodass Messages auch unkompliziert an einen weiteren BeagleBoneBlack geschickt werden können. 
+Die Architektur sollte sich daher auf Message-Passing stützen, gerade um die Kommunikation mit der anderen gleichartigen Anlage zu erleichtern.
+Da der BeagleBoneBlack ein eigenes Stück Hardware mit eigenem Betriebssystem ist, muss für die Entwicklung die Entwicklungsumgebung QNX Momentics benutzt werden, die Debugging und Testing ermöglicht.
+Die Kommunikation mit dem BeagleBoneBlack und dem Entwicklungsrechner erfolgt über die Netzwerkverbindung.
+
+\subsection{Kommunikation mit der Hardware}
+
+Die Ansteuerung der Aktorik und Sensorik der Anlage erfolgt direkt über die GPIOs des BeagleBoneBlack. 
+Die Sensorik ist hierbei an GPIO0, die Aktorik des Transfersystems an GPIO1 und die LEDs des Bedienpanels an GPIO2.
+Bei den GPIOs können Bits einzeln gesetzt und gelöscht werden und es können die aktuellen Werte ausgelesen werden.
+Auf Veränderung an den GPIOs kann mittels pro Pin konfigurierbarer Interrupts (steigende Flanke, fallende Flanke, Level=0, Level=1) reagiert werden.
+Interrupts lassen sich nach dem Auslösen für einen einstellbare Zeit ignorieren (Debouncing).
+Um später nicht direkt mit den GPIOs interagieren zu müssen, sollte ein Hardware Abstraction Layer einfachere Schnittstellen zum Ansteuern der Aktorik und für das Reagieren auf die Sensorik bereitstellen.
+Der Höhensensor ist am ADC des BeagleBoneBlack angeschlossen. Dieser kann über das Schreiben in ein bestimmtes GPIO-Register aktiviert werden und kann dann nach erfolgreicher Messung einen Interrupt auslösen.
+
+\subsection{Besonderheiten beim Systemaufbau}
+
+Bei genauerer Betrachtung des Systemaufbaus fallen folgende Eigenschaften und Zusammenhänge besonders auf. 
+Sie sind bei der Verhaltensmodellierung zu berücksichtigen und könnten das Erkennen von Szenarien vereinfachen.
+
+\subsubsection{Platzierung der Lichtschranke bei der Höhenmessung}
+
+Die Lichtschranke an der Höhenmessung ist so platziert, dass sich die Mitte eines Werkstücks bei ihrer Unterbrechung genau unter dem Höhenmesser befindet. 
+Auf diese Art lassen sich die unterschiedlichen Formen von Werkstücken mittels einer einzelnen Messung Unterscheiden. 
+Die gemessenen Höhen bei unterschiedlichen Werkstückarten gehen aus Tabelle~\ref{tab:werkstuecke} hervor.
+
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{ |c|c| }
+            \hline
+            Form                     & Höhe in mm \\
+            \hline\hline
+            HOCH                 &  25,0-25,4\\
+            \hline
+            FLACH                     & 21 \\
+            \hline
+            LOCH               & 15,8-16,4 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Höhen der unterschiedlichen Werkstückarten}
+    \label{tab:werkstuecke}
+\end{table}
+
+Ebenso fällt auf, dass der Abstand der Lichtschranke für die Höhenmessung vom Anfang des Förderbands ca. 25 cm beträgt, was für die Bestimmung des Abstands bei der Werkstückübergabe zwischen zwei Anlagen wichtig sein könnte.
+
+\subsubsection{Der Aufbau im Bereich des Aussortiermechnaismus}
+
+Im Transportweg der Werkstücke befindet sich an der Stelle an der im Falle einer Weiche diese spätestens für Durchlass öffnen muss und im Falle eines Auswerfers dieser das Werkstück auswerfen muss eine Lichtschranke.
+Das Unterbrechen dieser Lichtschranke kann daher als Signal zum Starten des Aussortiervorgangs verstanden werden. 
+Oberhalb des Werkstücks befindet sich in dieser Position auch der Metallsensor.
+Bei einer Anlage mit Weiche ist wichtig, dass diese bei längerem Verharren im geöffneten Zustand beschädigt werden kann.
 
 \section{Softwareebene}\label{sec:softwareebene}
 
@@ -100,4 +260,3 @@ siehe  \nameref{uc:1}.
 
 %% Welche wesentlichen Anforderungen ergeben sich aus den Systemanforderungen für Ihre Software?
 %% Berücksichtigen Sie auch mögliche Fehlbedienungen und Fehlverhalten des Systems.
-
