@@ -39,6 +39,9 @@
             \item[4a1)] Acknowledge wird an FTS\_2 gesendet
         \end{itemize}
     }
+    \addCollum{Postcondition}{
+        \item System ist im Ruhezustand
+    }
     \addCollum{Exceptional Flow 1}{
         \item at Step 2a2 of Alternative Flow 1
         \item[2a)] Timeout beim Warten auf Acknowledge
@@ -46,10 +49,7 @@
             \item[2a1)] Fehler auslösen
         \end{itemize}
     }
-    \addCollum{Postcondition Exceptional Flow 1}{
+    \addCollum{Postcondition of e.f.}{
         \item System ist im Fehlerzustand
-    }
-    \addCollum{Postcondition}{
-        \item System ist im Ruhezustand
     }
 \end{usecase}
