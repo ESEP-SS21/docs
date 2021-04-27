@@ -156,6 +156,24 @@ siehe  \nameref{uc:1}.
 \input{Chapters/UseCases/uc17}
 
 
+\subsection{ErrorHandler}
+Der ErrorHandler verwaltet alle Fehler, die im System auftreten.
+Immer wenn ein Fehler-Event ausgelöst wird, legt der ErrorHandler diese in eine Fehlerliste ab.
+Jeder Fehler hat zwei Flags. Die Acknowledge-Flag gibt an, ob der Fehler schon quittiert wurde.
+Wenn sie auf 0 steht, dann wurde der Fehler quittiert.
+Die Present-Flag gibt an, ob der Fehler noch vorhanden ist. Wenn diese Flag auf 0 steht, dann wurde mit einem Event die Behebung des Fehlers gemeldet. #
+Stehen beide Flags auf 0, wurde der Fehler behoben und wird somit aus der Fehlerliste gelöscht.
+Durch das Betätigen des Reset-Tasters werden alle Fehler, die sich zu diesem Zeitpunkt in der Fehlerliste befinden, quittiert.
+
+Das System ist immer Fehlerzustand des Fehlers mit der höchsten Priorität. Die Zustände sind wie folgt priorisiert:
+\begin{itemize}
+    \item[1)] astehend\_unqittiert. Wird durch ein dauerhaftes leuchten der roten LED dargestelt.  Ein Fehler hat diesen Zustand, wenn beide Flags gesetzt sind.
+    \item[2)] astehend\_qittiert. Wird durch wird durch schnelles Blinken (1 Hz) der roten LED signalisiert. Ein Fehler hat diesen Zustand, wenn nur die Acknowledge-Flag auf 0 steht.
+    \item[3)] gegangen\_qittiert . Wird durch wird durch langsames Blinken (0,5 Hz) der roten LED signalisiert. Ein Fehler hat diesen Zustand, wenn nur die Present-Flag auf 0 steht.
+\end{itemize}
+Wenn kein Fehler in der Fehlerliste vorhanden ist, dann verlässt das System den Fehlerzustand.
+
+
 \section{Systemanalyse}\label{sec:systemanalyse}
 
 %% Ihr technisches System hat aus Sicht der Software bestimmte Eigenschaften.
