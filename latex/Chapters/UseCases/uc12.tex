@@ -1,42 +1,25 @@
 \begin{usecase}{12}{Handle Error}{hoch}
     \addTextCollum{Verwandte Requirements}{
-    REQ-36, REQ-37
-    }
-    \addTextCollum{Description}{
-    Dieser Use Case beschreibt die Fehlerzustände und Anzeige der roten LED beim Auftritt eines Fehlers
-    Fehler müssen quittiert und behoben werden.
+    REQ-21, REQ-36, REQ-37, REQ-43, REQ-46
     }
     \addTextCollum{Actors}{
     Stoplight, Control\_Panel
-    }\addTextCollum{Precondition}{
-    Ein Fehler im System ist neu aufgetreten
     }
-    \addTextCollum{Trigger}{
-    Ein Fehler ist aufgetreten
+    \addTextCollum{Description}{
+    Der ErrorHandler verwaltet alle Fehler, die im System auftreten. Immer wenn ein Fehler-Event ausgelöst wird,
+    legt der ErrorHandler diese in eine Fehlerliste ab. Jeder Fehler hat einen Fehlerzustand,
+    welcher wie in der Statemachine~\ref{fig:stm_fehler} beschrieben ist.
+    Wenn der Reset-Taster gedrückt wird, werden alle Fehler in der Fehlerliste quittiert.
+    Fehler gelten als behoben, wenn ein Event die Behebung des Fehlers meldet.
+    Der Fehlerzustand der gesamten Anlage, somit auch die Anzeige der roten LED, wird durch den dem Fehler mit der höchsten Priorität in der Fehlerliste festgelegt. Die Fehlerzustände sind wie folgt priorisiert:
     }
-    \addCollum{Mainflow}{
-    \item[1)] Das System geht in den Fehlerzustand astehend\_unqittiert
-    \item[2)] Rote LED blinkt schnell(1Hz)
-    \item[3)] Warte bis Reset-Taster gedrückt wird  \textbullet
-    \item[4)] Fehler wurde acknowledged
-    \item[5)] Fehlerzustand wechselt zu astehend\_qittiert
-    \item[6)] Rote LED leuchtet dauerhaft
-    \item[7)] Warte bis alle Fehler behoben sind
-    \item[8)] System verlässt Fehlerzustand
-    \item[9)] Rote LED wird ausgeschaltet
+    \addCollum{Fehlerpriorität}{
+    \item[1)] astehend\_unqittiert. Wird durch ein dauerhaftes leuchten der roten LED signalisiert.
+    \item[2)] astehend\_qittiert. Wird durch wird durch schnelles Blinken (1 Hz) der roten LED signalisiert.
+    \item[3)] gegangen\_qittiert . Wird durch wird durch langsames Blinken (0,5 Hz) der roten LED signalisiert.
     }
-    \addCollum{Alternate flow 1}{
-    \item at step 3 of Mainflow
-    \item[3a)] Fehler wurde behoben
-    \begin{itemize}
-        \item[3a1)] Fehlerzustand wechselt gegangen\_unqittiert
-        \item[3a2)] Rote LED blinkt langsam(0,5Hz)
-        \item[3a3)] Warte bis Reset-Taster gedrückt wird
-        \item[3a4)] Fehler wurde acknowledged
-        \item[3a5)] Zum Schritt 7 des main flow zurückkehren
-    \end{itemize}
-    }
-    \addTextCollum{Postcondition}{
-    Aufgetretener Fehler wurden behoben und System ist wieder im Normalbetrieb
+    \addTextCollum{Description}{
+    Ist der globale Fehlerzustand astehend\_unqittiert oder astehend\_qittiert,
+    dann bleiben die Laufbänder beider Anlagen stehen und der Strom an den Aussortiermechanismen wird abgestellt.
     }
 \end{usecase}
