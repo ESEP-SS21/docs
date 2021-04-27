@@ -1,171 +1,140 @@
+\paragraph{Werkstücke und Sortierung}
 \begin{itemize}
-    \item[REQ-1][Werkstücke und Sortierung] Die Anlage kann zwischen vier Typen von Werkstücken unterscheiden (2, 3, 4, 5, 6)
+    \item[REQ-1] Die Anlage kann zwischen vier Typen von Werkstücken unterscheiden (2, 3, 4, 5, 6)
     \begin{itemize}
         \item Es gibt flache Werkstücke (3), hohe Werkstücke mit Bohrung und Metalleinsatz (4), hohe Werkstücke mit Bohrung und ohne Metalleinsatz (5) und hohe Werkstücke ohne Bohrung (6). Wenn das Werkstück 2. bzw. 3. umgedreht wird, entspricht es Werkstück 4.
     \end{itemize}
-    \item[REQ-2][Werkstücke und Sortierung] Am Ende des 2. Förderbandes sollen die Werkstücke in einer bestimmten Reihenfolge ankommen (1,7,8)
+    \item[REQ-2] Am Ende des 2. Förderbandes sollen die Werkstücke in einer bestimmten Reihenfolge ankommen (1,7,8)
     \begin{itemize}
         \item Einzelne Werkstücke sollen zyklisch in folgender Reihenfolge ankommen: hohe Werkstücke mit Bohrung und Metalleinsatz -> hohe Werkstücke mit Bohrung und ohne Metalleinsatz -> Flaches Werkstück
     \end{itemize}
-    \item[REQ-3][Werkstücke und Sortierung] Werkstücke, die nicht in die Sortierreihenfolge passen werden in ein der beiden Rutschen aussortiert (9, 10)
+    \item[REQ-3] Werkstücke, die nicht in die Sortierreihenfolge passen werden in ein der beiden Rutschen aussortiert (9, 10)
     \begin{itemize}
         \item siehe [REQ-2]
     \end{itemize}
-    \item[REQ-4][Werkstücke und Sortierung] Der Durchsatz an Werkstücken ist zu optimieren (11)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-30][Werkstücke und Sortierung] Aussortierung soll mit Weiche funktionieren (41)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-38][Werkstücke und Sortierung] Aussortierung soll mit Auswerfer funktionieren (41)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-39][Werkstücke und Sortierung] Beliebige Kombinationen der Sortierer an den beiden Laufbändern sollen unterstützt werden. (42)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-5][Kapazität] Eine volle Rutsche ist an der Anlage zu signalisieren (12)
+    \item[REQ-4] Der Durchsatz an Werkstücken ist zu optimieren (11)
+    \item[REQ-30] Aussortierung soll mit Weiche funktionieren (41)
+    \item[REQ-38] Aussortierung soll mit Auswerfer funktionieren (41)
+    \item[REQ-39] Beliebige Kombinationen der Sortierer an den beiden Laufbändern sollen unterstützt werden. (42)
+\end{itemize}
+
+\paragraph{Kapazität}
+\begin{itemize}
+    \item[REQ-5] Eine volle Rutsche ist an der Anlage zu signalisieren (12)
     \begin{itemize}
         \item "LED ""Rutsche voll"" an der Anlage soll angeschaltet werden."
     \end{itemize}
-    \item[REQ-6][Kapazität] Wenn die nächste notwendige Aussortierung aufgrund von ausgeschöpfter Rutschenkapazität nicht stattfinden kann, wird der Gesamtbetrieb gestoppt (13)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-7][Durchlassablauf] Zuführung von Werkstücken erfolgt durch einlegen von Werkstücken in der Lichtschranke am Anfang von Förderband 1 (14,15)
+    \item[REQ-6] Wenn die nächste notwendige Aussortierung aufgrund von ausgeschöpfter Rutschenkapazität nicht stattfinden kann, wird der Gesamtbetrieb gestoppt (13)
+\end{itemize}
+
+\paragraph{Durchlassablauf}
+\begin{itemize}
+    \item[REQ-7] Zuführung von Werkstücken erfolgt durch einlegen von Werkstücken in der Lichtschranke am Anfang von Förderband 1 (14,15)
     \begin{itemize}
         \item Ein Unterbrechen der Lichtschranke signalisiert dem System das Einlegen eines Werkstücks, sodass mit dem Sortiervorgang von diesem begonnen werden kann.
     \end{itemize}
-    \item[REQ-9][Durchlassablauf] Das System muss mit in beliebigem Abstand eingelegten Werkstücken umgehen können(16,17)
+    \item[REQ-9] Das System muss mit in beliebigem Abstand eingelegten Werkstücken umgehen können(16,17)
     \begin{itemize}
         \item Solange der Bereich der ersten Lichtschranke frei ist, muss der Benutzer Werkstücke einlegen können, ohne die Korrektheit der Funktion zu gefährden.
     \end{itemize}
-    \item[REQ-14][Durchlassablauf] Der Abstand von Werkstücken auf Förderband 2 muss mindestens 25 cm betragen (18)
+    \item[REQ-14] Der Abstand von Werkstücken auf Förderband 2 muss mindestens 25 cm betragen (18)
     \begin{itemize}
         \item Bedingung muss vor der Übergabe sichergestellt werden
     \end{itemize}
-    \item[REQ-16][Durchlassablauf] Auf dem Förderband von Anlage 2 dürfen sich maximal 2 Werkstücke befinden (19)
+    \item[REQ-16] Auf dem Förderband von Anlage 2 dürfen sich maximal 2 Werkstücke befinden (19)
     \begin{itemize}
         \item Muss bei der Übergabe sichergestellt werden
     \end{itemize}
-    \item[REQ-18][Durchlassablauf] Falls bei der Übergabe zwischen den beiden Förderbändern sich ein Werkstücken überschlägt, muss der Werkstücktyp beachtet werden. (20)
+    \item[REQ-18] Falls bei der Übergabe zwischen den beiden Förderbändern sich ein Werkstücken überschlägt, muss der Werkstücktyp beachtet werden. (20)
     \begin{itemize}
         \item Wir schließen den Fall aus, dass das Teil auf die Seite fällt, sodass es wegrollen könnte. Wenn sich das Werkstück überschlägt, ändert sich bei hohen Werkstücken der Typ.
     \end{itemize}
-    \item[REQ-20][Durchlassablauf] Werkstücke dürfen nicht vom Band fallen (21)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-24][Durchlassablauf] Beim Einlegen eines Werkstückes in die Anlage soll diesem eine Eindeutige ID zugewiesen werden(28)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-26][Durchlassablauf] Wenn sich auf einem Förderband kein Wekstück befindet, stoppt dieses.
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-31][Durchlassablauf] Wenn ein Werkstück die Lichtschranke am Ende von FB2 erreicht, sollen Informationen dazu auf der Konsole ausgegeben werden (22, 23, 24, 25, 26, 27)
+    \item[REQ-20] Werkstücke dürfen nicht vom Band fallen (21)
+    \item[REQ-24] Beim Einlegen eines Werkstückes in die Anlage soll diesem eine Eindeutige ID zugewiesen werden(28)
+    \item[REQ-26] Wenn sich auf einem Förderband kein Wekstück befindet, stoppt dieses.
+    \item[REQ-31] Wenn ein Werkstück die Lichtschranke am Ende von FB2 erreicht, sollen Informationen dazu auf der Konsole ausgegeben werden (22, 23, 24, 25, 26, 27)
     \begin{itemize}
         \item Zu den Informationen zählen die ID, Typ, Höhe auf FB1 und FB2 des Werkstücks als auch ein Hinweis darüber, ob sich das Werkstück überschlagen hat.
     \end{itemize}
-    \item[REQ-12][Bedienung durch Taster] Bei Betätigung des START-Tasters wechselt die Anlage in den Betriebszustand (49)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-15][Bedienung durch Taster] Bei Langem Drücken von drei Sekunden des START-Tasters wechselt die Anlage in den Service-Modus (50)
+\end{itemize}
+
+\paragraph{Bedienung durch Taster}
+\begin{itemize}
+    \item[REQ-12] Bei Betätigung des START-Tasters wechselt die Anlage in den Betriebszustand (49)
+    \item[REQ-15] Bei Langem Drücken von drei Sekunden des START-Tasters wechselt die Anlage in den Service-Modus (50)
     \begin{itemize}
         \item Im Service Modus führt die Anlage Kalibrierung und Selbsttests durch. Anforderung hierfür ist, dass die Anlage im Ruhezustand ist.
     \end{itemize}
-    \item[REQ-17][Bedienung durch Taster] Bei Betätigung des STOPP-Tasters wechselt die Anlage in den Ruhezustand (51, 52)
+    \item[REQ-17] Bei Betätigung des STOPP-Tasters wechselt die Anlage in den Ruhezustand (51, 52)
     \begin{itemize}
         \item Dafür müssen bestehende Fehler behoben und quittiert und gegangene Fehler quittiert sein. Alles andere führt sowohl zu einer Fehlermeldung, als auch zu einem Nichtwechsel in den Ruhemodus.
     \end{itemize}
-    \item[REQ-21][Bedienung durch Taster] Bei Betätigung des RESET-Tasters werden sämtliche Fehler quittiert (53)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-28][Bedienung durch Taster] Wenn die Anlage durch ESTOPP stillgelegt ist, kann der Betrieb durch Drücken des RESET-TASTERs der Anlage, an dem auch der E-Stopp-Schalter gedrückt wurde, fortgesetzt werden (56)
+    \item[REQ-21] Bei Betätigung des RESET-Tasters werden sämtliche Fehler quittiert (53)
+    \item[REQ-28] Wenn die Anlage durch ESTOPP stillgelegt ist, kann der Betrieb durch Drücken des RESET-TASTERs der Anlage, an dem auch der E-Stopp-Schalter gedrückt wurde, fortgesetzt werden (56)
     \begin{itemize}
         \item Bedingung dafür: Keine ESTOPP-Schalter sind gedrückt
     \end{itemize}
-    \item[REQ-40][Bedienung durch Taster] Im Service Modus führt die Anlage beispielsweise Kalibrierung und Selbsttests durch (50)
+    \item[REQ-40] Im Service Modus führt die Anlage beispielsweise Kalibrierung und Selbsttests durch (50)
     \begin{itemize}
         \item Aus dem Anforderungsdokument geht dies nicht eindeutig hervor, dies muss in zukünftig spezifiziert werden.
     \end{itemize}
-    \item[REQ-41][Bedienung durch Taster] Bei Betätigung des ESTOPP-Schalters werden beide Förderbandmodule angehalten (54, 55)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-42][Bedienung durch Taster] Dem Benutzer werden Hinweise über die Benutzung der Anlage mithilfe der LEDs an der Tastatern gegeben
+    \item[REQ-41] Bei Betätigung des ESTOPP-Schalters werden beide Förderbandmodule angehalten (54, 55)
+    \item[REQ-42] Dem Benutzer werden Hinweise über die Benutzung der Anlage mithilfe der LEDs an der Tastatern gegeben
     \begin{itemize}
         \item Im Betriebszustand ist die LED am Start-Taster an, im Ruhezustand die LED am Stopptaster. Bei einem gegangenen oder bestehenden Fehler ist die LED am RESET-Taster an.
     \end{itemize}
-    \item[REQ-10][Zustandsanzeigen] Im Betriebszustand leuchtet die Lampe grün dauerhaft (59)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-11][Zustandsanzeigen] Im Service-Mode blinkt die Lampe grün (60)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-13][Zustandsanzeigen] Bei Warnungen blinkt die Lampe gelb (61)
+\end{itemize}
+
+\paragraph{Zustandsanzeigen}
+\begin{itemize}
+    \item[REQ-10] Im Betriebszustand leuchtet die Lampe grün dauerhaft (59)
+    \item[REQ-11] Im Service-Mode blinkt die Lampe grün (60)
+    \item[REQ-13] Bei Warnungen blinkt die Lampe gelb (61)
     \begin{itemize}
         \item Eine Warnung ist, dass die Rutsche an der Anlage voll ist.
     \end{itemize}
-    \item[REQ-19][Zustandsanzeigen] Wenn keine Warnungen vorliegen ist die gelbe Lampe aus (61)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-37][Zustandsanzeigen] Die rote LED signalisiert die Fehlerzustände wie folgt (73, 74, 75, 76):
+    \item[REQ-19] Wenn keine Warnungen vorliegen ist die gelbe Lampe aus (61)
+    \item[REQ-37] Die rote LED signalisiert die Fehlerzustände wie folgt (73, 74, 75, 76):
     \begin{itemize}
         \item Anstehend unquittiert wird durch schnelles Blinken (1 Hz) signalisiert (74). Anstehend quittiert wird durch dauerhaftes Leuchten(75) signalisiert. Gegangen unquittiert wird durch langsames Blinken (0,5 Hz) signalisiert (z.B. wenn ein Werkstück an einer Weiche zu langsam in die Rutsche geschoben wurde). (76) Steht kein Fehleran, ist die Leuchte aus (73). Die Fehlerzustände sind der Liste nach priorisiert. Es wird stets der Zustand mit der höchsten Priorität angezeigt.
     \end{itemize}
-    \item[REQ-45][Zustandsanzeigen] Im Ruhezustand leuchtet die Lampe dauerhaft gelb
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-23][Weiche] Verklemmen der Weiche soll überwacht werden (37)
+    \item[REQ-45] Im Ruhezustand leuchtet die Lampe dauerhaft gelb
+\end{itemize}
+
+\paragraph{Weiche}
+\begin{itemize}
+    \item[REQ-23] Verklemmen der Weiche soll überwacht werden (37)
     \begin{itemize}
         \item Ein Werkstück ist verklemmt, wenn das Werkstück, abzüglich der Toleranz von 50% der durchschnittlichen Aussortierzeit, länger als erwartet braucht, um in der Rutsche anzukommen. Daraufhin wird eine Warnung ausgesendet, bis das Teil in der Rampe ankommt.
     \end{itemize}
-    \item[REQ-27][Weiche] Die Weiche darf nicht länger als 'x' auf offen stehen (35, 36)
+    \item[REQ-27] Die Weiche darf nicht länger als 'x' auf offen stehen (35, 36)
     \begin{itemize}
         \item Bei minutenlangen Stromflüss wird die Weiche beschädigt.
     \end{itemize}
-    \item[REQ-25][Embedded Recorder] Es soll eine 'record'-Funktion bereitgestellt werden, mit der ein Benutzer das gesamte Ereignisprotokoll der Anlage aufzeichnen kann (90)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-29][Embedded Recorder] Die von der 'record'-Funktion vorgenommene Aufzeichnung soll menschenlesbar sein (91)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-33][Embedded Recorder] Es soll eine 'replay'-Funktion bereitgestellt werden, mit der ein Benutzer eine zuvor aufgezeichnete Ereignissequenz abspielen lassen kann (93, 94)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-34][Embedded Recorder] Ereignissequenzen sollen per Hand angefertig werden können (95, 96)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-32][Höhenmessung] Höhenmessung muss Kippung des Lasers mit einbeziehen (43, 44)
-    \begin{itemize}
-        \item
-    \end{itemize}
-    \item[REQ-35][Fehlerumgang] Nach Behebung eines Fehlers soll der Normalbetrieb fortgesetzt werden. (45, 46)
+\end{itemize}
+Embedded Recorder
+\paragraph{Embedded Recorder}
+\begin{itemize}
+    \item[REQ-25] Es soll eine 'record'-Funktion bereitgestellt werden, mit der ein Benutzer das gesamte Ereignisprotokoll der Anlage aufzeichnen kann (90)
+    \item[REQ-29] Die von der 'record'-Funktion vorgenommene Aufzeichnung soll menschenlesbar sein (91)
+    \item[REQ-33] Es soll eine 'replay'-Funktion bereitgestellt werden, mit der ein Benutzer eine zuvor aufgezeichnete Ereignissequenz abspielen lassen kann (93, 94)
+    \item[REQ-34] Ereignissequenzen sollen per Hand angefertig werden können (95, 96)
+\end{itemize}
+
+\paragraph{Höhenmessung}
+\begin{itemize}
+    \item[REQ-32] Höhenmessung muss Kippung des Lasers mit einbeziehen (43, 44)
+\end{itemize}
+
+\paragraph{Fehlerumgang}
+\begin{itemize}
+    \item[REQ-35] Nach Behebung eines Fehlers soll der Normalbetrieb fortgesetzt werden. (45, 46)
     \begin{itemize}
         \item Nach Möglichkeit sollen die Laufbänder nicht geräumt werden.
     \end{itemize}
-    \item[REQ-43][Fehlerumgang] In den Zuständen 'bestehend\_unquittiert' und 'bestehend\_quittiert' bleiben die Laufbänder beider Anlagen stehen und den Aussortiermechanismen wird der Strom abgestellt
+    \item[REQ-43] In den Zuständen 'bestehend\_unquittiert' und 'bestehend\_quittiert' bleiben die Laufbänder beider Anlagen stehen und den Aussortiermechanismen wird der Strom abgestellt
     \begin{itemize}
         \item Die Fehleranzeige über die Ampel ist in REQ-37 spezifiziert
     \end{itemize}
-    \item[REQ-36][Fehlerzustände] Fehlerzustand soll wie in stm beschrieben sein. (65, 66, 67, 69, 70)
-    \begin{itemize}
-        \item
-    \end{itemize}
-
+    \item[REQ-36] Fehlerzustand soll wie in stm beschrieben sein. (65, 66, 67, 69, 70)
 \end{itemize}
