@@ -1,14 +1,14 @@
 \begin{usecase}{12}{Handle Error}{hoch}
     \addTextCollum{Verwandte Requirements}{
-    REQ-21, REQ-36, REQ-37, REQ-43, REQ-46
+        REQ-21, REQ-36, REQ-37, REQ-43, REQ-46
     }
     \addTextCollum{Actors}{
-    Stoplight, Control\_Panel
+        Stoplight, Control\_Panel
     }
     \addTextCollum{Description}{
     Der ErrorHandler verwaltet alle Fehler, die im System auftreten. Immer wenn ein Fehler-Event ausgelöst wird,
     legt der ErrorHandler diese in eine Fehlerliste ab. Jeder Fehler hat einen Fehlerzustand,
-    welcher wie in der Statemachine~\ref{fig:stm_fehler} beschrieben ist.
+    welcher wie in der Statemachine~\ref{fig:stm-fehlerzustand} beschrieben ist.
     Wenn der Reset-Taster gedrückt wird, werden alle Fehler in der Fehlerliste quittiert.
     Fehler gelten als behoben, wenn ein Event die Behebung des Fehlers meldet.
     Der Fehlerzustand der gesamten Anlage, somit auch die Anzeige der roten LED,

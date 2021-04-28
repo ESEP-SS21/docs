@@ -1,40 +1,40 @@
 \begin{usecase}{04}{Transfer Workpiece}{mittel}
     \addTextCollum{Verwandte Requirements}{
-    REQ-9, REQ-14, REQ-16, REQ-18, REQ-31
+        REQ-9, REQ-14, REQ-16, REQ-18, REQ-31
     }
     \addTextCollum{Description}{
-    In diesem Use-Case erreicht ein Werkstück das Ende eines Förderbandes und wird gegebenenfalls an das nächste Förderband transferiert
+        In diesem Use-Case erreicht ein Werkstück das Ende eines Förderbandes und wird gegebenenfalls an das nächste Förderband transferiert
     }
     \addTextCollum{Actors}{
-    Conveyor\_Belt, FTS\_2, LightBarrier\_End
+        Conveyor\_Belt, FTS\_2, LightBarrier\_End
     }
 
     \addCollum{Precondition}{
-    \item Anlage befindet sich im Betriebszustand
+        \item Anlage befindet sich im Betriebszustand
     }
 
     \addCollum{Trigger}{
-    \item LightBarrier\_End wird unterbrochen
+        \item LightBarrier\_End wird unterbrochen
     }
 
     \addCollum{Mainflow}{
-    \item[1)] Die Anlage ist in Primary Mode \textbullet
-    \item[2)] Conveyor\_Belt stoppen
-    \item[3)] Anfrage zum transferieren und Werkstück\-Informationen an FTS\_2 senden
-    \item[4)] Auf 'OK' von FTS\_2 warten
-    \item[5)] Conveyor\_Belt in Bewegung setzen und Werkstück transferieren
+        \item[1)] Die Anlage ist in Primary Mode \textbullet
+        \item[2)] Conveyor\_Belt stoppen
+        \item[3)] Anfrage zum transferieren und Werkstück\-Informationen an FTS\_2 senden
+        \item[4)] Auf 'OK' von FTS\_2 warten
+        \item[5)] Conveyor\_Belt in Bewegung setzen und Werkstück transferieren
     }
 
     \addCollum{Alternative Flow 1}{
-    \item at step 1) of Mainflow
-    \item[1a)] Die Anlage ist in Secondary Mode
-    \begin{itemize}
-        \item[1a1)] Ausgabe der ID, des Typs, Höhe\_FB1 und Höhe\_FB2 auf der Konsole
-        \item[1a2)] Ausgabe an der Konsole, ob sich das Werkstück bei der Übergabe zwischen den Anlagen überschlagen hat
-    \end{itemize}
+        \item at step 1) of Mainflow
+        \item[1a)] Die Anlage ist in Secondary Mode
+        \begin{itemize}
+            \item[1a1)] Ausgabe der ID, des Typs, Höhe\_FB1 und Höhe\_FB2 auf der Konsole
+            \item[1a2)] Ausgabe an der Konsole, ob sich das Werkstück bei der Übergabe zwischen den Anlagen überschlagen hat
+        \end{itemize}
     }
 
     \addCollum{Postcondition}{
-    \item Werkstück ist nicht mehr auf dem Förderband
+        \item Werkstück ist nicht mehr auf dem Förderband
     }
 \end{usecase}
