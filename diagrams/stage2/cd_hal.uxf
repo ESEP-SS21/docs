@@ -68,11 +68,11 @@ GPIO
 --
 + &lt;&lt;Create&gt;&gt; GPIO()
 + write(int bank, int pin): void
-+ read(int bank, int pin): void
++ read(int bank, int pin): uint_32_t
 + enable_interrupt(int bank, int pin): void
 + disable_interrupt(int bank, int pin): void
 + enable_debounce(int bank, int pin): void
-+ set_debounce_time(int bank, int pin): void 
++ set_debounce_time(int bank, int time_MS): void 
 + enable_interrupt_falling(int bank, int pin): void
 + enable_interrupt_rising(int bank, int pin):void
 
