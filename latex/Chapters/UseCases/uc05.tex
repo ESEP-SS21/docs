@@ -9,24 +9,24 @@
         Conveyor\_Belt, LightBarrier\_Start
     }
     \addCollum{Precondition}{
-        \item Die Anlage befindet sich im Betriebszustand
+    \item Die Anlage befindet sich im Betriebszustand
     }
     \addCollum{Trigger}{
-        \item LightBarrier\_Start
+    \item LightBarrier\_Start
     }
     \addCollum{Mainflow}{
-        \item[1)] Zuweisung einer eindeutigen ID an das betroffene Werkstück
-        \item[2)] Conveyor\_Belt ist nicht in Bewegung \textbullet
-        \item[3)] Conveyor\_Belt wird in Bewegung gesetzt
-        \item[4)] Warte bis LightBarrier\_Start nicht mehr unterbrochen \textbullet
+    \item[1)] Zuweisung einer eindeutigen ID an das betroffene Werkstück
+    \item[2)] Conveyor\_Belt ist nicht in Bewegung \textbullet
+    \item[3)] Conveyor\_Belt wird in Bewegung gesetzt
+    \item[4)] Warte bis LightBarrier\_Start nicht mehr unterbrochen \textbullet
     }
     \addCollum{Alternative Flow 1}{
-        \item at step 2) of Mainflow
-        \item[2a)] Conveyor\_Belt ist bereits in Bewegung und muss nicht gestartet werden
+    \item at step 2) of Mainflow
+    \item[2a)] Conveyor\_Belt ist bereits in Bewegung und muss nicht gestartet werden
     }
     \addCollum{Postcondition}{
-        \item Der Conveyor\_Belt ist in Bewegung
-    }
+    \item Der Conveyor\_Belt ist in Bewegung
+    }    
     \addCollum{Exceptional flow}{
         \item at step 4 of main flow
         \item[4a)] Timeout
@@ -34,5 +34,5 @@
             \item[4a1)] Fehler aussenden
         \end{itemize}
     }
-
+    
 \end{usecase}
