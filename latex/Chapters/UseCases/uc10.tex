@@ -1,51 +1,5 @@
 \begin{usecase}{10}{Bootup Configuration}{hoch}
     \addTextCollum{Description}{
-        Dieser Use Case beschreibt die Initialisierung des Systems, sowie die Aushandlung ob das System selbst oder das FTS\_2 das Primary System ist.
-        Das Primary System wird durch Drücken des Startknopfes der entsprechenden Anlage bestimmt
-    }
-    \addTextCollum{Actors}{
-         FTS\_2, Control\_Panel
-    }
-    \addCollum{Preconditions}{
-        \item System ist mit Strom versorgt und Hochgefahren
-    }
-    \addCollum{Mainflow}{
-        \item[1)] HAL wird initialisiert \textbullet
-        \item[2)] Herstellen einer Verbindung zu FTS\_2 \textbullet
-        \item[3)] Kontrolleuchte 1 auf Control\_Panel Blink\_Slow aktivieren
-        \item[4)] Warten auf Drücken des Startknopfes auf dem ControlPanel \textbullet
-        \item[5)] Primary-Anfrage an FTS\_2 schicken
-        \item[6)] Warten auf Bestätigung von FTS\_2 \textbullet
-        \item[7)] Eigenen Betriebsmodus auf PRIMARY setzen
-        \item[8)] Kontrolleuchte 1 auf Control\_Panel dauerhaft aktivieren
-    }
-    \addCollum{Alternate flow 1}{
-        \item at step 2 of Mainflow
-        \item[1)] Verbindung schlägt fehl
-        \item[2)] Zurück in Schritt 2 Mainflow
-    }
-    \addCollum{Alternate flow 2}{
-        \item at step 4 of Mainflow
-        \item[1)] Event Primary-Anfrage von FTS\_2 Empfangen
-        \item[2)] Eigenen Betriebsmodus auf SECONDARY setzen
-        \item[3)] Bestätigung an FTS\_2 senden
-        \item[4)] Kontrolleuchte 2 auf Control\_Panel dauerhaft aktivieren
-    }
-    \addCollum{Postconditions}{
-        \item[1)] HAL ist initialisiert
-        \item[2)] Verbindung mit FTS\_2 hergestellt
-        \item[3)] Betriebsmodus der Anlage ist festgelegt
-    }
-    \addCollum{Exceptional flow 1}{
-        \item at step 1 of Mainflow
-        \item[1)] Initialisierung der HAL schlägt fehl
-        \item[2)] Fehlermeldung ausgeben
-        \item[3)] System abschalten
-    }
-    \addCollum{Exceptional flow 2}{
-        \item at step 6 of Mainflow
-        \item[1)] Timeout beim Empfangen
-        \item[2)] Fehlermeldung ausgeben
-        \item[3)] System abschalten
+        Under construction
     }
 \end{usecase}
