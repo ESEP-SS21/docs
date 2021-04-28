@@ -4,16 +4,16 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>728</x>
+      <x>700</x>
       <y>798</y>
-      <w>336</w>
+      <w>364</w>
       <h>154</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
 CBMotor
 --
 --
-+ &lt;&lt;Create&gt;&gt; CBMotor(GPIO)
++ &lt;&lt;Create&gt;&gt; CBMotor(GPIOWrapper)
 + set_direction(Direction): void</panel_attributes>
     <additional_attributes/>
   </element>
@@ -28,7 +28,7 @@ CBMotor
     <panel_attributes>&lt;&lt;class&gt;&gt;
 Ejector
 --
-+ &lt;&lt;Create&gt;&gt; Ejector(GPIO)
++ &lt;&lt;Create&gt;&gt; Ejector(GPIOWrapper)
 
 </panel_attributes>
     <additional_attributes/>
@@ -38,14 +38,14 @@ Ejector
     <coordinates>
       <x>70</x>
       <y>490</y>
-      <w>294</w>
+      <w>308</w>
       <h>154</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
 LEDs
 --
 --
-+ &lt;&lt;Create&gt;&gt; LEDs(GPIO)
++ &lt;&lt;Create&gt;&gt; LEDs(GPIOWrapper)
 + enable(LED_type): void
 + disable(LED_type): void
 </panel_attributes>
@@ -56,23 +56,23 @@ LEDs
     <coordinates>
       <x>448</x>
       <y>28</y>
-      <w>462</w>
+      <w>476</w>
       <h>350</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
-GPIO
+GPIOWrapper
 --
 - _bank_input: uintptr_t
 - _bank_actuator: uintptr_t
 - _bank_led: uintptr_t
 --
-+ &lt;&lt;Create&gt;&gt; GPIO()
-+ write(int bank, int pin): void
-+ read(int bank, int pin): uint_32_t
++ &lt;&lt;Create&gt;&gt; GPIOWrapper()
++ out(int bank, int pin, int value): void
++ in(int bank, int pin): int
 + enable_interrupt(int bank, int pin): void
 + disable_interrupt(int bank, int pin): void
 + enable_debounce(int bank, int pin): void
-+ set_debounce_time(int bank, int time_MS): void 
++ set_debounce_time(int bank, int time_ms): void 
 + enable_interrupt_falling(int bank, int pin): void
 + enable_interrupt_rising(int bank, int pin):void
 
@@ -92,7 +92,7 @@ GPIO
 Stoplight
 --
 --
-+ &lt;&lt;Create&gt;&gt; Stoplight(GPIO)
++ &lt;&lt;Create&gt;&gt; Stoplight(GPIOWrapper)
 + enable(Color): void
 + disable(Color): void 
 + blink(Color, Speed): void</panel_attributes>
@@ -149,7 +149,7 @@ SortingMechanism
     <panel_attributes>&lt;&lt;class&gt;&gt;
 Switch
 --
-+ &lt;&lt;Create&gt;&gt; Switch(GPIO)</panel_attributes>
++ &lt;&lt;Create&gt;&gt; Switch(GPIOWrapper)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -189,14 +189,14 @@ XOR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
+      <x>364</x>
       <y>588</y>
-      <w>154</w>
+      <w>140</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1 _leds</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -352,26 +352,26 @@ m1=_gpio
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
+      <x>910</x>
       <y>168</y>
-      <w>392</w>
+      <w>378</w>
       <h>350</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>230.0;230.0;230.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>220.0;230.0;220.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
+      <x>910</x>
       <y>112</y>
-      <w>602</w>
+      <w>588</w>
       <h>868</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>120.0;590.0;410.0;590.0;410.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;590.0;400.0;590.0;400.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
