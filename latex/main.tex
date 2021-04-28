@@ -16,13 +16,16 @@
 \usepackage[explicit]{titlesec}
 \usepackage{adjustbox} % <<- allows for temporary adjustment of side margins
 % \usepackage{subcaption} % <<- cant be used with subfloat
-
 \usepackage[table]{xcolor} % for colored table cells
 \usepackage{array} % for larger table cells
 \usepackage{hhline} % for better horizontal table lines
 \usepackage{placeins}
-
 \usepackage{ifthen}
+%Import package
+\usepackage[style=list,nonumberlist,
+    section=section,toc
+]{glossaries}
+
 \newboolean{DEBUG}
 %% DO NOT MODIFY THE FOLLOWING LINE
 \setboolean{DEBUG}{true}
@@ -46,10 +49,6 @@
 %% -----------------------------------------------------------------------------
 %% Glossary
 %% -----------------------------------------------------------------------------
-%Import package
-\usepackage[style=list,nonumberlist,
-section=section,toc
-]{glossaries}
 % Create Glossaries
 \newglossary{type1}{gls1}{glo1}{Glossar}
 \newglossary{type2}{gls2}{glo2}{Abkürzungen}
