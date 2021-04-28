@@ -372,29 +372,6 @@ uses</panel_attributes>
     <additional_attributes>120.0;590.0;410.0;590.0;410.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>784</x>
-      <y>364</y>
-      <w>98</w>
-      <h>126</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-m2=1 gpio</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLFrame</id>
-    <coordinates>
-      <x>126</x>
-      <y>0</y>
-      <w>1498</w>
-      <h>1260</h>
-    </coordinates>
-    <panel_attributes>cd HAL</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>1386</x>
@@ -423,5 +400,28 @@ FAST
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>364</y>
+      <w>98</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+creates</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>126</x>
+      <y>0</y>
+      <w>1498</w>
+      <h>1260</h>
+    </coordinates>
+    <panel_attributes>cd HAL</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
