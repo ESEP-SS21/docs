@@ -44,6 +44,22 @@
 \input{Commands/usecase}
 
 %% -----------------------------------------------------------------------------
+%% Glossary
+%% -----------------------------------------------------------------------------
+%Import package
+\usepackage[style=list,nonumberlist,
+section=section,toc
+]{glossaries}
+% Create Glossaries
+\newglossary{type1}{gls1}{glo1}{Glossar}
+\newglossary{type2}{gls2}{glo2}{Abkürzungen}
+%Entries
+\input{Chapters/GlossarEntries/glossar_Entries.tex}
+
+\makenoidxglossaries
+
+
+%% -----------------------------------------------------------------------------
 %% Dokument Start
 %% -----------------------------------------------------------------------------
 \begin{document}
