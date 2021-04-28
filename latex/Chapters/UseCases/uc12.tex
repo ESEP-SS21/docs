@@ -1,24 +1,24 @@
 \begin{usecase}{12}{Handle Error}{hoch}
     \addTextCollum{Verwandte Requirements}{
-    REQ-21, REQ-36, REQ-37, REQ-43, REQ-46
+        REQ-21, REQ-36, REQ-37, REQ-43, REQ-46
     }
     \addTextCollum{Actors}{
-    Stoplight, Control\_Panel
+        Stoplight, Control\_Panel
     }
     \addTextCollum{Description}{
-    Der ErrorHandler verwaltet alle Fehler, die im System auftreten. Immer wenn ein Fehler-Event ausgelöst wird,
-    legt der ErrorHandler diese in eine Fehlerliste ab. Jeder Fehler hat einen Fehlerzustand,
-    welcher wie in der Statemachine~\ref{fig:stm_fehler} beschrieben ist.
-    Wenn der Reset-Taster gedrückt wird, werden alle Fehler in der Fehlerliste quittiert.
-    Fehler gelten als behoben, wenn ein Event die Behebung des Fehlers meldet.
-    Der Fehlerzustand der gesamten Anlage, somit auch die Anzeige der roten LED,
-    wird durch den dem Fehler mit der höchsten Priorität in der Fehlerliste festgelegt. Die Fehlerzustände sind wie in Fehlerpriorität priorisiert.
-    Ist der globale Fehlerzustand anstehend\_unquittiert oder anstehend\_quittiert,
-    dann bleiben die Laufbänder beider Anlagen stehen und der Strom an den Aussortiermechanismen wird abgestellt.
+        Der ErrorHandler verwaltet alle Fehler, die im System auftreten. Immer wenn ein Fehler-Event ausgelöst wird,
+        legt der ErrorHandler diese in eine Fehlerliste ab. Jeder Fehler hat einen Fehlerzustand,
+        welcher wie in der Statemachine~\ref{fig:stm_fehler} beschrieben ist.
+        Wenn der Reset-Taster gedrückt wird, werden alle Fehler in der Fehlerliste quittiert.
+        Fehler gelten als behoben, wenn ein Event die Behebung des Fehlers meldet.
+        Der Fehlerzustand der gesamten Anlage, somit auch die Anzeige der roten LED,
+        wird durch den dem Fehler mit der höchsten Priorität in der Fehlerliste festgelegt. Die Fehlerzustände sind wie in Fehlerpriorität priorisiert.
+        Ist der globale Fehlerzustand anstehend\_unquittiert oder anstehend\_quittiert,
+        dann bleiben die Laufbänder beider Anlagen stehen und der Strom an den Aussortiermechanismen wird abgestellt.
     }
     \addCollum{Fehlerpriorität}{
-    \item[1)] anstehend\_unquittiert. Wird durch ein dauerhaftes leuchten der roten LED signalisiert.
-    \item[2)] anstehend\_quittiert. Wird durch wird durch schnelles Blinken (1 Hz) der roten LED signalisiert.
-    \item[3)] gegangen\_quittiert . Wird durch wird durch langsames Blinken (0,5 Hz) der roten LED signalisiert.
+        \item[1)] anstehend\_unquittiert. Wird durch ein dauerhaftes leuchten der roten LED signalisiert.
+        \item[2)] anstehend\_quittiert. Wird durch wird durch schnelles Blinken (1 Hz) der roten LED signalisiert.
+        \item[3)] gegangen\_quittiert . Wird durch wird durch langsames Blinken (0,5 Hz) der roten LED signalisiert.
     }
 \end{usecase}
