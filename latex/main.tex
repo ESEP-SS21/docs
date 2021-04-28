@@ -16,13 +16,16 @@
 \usepackage[explicit]{titlesec}
 \usepackage{adjustbox} % <<- allows for temporary adjustment of side margins
 % \usepackage{subcaption} % <<- cant be used with subfloat
-
 \usepackage[table]{xcolor} % for colored table cells
 \usepackage{array} % for larger table cells
 \usepackage{hhline} % for better horizontal table lines
 \usepackage{placeins}
-
 \usepackage{ifthen}
+%Import package
+\usepackage[style=list,nonumberlist,
+    section=section,toc
+]{glossaries}
+
 \newboolean{DEBUG}
 %% DO NOT MODIFY THE FOLLOWING LINE
 \setboolean{DEBUG}{true}
@@ -42,6 +45,19 @@
 %% Custom Commands importieren
 %% -----------------------------------------------------------------------------
 \input{Commands/usecase}
+
+%% -----------------------------------------------------------------------------
+%% Glossary
+%% -----------------------------------------------------------------------------
+
+%Entries
+\input{Chapters/GlossarEntries/begriffe_Entries.tex}
+\input{Chapters/GlossarEntries/abkuerzung_Entries.tex}
+\input{Chapters/GlossarEntries/events_Entries.tex}
+\input{Chapters/GlossarEntries/identifier_Entries.tex}
+
+\makenoidxglossaries
+
 
 %% -----------------------------------------------------------------------------
 %% Dokument Start
@@ -73,8 +89,6 @@
     \clearpage
     \appendix
     \input{Chapters/A_glossar}
-    \clearpage
-    \input{Chapters/B_abkuerzungen}
     \clearpage
 
 \end{document}
