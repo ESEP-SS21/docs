@@ -1,10 +1,9 @@
-\begin{usecase}{9}{Start System}{hoch}
+\begin{usecase}{09}{Start System}{hoch}
     \addTextCollum{Verwandte Requirements}{
         REQ-12, REQ-42
     }
-    \addCollum{Actors}{
-        \item FTS\_2
-        \item Control\_Panel
+    \addTextCollum{Actors}{
+        FTS\_2, Control\_Panel
     }
     \addCollum{Preconditions}{
         \item System ist gestoppt
@@ -22,7 +21,7 @@
     \addCollum{Alternate flow 1}{
         \item at step 1 of Mainflow
         \item[1)] Trigger ist Drücken des Knopfes
-        \item[2)] Signal zum Starten an FTS\_2 schicken 
+        \item[2)] Signal zum Starten an FTS\_2 schicken
         \item[3)] Auf Bestätigung von FTS\_2 warten \textbullet
         \item[4)] mit Mainflow Step 1 weitermachen
     }

@@ -6,20 +6,20 @@
         In diesem Use-Case wird ein Werkstück vom Aussortiermechanismus durchgelassen
     }
     \addTextCollum{Actors}{
-        Sorting_Mechanism, LightBarrier_Switch
+        Sorting\_Mechanism, LightBarrier\_Switch
     }
     \addCollum{Precondition}{
-    \item Die Anlage befindet sich im Betriebszustand
-    \item Das betroffene Werkstück ist als 'no discard' markiert
+        \item Die Anlage befindet sich im Betriebszustand
+        \item Das betroffene Werkstück ist als 'no discard' markiert
     }
 
     \addCollum{Mainflow}{
-    \item[1)] Öffne Sorting_Mechanism
-    \item[2)] Setze Sorting_Mechanism zurück, wenn LightBarrier_Switch nicht mehr unterbrochen
+        \item[1)] Öffne Sorting\_Mechanism
+        \item[2)] Setze Sorting\_Mechanism zurück, wenn LightBarrier\_Switch nicht mehr unterbrochen
     }
 
     \addCollum{Postcondition}{
-    \item Sorting_Mechanism zurückgesetzt
-    \item Werkstück nicht aussortiert
+        \item Sorting\_Mechanism zurückgesetzt
+        \item Werkstück nicht aussortiert
     }
 \end{usecase}

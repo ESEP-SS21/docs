@@ -132,46 +132,53 @@ Die Systemsicht bringt umliegende Aktorik des Systemkontext und System selber mi
 
 \subsection{Use Cases / User Stories}\label{subsec:use-cases-user-stories}
 
+In Abbildung~\ref{fig:ucd} sind die Use Cases in einem Use Case Diagramm dargestellt.
+Die Farbgebung dient lediglich zur Veranschaulichung.
+
+\begin{figure}[h]
+    \centering
+    \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{../out/diagrams/stage1/ucd}}
+    \caption{Use Case Diagramm}
+    \label{fig:ucd}
+\end{figure}
+
 %% Dokumentieren Sie hier, welche Use Cases/ User Stories Sie auf der Systemebene implementieren müssen.
 %% Die Test Cases sollen später zu den Use Cases/ User Stories konsistent sein.
 
 %% < Hier kommt die genaue Beschreibung der Use.
 %% Pro Anforderung eine Tabelle benutzen. Die Tabelle nach Belieben vervielfältigen. >
 
-\input{Chapters/UseCases/uc03}
-
-\input{Chapters/UseCases/uc08}
-
-\input{Chapters/UseCases/uc06.tex}
-
-\input{Chapters/UseCases/uc12}
-
-\input{Chapters/UseCases/uc07}
-
-\input{Chapters/UseCases/uc05}
-
-\input{Chapters/UseCases/uc11}
-
-\input{Chapters/UseCases/uc04}
-
-\input{Chapters/UseCases/uc9}
-
-\input{Chapters/UseCases/uc16}
 
 \input{Chapters/UseCases/uc02}
 
+\input{Chapters/UseCases/uc03}
+
+\input{Chapters/UseCases/uc04}
+
+\input{Chapters/UseCases/uc05}
+
+\input{Chapters/UseCases/uc06}
+
+\input{Chapters/UseCases/uc07}
+
+\input{Chapters/UseCases/uc08}
+
+\input{Chapters/UseCases/uc09}
+
 \input{Chapters/UseCases/uc10}
 
-\input{Chapters/UseCases/uc17}
+\input{Chapters/UseCases/uc11}
+
+\input{Chapters/UseCases/uc12}
 
 \input{Chapters/UseCases/uc14}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{../out/diagrams/stage1/req-fehlerzustand.pdf}
-    \caption{Fehlerzustände}
-    \label{fig:stm_fehler}
-\end{figure}
+\input{Chapters/UseCases/uc15}
+
+\input{Chapters/UseCases/uc16}
+
+\input{Chapters/UseCases/uc17}
+
 
 
 
@@ -236,12 +243,15 @@ Die gemessenen Höhen bei unterschiedlichen Werkstückarten gehen aus Tabelle~\r
     \label{tab:werkstuecke}
 \end{table}
 
-Ebenso fällt auf, dass der Abstand der Lichtschranke für die Höhenmessung vom Anfang des Förderbands ca. 25 cm beträgt, was für die Bestimmung des Abstands bei der Werkstückübergabe zwischen zwei Anlagen wichtig sein könnte.
+Ebenso fällt auf, dass der Abstand der Lichtschranke für die Höhenmessung vom Anfang des Förderbands ca. 25 cm beträgt, 
+was für die Bestimmung des Abstands bei der Werkstückübergabe zwischen zwei Anlagen wichtig sein könnte.
 
 \subsubsection{Der Aufbau im Bereich des Aussortiermechnaismus}
 
-Im Transportweg der Werkstücke befindet sich an der Stelle an der im Falle einer Weiche diese spätestens für Durchlass öffnen muss und im Falle eines Auswerfers dieser das Werkstück auswerfen muss eine Lichtschranke.
+Im Transportweg der Werkstücke befindet sich an der Stelle an der ein Werkstück vom Sortiermechanismus aussortiert werden muss eine Lichtschranke. 
 Das Unterbrechen dieser Lichtschranke kann daher als Signal zum Starten des Aussortiervorgangs verstanden werden.
+Im Falle einer Weiche als Aussortiermechanismus müsste diese geöffnet werden, falls keine Aussortierung erfolgen soll.
+Im Falle eines Auswerfers müsste dieser aktiviert werden, falls das Werkstück aussortiert werden muss.
 Oberhalb des Werkstücks befindet sich in dieser Position auch der Metallsensor.
 Bei einer Anlage mit Weiche ist wichtig, dass diese bei längerem Verharren im geöffneten Zustand beschädigt werden kann.
 

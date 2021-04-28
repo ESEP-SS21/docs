@@ -3,15 +3,12 @@
         REQ-11, REQ-15, REQ-40
     }
     \addTextCollum{Description}{
-        Dieser Usecase betreibt das Durchführen des Servicemode. 
+        Dieser Usecase betreibt das Durchführen des Servicemode.
         Dieser kann durch das lange drücken des Starttasters von beiden Anlagen aus aktiviert werden.
         Im Servicemode werden die Höhenmesser kalibriert sowie die korrekte Funktion des Aussortiermechanismus geprüft
     }
-    \addCollum{Actors}{
-        \item Stoplight
-        \item Height\_Measurement
-        \item Control\_Panel
-        \item Sorting\_Mechanism
+    \addTextCollum{Actors}{
+        Stoplight, Height\_Measurement, Control\_Panel, Sorting\_Mechanism,
     }
     \addCollum{Preconditions}{
         \item System ist im Ruhezustand
@@ -36,7 +33,7 @@
         \item[1)] System ist im Ruhezustand
         \item[2)] Height\_Measurement wurde kalibriert
     }
-    \addCollum{Exceptional flow 1}{
+    \addCollum{Exceptional flow}{
         \item at step 6 or 8 of Mainflow
         \item[1)] Timeout beim Empfang des Signals
         \item[2)] Fehler auslösen
