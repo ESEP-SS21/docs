@@ -1,18 +1,35 @@
 \newglossary{var}{var}{var}{Bezeichner}
 
-\newglossaryentry{workpiece_type}{
-    type = var,
-    name = workpiece\_type,
+\newglossaryentry{workpiece_type}{ type = var,
+    name = wrpc\_type,
     description = {Typ eines \gls{workpiece}}
-%    \begin{itemize}
-%        \item Flaches Werkstück
-%        \item Hohes Werkstück mit Bohrung und Metalleinsatz
-%        \item Hohes Werkstück mit Bohrung ohne Metalleinsatz
-%        \item Hohes Werkstück ohne Bohrung
-%    \end{itemize}
 }
 
-%
-%\newglossaryentry{bsp1}{type = var, name = Beispiel, description = Beispiel für Glossar}
-%% \newglossaryentry{Referenz in Dokument}{type = Abkürzung des Glossars, name = Beispiel, description = Beispiel für Glossar}
-%% -----------------------------------------------------------------------------
+\newglossaryentry{workpiece_flach}{ type = {var},
+    name = {wrpc\_l},
+    long={flaches Werkstück},
+    description = {\Glsentrylong{workpiece_flach}},
+    first = {\glsentrylong{workpiece_flach} (\glsentryname{workpiece_flach})},
+}
+
+\newglossaryentry{workpiece_bohrung}{ type = {var},
+    name = {wrpc\_hb},
+    long = {hohes Werkstück mit Bohrung und ohne Metalleinsatz},
+    description = {\Glsentrylong{workpiece_bohrung}},
+    first = {\glsentrylong{workpiece_bohrung} (\glsentryname{workpiece_bohrung})},
+}
+
+\newglossaryentry{workpiece_metall}{ type = {var},
+    name = {wrpc\_hm},
+    long={Werkstück mit Bohrung und mit Metalleinsatz},
+    description = {\Glsentrylong{workpiece_metall}},
+    first = {\glsentrylong{workpiece_metall} (\glsentryname{workpiece_metall})},
+}
+
+\newglossaryentry{workpiece_hoch}{ type = {var},
+    name = {wrpc\_h},
+    long={hohes Werkstück ohne Bohrung},
+    description = {\Glsentrylong{workpiece_hoch}},
+    first={\glsentrylong{workpiece_hoch} (\glsentryname{workpiece_hoch})}
+}
+
