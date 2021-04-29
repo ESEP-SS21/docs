@@ -1,3 +1,36 @@
 \newglossary{abr}{abr}{abr}{Abkürzungen}
 
 %\newglossaryentry{bsp2}{type = abr, name = Bsp, description = Beispiel}
+\newglossaryentry{workpiece_type}{ type = abr,
+    name = wrpc\_type,
+    description = {Typ eines \gls{workpiece}}
+}
+
+\newglossaryentry{workpiece_flach}{ type = {abr},
+    name = {wrpc\_l},
+    long={flaches Werkstück},
+    description = {\Glsentrylong{workpiece_flach}},
+    first = {\glsentrylong{workpiece_flach} (\glsentryname{workpiece_flach})},
+}
+
+\newglossaryentry{workpiece_bohrung}{ type = {abr},
+    name = {wrpc\_hb},
+    long = {hohes Werkstück mit Bohrung und ohne Metalleinsatz},
+    description = {\Glsentrylong{workpiece_bohrung}},
+    first = {\glsentrylong{workpiece_bohrung} (\glsentryname{workpiece_bohrung})},
+}
+
+\newglossaryentry{workpiece_metall}{ type = {abr},
+    name = {wrpc\_hm},
+    long={Werkstück mit Bohrung und mit Metalleinsatz},
+    description = {\Glsentrylong{workpiece_metall}},
+    first = {\glsentrylong{workpiece_metall} (\glsentryname{workpiece_metall})},
+}
+
+\newglossaryentry{workpiece_hoch}{ type = {abr},
+    name = {wrpc\_h},
+    long={hohes Werkstück ohne Bohrung},
+    description = {\Glsentrylong{workpiece_hoch}},
+    first={\glsentrylong{workpiece_hoch} (\glsentryname{workpiece_hoch})}
+}
+
