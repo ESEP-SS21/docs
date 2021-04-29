@@ -30,36 +30,32 @@
 
 \paragraph{Durchlassablauf}
 \begin{itemize}
-    \item[REQ-7:] Zuführung von Werkstücken erfolgt durch Einlegen von Werkstücken in der
-    Lichtschranke am Anfang von \gls{belt} 1 (14,15)
+    \item[REQ-7:] Zuführung von Werkstücken erfolgt durch Einlegen von Werkstücken am Anfang von \gls{anlage} 1 (14, 15)
     \begin{itemize}
-        \item Ein Unterbrechen der Lichtschranke signalisiert dem System das Einlegen eines Werkstücks,
-        sodass mit dem Sortiervorgang von diesem begonnen werden kann.
+        \item Ein Unterbrechen der \gls{lb_st} signalisiert dem System das Einlegen eines Werkstücks,
+        sodass der Transport dessen beginnen kann.
     \end{itemize}
-    \item[REQ-9:] Das System muss mit in beliebigem Abstand eingelegten Werkstücken umgehen können(16,17)
+    \item[REQ-9:] Das System muss mit in beliebigem Abstand eingelegten Werkstücken umgehen können(16,17) %TODO Mindestabstand
     \begin{itemize}
         \item Solange der Bereich der ersten Lichtschranke frei ist, muss der Benutzer Werkstücke
         einlegen können, ohne die Korrektheit der Funktion zu gefährden.
     \end{itemize}
     \item[REQ-14:] Der Abstand von Werkstücken auf Förderband 2 muss mindestens 25 cm betragen (18)
     \begin{itemize}
-        \item Bedingung muss vor der Übergabe sichergestellt werden
+        \item Abstand muss vor der Übergabe sichergestellt werden
     \end{itemize}
     \item[REQ-16:] Auf dem Förderband von Anlage 2 dürfen sich maximal 2 Werkstücke befinden (19)
-    \begin{itemize}
-        \item Muss bei der Übergabe sichergestellt werden
-    \end{itemize}
     \item[REQ-18:] Falls sich bei der Übergabe zwischen den beiden Förderbändern ein Werkstücke
     überschlägt, muss der neue Werkstücktyp beachtet werden. (20)
     \begin{itemize}
-        \item Wir schließen den Fall aus, dass das Teil auf die Seite fällt, sodass es wegrollen könnte.
+        \item Der Fall, dass das Teil auf die Seite fällt, sodass es wegrollen könnte, wird ausgeschlossen.
         Wenn sich das Werkstück überschlägt, ändert sich bei hohen Werkstücken der Typ.
     \end{itemize}
-    \item[REQ-20:] Werkstücke dürfen nicht vom Band fallen (21)
-    \item[REQ-24:] Beim Einlegen eines Werkstückes in die Anlage soll diesem eine eindeutige ID zugewiesen werden(28)
-    \item[REQ-26:] Wenn sich auf einem Förderband kein Werkstück befindet, stoppt dieses.
-    \item[REQ-31:] Wenn ein Werkstück die Lichtschranke am Ende von FB2 erreicht,
-    sollen Informationen dazu auf der Konsole ausgegeben werden (22, 23, 24, 25, 26, 27)
+    \item[REQ-20:] Werkstücke dürfen nicht vom Förderband fallen (21)
+    \item[REQ-24:] Beim Einlegen eines Werkstückes in die Anlage soll dem \gls{workpiece} eine eindeutige ID zugewiesen werden(28)
+    \item[REQ-26:] Wenn sich auf einem Förderband kein Werkstück befindet, stoppt das Förderband.
+    \item[REQ-31:] Wenn ein \gls{workpiece} die \gls{lb_en} von FB2 erreicht,
+    sollen Informationen zu diesem \gls{workpiece} auf der Konsole ausgegeben werden (22, 23, 24, 25, 26, 27)
     \begin{itemize}
         \item Zu den Informationen zählen die ID, Typ, Höhe auf FB1 und FB2 des Werkstücks als
         auch ein Hinweis darüber, ob sich das Werkstück überschlagen hat.
