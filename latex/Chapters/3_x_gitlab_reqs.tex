@@ -13,7 +13,7 @@
         \item \gls{workpiece_bohrung}
         \item \gls{workpiece_flach}
     \end{enumerate}
-    \item[REQ-3:] \glspl{workpiece}, die nicht in die Sortierreihenfolge passen werden in eine der beiden \glspl{rutsche} aussortiert (9, 10)
+    \item[REQ-3:] \glspl{workpiece}, die nicht in die Sortierreihenfolge passen werden in eine der beiden \glspl{rampe} aussortiert (9, 10)
     \item[REQ-4:] Der \gls{durchsatz} an \glspl{workpiece} ist zu optimieren (11)
     \item[REQ-30:] Aussortierung der \glspl{workpiece} soll mit \gls{weiche} funktionieren (41)
     \item[REQ-38:] Aussortierung der \glspl{workpiece} soll mit \gls{ejector} funktionieren (41)
@@ -23,8 +23,8 @@
 
 \paragraph{Kapazität}
 \begin{itemize}
-    \item[REQ-5:] Bei einer vollen \gls{rutsche} wird eine Warnung ausgesandt (12)
-    \item[REQ-6:] Wenn die nächste notwendige Aussortierung aufgrund von ausgeschöpfter \glspl{rutsche}kapazität
+    \item[REQ-5:] Bei einer vollen \gls{rampe} wird eine Warnung ausgesandt (12)
+    \item[REQ-6:] Wenn die nächste notwendige Aussortierung aufgrund von ausgeschöpfter \glspl{rampe}kapazität
     nicht stattfinden kann, ein Fehler ausgesendet (und somit der Gesamtbetrieb gestoppt) (13)
 \end{itemize}
 
@@ -103,7 +103,7 @@
     \item[REQ-11:] Im Service-Mode blinkt die Lampe grün (60)
     \item[REQ-13:] Bei Warnungen blinkt die Lampe gelb (61)
     \begin{itemize}
-        \item Eine Warnung ist, dass die \gls{rutsche} an der Anlage voll ist.
+        \item Eine Warnung ist, dass die \gls{rampe} an der Anlage voll ist.
     \end{itemize}
     \item[REQ-19:] Wenn keine Warnungen vorliegen ist die gelbe Lampe aus (61)
     \item[REQ-37:] Die rote LED signalisiert die Fehlerzustände wie folgt (73, 74, 75, 76):
@@ -111,7 +111,7 @@
         \item Anstehend unquittiert wird durch schnelles Blinken (1 Hz) signalisiert (74).
         Anstehend quittiert wird durch dauerhaftes Leuchten(75) signalisiert.
         Gegangen unquittiert wird durch langsames Blinken (0,5 Hz) signalisiert (z.B.\ wenn ein
-        Werkstück an einer Weiche zu langsam in die \gls{rutsche} geschoben wurde) (76).
+        Werkstück an einer Weiche zu langsam in die \gls{rampe} geschoben wurde) (76).
         Steht kein Fehler an, ist die Leuchte aus (73).
     \end{itemize}
     \item[REQ-45:] Im Ruhezustand leuchtet die Lampe dauerhaft gelb
@@ -122,7 +122,7 @@
     \item[REQ-23:] Verklemmen der Weiche soll überwacht werden (37)
     \begin{itemize}
         \item Ein Werkstück ist verklemmt, wenn das Werkstück, abzüglich der Toleranz von 50 Prozent
-        der durchschnittlichen Aussortierzeit, länger als erwartet braucht, um in der \gls{rutsche} anzukommen.
+        der durchschnittlichen Aussortierzeit, länger als erwartet braucht, um in der \gls{rampe} anzukommen.
         Daraufhin wird eine Warnung ausgesendet, bis das Teil in der Rampe ankommt.
     \end{itemize}
     \item[REQ-27:] Die Weiche darf nicht länger als 'x' auf offen stehen (35, 36)
