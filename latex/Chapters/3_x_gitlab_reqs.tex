@@ -93,20 +93,20 @@
 
 \paragraph{Zustandsanzeigen}
 \begin{itemize}
-    \item[REQ-10:] Im Betriebszustand leuchtet die \gls{ampel} grün dauerhaft (59)
-    \item[REQ-11:] Im Service-Mode blinkt die \gls{ampel} grün (60)
-    \item[REQ-13:] Bei Warnungen blinkt die \gls{ampel} gelb (61)
+    \item[REQ-10:] Im Betriebszustand leuchtet die grüne \gls{ampelled} dauerhaft (59)
+    \item[REQ-11:] Im Service-Mode blinkt die grüne \gls{ampelled}  (60)
+    \item[REQ-13:] Bei Warnungen blinkt die gelbe \gls{ampelled} (61)
     \begin{itemize}
         \item Eine Warnung ist, dass die \gls{rampe} an der \gls{anlage} voll ist.
     \end{itemize}
-    \item[REQ-19:] Wenn keine Warnungen vorliegen ist die gelbe \gls{ampelled} aus (61)
+    \item[REQ-19:] Wenn im Betriebszustand keine Warnungen vorliegen, ist die gelbe \gls{ampelled} aus (61)
     \item[REQ-37:] Die rote \gls{ampelled} signalisiert die Fehlerzustände wie folgt (73, 74, 75, 76):
     \begin{itemize}
         \item Anstehend unquittiert wird durch schnelles Blinken (1 Hz) signalisiert (74).
-        Anstehend quittiert wird durch dauerhaftes Leuchten(75) signalisiert.
-        Gegangen unquittiert wird durch langsames Blinken (0,5 Hz) signalisiert (z.B.\ wenn ein
+        \item Anstehend quittiert wird durch dauerhaftes Leuchten(75) signalisiert.
+        \item Gegangen unquittiert wird durch langsames Blinken (0,5 Hz) signalisiert (z.B.\ wenn ein
         \gls{workpiece} an einer \gls{weiche} zu langsam in die \gls{rampe} geschoben wurde) (76).
-        Steht kein Fehler an, ist die Leuchte aus (73).
+        \item Steht kein Fehler an, ist die Leuchte aus (73).
     \end{itemize}
     \item[REQ-45:] Im Ruhezustand leuchtet die \gls{ampel} dauerhaft gelb
 \end{itemize}
