@@ -136,7 +136,7 @@
 
 \paragraph{Höhenmessung}
 \begin{itemize}
-    \item[REQ-32:] Höhenmessung muss Kippung des Lasers mit einbeziehen (43, 44)
+    \item[REQ-32:] Höhenmessung muss Kippung des Lasers mit einbeziehen (43, 44) %TODO clarify
 \end{itemize}
 
 \paragraph{Fehlerumgang}
@@ -146,16 +146,21 @@
         \item Nach Möglichkeit sollen die \glspl{belt} nicht geräumt werden.
     \end{itemize}
     \item[REQ-43:] In den Zuständen 'bestehend\_unquittiert' und 'bestehend\_quittiert' bleiben die
-    \glspl{belt} beider \glspl{anlage} stehen und den Aussortiermechanismen wird der Strom abgestellt
+    \glspl{belt} beider \glspl{anlage} stehen und der \gls{sortierer} wird der Strom abgestellt
     \begin{itemize}
-        \item Die Fehleranzeige über die \gls{ampel} ist in REQ-37: spezifiziert
+        \item Die Fehleranzeige mittels der \gls{ampel} ist in REQ-37 spezifiziert
     \end{itemize}
     \item[REQ-36:] Fehlerzustand soll wie in Abbildung~\ref{fig:stm-fehlerzustand} beschrieben sein. (65, 66, 67, 69, 70)
-    \item[REQ-46:] Der globale Fehlerzustand wird wie folgt festgelegt
+    \item[REQ-46:] Der Fehlerzustand beider \glspl{anlage} wird wie folgt festgelegt:
     \begin{itemize}
         \item Der aktuell bestehende Fehler mit der höchsten Priorität entspricht dem Fehlerzustand der gesamten \gls{anlage}.
-        Die Fehlerzustände sind der folgenden Liste nach priorisiert: 1.\ Anstehend unquittiert
-        2.\ Anstehend quittiert 3\ Gegangen unquittiert 4.\ OK
+        Die Fehlerzustände sind der folgenden Liste nach priorisiert:
+    \begin{enumerate} %TODO wording anpassen sodass kein 'priorität' vorkommnt
+        \item Anstehend unquittiert
+        \item Anstehend quittiert
+        \item Gegangen unquittiert
+        \item OK
+    \end{enumerate}
     \end{itemize}
 \end{itemize}
 
