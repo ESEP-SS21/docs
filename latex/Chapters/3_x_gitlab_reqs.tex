@@ -87,7 +87,7 @@
     \begin{itemize}
         \item Im Betriebszustand ist die LED am \gls{t_start} an
         \item Im Ruhezustand die LED am \gls{t_stop}
-        \tiem Bei einem gegangenen oder bestehenden Fehler ist die LED am \gls{t_reset} an
+        \item Bei einem gegangenen oder bestehenden Fehler ist die LED am \gls{t_reset} an
     \end{itemize}
 \end{itemize}
 
@@ -113,26 +113,25 @@
 
 \paragraph{\gls{weiche}}
 \begin{itemize}
-    \item[REQ-23:] Verklemmen der \gls{weiche} soll überwacht werden (37)
+    \item[REQ-23:] Bei Verklemmen der \gls{weiche} wird eine Warnung ausgesandt, bis das \gls{workpiece} in der Rampe ankommt (37)
     \begin{itemize}
-        \item Ein \gls{workpiece} ist verklemmt, wenn das \gls{workpiece}, abzüglich der Toleranz von 50 Prozent
-        der durchschnittlichen Aussortierzeit, länger als erwartet braucht, um in der \gls{rampe} anzukommen.
-        Daraufhin wird eine Warnung ausgesendet, bis das Teil in der Rampe ankommt.
+        \item Ein \gls{workpiece} ist verklemmt, wenn das \gls{workpiece} länger als erwartet braucht, um in der \gls{rampe} anzukommen.
+        \item Länger als erwartet wird mit mehr als 50 Prozent der durchschnittlichen Aussortierzeit definiert
     \end{itemize}
-    \item[REQ-27:] Die \gls{weiche} darf nicht länger als 'x' auf offen stehen (35, 36)
+    \item[REQ-27:] Die \gls{weiche} darf nicht länger als 'x' auf offen stehen (35, 36) %TODO 'offen' , zeit festlegen
     \begin{itemize}
         \item Bei minutenlangen Stromfluss wird die \gls{weiche} beschädigt.
     \end{itemize}
 \end{itemize}
 
-\paragraph{Embedded Recorder}
+\paragraph{\gls{recorder}}
 \begin{itemize}
-    \item[REQ-25:] Es soll eine 'record'-Funktion bereitgestellt werden, mit der ein Benutzer das gesamte
-    Ereignisprotokoll der \gls{anlage} aufzeichnen kann (90)
-    \item[REQ-29:] Die von der 'record'-Funktion vorgenommene Aufzeichnung soll menschenlesbar sein (91)
-    \item[REQ-33:] Es soll eine 'replay'-Funktion bereitgestellt werden, mit der ein
-    Benutzer eine zuvor aufgezeichnete Ereignissequenz abspielen lassen kann (93, 94)
-    \item[REQ-34:] Ereignissequenzen sollen per Hand angefertigt werden können (95, 96)
+    \item[REQ-25:] Es soll eine \gls{record-fn} bereitgestellt werden, mit der ein Benutzer alle
+    \glspl{event} der \gls{anlage} in ein \gls{protokoll} aufzeichnen kann (90)
+    \item[REQ-29:] Die von der \gls{record-fn} vorgenommene Aufzeichnung soll menschenlesbar sein (91)
+    \item[REQ-33:] Es soll eine \gls{replay-fn} bereitgestellt werden, mit der ein
+    Benutzer eine zuvor aufgezeichnetes \gls{protokoll} abspielen lassen kann (93, 94)
+    \item[REQ-34:] \glspl{protokoll} sollen per Hand angefertigt werden können (95, 96)
 \end{itemize}
 
 \paragraph{Höhenmessung}
