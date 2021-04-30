@@ -95,14 +95,14 @@
 
 \paragraph{Zustandsanzeigen}
 \begin{itemize}
-    \item[REQ-10:] Im Betriebszustand leuchtet die Lampe grün dauerhaft (59)
-    \item[REQ-11:] Im Service-Mode blinkt die Lampe grün (60)
-    \item[REQ-13:] Bei Warnungen blinkt die Lampe gelb (61)
+    \item[REQ-10:] Im Betriebszustand leuchtet die \gls{ampel} grün dauerhaft (59)
+    \item[REQ-11:] Im Service-Mode blinkt die \gls{ampel} grün (60)
+    \item[REQ-13:] Bei Warnungen blinkt die \gls{ampel} gelb (61)
     \begin{itemize}
         \item Eine Warnung ist, dass die \gls{rampe} an der \gls{anlage} voll ist.
     \end{itemize}
-    \item[REQ-19:] Wenn keine Warnungen vorliegen ist die gelbe Lampe aus (61)
-    \item[REQ-37:] Die rote LED signalisiert die Fehlerzustände wie folgt (73, 74, 75, 76):
+    \item[REQ-19:] Wenn keine Warnungen vorliegen ist die gelbe \gls{ampelled} aus (61)
+    \item[REQ-37:] Die rote \gls{ampelled} signalisiert die Fehlerzustände wie folgt (73, 74, 75, 76):
     \begin{itemize}
         \item Anstehend unquittiert wird durch schnelles Blinken (1 Hz) signalisiert (74).
         Anstehend quittiert wird durch dauerhaftes Leuchten(75) signalisiert.
@@ -110,7 +110,7 @@
         \gls{workpiece} an einer \gls{weiche} zu langsam in die \gls{rampe} geschoben wurde) (76).
         Steht kein Fehler an, ist die Leuchte aus (73).
     \end{itemize}
-    \item[REQ-45:] Im Ruhezustand leuchtet die Lampe dauerhaft gelb
+    \item[REQ-45:] Im Ruhezustand leuchtet die \gls{ampel} dauerhaft gelb
 \end{itemize}
 
 \paragraph{\gls{weiche}}
@@ -151,7 +151,7 @@
     \item[REQ-43:] In den Zuständen 'bestehend\_unquittiert' und 'bestehend\_quittiert' bleiben die
     \glspl{belt} beider \glspl{anlage} stehen und den Aussortiermechanismen wird der Strom abgestellt
     \begin{itemize}
-        \item Die Fehleranzeige über die Ampel ist in REQ-37: spezifiziert
+        \item Die Fehleranzeige über die \gls{ampel} ist in REQ-37: spezifiziert
     \end{itemize}
     \item[REQ-36:] Fehlerzustand soll wie in Abbildung~\ref{fig:stm-fehlerzustand} beschrieben sein. (65, 66, 67, 69, 70)
     \item[REQ-46:] Der globale Fehlerzustand wird wie folgt festgelegt
