@@ -45,16 +45,14 @@
 %% Custom Commands importieren
 %% -----------------------------------------------------------------------------
 \input{Commands/usecase}
+\input{Commands/reqRef}
 
 %% -----------------------------------------------------------------------------
 %% Glossary
 %% -----------------------------------------------------------------------------
 
 %Entries
-\input{Chapters/GlossarEntries/begriffe_Entries.tex}
-\input{Chapters/GlossarEntries/abkuerzung_Entries.tex}
-\input{Chapters/GlossarEntries/events_Entries.tex}
-\input{Chapters/GlossarEntries/identifier_Entries.tex}
+\input{Chapters/GlossarEntries/_definitions.tex}
 
 \makenoidxglossaries
 
@@ -87,8 +85,18 @@
     \clearpage
     \input{Chapters/7_lessons_learned}
     \clearpage
+
     \appendix
-    \input{Chapters/A_glossar}
+
+
+    \chapter{Glossar}\label{ch:glossar}
+    \printnoidxglossary[type=abr]
+    \printnoidxglossary[type=term]
+    \printnoidxglossary[type=event]
+    \printnoidxglossary[type=var]
+    \printnoidxglossary[type=sensor]
+    \printnoidxglossary[type=aktor]
+
     \clearpage
 
 \end{document}

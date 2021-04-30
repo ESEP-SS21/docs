@@ -46,33 +46,6 @@
     \end{itemize}
 \end{itemize}
 
-\subsection{Anforderungen}\label{subsec:anforderungen2}
-Im Folgenden werden die Anforderungen an das System definiert. Diese wurden zur besseren
-Übersichtlichkeit sinnvoll kategorisiert. Zum besseren Abgleich verweisen wir in den
-Anforderungen jeweils auf die Sätze in dem Lastenheft, aus denen diese hervorgehen. 
-Das wird, wie folgendes Beispiel zeigt, gekennzeichnet: (36). 
-
-\input{Chapters/3_x_gitlab_reqs.tex}
-\FloatBarrier
-
-%% In der Aufgabenstellung sind Anforderungen an das System gestellt.
-%% Arbeiten Sie diese hier auf und ergänzen Sie diese entsprechend der Absprachen mit dem Betreuer.
-%% Achten Sie auf die entsprechende Atribuierung.
-%% Berücksichtigen Sie auch mögliche Fehlbedienungen und Fehlverhalten des Systems.
-
-\subsection{Systemkontext}\label{subsec:systemkontext2}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{../out/diagrams/stage1/systemkontext.pdf}
-    \caption{Systemkontext}
-    \label{fig:systemkontext}
-\end{figure}
-
-
-Betrachte Abbildung \ref{fig:systemkontext}.
-Die Systemsicht bringt umliegende Aktorik des Systemkontext und System selber miteinander in Beziehung.
-
 \paragraph{Akteure}
 
 \begin{itemize}
@@ -106,25 +79,52 @@ Die Systemsicht bringt umliegende Aktorik des Systemkontext und System selber mi
     \item LightBarrier\\
     Das System besitzt diverse Lichtschranken als Trigger und zur Steuerung des Kontrollflusses
     \begin{itemize}
-        \item LightBarrier\_Start\\
+        \item \gls{lb_st}\\
         Lichtschranke am Anfang eines Förderbandes.
         Die Unterbrechung dieser Lichtschranke setzt das Förderband in Bewegung.
-        \item LightBarrier\_Ramp\\
+        \item \gls{lb_ra}\\
         Lichtschranke an der Rampe, in der die Werkstücke aussortiert werden.
         Die kurze Unterbrechung dieser Lichtschranke kann als erfolgreiche Aussortierung interpretiert werden.
         Eine stetige Unterbrechung signalisiert eine volle Rutsche.
-        \item LightBarrier\_Height\\
+        \item \gls{lb_he}\\
         Lichtschranke an der Position des Höhensensors.
         Die Unterbrechung dieser Lichtschranke startet eine Höhenmessung.
-        \item LightBarrier\_Switch\\
+        \item \gls{lb_sw}\\
         Lichtschranke vor dem Aussortiermechanismus der Anlage.
         Die Unterbrechung startet den Aussortieralgorithmus.
-        \item LightBarrier\_End\\
+        \item \gls{lb_en}\\
         Lichtschranke am Ende eines Förderbandes.
         Die Unterbrechung dieser Lichtschranke kann das Transferieren des Werkstückes an die nächste Anlage einleiten.
         Am Ende der zweiten Anlage werden bei Unterbrechung dieser Lichtschranke Werkstück-Informationen an der Konsole ausgegeben.
     \end{itemize}
 \end{itemize}
+
+\subsection{Anforderungen}\label{subsec:anforderungen2}
+Im Folgenden werden die Anforderungen an das System definiert. Diese wurden zur besseren
+Übersichtlichkeit sinnvoll kategorisiert. Zum besseren Abgleich verweisen wir in den
+Anforderungen jeweils auf die Sätze in dem Lastenheft, aus denen diese hervorgehen. 
+Das wird, wie folgendes Beispiel zeigt, gekennzeichnet: (36). 
+
+\input{Chapters/3_x_gitlab_reqs.tex}
+\FloatBarrier
+
+%% In der Aufgabenstellung sind Anforderungen an das System gestellt.
+%% Arbeiten Sie diese hier auf und ergänzen Sie diese entsprechend der Absprachen mit dem Betreuer.
+%% Achten Sie auf die entsprechende Atribuierung.
+%% Berücksichtigen Sie auch mögliche Fehlbedienungen und Fehlverhalten des Systems.
+
+\subsection{Systemkontext}\label{subsec:systemkontext2}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{../out/diagrams/stage1/systemkontext.pdf}
+    \caption{Systemkontext}
+    \label{fig:systemkontext}
+\end{figure}
+
+
+Betrachte Abbildung \ref{fig:systemkontext}.
+Die Systemsicht bringt umliegende Aktorik des Systemkontext und System selber miteinander in Beziehung.
 
 %% Use Cases werden aus einer bestimmten Sicht erstellt.
 %% Dokumentieren Sie diese mittels Kontextdiagramm oder Use Case Diagramm.
