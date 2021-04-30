@@ -67,29 +67,27 @@
     \item[REQ-12:] Bei Betätigung von \gls{t_start} wechselt die \gls{anlage} in den Betriebszustand (49)
     \item[REQ-15:] Bei \gls{longpress} von \gls{t_start} wechselt die \gls{anlage} in den Service-Modus (50)
     \begin{itemize}
-        \item Im Service Modus führt die \gls{anlage} Kalibrierung und Selbsttests durch.
-        Anforderung hierfür ist, dass die \gls{anlage} im Ruhezustand ist.
+        \item Anforderung für den Wechsel ist, dass die \gls{anlage} im Ruhezustand ist.
+        \item Im Service Modus führt die \gls{anlage} Kalibrierung und Selbsttests durch. %TODO Modi in glossar aufnehmen
     \end{itemize}
     \item[REQ-17:] Bei Betätigung des \gls{t_stop} wechselt die \gls{anlage} in den Ruhezustand (51, 52)
     \begin{itemize}
-        \item Dafür müssen bestehende Fehler behoben und quittiert und gegangene Fehler quittiert sein.
+        \item Bedingung für den Wechsel ist, dass weder Fehler noch Warnungen vorliegen dürfen. %TODO Warnung und Fehler in glossar aufnehmen
         Alles andere führt zu einer Fehlermeldung.
     \end{itemize}
-    \item[REQ-21:] Bei Betätigung des \gls{t_reset} werden sämtliche Fehler quittiert (53)
+    \item[REQ-21:] Bei Betätigung des \gls{t_reset} werden sämtliche Fehler quittiert (53) %TODO mit kunden kären
     \item[REQ-28:] Wenn die \gls{anlage} durch \gls{estop} stillgelegt ist, kann der Betrieb durch Drücken des
-    \gls{t_reset} der \gls{anlage}, an dem auch der \gls{estop} gedrückt wurde, fortgesetzt werden (56)
+    \gls{t_reset} der \gls{anlage}, an dem auch der \gls{estop} gedrückt wurde, fortgesetzt werden (56) %TODO 'fortsetzten' mit kunden kären
     \begin{itemize}
         \item Bedingung dafür: Keine \gls{estop} sind gedrückt
     \end{itemize}
-    \item[REQ-40:] Im Service Modus führt die \gls{anlage} beispielsweise Kalibrierung und Selbsttests durch (50)
+    \item[REQ-40:] Im Service Modus führt die \gls{anlage} Kalibrierung und Selbsttests durch (50) %TODO genauer spezifizieren
+    \item[REQ-41:] Bei Betätigung eines \gls{estop} werden beide \glspl{anlage} angehalten (54, 55)
+    \item[REQ-42:] Dem Benutzer werden Hinweise über die Benutzung der \gls{anlage} mithilfe der LEDs an der \gls{taster}n gegeben
     \begin{itemize}
-        \item Aus dem Anforderungsdokument geht dies nicht eindeutig hervor, dies muss in zukünftig spezifiziert werden.
-    \end{itemize}
-    \item[REQ-41:] Bei Betätigung des \gls{estop} werden beide \glspl{anlage} angehalten (54, 55)
-    \item[REQ-42:] Dem Benutzer werden Hinweise über die Benutzung der \gls{anlage} mithilfe der LEDs an der Tastatern gegeben
-    \begin{itemize}
-        \item Im Betriebszustand ist die LED am \gls{t_start} an, im Ruhezustand die LED am \gls{t_stop}.
-        Bei einem gegangenen oder bestehenden Fehler ist die LED am \gls{t_reset} an.
+        \item Im Betriebszustand ist die LED am \gls{t_start} an
+        \item Im Ruhezustand die LED am \gls{t_stop}
+        \tiem Bei einem gegangenen oder bestehenden Fehler ist die LED am \gls{t_reset} an
     \end{itemize}
 \end{itemize}
 
