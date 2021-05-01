@@ -23,6 +23,44 @@ visualisiert.
     \label{fig:cmp}
 \end{figure}
 
+\subsubsection{Allgemein}
+Es wird eine ereignisbasierte Architektur implementiert.
+Das System basiert auf eine ungepufferte ereignisbasierte Kommunikation,
+die über dem Dispatcher abläuft. Am Dispatcher sind sämtliche Komponenten,
+die \glspl{event} erzeugen oder beziehen, als Clients registriert.
+Die gesamte Eventkommunikation läuft über das Qnet-Protokoll durch Pulse-Messages ab,
+ die Kommunikation mit der anderen \gls{anlage}.
+
+\subsubsection{Dispatcher}
+Die Eventkommunikation läuft über dem Dispatcher nach dem Publish/Subscriber Messaging Pattern ab,
+die \glspl{event} werden Type-Based gefiltert. Der Dispatcher stellt das Interface IDispatcher bereit,
+an dem sich die Komponenten als Clients hängen. Clients sind einerseits Publisher,
+die \glspl{event} erzeugen. Andererseits gibt es Subscriber, die bestimmte \glspl{event} abbonieren und diese beziehen.
+Der Dispatcher hat zudem das Interface Qnet, welches die Kommunikation mit der anderen \gls{anlage} ermöglicht.
+
+\subsubsection{EventRecorder}
+Der Eventrecorder hängt als Publisher und Subscriber am Dispatcher.
+Er abonniert alle \glspl{event} um mittels der \gls{record-fn} ein \gls{protokoll} zu erstellen.
+Ein Systemablauf kann durch die \gls{replay-fn} simuliert werden,
+indem die \glspl{event} aus dem \gls{protokoll} erzeugt und an den Dispatcher geleitet werden.
+
+\subsubsection{HAL}
+In der Hardware Abstraction Layer befinden sich zum einem die Sensoren.
+Sensoren sind Publisher, die \glspl{event} erzeugen und dem Dispatcher zusenden.
+Zum anderen gibt es die Actuators. Actuators werden über das Interface IHal, welches von der HAL bereitgestellt wird, angesteuert.
+
+\subsubsection{Datamodel}
+    %TODO
+
+\subsubsection{Control}
+Ein Teil der Logic ist die Control. Die Control beinhaltet Komponenten, die mit FSMs den Systemablauf steuern.
+Dazu gehehören die Komponenten MainControl, Stoplight, ErrorHandler und ConnectionManagement.
+Die Control benötigt das Interface IDatamodel, das den Zugriff auf die im Datamodel gespeicherten Daten ermöglich.
+Über das Interface IHal können Aktionen für die Actuators gesetzt werden.
+Alle Komponenten der Control beziehen zudem \glspl{event} über das Interface IDispatcher als Subscriber und erzeugen \glspl{event} als Publisher.
+
+
+
 \section{Datenmodellierung}\label{sec:datenmodellierung}
 
 %% Bestimmen Sie das Datenmodell und dokumentieren Sie es hier mit Hilfe von UML Klassendiagrammen
