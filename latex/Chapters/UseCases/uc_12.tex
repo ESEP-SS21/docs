@@ -1,15 +1,15 @@
-\begin{usecase}{12}{Wechsel Ruhezustand}{mittel}
+\begin{usecase}{12}{Wechsel \gls{ruhe-zst}}{mittel}
     \addTextCollum{Verwandte Requirements}{
         \refreq{17}, \refreq{40}
     }
     \addTextCollum{Description}{
-        Dieser Use-Case beschreibt, wie vom Betriebszustand in den Ruhezustand gewechselt wird.
+        Dieser Use-Case beschreibt, wie vom \gls{betrieb-zst} in den \gls{ruhe-zst} gewechselt wird.
     }
     \addTextCollum{Actors}{
         Stoplight, Control\_Panel, FTS\_2, Conveyor\_Belt, Sorting\_Mechanism
     }
     \addCollum{Precondition}{
-        \item System ist im Betriebszustand
+        \item System ist im \gls{betrieb-zst}
     }
     \addCollum{Triggers}{
         \item[1a)] Event Stopptaste empfangen
@@ -20,9 +20,9 @@
         \item[3)] Ampel wechselt auf gelb leuchtend
         \item[4)] LED am Start-Taster vom Control\_Panel einschalten
         \item[5)] LED am Stopp-Taster vom Control\_Panel ausschalten
-        \item[6)] Wechseln in Ruhezustand
+        \item[6)] Wechseln in \gls{ruhe-zst}
     }
     \addCollum{Postcondition}{
-        \item System ist im Ruhezustand
+        \item System ist im \gls{ruhe-zst}
     }
 \end{usecase}
