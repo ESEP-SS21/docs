@@ -1,24 +1,24 @@
-\begin{usecase}{15}{Do not discard}{hoch}
+\begin{usecase}{06}{\gls{workpiece} durchlassen}{hoch}
     \addTextCollum{Verwandte Requirements}{
-        REQ-2, REQ-27
+        \refreq{2}, \refreq{27}
     }
     \addTextCollum{Description}{
         In diesem Use-Case wird ein Werkstück vom Aussortiermechanismus durchgelassen
     }
     \addTextCollum{Actors}{
-        Sorting\_Mechanism, LightBarrier\_Switch
+        Sorting\_Mechanism
     }
-    \addCollum{Precondition}{
+    \addTextCollum{Precondition}{
         \item Die Anlage befindet sich im Betriebszustand
-        \item Das betroffene Werkstück ist als \gls{do_not_discard} markiert
     }
 
     \addCollum{Mainflow}{
         \item[1)] Öffne Sorting\_Mechanism
-        \item[2)] Setze Sorting\_Mechanism zurück, wenn LightBarrier\_Switch nicht mehr unterbrochen
+        \item[2)] Warte bis \gls{workpiece} Sorting\_Mechanism passiert
+        \item[3)] Setze Sorting\_Mechanism zurück
     }
 
-    \addCollum{Postcondition}{
+    \addTextCollum{Postcondition}{
         \item Sorting\_Mechanism zurückgesetzt
         \item Werkstück nicht aussortiert
     }

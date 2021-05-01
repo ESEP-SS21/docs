@@ -1,0 +1,24 @@
+\begin{usecase}{03}{Metall erfassen}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+    \refreq{1}, \refreq{2}, \refreq{3}
+    }
+    \addTextCollum{Description}{
+        In diesem Use-Case wird ein metallernes \gls{workpiece} erkannt.
+        Initial wird bei jedem \gls{workpiece} von Kunstoff-Material ausgegangen.
+    }
+    \addTextCollum{Actors}{
+        Metal\_Detector
+    }
+    \addTextCollum{Precondition}{
+        \item Die Anlage befindet sich im Betriebszustand
+    }
+    \addTextCollum{Trigger}{
+        \item Metal\_Detector erfasst Metall
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Aktuellem Werkstück wird Metall als Material zugewiesen
+    }
+    \addTextCollum{Postcondition}{
+        \item Das Material des \gls{workpiece}s ist bekannt.
+    }
+\end{usecase}

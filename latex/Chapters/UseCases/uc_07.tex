@@ -1,19 +1,20 @@
-\begin{usecase}{04}{Transfer \gls{workpiece}}{mittel}
+\begin{usecase}{07}{\gls{workpiece}-Übergabe}{mittel}
     \addTextCollum{Verwandte Requirements}{
-        REQ-9, REQ-14, REQ-16, REQ-18, REQ-31
+        \refreq{9}, \refreq{14}, \refreq{16}, \refreq{18}, \refreq{31}
     }
     \addTextCollum{Description}{
-        In diesem Use-Case erreicht ein Werkstück das Ende eines Förderbandes und wird gegebenenfalls an das nächste Förderband transferiert
+        In diesem Use-Case erreicht ein Werkstück das Ende des Förderbandes.
+        Befindet sich das System in Primary Mode wird das \gls{workpiece} an die Anlage in Secondary Mode übergeben.
     }
     \addTextCollum{Actors}{
         Conveyor\_Belt, FTS\_2, LightBarrier\_End
     }
 
-    \addCollum{Precondition}{
+    \addTextCollum{Precondition}{
         \item Anlage befindet sich im Betriebszustand
     }
 
-    \addCollum{Trigger}{
+    \addTextCollum{Trigger}{
         \item LightBarrier\_End wird unterbrochen
     }
 
@@ -34,7 +35,7 @@
         \end{itemize}
     }
 
-    \addCollum{Postcondition}{
-        \item Werkstück ist nicht mehr auf dem Förderband
+    \addTextCollum{Postcondition}{
+        \item Werkstück ist nicht mehr auf dem Förderband der eigenen Anlage
     }
 \end{usecase}

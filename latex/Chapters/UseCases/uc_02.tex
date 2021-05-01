@@ -1,0 +1,27 @@
+\begin{usecase}{02}{Höhe messen}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{1}, \refreq{31}, \refreq{32}
+    }
+    \addTextCollum{Description}{
+        Die Höhe eines \gls{workpiece}s wird gemessen.
+    }
+    \addTextCollum{Actors}{
+        Height\_Measurement, LightBarrier\_Height
+    }
+    \addTextCollum{Preconditions}{
+        \item System ist im Betriebszustand
+    }
+    \addTextCollum{Trigger}{
+        LightBarrier\_Height
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Messung bei Height\_Measurement anfragen
+        \item[2)] Auf Rückmeldung warten
+        \item[3)] Rückgabewert mit den in Höhenprofile erwähnten Werten vergleichen
+        \item[4)] Rückgabewert fällt in einen der Bereiche (plus Toleranz) \textbullet
+        \item[4)] Jeweiliges Höhenprofil zurückgeben
+    }
+    \addTextCollum{Postcondition}{
+        \item Die Höhe des \gls{workpiece}s ist gemessen
+    }
+\end{usecase}

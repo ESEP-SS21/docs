@@ -1,0 +1,39 @@
+\begin{usecase}{01}{\gls{workpiece}-Annahme}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{7}, \refreq{24}, \refreq{26}
+    }
+    \addTextCollum{Description}{
+        In diesem Use-Case ein \gls{workpiece} von der \gls{anlage} entgegengenommen.
+    }
+    \addTextCollum{Actors}{
+        Conveyor\_Belt, LightBarrier\_Start
+    }
+    \addTextCollum{Precondition}{
+        \item Die Anlage befindet sich im Betriebszustand
+        \item Es befindet sich kein Werkstück im Bereich von LightBarrier\_Start
+    }
+    \addTextCollum{Trigger}{
+        \item LightBarrier\_Start
+    }
+    \addCollum{Main flow}{
+        \item[1)] Zuweisung der eindeutigen ID an das betroffene Werkstück
+        \item[2)] Conveyor\_Belt ist nicht in Bewegung \textbullet
+        \item[3)] Conveyor\_Belt wird in Bewegung gesetzt
+        \item[4)] Warte bis LightBarrier\_Start nicht mehr unterbrochen \textbullet
+    }
+    \addCollum{Alternative Flow 1}{
+        \item at step 2) of Mainflow
+        \item[2a)] Conveyor\_Belt ist bereits in Bewegung und muss nicht gestartet werden
+    }
+    \addCollum{Alternative Flow 2}{
+        \item at step 3) of Mainflow
+        \item[3a)] Werkstück wartet am Ende der Anlage auf Übergabe
+    \begin{itemize}
+        \item 3a1) Förderband wird nicht gestartet
+    \end{itemize}
+    }
+    \addTextCollum{Postcondition}{
+        \item Werkstück ist eindeutig erfasst
+        \item LightBarrier\_Start ist nicht mehr unterbrochen
+    }
+\end{usecase}

@@ -1,0 +1,29 @@
+\begin{usecase}{12}{Wechsel Ruhezustand}{mittel}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{17}, \refreq{40}
+    }
+    \addTextCollum{Description}{
+        Dieser Use-Case beschreibt, wie vom Betriebszustand in den Ruhezustand, bzw. idle
+        gewechselt wird.
+    }
+    \addTextCollum{Actors}{
+        Stoplight, Control\_Panel, FTS\_2, Conveyor\_Belt, Sorting\_Mechanism
+    }
+    \addTextCollum{Precondition}{
+        \item System ist im Betriebszustand
+    }
+    \addTextCollum{Triggers}{
+        \item[1a)] Event Stopptaste empfangen
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Conveyor\_Belt abschalten
+        \item[2)] Sorting\_Mechanism zurücksetzen
+        \item[3)] Ampel wechselt auf gelb leuchtend
+        \item[4)] LED am Start-Taster vom Control\_Panel einschalten
+        \item[5)] LED am Stopp-Taster vom Control\_Panel ausschalten
+        \item[6)] Wechseln in Ruhezustand
+    }
+    \addTextCollum{Postcondition}{
+        \item System ist im Ruhezustand
+    }
+\end{usecase}

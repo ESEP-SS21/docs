@@ -1,0 +1,24 @@
+\begin{usecase}{11}{Wechsel Betriebszustand}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{12}, \refreq{42}
+    }
+    \addTextCollum{Actors}{
+        FTS\_2, Control\_Panel
+    }
+    \addCollum{Preconditions}{
+        \item System ist im Ruhezustand
+        \item System ist nicht im Fehlerzustand
+    }
+    \addTextCollum{Trigger}{
+        \item Der Startknopf wird gedrückt
+    }
+    \addCollum{Mainflow}{
+        \item[1)] System wechselt in den Betriebszustand \textbullet
+        \item[2)] LED im Stopptaster wird eingeschaltet
+        \item[3)] LED im Starttaster wird ausgeschaltet \textbullet
+    }
+    \addTextCollum{Postconditions}{
+        \item[2)] FTS\_2 ist im Betriebszustand
+        \item[3)] \gls{anlage} ist im Betriebszustand
+    }
+\end{usecase}
