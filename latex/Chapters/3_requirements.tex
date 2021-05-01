@@ -19,13 +19,13 @@
     \item Betreuer
     \begin{itemize}
         \item Erreichen der Ziele am Ende jeder Phase
-        \item Möglichst vollständige Dokumentation als Rückmeldungsgrundlage
+        \item Vollständige Dokumentation als Rückmeldungsgrundlage
     \end{itemize}
     \item Benutzer
     \begin{itemize}
         \item System stellt keine Gefahr dar
         \item Information über Fehlerzustände
-        \item Möglichst selten Eingreifen erforderlich
+        \item Seltenes Eingreifen erforderlich
         \item Hoher Durchsatz
         \item Einfache Bedienung und Inbetriebnahme (Dokumentation)
     \end{itemize}
@@ -51,18 +51,19 @@
 \begin{itemize}
     \item Control\_Panel\\
     Steuerungspanel der Anlage.
-    Sie stellt einen START-, STOP- und RESET-Button zur Verfügung.
+    Sie stellt den \gls{str} START-, STOP- und RESET-Button zur Verfügung.
 
     \item Conveyor\_Belt\\
-    Auf Förderband werden Werkstücke durch das System bewegt.
+    Auf dem Förderband werden Werkstücke durch das System bewegt.
     \item FTS\_2\\
     Die jeweils andere Förderanlage, mit der das System kommuniziert.
     \item E\_Stop\\
-    Ein Button zum Auslösen des Emergency-Stops.
+    Ein Button zum Auslösen des Emergency-Stops. Ist der Button gedrückt, kann er durch Herausziehen und drücken des
+    RESET-Buttons deaktiviert werden.
     \item Metal\_Detector\\
-    Metall-Sensor zum Erfassen des Materials eines Werkstückes.
+    Sensor zum Erfassen von Metall eines Werkstückes.
     \item Height\_Measurement\\
-    Höhen-Sensor zum Erfassen des Materials eines Werkstückes.
+    Höhen-Sensor zum Erfassen der Höhe eines Werkstückes.
     \item Stoplight\\
     Ampel, die durch verschiedene LED-Einstellungen Zustandsinformationen der Anlage anzeigt.
     \item Sorting\_Mechanism\\
@@ -101,8 +102,8 @@
 
 \subsection{Anforderungen}\label{subsec:anforderungen2}
 Im Folgenden werden die Anforderungen an das System definiert. Diese wurden zur besseren
-Übersichtlichkeit sinnvoll kategorisiert. Zum besseren Abgleich verweisen wir in den
-Anforderungen jeweils auf die Sätze in dem Lastenheft, aus denen diese hervorgehen. 
+Übersichtlichkeit kategorisiert. Zum besseren Abgleich wird in den
+Anforderungen jeweils auf die Sätze in den Anforderungen des Kunden verwiesen, aus denen diese hervorgehen.
 Das wird, wie folgendes Beispiel zeigt, gekennzeichnet: (36). 
 
 \input{Chapters/3_x_gitlab_reqs.tex}
@@ -124,7 +125,7 @@ Das wird, wie folgendes Beispiel zeigt, gekennzeichnet: (36).
 
 
 Betrachte Abbildung \ref{fig:systemkontext}.
-Die Systemsicht bringt umliegende Aktorik des Systemkontext und System selber miteinander in Beziehung.
+Die Systemsicht bringt umliegende Aktorik des Systems und System selber miteinander in Beziehung.
 
 %% Use Cases werden aus einer bestimmten Sicht erstellt.
 %% Dokumentieren Sie diese mittels Kontextdiagramm oder Use Case Diagramm.
@@ -191,28 +192,39 @@ Die Farbgebung dient lediglich zur Veranschaulichung.
 
 \subsection{Art des Systems}
 
-Bei dem zu entwerfenden System handelt es sich um die Steuerung eines Festo-Transfersystems, welche auf einem in die Anlage integrierten BeagleBoneBlack Einplatinencomputer zu realisieren ist.
+Bei dem zu entwerfenden System handelt es sich um die Steuerung eines Festo-Transfersystems,
+welche auf dem BeagleBoneBlack Einplatinencomputer, von dem jede Anlage einen besitzt, zu realisieren ist.
 Daher handelt es sich um ein Embedded System.
-Für das Zu entwickelnde Softwaresystem bedeutet dies, dass es zur Steuerung der Prozesse sehr nah an der in der Anlage verbauten Hardware arbeiten muss.
-Ein weiterer wichtiger Punkt ist, dass das System mit einer weiteren gleichartigen Anlage über das Netzwerk kommunizieren muss. Dies ist ebenfalls im Entwurfsprozess zu berücksichtigen.
+Für das zu entwickelnde Softwaresystem bedeutet dies, dass es zur Steuerung der Prozesse sehr nah
+an der in der Anlage verbauten Hardware arbeiten muss.
+Ein weiterer wichtiger Punkt ist, dass das System mit einer weiteren gleichartigen Anlage über
+das Netzwerk kommunizieren muss. Dies ist ebenfalls im Entwurfsprozess zu berücksichtigen.
 
 \subsubsection{Eigenschaften des BeagleBoneBlack und Grundlagen QNX}
 
-Auf dem BeagleBoneBlack Einplatinencomputer läuft das Echtzeitbetriebssystem QNX, das Kommunikation zwischen Prozessen und Threads mittels Message Passing bevorzugt.
-Dieses Message Passing kann auch über das Netzwerk erfolgen, sodass Messages auch unkompliziert an einen weiteren BeagleBoneBlack geschickt werden können.
-Die Architektur sollte sich daher auf Message-Passing stützen, gerade um die Kommunikation mit der anderen gleichartigen Anlage zu erleichtern.
-Da der BeagleBoneBlack ein eigenes Stück Hardware mit eigenem Betriebssystem ist, muss für die Entwicklung die Entwicklungsumgebung QNX Momentics benutzt werden, die Debugging und Testing ermöglicht.
+Auf dem BeagleBoneBlack Einplatinencomputer läuft das Echtzeitbetriebssystem QNX, das Kommunikation
+zwischen Prozessen und Threads mittels Message Passing bevorzugt.
+Dieses Message Passing kann auch über das Netzwerk erfolgen, sodass Messages auch an
+einen weiteren BeagleBoneBlack geschickt werden können.
+Die Architektur sollte sich daher auf Message-Passing stützen, gerade um die Kommunikation mit der
+anderen gleichartigen Anlage zu erleichtern.
+Da der BeagleBoneBlack ein eigenes Stück Hardware mit eigenem Betriebssystem ist, muss für die
+Entwicklung die Entwicklungsumgebung QNX Momentics benutzt werden, die Debugging und Testing ermöglicht.
 Die Kommunikation mit dem BeagleBoneBlack und dem Entwicklungsrechner erfolgt über die Netzwerkverbindung.
 
 \subsection{Kommunikation mit der Hardware}
 
 Die Ansteuerung der Aktorik und Sensorik der Anlage erfolgt direkt über die GPIOs des BeagleBoneBlack.
-Die Sensorik ist hierbei an GPIO0, die Aktorik des Transfersystems an GPIO1 und die LEDs des Bedienpanels an GPIO2.
+Die Sensorik ist hierbei an GPIO0, die Aktorik des Transfersystems an GPIO1 und die LEDs des Bedienpanels an GPIO2
+gekoppelt.
 Bei den GPIOs können Bits einzeln gesetzt und gelöscht werden und es können die aktuellen Werte ausgelesen werden.
-Auf Veränderung an den GPIOs kann mittels pro Pin konfigurierbarer Interrupts (steigende Flanke, fallende Flanke, Level=0, Level=1) reagiert werden.
+Auf Veränderung an den GPIOs kann mittels pro Pin konfigurierbarer Interrupts (steigende Flanke, fallende Flanke,
+Level=0, Level=1) reagiert werden.
 Interrupts lassen sich nach dem Auslösen für einen einstellbare Zeit ignorieren (Debouncing).
-Um später nicht direkt mit den GPIOs interagieren zu müssen, sollte ein Hardware Abstraction Layer einfachere Schnittstellen zum Ansteuern der Aktorik und für das Reagieren auf die Sensorik bereitstellen.
-Der Höhensensor ist am ADC des BeagleBoneBlack angeschlossen. Dieser kann über das Schreiben in ein bestimmtes GPIO-Register aktiviert werden und kann dann nach erfolgreicher Messung einen Interrupt auslösen.
+Um später nicht direkt mit den GPIOs interagieren zu müssen, sollte ein Hardware Abstraction Layer
+einfachere Schnittstellen zum Ansteuern der Aktorik und für das Reagieren auf die Sensorik bereitstellen.
+Der Höhensensor ist am ADC des BeagleBoneBlack angeschlossen. Dieser kann über das Schreiben in ein
+bestimmtes GPIO-Register aktiviert werden und kann dann nach erfolgreicher Messung einen Interrupt auslösen.
 
 \subsection{Besonderheiten beim Systemaufbau}
 
@@ -221,8 +233,9 @@ Sie sind bei der Verhaltensmodellierung zu berücksichtigen und könnten das Erk
 
 \subsubsection{Platzierung der Lichtschranke bei der Höhenmessung}
 
-Die Lichtschranke an der Höhenmessung ist so platziert, dass sich die Mitte eines Werkstücks bei ihrer Unterbrechung genau unter dem Höhenmesser befindet.
-Auf diese Art lassen sich die unterschiedlichen Formen von Werkstücken mittels einer einzelnen Messung Unterscheiden.
+Die Lichtschranke an der Höhenmessung ist so platziert, dass sich die Mitte eines Werkstücks bei ihrer
+Unterbrechung genau unter dem Höhenmesser befindet.
+Auf diese Art lassen sich die unterschiedlichen Höhen von Werkstücken mittels einer einzelnen Messung unterscheiden.
 Die gemessenen Höhen bei unterschiedlichen Werkstückarten gehen aus Tabelle~\ref{tab:werkstuecke} hervor.
 
 \begin{table}[h]
@@ -233,7 +246,7 @@ Die gemessenen Höhen bei unterschiedlichen Werkstückarten gehen aus Tabelle~\r
             \hline\hline
             HOCH                 &  25,0-25,4\\
             \hline
-            FLACH                     & 21 \\
+            FLACH                     & 19,8-20,2 \\
             \hline
             LOCH               & 15,8-16,4 \\
             \hline
@@ -244,11 +257,12 @@ Die gemessenen Höhen bei unterschiedlichen Werkstückarten gehen aus Tabelle~\r
 \end{table}
 
 Ebenso fällt auf, dass der Abstand der Lichtschranke für die Höhenmessung vom Anfang des Förderbands ca. 25 cm beträgt, 
-was für die Bestimmung des Abstands bei der Werkstückübergabe zwischen zwei Anlagen wichtig sein könnte.
+was für die Bestimmung des Abstands bei der Werkstückübergabe zwischen zwei Anlagen wichtig ist.
 
 \subsubsection{Der Aufbau im Bereich des Aussortiermechnaismus}
 
-Im Transportweg der Werkstücke befindet sich an der Stelle an der ein Werkstück vom Sortiermechanismus aussortiert werden muss eine Lichtschranke. 
+Im Transportweg der Werkstücke befindet sich an der Stelle, an der ein Werkstück vom Sortiermechanismus aussortiert
+werden muss, eine Lichtschranke.
 Das Unterbrechen dieser Lichtschranke kann daher als Signal zum Starten des Aussortiervorgangs verstanden werden.
 Im Falle einer Weiche als Aussortiermechanismus müsste diese geöffnet werden, falls keine Aussortierung erfolgen soll.
 Im Falle eines Auswerfers müsste dieser aktiviert werden, falls das Werkstück aussortiert werden muss.
