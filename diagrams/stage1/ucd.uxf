@@ -4,13 +4,38 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>954</x>
-      <y>567</y>
-      <w>180</w>
+      <x>423</x>
+      <y>414</y>
+      <w>216</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Determine Sorting Action
-fg=red
+    <panel_attributes>07 Werkstück-Übergabe
+bg=white
+lw=2.5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>648</x>
+      <y>306</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>04 Werkstück sortieren
+bg=white
+lw=2.5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>873</x>
+      <y>360</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>06 Werkstück durchlassen
 bg=light_gray
 lw=2.5</panel_attributes>
     <additional_attributes/>
@@ -18,67 +43,12 @@ lw=2.5</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>747</x>
-      <y>225</y>
-      <w>162</w>
+      <x>423</x>
+      <y>360</y>
+      <w>216</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Werkstück-Transfer
-bg=white
-lw=2.5</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>963</x>
-      <y>333</y>
-      <w>162</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Measure Height
-fg=red
-bg=white
-lw=2.5</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>963</x>
-      <y>720</y>
-      <w>162</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Werkstück-Typ erfassen
-
-bg=white
-lw=2.5</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>837</x>
-      <y>648</y>
-      <w>198</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Werkstück sortieren
-bg=white
-fg=blue
-lw=2.5</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>747</x>
-      <y>720</y>
-      <w>162</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Durchlassen
+    <panel_attributes>05 Werkstück aussortieren
 bg=light_gray
 lw=2.5</panel_attributes>
     <additional_attributes/>
@@ -86,53 +56,12 @@ lw=2.5</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>747</x>
-      <y>567</y>
-      <w>162</w>
+      <x>873</x>
+      <y>414</y>
+      <w>216</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Aussortieren
-bg=light_gray
-lw=2.5</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>819</x>
-      <y>675</y>
-      <w>99</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-&lt;&lt;includes&gt;&gt;
-fg=blue
-lw=2.5</panel_attributes>
-    <additional_attributes>90.0;10.0;90.0;30.0;10.0;30.0;10.0;50.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>819</x>
-      <y>594</y>
-      <w>99</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-&lt;&lt;includes&gt;&gt;
-fg=blue
-lw=2.5</panel_attributes>
-    <additional_attributes>90.0;60.0;90.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>747</x>
-      <y>450</y>
-      <w>162</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Fehler behandeln
+    <panel_attributes>09 Kalibrierung
 bg=white
 lw=2.5</panel_attributes>
     <additional_attributes/>
@@ -140,12 +69,12 @@ lw=2.5</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>531</x>
-      <y>225</y>
-      <w>162</w>
+      <x>423</x>
+      <y>468</y>
+      <w>216</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Kalibrierung
+    <panel_attributes>10 E-Stop benutzen
 bg=white
 lw=2.5</panel_attributes>
     <additional_attributes/>
@@ -153,12 +82,12 @@ lw=2.5</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>963</x>
-      <y>450</y>
-      <w>162</w>
+      <x>873</x>
+      <y>468</y>
+      <w>216</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>E-Stop benutzen
+    <panel_attributes>12 Wechsel Ruhezustand
 bg=white
 lw=2.5</panel_attributes>
     <additional_attributes/>
@@ -166,67 +95,26 @@ lw=2.5</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>531</x>
-      <y>684</y>
-      <w>162</w>
+      <x>648</x>
+      <y>468</y>
+      <w>216</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Wechsel Ruhezustand
+    <panel_attributes>11 Wechsel Betriebszustand
 bg=white
 lw=2.5</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>531</x>
-      <y>567</y>
-      <w>162</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Wechsel Betriebszustand
-bg=white
-lw=2.5</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>531</x>
-      <y>450</y>
-      <w>162</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Answer Transfer Request
-fg=red
-bg=white
-lw=2.5</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>963</x>
-      <y>594</y>
-      <w>99</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-&lt;&lt;includes&gt;&gt;
-fg=red
-lw=2.5</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;50.0;90.0;50.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>468</x>
-      <y>144</y>
-      <w>720</w>
-      <h>666</h>
+      <x>405</x>
+      <y>198</y>
+      <w>702</w>
+      <h>324</h>
     </coordinates>
     <panel_attributes>&lt;&lt;system&gt;&gt;
-fg=black
+fg=blue
 lw=2.5
 FTS
 
@@ -236,10 +124,10 @@ FTS
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>297</x>
-      <y>0</y>
-      <w>1062</w>
-      <h>1008</h>
+      <x>378</x>
+      <y>162</y>
+      <w>756</w>
+      <h>387</h>
     </coordinates>
     <panel_attributes>uc Anwendungsfalldiagramm</panel_attributes>
     <additional_attributes/>
@@ -247,40 +135,51 @@ FTS
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>747</x>
-      <y>333</y>
-      <w>162</w>
+      <x>423</x>
+      <y>252</y>
+      <w>216</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Acknowledge Error
-fg=red
-bg=light_gray
+    <panel_attributes>01 Werkstück-Annahme
+bg=white
 lw=2.5</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLUseCase</id>
     <coordinates>
-      <x>819</x>
-      <y>360</y>
-      <w>90</w>
-      <h>108</h>
+      <x>648</x>
+      <y>252</y>
+      <w>216</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>lt=.&gt;
-&lt;&lt;includes&gt;&gt;
-fg=red
+    <panel_attributes>02 Höhe messen
+bg=white
 lw=2.5</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>531</x>
-      <y>333</y>
-      <w>162</w>
+      <x>648</x>
+      <y>414</y>
+      <w>216</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>Konfiguration
+    <panel_attributes>08 Transfer-Anfrage beantworten
+bg=white
+lw=2.5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>873</x>
+      <y>252</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>03 Metall erfassen
 bg=white
 lw=2.5</panel_attributes>
     <additional_attributes/>
@@ -288,28 +187,29 @@ lw=2.5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>963</x>
-      <y>675</y>
-      <w>99</w>
-      <h>63</h>
+      <x>522</x>
+      <y>306</y>
+      <w>144</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;includes&gt;&gt;
-fg=blue
-lw=2.5</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;30.0;90.0;30.0;90.0;50.0</additional_attributes>
+lw=2.5
+fg=blue</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0;10.0;60.0</additional_attributes>
   </element>
   <element>
-    <id>UMLUseCase</id>
+    <id>Relation</id>
     <coordinates>
-      <x>963</x>
-      <y>225</y>
-      <w>162</w>
-      <h>36</h>
+      <x>855</x>
+      <y>306</y>
+      <w>144</w>
+      <h>72</h>
     </coordinates>
-    <panel_attributes>Werkstück-Annahme
-bg=white
-lw=2.5</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;
+lw=2.5
+fg=blue</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0;140.0;60.0</additional_attributes>
   </element>
 </diagram>
