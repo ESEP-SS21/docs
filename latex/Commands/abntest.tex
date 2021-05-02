@@ -18,11 +18,15 @@
     \begin{enumerate}}{\end{enumerate}%
 }
 
-\newenvironment{abntest}[3]{%
+\newenvironment{anmerkungen}{%
+    \paragraph{Anmerkungen}
+    \begin{itemize}}{\end{itemize}%
+}
+
+\newcommand{\abntest}[3]{%
     \refstepcounter{abntest}
 
     \subsection[#1]{Abnahmetest \theabntest: #1}
     \paragraph{Überprüfte Anforderungen}\mbox{}\\#2
 
-    \paragraph{Voraussetzungen}\mbox{}\begin{itemize} #3 \end{itemize}}%
-    {}
+    \paragraph{Voraussetzungen}\begin{itemize} #3 \end{itemize}}

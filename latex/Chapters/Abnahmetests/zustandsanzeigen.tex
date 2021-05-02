@@ -1,4 +1,4 @@
-\begin{abntest}{Zustandsanzeigen}{
+\abntest{Zustandsanzeigen}{
     \refreq{10},
     \refreq{11},
     \refreq{19},
@@ -7,7 +7,9 @@
     \item Das System befindet sich im Idle
 }
     \label{abntest-zustandsanzeigen}
-    Die Anzeige von Fehlerzuständen wird in Abschnitt~\ref{abntest-fehlerumgang} getestet.
+    \begin{anmerkungen}
+        \item Die Anzeige von Fehlerzuständen wird in Abschnitt~\ref{abntest-fehlerumgang} getestet.
+    \end{anmerkungen}
 
     \begin{ablauf}{Betriebszustände}
         \item \label{enm:to-service} Den Servicemodus betreten
@@ -27,5 +29,3 @@
         \item Nach Schritt~\ref{enm:to-idle2} leuchten
         beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
     \end{erwartung}
-
-\end{abntest}
