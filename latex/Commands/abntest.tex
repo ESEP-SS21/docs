@@ -21,7 +21,7 @@
 \newenvironment{abntest}[3]{%
     \refstepcounter{abntest}
 
-    \subsection{Abnahmetest \theabntest: #1}
+    \subsection[#1]{Abnahmetest \theabntest: #1}
     \paragraph{Überprüfte Anforderungen}\mbox{}\\#2
 
     \paragraph{Voraussetzungen}\mbox{}\begin{itemize} #3 \end{itemize}}%
