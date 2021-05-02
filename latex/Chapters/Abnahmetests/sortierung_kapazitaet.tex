@@ -1,0 +1,71 @@
+\begin{abntest}{Sortierung, Kapazität}{
+    \refreq{1},
+    \refreq{2},
+    \refreq{3},
+    \refreq{5},
+    \refreq{13}, %<- TODO auslagern
+    \refreq{30},
+    \refreq{38},
+    \refreq{39}
+}{
+    \item Das System befindet sich im Betriebszustand
+    \item Falls nicht anders spezifiziert soll sichergestellt werden, dass
+    \begin{enumerate}
+        \item die \glspl{rampe}kapazität während der Tests nicht ausgeschöpft wird
+        \item sich die \glspl{workpiece} während der Tests nicht überschlagen
+    \end{enumerate}
+}
+    \label{abntest-sortierung-kapazitaet}
+
+    \begin{ablauf}{Korrekte Reihenfolge}
+        \item \Glspl{workpiece} in korrekter Reihenfolge einlegen:
+        \begin{enumerate}[noitemsep, nolistsep]
+            \item \gls{workpiece_metall}
+            \item \gls{workpiece_bohrung}
+            \item \gls{workpiece_flach}
+            \item \gls{workpiece_metall}
+        \end{enumerate}
+    \end{ablauf}
+
+    \erwartung
+    Am Ende von \gls{anlage} 2 kommen die \Glspl{workpiece} in
+    unveränderter Reihenfolge an (\refreq{2})
+
+    \begin{ablauf}{Falsche Reihenfolge}
+        \item Eine \gls{anlage} mit \gls{weiche}, die andere mit \gls{ejector} ausstatten
+        (\refreq{30}, \refreq{38}, \refreq{39})
+        \item \Glspl{workpiece} in falscher Reihenfolge einlegen:\label{enm:reih1}
+        \begin{enumerate}[noitemsep, nolistsep]
+            \item \gls{workpiece_hoch} %x
+            \item \gls{workpiece_metall}
+            \item \gls{workpiece_metall} %x
+            \item \gls{workpiece_bohrung}
+            \item \gls{workpiece_hoch} %x
+            \item \gls{workpiece_flach}
+            \item \gls{workpiece_bohrung} %x
+            \item \gls{workpiece_metall}
+        \end{enumerate}
+        \item \Glspl{rampe}kapazität von \gls{anlage} 1 manuell ausschöpfen\label{enm:rampe1-voll}
+        \item \Glspl{workpiece} in gleicher Reihenfolge wie in
+        Schritt~\ref{enm:reih1} einlegen\label{enm:reih2}
+        \item \Glspl{rampe}kapazität von \gls{anlage} 2 manuell ausschöpfen\label{enm:rampe2-voll}
+    \end{ablauf}
+
+    \erwartung
+    \begin{enumerate}
+        \item Bei Schritt~\ref{enm:reih1} und~\ref{enm:reih2}: Am Ende von \gls{anlage} 2 kommen
+        \Glspl{workpiece} in folgender Reihenfolge an,
+        alle anderen wurden aussortiert (\refreq{3})
+        \begin{enumerate}[noitemsep, nolistsep]
+            \item \gls{workpiece_metall}
+            \item \gls{workpiece_bohrung}
+            \item \gls{workpiece_flach}
+            \item \gls{workpiece_metall}
+        \end{enumerate}
+        \item Nach Schritt~\ref{enm:rampe1-voll}  blinkt die gelbe \gls{ampelled}
+        von \gls{anlage} 1 (\refreq{5}, \refreq{13})
+        \item Nach Schritt~\ref{enm:rampe2-voll}  blinkt die gelbe \gls{ampelled}
+        von \gls{anlage} 2 (\refreq{5}, \refreq{13})
+    \end{enumerate}
+    %todo: req 47 , 6
+\end{abntest}
