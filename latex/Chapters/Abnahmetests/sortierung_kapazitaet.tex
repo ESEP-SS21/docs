@@ -30,9 +30,9 @@
         \end{enumerate}
     \end{ablauf}
 
-    \erwartung
+    \erwartungText
     Am Ende von \gls{anlage} 2 kommen die \Glspl{workpiece} in
-    unveränderter Reihenfolge an (\refreq{2})
+    unveränderter Reihenfolge an (\refreq{2}, \refreq{3})
 
     \begin{ablauf}{Falsche Reihenfolge}
         \item Eine \gls{anlage} mit \gls{weiche}, die andere mit \gls{ejector} ausstatten
@@ -53,18 +53,17 @@
         Schritt~\ref{enm:reih1} einlegen\label{enm:reih2}
     \end{ablauf}
 
-    \erwartung
-    \begin{enumerate}
+    \begin{erwartung}
         \item Bei Schritt~\ref{enm:reih1} und~\ref{enm:reih2}: Am Ende von \gls{anlage} 2 kommen
         \Glspl{workpiece} in folgender Reihenfolge an,
-        alle anderen wurden aussortiert (\refreq{3})
+        alle anderen wurden aussortiert (\refreq{2}, \refreq{3})
         \begin{enumerate}[noitemsep, nolistsep]
             \item \gls{workpiece_metall}
             \item \gls{workpiece_bohrung}
             \item \gls{workpiece_flach}
             \item \gls{workpiece_metall}
         \end{enumerate}
-    \end{enumerate}
+    \end{erwartung}
 
     \begin{ablauf}{Beide \glspl{rampe} voll}
         \item \Glspl{rampe}kapazität von \gls{anlage} 1 manuell ausschöpfen\label{enm:rampe1-voll}
@@ -72,26 +71,25 @@
         \item \gls{workpiece_hoch} einlegen\label{enm:beide-rutschen-voll-und-einlegen}
     \end{ablauf}
 
-    \erwartung
-    \begin{enumerate}
+    \begin{erwartung}
         \item Nach Schritt~\ref{enm:rampe1-voll} blinkt die gelbe \gls{ampelled}
         von \gls{anlage} 1 (\refreq{5}, \refreq{13}) % TODO auslagern
         \item Nach Schritt~\ref{enm:rampe2-voll} blinkt die gelbe \gls{ampelled}
         von \gls{anlage} 2 (\refreq{5}, \refreq{13}) % TODO auslagern
         \item Nach Schritt~\ref{enm:beide-rutschen-voll-und-einlegen}, sobald das \gls{workpiece}
         \gls{lb_sw} erreicht, bleiben die \glspl{belt} beider \glspl{anlage} stehen (\refreq{6})
-    \end{enumerate}
+    \end{erwartung}
 
     \begin{ablauf}{Überschlagen von \glspl{workpiece}}
         \item \gls{workpiece_metall} einlegen
         \item Direkt dahinter \gls{workpiece_bohrung} einlegen
-        \item Nach der Übergabe von \gls{workpiece_metall} an \gls{anlage} 2 manuel überschlagen
+        \item Nach der Übergabe von \gls{workpiece_metall} an \gls{anlage} 2 dieses manuel überschlagen
         \item Warten bis das \gls{workpiece_hoch}, welches vorher ein \gls{workpiece_metall} war,
         aussortiert wurde
         \item \gls{workpiece_metall} einlegen
     \end{ablauf}
 
-    \erwartung
-    Am Ende von \gls{anlage} 2 kommt genau ein \Glspl{workpiece_metall} an (\refreq{47}, \refreq{18})
+    \erwartungText
+    Am Ende von \gls{anlage} 2 kommt genau ein \glspl{workpiece_metall} an (\refreq{47}, \refreq{18})
 
 \end{abntest}
