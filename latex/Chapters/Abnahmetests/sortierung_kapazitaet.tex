@@ -3,12 +3,15 @@
     \refreq{2},
     \refreq{3},
     \refreq{5},
+    \refreq{6},
     \refreq{13}, %<- TODO auslagern
+    \refreq{18},
     \refreq{30},
     \refreq{38},
-    \refreq{39}
+    \refreq{39},
+    \refreq{47}
 }{
-    \item Das System befindet sich im Betriebszustand
+    \item Das System befindet sich im Betriebszustand und hat noch keine \glspl{workpiece} sortiert
     \item Falls nicht anders spezifiziert soll sichergestellt werden, dass
     \begin{enumerate}
         \item die \glspl{rampe}kapazität während der Tests nicht ausgeschöpft wird
@@ -45,10 +48,9 @@
             \item \gls{workpiece_bohrung} %x
             \item \gls{workpiece_metall}
         \end{enumerate}
-        \item \Glspl{rampe}kapazität von \gls{anlage} 1 manuell ausschöpfen\label{enm:rampe1-voll}
+        \item \Glspl{rampe}kapazität von \gls{anlage} 1 manuell ausschöpfen
         \item \Glspl{workpiece} in gleicher Reihenfolge wie in
         Schritt~\ref{enm:reih1} einlegen\label{enm:reih2}
-        \item \Glspl{rampe}kapazität von \gls{anlage} 2 manuell ausschöpfen\label{enm:rampe2-voll}
     \end{ablauf}
 
     \erwartung
@@ -62,10 +64,34 @@
             \item \gls{workpiece_flach}
             \item \gls{workpiece_metall}
         \end{enumerate}
-        \item Nach Schritt~\ref{enm:rampe1-voll}  blinkt die gelbe \gls{ampelled}
-        von \gls{anlage} 1 (\refreq{5}, \refreq{13})
-        \item Nach Schritt~\ref{enm:rampe2-voll}  blinkt die gelbe \gls{ampelled}
-        von \gls{anlage} 2 (\refreq{5}, \refreq{13})
     \end{enumerate}
-    %todo: req 47 , 6
+
+    \begin{ablauf}{Beide \glspl{rampe} voll}
+        \item \Glspl{rampe}kapazität von \gls{anlage} 1 manuell ausschöpfen\label{enm:rampe1-voll}
+        \item \Glspl{rampe}kapazität von \gls{anlage} 2 manuell ausschöpfen\label{enm:rampe2-voll}
+        \item \gls{workpiece_hoch} einlegen\label{enm:beide-rutschen-voll-und-einlegen}
+    \end{ablauf}
+
+    \erwartung
+    \begin{enumerate}
+        \item Nach Schritt~\ref{enm:rampe1-voll} blinkt die gelbe \gls{ampelled}
+        von \gls{anlage} 1 (\refreq{5}, \refreq{13}) % TODO auslagern
+        \item Nach Schritt~\ref{enm:rampe2-voll} blinkt die gelbe \gls{ampelled}
+        von \gls{anlage} 2 (\refreq{5}, \refreq{13}) % TODO auslagern
+        \item Nach Schritt~\ref{enm:beide-rutschen-voll-und-einlegen}, sobald das \gls{workpiece}
+        \gls{lb_sw} erreicht, bleiben die \glspl{belt} beider \glspl{anlage} stehen (\refreq{6})
+    \end{enumerate}
+
+    \begin{ablauf}{Überschlagen von \glspl{workpiece}}
+        \item \gls{workpiece_metall} einlegen
+        \item Direkt dahinter \gls{workpiece_bohrung} einlegen
+        \item Nach der Übergabe von \gls{workpiece_metall} an \gls{anlage} 2 manuel überschlagen
+        \item Warten bis das \gls{workpiece_hoch}, welches vorher ein \gls{workpiece_metall} war,
+        aussortiert wurde
+        \item \gls{workpiece_metall} einlegen
+    \end{ablauf}
+
+    \erwartung
+    Am Ende von \gls{anlage} 2 kommt genau ein \Glspl{workpiece_metall} an (\refreq{47}, \refreq{18})
+
 \end{abntest}
