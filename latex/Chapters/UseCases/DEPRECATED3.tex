@@ -1,7 +1,7 @@
-\begin{usecase}{10}{Bootup Configuration}{hoch}
+\begin{usecase}{10}{Konfiguration}{hoch}
     \addTextCollum{Description}{
         Dieser Use Case beschreibt die Initialisierung des Systems, sowie die Aushandlung ob das System selbst oder das FTS\_2 das Primary System ist.
-        Das Primary System wird durch Drücken des Startknopfes der entsprechenden Anlage bestimmt
+        Das Primary System wird durch Drücken des \gls{t_start}es der entsprechenden Anlage bestimmt
     }
     \addTextCollum{Actors}{
          FTS\_2, Control\_Panel
@@ -13,7 +13,7 @@
         \item[1)] HAL wird initialisiert \textbullet
         \item[2)] Herstellen einer Verbindung zu FTS\_2 \textbullet
         \item[3)] Kontrolleuchte 1 auf Control\_Panel Blink\_Slow aktivieren
-        \item[4)] Warten auf Drücken des Startknopfes auf dem ControlPanel \textbullet
+        \item[4)] Warten auf Drücken des \gls{t_start}es auf dem ControlPanel \textbullet
         \item[5)] Primary-Anfrage an FTS\_2 schicken
         \item[6)] Warten auf Bestätigung von FTS\_2 \textbullet
         \item[7)] Eigenen Betriebsmodus auf PRIMARY setzen

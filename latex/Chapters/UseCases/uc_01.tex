@@ -1,0 +1,39 @@
+\begin{usecase}{01}{\gls{workpiece}-Annahme}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{7}, \refreq{24}, \refreq{26}
+    }
+    \addTextCollum{Description}{
+        In diesem Use-Case ein \gls{workpiece} von der \gls{anlage} entgegengenommen.
+    }
+    \addTextCollum{Actors}{
+        \gls{belt}, \gls{lb_st}
+    }
+    \addCollum{Precondition}{
+        \item Das \gls{system} befindet sich im \gls{betrieb-zst}
+        \item Es befindet sich kein \gls{workpiece} im Bereich von \gls{lb_st}
+    }
+    \addCollum{Trigger}{
+        \item \gls{lb_st}
+    }
+    \addCollum{Main flow}{
+        \item[1)] Zuweisung der eindeutigen ID an das betroffene \gls{workpiece}
+        \item[2)] \gls{belt} ist nicht in Bewegung \textbullet
+        \item[3)] \gls{belt} wird in Bewegung gesetzt \textbullet
+        \item[4)] Warte bis \gls{lb_st} nicht mehr unterbrochen
+    }
+    \addCollum{Alternative Flow 1}{
+        \item at step 2) of Mainflow
+        \item[2a)] \gls{belt} ist bereits in Bewegung und muss nicht gestartet werden
+    }
+    \addCollum{Alternative Flow 2}{
+        \item at step 3) of Mainflow
+        \item[3a)] Ein anderes \gls{workpiece} wartet am Ende der Anlage auf Übergabe
+    \begin{itemize}
+        \item 3a1) \gls{belt} wird nicht gestartet
+    \end{itemize}
+    }
+    \addCollum{Postcondition}{
+        \item \gls{workpiece} ist eindeutig erfasst
+        \item \gls{lb_st} ist nicht mehr unterbrochen
+    }
+\end{usecase}

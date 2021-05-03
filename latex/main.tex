@@ -33,6 +33,7 @@
 %% --------------------------------
 \ifthenelse{\boolean{DEBUG}}{
     \usepackage{showlabels}
+    \usepackage{datatool}
 }
 
 % customize chapter style
@@ -45,8 +46,7 @@
 %% -----------------------------------------------------------------------------
 %% Custom Commands importieren
 %% -----------------------------------------------------------------------------
-\input{Commands/usecase}
-\input{Commands/reqRef}
+\input{Commands/_commands}
 
 %% -----------------------------------------------------------------------------
 %% Glossary

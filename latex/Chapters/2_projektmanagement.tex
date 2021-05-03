@@ -13,7 +13,7 @@
 \section{Absprachen}\label{sec:absprachen}
 
 \begin{itemize}
-    \item Die Kommunikation läuft über unseren Discord Server, für dringenden Angelgelegenheiten
+    \item Die Kommunikation läuft über unseren Discord Server, für dringende Angelegenheiten
     wird eine WhatsApp-Gruppe genutzt
     \item Zweimal pro Woche wird ein Meeting gehalten.
     Die Agenda wird in
@@ -31,7 +31,7 @@
 
 %% User Stories/Projektstrukturplan, Ressourcenplan, Zeitplan, Abhängigkeiten von Arbeitspaketen,
 %% eventueller Zeitverzug, Visualisierung des Projektstandes, etc.
-Wir verwenden einen agilen Ansatz für das Umsetzten des Projektes und setzten diesen auf GitLab um.
+Wir verwenden einen agilen Ansatz für das Umsetzten des Projektes und setzen diesen auf GitLab um.
 Dabei orientieren wir uns an dem
 \href{https://about.gitlab.com/blog/2018/03/05/gitlab-for-agile-software-development/}{Guide
 zur Verwendung von GitLab für agile Software Entwicklung}:
@@ -47,7 +47,7 @@ zur Verwendung von GitLab für agile Software Entwicklung}:
     verwendet, die, soweit möglich, einem Epic und Milestone zugeordnet werden.
     In einem Issue kann mit Kommentaren über das Issue selber diskutiert werden.
     Über die Assignee Funktion können einem Issue beliebig viele Personen zugeteilt werden, die für
-    für das Lösen dieses verantwortlich sind.
+    für das Lösen dieses Issues verantwortlich sind.
 \end{itemize}
 Sobald an einem Issue gearbeitet wird, wird, falls ein eigener Branch nötig ist, ein Draft MR
 erstellt.
@@ -58,18 +58,19 @@ Bei Änderungsvorschlägen ist ein neuer Thread statt eines Kommentars zu eröff
 auf den ersten Blick über \glqq unresolved threads\grqq{} zu sehen sind.
 Sobald der Branch gemerged werden soll, wird der MR als \textit{ready} markiert und das Label
 \textit{workflow::pending review} zugewiesen, was den anderen
-Teammitgliedern signalisiert, dass sie mit dem Reviewprozess wie in
-Abschnitt~\ref{sec:qualitaetssicherung} beschrieben beginnen können.
+Teammitgliedern signalisiert, dass sie mit dem Reviewprozess, wie in
+Abschnitt~\ref{sec:qualitaetssicherung} beschrieben, beginnen können.
 
 
 \section{Qualitätssicherung}\label{sec:qualitaetssicherung}
 
-Die Qualität wird mithilfe eines Review bzw.\ Approval Prozesses bei MR sichergestellt.
-Für einen Merge in den Master-Branch werden 3 Approvals benötigt.
-Für einen Merge in den Latex-Branch werden 2 Approvals benötigt.
-Die Anzahl an nötigen Approves kann bei jedem MR bearbeitet werden.
-Wir haben uns darauf geeinigt, diese nicht herunter zu setzten,
-sondern im Einzelfall zu erhöhen, falls dieses nötig erscheint.
+Die Qualität sowohl der erstellten Dokumentation, als auch des Codes
+wird mithilfe eines Review bzw.\ Approval Prozesses bei MR sichergestellt.
+Für einen Merge in den Master-Branch werden drei Approvals benötigt.
+Für einen Merge in den Latex-Branch werden zwei Approvals benötigt.
+Die Anzahl an nötigen Approvals kann bei jedem MR bearbeitet werden.
+Wir haben uns darauf geeinigt, die Anzahl nicht herunter zu setzen,
+sondern im Einzelfall zu erhöhen, falls es nötig erscheint.
 Jeder aus dem Team kann einen MR approven.
 
 Wenn ein MR approved wird, übernimmt der Approver neben dem Implementierer die volle Verantwortung

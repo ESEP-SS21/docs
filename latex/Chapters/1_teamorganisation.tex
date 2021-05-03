@@ -44,54 +44,49 @@ Die Verantwortlichkeiten gehen aus Tabelle~\ref{tab:verantwortlichkeiten} hervor
 
 \subsection{Ordner Organisation}\label{subsec:organisation}
 %% Überlegen Sie sich, wie Sie das Repository und die Ordner organisieren wollen.
-Momentan bestehen zwei toplevel Ordner: \textit{doc} und \textit{esep\_ss2021\_Gruppe2\_3}.
-Im ersteren wird das Pflichtenheft und jegliche weitere Dokumentation, inklusive Diagramme abgelegt.
-Im letzteren befindet sich momentan der Code für das Projekt.
-Der Name dessen ist jedoch noch temporär und wird noch angepasst,
-da wahrscheinlich zwei Ordner für den Code benötigt werden -- einer pro Förderband.
+Es gibt es zwei Repositories: ESEP\_Docs und ESEP. Im ersteren wird das Pflichtenheft und
+jegliche weitere Dokumentation, inklusive Diagramme abgelegt. Im letzteren befindet sich in dem
+Ordner \textit{esep\_ss2021\_Gruppe2\_3} der Code für das Projekt.
 
 \subsection{Git Practices}\label{subsec:git}
 
 \paragraph{Branching Strategie}
 %% Welche Regeln wollen Sie beim Umgang mit Branches
-Für unsere Branching-Strategie verwenden wir als Grundlage
-\href{https://docs.gitlab.com/ee/topics/gitlab_flow.html}{GitLab Flow}.
-Der default Branch ist der \textit{master}-Branch, es können keine Commits direkt auf diesem
-gepusht werden.
-Um Änderungen vorzunehmen wird ein Feature-Branch erstellt.
+Für die Branching-Strategie wird als Grundlage
+\href{https://docs.gitlab.com/ee/topics/gitlab_flow.html}{GitLab Flow} verwendet.
+Der default Branch ist der \textit{master}-Branch, auf dem keine Commits direkt
+gepusht werden können.
+Um Änderungen vorzunehmen, wird ein Feature-Branch erstellt.
 In diesem werden die nötigen Änderungen vorgenommen.
 Sobald das Feature abgeschlossen ist, wird dieser wieder in den \textit{master}-Branch gemerged.
 Die Feature-Branches sind vom Umfang jeweils möglichst klein zuhalten, dies ermöglicht einen
 genaueren Review Prozess, der weiter in Abschnitt~\ref{sec:qualitaetssicherung} ausgeführt wird.
 
-Für das Pflichtenheft besteht außerdem ein eigener Branch mit dem Namen \textit{latex}, um den
-\textit{master}-Branch übersichtlicher und Code-basiert zu halten.
-In diesem können direkt Änderungen vorgenommen werden, dies ist jedoch nur für kleine Fixes, wie
-z.\ B.\ Rechtschreibung, Formatierung usw., vorgesehen.
+In dem \textit{master}-Branch des ESEP\_Docs-Repos können direkt Änderungen vorgenommen werden,
+was jedoch nur für kleine Fixes, wie  z.\ B.\ Rechtschreibung, Formatierung usw., vorgesehen ist.
 Für neue Abschnitte, oder für das Ändern des Inhaltes bestehender Abschnitte ist ein neuer Branch
 anzulegen, sodass die Änderung reviewt werden können.
 
 \paragraph{Commits}
 %% Welche Regeln wollen Sie mit Nachrichten an den Commits
-Commits sind möglichst atomar zu halten:
+Commits sind atomar zu halten:
 So stellt jeder Commit genau eine vollständige Änderung, zum Beispiel das Beheben eines
 Fehlers, das Hinzufügen einer Funktion o.\ Ä.\ dar.
-Der Zustand des Repositories bzw.\ Codes soll optimalerweise nach jedem Commit funktional sein.
-Dies hat den Vorteil, dass Änderung leicht rückgängig gemacht und mithilfe von
+Der Zustand des Repositories bzw.\ Codes soll nach jedem Commit funktional sein.
+Dies hat den Vorteil, dass Änderungen leicht rückgängig gemacht und mithilfe von
 \textit{git cherry-pick} ausgewählt werden können.
-
 Commit-Messages sind aussagekräftig zu wählen.
-Es soll beschrieben werden was geändert wurde bzw.\ warum es geändert wurde.
-Wie etwas geändert wurde, geht hingegen aus dem Inhalt des Commits selber hervor und soll somit
-nicht erwähnt werden.
-Wir habens uns darauf geeinigt die Commit-Messages in Englisch im Imperativ zu verfassen, sodass
+Sie beschreiben, was geändert wurde bzw.\ warum es geändert wurde.
+Wie etwas geändert wurde, geht hingegen aus dem Inhalt des Commits selber hervor und wird somit nicht
+erwähnt.
+Die Commit-Messages werden auf Englisch im Imperativ verfasst, sodass
 diese mit Standard Commit-Messages von Git konsistent sind.
 
 \paragraph{Auslieferungen}\label{subsec:auslieferungen}
 %% Welche Regeln wollen Sie beim Umgang mit Auslieferungen
 Für Auslieferungen benutzten wir Git Tags in Kombination mit GitLab Releases, das genaue Vorgehen
 muss noch festgelegt werden.
-Die zwei möglichen Varianten hierbei sind einmal wie in Gitflow beschrieben ein
+Die zwei möglichen Varianten hierbei sind einmal, wie in Gitflow beschrieben ein
 Production-Branch, in den der \textit{master} gemerged wird und der den Stand der aktuellen Auslieferung
 widerspiegelt.
 Alternativ kann auch direkt im \textit{master}-Branch ein Commit getaggt werden.

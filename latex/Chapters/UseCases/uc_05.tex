@@ -1,0 +1,35 @@
+\begin{usecase}{05}{\gls{workpiece} aussortieren}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+    \refreq{3}, \refreq{5}, \refreq{23}, \refreq{30}, \refreq{38}, \refreq{39}
+    }
+    \addTextCollum{Description}{
+        In diesem Use-Case bewegt der \gls{sortierer} der \gls{anlage} ein \gls{workpiece} vom \gls{belt} in die \gls{rampe}
+    }
+    \addTextCollum{Actors}{
+        \gls{lb_ra}, \gls{sortierer}
+    }
+    \addCollum{Precondition}{
+        \item \gls{system} befindet sich im \gls{betrieb-zst}
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Führe Aussortierung mit \gls{sortierer} durch
+        \item[2)] Warte auf Unterbrechung von \gls{lb_ra} \textbullet
+        \item[3)] Setze \gls{sortierer} zurück
+    }
+
+    \addCollum{Alternative flow 1}{
+        \item at step 4) of Mainflow
+        \item[4a)] \gls{lb_ra} ist nach zu langer Aussortierzeit nicht unterbrochen worden, \refreq{23}
+        \begin{itemize}
+            \item[4a1)] Warnung wird gesendet
+            \item[4a2)] Warte auf Unterbrechung von \gls{lb_ra}
+            \item[4a3)] Sende Nachricht, dass Warnung behoben ist
+            \item[4a4)] Go back to step 3) of Mainflow
+        \end{itemize}
+    }
+
+    \addCollum{Postcondition}{
+        \item \gls{workpiece} liegt in der \gls{rampe}
+        \item \gls{sortierer} ist zurückgesetzt
+    }
+\end{usecase}

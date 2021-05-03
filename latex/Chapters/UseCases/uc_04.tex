@@ -1,42 +1,45 @@
-\begin{usecase}{02}{Determine Sorting Action}{hoch}
+\begin{usecase}{04}{\gls{workpiece} sortieren}{hoch}
     \addTextCollum{Verwandte Requirements}{
-        REQ-1, REQ-2, REQ-3, REQ-6
+        \refreq{1}, \refreq{2}, \refreq{3}, \refreq{6}
     }
     \addTextCollum{Description}{
         Es wird bestimmt, ob ein \gls{workpiece} aussortiert werden soll, oder nicht.
         Dafür muss der Vorgänger \gls{workpiece_type} gespeichert werden.
     }
     \addTextCollum{Actors}{
-        LightBarrier\_Ramp
+        \gls{lb_sw}, \gls{lb_ra}
     }
     \addCollum{Precondition}{
-        \item Dem workpiece ist ein \gls{workpiece_type} zugeordnet
+        \item Dem \gls{workpiece} ist ein \gls{workpiece_type} zugeordnet
+    }
+    \addCollum{Trigger}{
+        \item \gls{lb_sw} unterbrochen
     }
     \addCollum{Main flow}{
         \item[1)] Der aktuelle \gls{workpiece_type} wird mit dem erwarteten verglichen
-        \item[2)] Das \gls{workpiece} stimmt nicht überein, das workpiece muss aussortiert werden \textbullet
-        \item[3)] Das \gls{workpiece} wird mit \gls{discard} markiert \textbullet
+        \item[2)] Das \gls{workpiece} stimmt nicht überein \textbullet
+        \item[3)] Das \gls{workpiece} wird aussortiert % TODO UC Referenz
     }
     \addCollum{Alternative flow 1}{
         \item at step 2 of main flow
         \item[2a)] Das \gls{workpiece} stimmt überein
         \begin{itemize}
-            \item[2a1)] Das \gls{workpiece} wird mit \gls{do_not_discard} markiert
+            \item[2a1)] Das \gls{workpiece} wird durchgelassen % TODO UC Referenz
             \item[2a2)] Ende des use case
         \end{itemize}
     }
     \addCollum{Alternative flow 2}{
         \item at step 3 of main flow
-        \item[3a)] Rutsche ist voll und in Primary mode
+        \item[3a)] \gls{rampe} ist voll und in \gls{primary}
         \begin{itemize}
-            \item[3a1)] das Teil mit \gls{do_not_discard} markiert
+            \item[3a1)] das \gls{workpiece} wird durchgelassen
         \end{itemize}
-        \item[3b)] Rutsche ist voll und in Secondary mode
+        \item[3b)] \gls{rampe} ist voll und in \gls{secondary}
         \begin{itemize}
-            \item[3b1)] Gesamtbetrieb wird gestoppt (REQ-6)
+            \item[3b1)] Fehler wird gesendet
         \end{itemize}
     }
-    \addTextCollum{Postcondition}{
-        Dem \gls{workpiece} ist entweder \gls{do_not_discard} oder \gls{discard} zugeordnet
+    \addCollum{Postcondition}{
+        \item Das \gls{workpiece} ist sortiert
     }
 \end{usecase}

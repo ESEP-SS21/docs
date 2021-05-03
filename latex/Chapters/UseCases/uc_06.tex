@@ -1,0 +1,25 @@
+\begin{usecase}{06}{\gls{workpiece} durchlassen}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{2}, \refreq{27}
+    }
+    \addTextCollum{Description}{
+        In diesem Use-Case wird ein \gls{workpiece} vom \gls{sortierer} durchgelassen
+    }
+    \addTextCollum{Actors}{
+        \gls{sortierer}
+    }
+    \addCollum{Precondition}{
+        \item Das \gls{system} befindet sich im \gls{betrieb-zst}
+    }
+
+    \addCollum{Mainflow}{
+        \item[1)] Öffne \gls{sortierer}
+        \item[2)] Warte bis \gls{workpiece} \gls{sortierer} passiert
+        \item[3)] Setze \gls{sortierer} zurück
+    }
+
+    \addCollum{Postcondition}{
+        \item \gls{sortierer} zurückgesetzt
+        \item \gls{workpiece} nicht aussortiert
+    }
+\end{usecase}
