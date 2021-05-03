@@ -42,7 +42,7 @@
         \item Ein Unterbrechen der \gls{lb_st} signalisiert dem System das Einlegen eines \gls{workpiece}s,
         sodass der Transport dessen beginnen kann
     \end{itemize}
-    \reqitem{9} Das System muss mit in beliebigem Abstand eingelegten \glspl{workpiece}n umgehen können (16, 17) %TODO Mindestabstand
+    \reqitem{9} Das System muss mit in 2s Abstand eingelegten \glspl{workpiece} umgehen können (16, 17)
     \begin{itemize}
         \item Solange der Bereich der ersten Lichtschranke frei ist, muss der Benutzer \glspl{workpiece}
         einlegen können, ohne die Korrektheit der Funktion zu gefährden
@@ -111,8 +111,7 @@
 \begin{itemize}
     \reqitem{23} Bei Verklemmen der \gls{weiche} wird eine Warnung ausgesandt, bis das \gls{workpiece} in der Rampe ankommt (37)
     \begin{itemize}
-        \item Ein \gls{workpiece} ist verklemmt, wenn das \gls{workpiece} länger als erwartet braucht, um in der \gls{rampe} anzukommen
-        \item Länger als erwartet wird mit mehr als 50 Prozent der durchschnittlichen Aussortierzeit definiert
+        \item Ein \gls{workpiece} ist verklemmt, wenn es länger als 3 Sekunden braucht, um in der \gls{rampe} anzukommen
     \end{itemize}
     \reqitem{27} Die \gls{weiche} darf nicht länger als 30 Sekunden auf \gls{do_not_discard} stehen (35, 36)
     \begin{itemize}
