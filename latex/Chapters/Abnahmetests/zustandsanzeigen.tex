@@ -1,6 +1,8 @@
-\abntest{Zustandsanzeigen}{
+\abntest{Bedienung durch Taster und Zustandsanzeigen}{
     \refreq{10},
     \refreq{11},
+    \refreq{15},
+    \refreq{17},
     \refreq{19},
     \refreq{45}
 }{
@@ -12,20 +14,20 @@
 \end{anmerkungen}
 
 \begin{ablauf}{Betriebszustände}
-    \item \label{itm:to-service} Den Servicemodus betreten
+    \item \label{itm:to-service} Den Servicemodus durch \gls{longpress} von \gls{t_start} betreten
     \item \label{itm:to-idle} Auf Rückkehr in den Idle warten
-    \item \label{itm:to-betriebsz} Den Betriebszustand betreten
-    \item \label{itm:to-idle2} Den Betriebszustand verlassen
+    \item \label{itm:to-betriebsz} Den Betriebszustand durch \gls{shortpress} von \gls{t_start} betreten
+    \item \label{itm:to-idle2} Den Betriebszustand durch \gls{shortpress} von \gls{t_stop} verlassen
 \end{ablauf}
 \begin{erwartung}
     \item Vor Schritt~\ref{itm:to-service} leuchten
     beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
     \item Nach Schritt~\ref{itm:to-service} blinken
-    beide grünen \glspl{ampelled}, alle anderen sind aus (\refreq{11})
+    beide grünen \glspl{ampelled}, alle anderen sind aus (\refreq{11}, \refreq{15})
     \item Nach Schritt~\ref{itm:to-idle} leuchten
     beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
     \item Nach Schritt~\ref{itm:to-betriebsz} leuchten
     beide grünen \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{10}, \refreq{19})
     \item Nach Schritt~\ref{itm:to-idle2} leuchten
-    beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
+    beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45}, \refreq{17})
 \end{erwartung}
