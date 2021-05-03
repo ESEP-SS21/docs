@@ -1,4 +1,5 @@
 \abntest{Fehlerumgang und Zustandsanzeigen}{
+    \refreq{35},
     \refreq{37},
     \refreq{43},
     \refreq{46} (indirekt durch \refreq{37}),
@@ -37,6 +38,7 @@
 \begin{ablauf}{Gegangen unquittiert}
     \item \label{itm:2err} Fehler erzeugen
     \item\label{itm:2gegang} Die \gls{rampe} von \gls{anlage} 2 leeren
+    \item\label{itm:2aussoriert} Warten bis das \gls{workpiece} aussortiert wurde
     \item\label{itm:2ok} \gls{t_reset} drücken
 \end{ablauf}
 \begin{erwartung}
@@ -47,6 +49,7 @@
         \item blinkt die rote \gls{ampelled} schnell (\refreq{37}-\ref{req-37-unq})
     \end{enumerate}
     \item Nach Schritt~\ref{itm:2gegang} blinkt die rote \gls{ampelled} langsam (\refreq{37}-\ref{req-37-geg})
+    \item Bei Schritt~\ref{itm:2aussoriert} wird das \gls{workpiece} aussortiert (\refreq{35})
     \item Nach Schritt~\ref{itm:2ok} ist die rote \gls{ampelled} ausgeschaltet (\refreq{37}-\ref{req-37-ok})
 \end{erwartung}
 
