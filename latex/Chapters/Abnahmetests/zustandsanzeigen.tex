@@ -6,26 +6,26 @@
 }{
     \item Das System befindet sich im Idle
 }
-    \label{abntest-zustandsanzeigen}
-    \begin{anmerkungen}
-        \item Die Anzeige von Fehlerzuständen wird in Abschnitt~\ref{abntest-fehlerumgang} getestet.
-    \end{anmerkungen}
+\label{abntest-zustandsanzeigen}
+\begin{anmerkungen}
+    \item Die Anzeige von Fehlerzuständen wird in Abschnitt~\ref{abntest-fehlerumgang} getestet.
+\end{anmerkungen}
 
-    \begin{ablauf}{Betriebszustände}
-        \item \label{enm:to-service} Den Servicemodus betreten
-        \item \label{enm:to-idle} Auf Rückkehr in den Idle warten
-        \item \label{enm:to-betriebsz} Den Betriebszustand betreten
-        \item \label{enm:to-idle2} Den Betriebszustand verlassen
-    \end{ablauf}
-    \begin{erwartung}
-        \item Vor Schritt~\ref{enm:to-service} leuchten
-        beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
-        \item Nach Schritt~\ref{enm:to-service} blinken
-        beide grünen \glspl{ampelled}, alle anderen sind aus (\refreq{11})
-        \item Nach Schritt~\ref{enm:to-idle} leuchten
-        beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
-        \item Nach Schritt~\ref{enm:to-betriebsz} leuchten
-        beide grünen \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{10}, \refreq{19})
-        \item Nach Schritt~\ref{enm:to-idle2} leuchten
-        beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
-    \end{erwartung}
+\begin{ablauf}{Betriebszustände}
+    \item \label{itm:to-service} Den Servicemodus betreten
+    \item \label{itm:to-idle} Auf Rückkehr in den Idle warten
+    \item \label{itm:to-betriebsz} Den Betriebszustand betreten
+    \item \label{itm:to-idle2} Den Betriebszustand verlassen
+\end{ablauf}
+\begin{erwartung}
+    \item Vor Schritt~\ref{itm:to-service} leuchten
+    beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
+    \item Nach Schritt~\ref{itm:to-service} blinken
+    beide grünen \glspl{ampelled}, alle anderen sind aus (\refreq{11})
+    \item Nach Schritt~\ref{itm:to-idle} leuchten
+    beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
+    \item Nach Schritt~\ref{itm:to-betriebsz} leuchten
+    beide grünen \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{10}, \refreq{19})
+    \item Nach Schritt~\ref{itm:to-idle2} leuchten
+    beide gelben \glspl{ampelled} dauerhaft, alle anderen sind aus (\refreq{45})
+\end{erwartung}

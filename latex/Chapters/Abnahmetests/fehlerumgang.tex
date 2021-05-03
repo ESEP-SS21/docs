@@ -1,13 +1,45 @@
-\abntest{Fehlerumgang}{
-
+\abntest{Fehlerumgang und Zustandsanzeigen}{
+    \refreq{37},
+    \refreq{43},
 }{
-    \item Das System befindet sich im Betriebsmodus und hat noch keine \glspl{workpiece} soritert
+    \item Das System befindet sich im Idle
 }
-    \label{abntest-fehlerumgang}
+\label{abntest-fehlerumgang}
 
-%    \begin{ablauf}{Fehlerzustände}
-%        \item
-%    \end{ablauf}
-%    \begin{erwartung}
-%        \item
-%    \end{erwartung}
+\begin{ablauf}{Anstehened quittiert}
+    \item In den Betriebszustand wechseln
+    \item Kapazität beider \glspl{rampe} ausschöpfen ein \gls{workpiece_hoch} einlegen
+    \item \label{itm:1err} Warten bis das \gls{workpiece_hoch} die \gls{lb_sw} erreicht
+    \item\label{itm:1quitt} \gls{t_reset} drücken
+    \item\label{itm:1ok} Die \gls{rampe} von \gls{anlage} 2 leeren
+\end{ablauf}
+\begin{erwartung}
+    \item Nach Schritt~\ref{itm:1err}
+    \begin{enumerate}
+        \item bleiben die \glspl{belt} beider \glspl{anlage} stehen \refreq{43}
+        \item stehen beide \glspl{weiche} auf \gls{discard} \refreq{43}
+        \item blinkt die rote \gls{ampelled} schnell \refreq{37}-\ref{req-37-unq}
+    \end{enumerate}
+    \item Nach Schritt~\ref{itm:1quitt} leuchtet die rote \gls{ampelled} dauerhaft \refreq{37}-\ref{req-37-quit}
+    \item Nach Schritt~\ref{itm:1ok} ist die rote \gls{ampelled} ausgeschaltet \refreq{37}-\ref{req-37-ok}
+\end{erwartung}
+
+\begin{ablauf}{Gegangen unquittiert}
+    \item In den Betriebszustand wechseln
+    \item Kapazität beider \glspl{rampe} ausschöpfen ein \gls{workpiece_hoch} einlegen
+    \item \label{itm:2err} Warten bis das \gls{workpiece_hoch} die \gls{lb_sw} erreicht
+    \item\label{itm:2gegang} Die \gls{rampe} von \gls{anlage} 2 leeren
+    \item\label{itm:2ok} \gls{t_reset} drücken
+\end{ablauf}
+\begin{erwartung}
+    \item Nach Schritt~\ref{itm:2err}
+    \begin{enumerate}
+        \item bleiben die \glspl{belt} beider \glspl{anlage} stehen \refreq{43}
+        \item stehen beide \glspl{weiche} auf \gls{discard} \refreq{43}
+        \item blinkt die rote \gls{ampelled} schnell \refreq{37}-\ref{req-37-unq}
+    \end{enumerate}
+    \item Nach Schritt~\ref{itm:2gegang} blinkt die rote \gls{ampelled} langsam \refreq{37}-\ref{req-37-geg}
+    \item Nach Schritt~\ref{itm:2ok} ist die rote \gls{ampelled} ausgeschaltet \refreq{37}-\ref{req-37-ok}
+\end{erwartung}
+
+% TODO Fehler während quittiert oder unquittiert vorkommen lassen.
