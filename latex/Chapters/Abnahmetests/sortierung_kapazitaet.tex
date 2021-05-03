@@ -68,7 +68,8 @@
     \begin{ablauf}{Beide \glspl{rampe} voll}
         \item \Glspl{rampe}kapazität von \gls{anlage} 1 manuell ausschöpfen\label{enm:rampe1-voll}
         \item \Glspl{rampe}kapazität von \gls{anlage} 2 manuell ausschöpfen\label{enm:rampe2-voll}
-        \item \gls{workpiece_hoch} einlegen\label{enm:beide-rutschen-voll-und-einlegen}
+        \item \gls{workpiece_hoch} einlegen
+        \item Warten, bis das \gls{workpiece_hoch} \gls{lb_sw} erreicht\label{itm:workpiece-erreicht-switch}
     \end{ablauf}
 
     \begin{erwartung}
@@ -76,8 +77,8 @@
         von \gls{anlage} 1 (\refreq{5}, \refreq{13}) % TODO auslagern
         \item Nach Schritt~\ref{enm:rampe2-voll} blinkt die gelbe \gls{ampelled}
         von \gls{anlage} 2 (\refreq{5}, \refreq{13}) % TODO auslagern
-        \item Nach Schritt~\ref{enm:beide-rutschen-voll-und-einlegen}, sobald das \gls{workpiece}
-        \gls{lb_sw} erreicht, bleiben die \glspl{belt} beider \glspl{anlage} stehen (\refreq{6})
+        \item Nach Schritt~\ref{itm:workpiece-erreicht-switch},
+         bleiben die \glspl{belt} beider \glspl{anlage} stehen (\refreq{6})
     \end{erwartung}
 
     \begin{ablauf}{Überschlagen von \glspl{workpiece}}
