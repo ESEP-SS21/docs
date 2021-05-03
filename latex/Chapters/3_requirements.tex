@@ -50,48 +50,51 @@
 
 \begin{itemize}
     \item Control\_Panel\\
-    Steuerungspanel der Anlage.
-    Sie stellt den \gls{str} START-, STOP- und RESET-Button zur Verfügung.
+    \gls{ctrlp} der Anlage.
+    Es stellt den \gls{t_start}, \gls{t_stop} und \gls{t_reset} zur Verfügung.
 
     \item Conveyor\_Belt\\
-    Auf dem Förderband werden Werkstücke durch das System bewegt.
+    Auf dem \gls{belt} werden Werkstücke durch das System bewegt.
     \item FTS\_2\\
-    Die jeweils andere Förderanlage, mit der das System kommuniziert.
+    Die jeweils andere Anlage des Systems.
     \item E\_Stop\\
-    Ein Button zum Auslösen des Emergency-Stops. Ist der Button gedrückt, kann er durch Herausziehen und drücken des
-    RESET-Buttons deaktiviert werden.
+    Ein Button zum Auslösen des Emergency-Stops. Ist er gedrückt, kann er durch Herausziehen
+    und drücken des \gls{t_reset} deaktiviert werden.
     \item Metal\_Detector\\
     Sensor zum Erfassen von Metall eines Werkstückes.
     \item Height\_Measurement\\
     Höhen-Sensor zum Erfassen der Höhe eines Werkstückes.
     \item Stoplight\\
-    Ampel, die durch verschiedene LED-Einstellungen Zustandsinformationen der Anlage anzeigt.
+    \gls{ampelled}, die durch verschiedene LED-Einstellungen Zustandsinformationen der Anlage anzeigt.
     \item Sorting\_Mechanism\\
-    Das System besitzt allgemein einen Aussortier-Mechanismus.
-    Dieser ist in einer von zwei Varianten in die Anlage eingebaut:
+    Jede Anlage besitzt einen Aussortier-Mechanismus.
+    Dieser ist in einer von zwei Varianten eingebaut:
     \begin{itemize}
         \item Ejector\\
-        Ein Auswerfer, der sich bei Stromzufluss ausfährt und so Werkstücke in die Rampe stoßen soll.
-        Ohne Strom ist der Aussortiermechanismus offen.
+        Der \gls{ejector}, der bei Stromzufluss ausfährt und so Werkstücke in die Rampe stoßen soll.
+        Ohne Strom steht der \gls{ejector} auf \gls{do_not_discard}.
         \item Switch\\
-        Eine Weiche, die sich bei Stromzufluss öffnet und Werkstücke durchlässt.
-        Ohne Strom ist der Aussortiermechanismus geschlossen und befördert Werkstücke langsam in die Rampe.
+        Die \gls{weiche}, die bei Stromzufluss auf \gls{do_not_discard} steht und Werkstücke durchlässt.
+        Ohne Strom steht die  \gls{weiche} auf \gls{discard} und befördert Werkstücke
+        langsam in die Rampe.
     \end{itemize}
     \item LightBarrier\\
-    Das System besitzt diverse Lichtschranken als Trigger und zur Steuerung des Kontrollflusses
+    Das System besitzt diverse Lichtschranken. Sie werden als Trigger und zur Steuerung
+    des Kontrollflusses benutzt:
     \begin{itemize}
         \item \gls{lb_st}\\
         Lichtschranke am Anfang eines Förderbandes.
-        Die Unterbrechung dieser Lichtschranke setzt das Förderband in Bewegung.
+        Die Unterbrechung dieser Lichtschranke setzt, vorausgesetzt es liegen keine
+        Fehler vor, das \gls{belt} in Bewegung.
         \item \gls{lb_ra}\\
-        Lichtschranke an der Rampe, in der die Werkstücke aussortiert werden.
+        Lichtschranke an der Rampe. Aussortierte Werkstücke passieren diese Lichtschranke.
         Die kurze Unterbrechung dieser Lichtschranke kann als erfolgreiche Aussortierung interpretiert werden.
-        Eine stetige Unterbrechung signalisiert eine volle Rutsche.
+        Eine dauerhafte Unterbrechung signalisiert eine volle Rampe.
         \item \gls{lb_he}\\
         Lichtschranke an der Position des Höhensensors.
-        Die Unterbrechung dieser Lichtschranke startet eine Höhenmessung.
+        Sie wird als Trigger für den Start der Höhenmessung benutzt.
         \item \gls{lb_sw}\\
-        Lichtschranke vor dem Aussortiermechanismus der Anlage.
+        Lichtschranke vor dem Aussortier-Mechanismus der Anlage.
         Die Unterbrechung startet den Aussortieralgorithmus.
         \item \gls{lb_en}\\
         Lichtschranke am Ende eines Förderbandes.
