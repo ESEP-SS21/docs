@@ -1,16 +1,25 @@
 \abntest{Fehlerumgang und Zustandsanzeigen}{
     \refreq{37},
     \refreq{43},
+    \refreq{46} (indirekt durch \refreq{37}),
     \refreq{48}
 }{
     \item Das System befindet sich im Idle
 }
 \label{abntest-fehlerumgang}
 
+\begin{anmerkungen}
+    \item Fehler erzeugen ist in diesem Abnahmetest wie folgt definiert:
+    \begin{enumerate}
+        \item In den Betriebszustand wechseln
+        \item Kapazität beider \glspl{rampe} ausschöpfen
+        \item Ein \gls{workpiece_hoch} einlegen
+        \item Warten bis das \gls{workpiece_hoch} die \gls{lb_sw} erreicht
+    \end{enumerate}
+\end{anmerkungen}
+
 \begin{ablauf}{Anstehened quittiert}
-    \item In den Betriebszustand wechseln
-    \item Kapazität beider \glspl{rampe} ausschöpfen ein \gls{workpiece_hoch} einlegen
-    \item \label{itm:1err} Warten bis das \gls{workpiece_hoch} die \gls{lb_sw} erreicht
+    \item \label{itm:1err} Fehler erzeugen
     \item\label{itm:1quitt} \gls{t_reset} drücken
     \item\label{itm:1ok} Die \gls{rampe} von \gls{anlage} 2 leeren
 \end{ablauf}
@@ -26,9 +35,7 @@
 \end{erwartung}
 
 \begin{ablauf}{Gegangen unquittiert}
-    \item In den Betriebszustand wechseln
-    \item Kapazität beider \glspl{rampe} ausschöpfen ein \gls{workpiece_hoch} einlegen
-    \item \label{itm:2err} Warten bis das \gls{workpiece_hoch} die \gls{lb_sw} erreicht
+    \item \label{itm:2err} Fehler erzeugen
     \item\label{itm:2gegang} Die \gls{rampe} von \gls{anlage} 2 leeren
     \item\label{itm:2ok} \gls{t_reset} drücken
 \end{ablauf}
