@@ -1,4 +1,5 @@
 %! suppress = LabelConvention
+
 \paragraph{\glspl{workpiece} und Sortierung}
 \begin{itemize}
     \reqitem{1} Die \gls{anlage} kann zwischen vier Typen von \glspl{workpiece}n unterscheiden (\gls{workpiece_type}) (2, 3, 4, 5, 6)
@@ -16,6 +17,11 @@
     \end{enumerate}
     \reqitem{3} \glspl{workpiece}, die nicht in die Sortierreihenfolge passen werden in eine der beiden \glspl{rampe} aussortiert (9, 10)
     \reqitem{4} Der \gls{durchsatz} an \glspl{workpiece} soll hoch sein (11)
+    \reqitem{18} Falls sich bei der Übergabe zwischen den beiden \glspl{belt} ein \gls{workpiece}
+    überschlägt, muss der neue \gls{workpiece_type} beachtet werden (siehe \refreq{47}) (20)
+    \begin{itemize}
+        \item Der Fall, dass das Teil auf die Seite fällt, sodass es wegrollen könnte, wird ausgeschlossen.
+    \end{itemize}
     \reqitem{30} Aussortierung der \glspl{workpiece} soll mit \gls{weiche} funktionieren (41)
     \reqitem{38} Aussortierung der \glspl{workpiece} soll mit \gls{ejector} funktionieren (41)
     \reqitem{39} Beliebige Kombinationen der \gls{sortierer} an den beiden \glspl{anlage} sollen unterstützt werden (42)
@@ -46,12 +52,6 @@
         \item Abstand muss vor der Übergabe sichergestellt werden
     \end{itemize}
     \reqitem{16} Auf dem \gls{belt} von \gls{anlage} 2 dürfen sich maximal 2 \glspl{workpiece} befinden (19)
-    \reqitem{18} Falls sich bei der Übergabe zwischen den beiden \glspl{belt} ein \gls{workpiece}
-    überschlägt, muss der neue \gls{workpiece_type} beachtet werden (20)
-    \begin{itemize}
-        \item Der Fall, dass das Teil auf die Seite fällt, sodass es wegrollen könnte, wird ausgeschlossen.
-        Wenn sich das \gls{workpiece} überschlägt, ändert sich bei hohen \glspl{workpiece}n der Typ
-    \end{itemize}
     \reqitem{20} \Glspl{workpiece} dürfen nicht vom \gls{belt} fallen (21)
     \reqitem{24} Beim Einlegen eines \glspl{workpiece}s in die \gls{anlage} soll dem \gls{workpiece} eine eindeutige ID zugewiesen werden(28)
     \reqitem{26} Wenn sich auf einem \gls{belt} kein \gls{workpiece} befindet, stoppt das \gls{belt}
@@ -63,18 +63,18 @@
     \end{itemize}
 \end{itemize}
 
-\paragraph{Bedienung durch Taster}
+\paragraph{Bedienung durch \gls{taster}}
 \begin{itemize}
     \reqitem{12} Bei Betätigung von \gls{t_start} wechselt die \gls{anlage} in den Betriebszustand (49)
     \reqitem{15} Bei \gls{longpress} von \gls{t_start} wechselt die \gls{anlage} in den Service-Modus (50)
     \begin{itemize}
         \item Anforderung für den Wechsel ist, dass die \gls{anlage} im Ruhezustand ist
     \end{itemize}
-    \reqitem{17} Bei Betätigung des \gls{t_stop} wechselt die \gls{anlage} in den Ruhezustand (51, 52)
+    \reqitem{17} Bei Betätigung von \gls{t_stop} im Betriebszustand wechselt die \gls{anlage} in den Ruhezustand (51, 52)
     \begin{itemize}
         \item Wenn Fehler oder Warnung vorliegen, wird stattdessen ein Fehler ausgesandt  %TODO Warnung und Fehler in glossar aufnehmen
     \end{itemize}
-    \reqitem{21} Bei Betätigung des \gls{t_reset} werden sämtliche Fehler quittiert (53) %TODO mit kunden kären
+    \reqitem{21} Bei Betätigung von \gls{t_reset} werden sämtliche Fehler quittiert (53) %TODO mit kunden kären
     \reqitem{28} Wenn die \gls{anlage} durch \gls{estop} stillgelegt ist, kann der Betrieb durch Drücken des
     \gls{t_reset} der \gls{anlage}, an dem auch der \gls{estop} gedrückt wurde, fortgesetzt werden (56) %TODO 'fortsetzten' mit kunden kären
     \begin{itemize}
@@ -94,19 +94,16 @@
 \begin{itemize}
     \reqitem{10} Im Betriebszustand leuchtet die grüne \gls{ampelled} dauerhaft (59)
     \reqitem{11} Im Service-Mode blinkt die grüne \gls{ampelled}  (60)
-    \reqitem{13} Bei Warnungen blinkt die gelbe \gls{ampelled} (61)
-    \begin{itemize}
-        \item Eine Warnung ist, dass die \gls{rampe} an der \gls{anlage} voll ist
-    \end{itemize}
+    \reqitem{13} Bei Warnungen blinkt die gelbe \gls{ampelled} bei der \gls{anlage}, bei der die Warnung vorliegt (61)
     \reqitem{19} Wenn im Betriebszustand keine Warnungen vorliegen, ist die gelbe \gls{ampelled} aus (61)
     \reqitem{37} Die rote \gls{ampelled} signalisiert die Fehlerzustände wie folgt (73, 74, 75, 76):
-    \begin{itemize}
-        \item Anstehend unquittiert wird durch schnelles Blinken (1 Hz) signalisiert (74)
-        \item Anstehend quittiert wird durch dauerhaftes Leuchten(75) signalisiert
-        \item Gegangen unquittiert wird durch langsames Blinken (0,5 Hz) signalisiert (z.B.\ wenn ein
+    \begin{enumerate}
+        \item\label{req-37-unq} Anstehend unquittiert wird durch schnelles Blinken (1 Hz) signalisiert (74)
+        \item\label{req-37-quit} Anstehend quittiert wird durch dauerhaftes Leuchten(75) signalisiert
+        \item\label{req-37-geg} Gegangen unquittiert wird durch langsames Blinken (0,5 Hz) signalisiert (z.B.\ wenn ein
         \gls{workpiece} an einer \gls{weiche} zu langsam in die \gls{rampe} geschoben wurde) (76)
-        \item Steht kein Fehler an, ist die Leuchte aus (73)
-    \end{itemize}
+        \item\label{req-37-ok} Steht kein Fehler an, ist die Leuchte aus (73)
+    \end{enumerate}
     \reqitem{45} Im Ruhezustand leuchtet die \gls{ampel} dauerhaft gelb
 \end{itemize}
 
@@ -144,23 +141,25 @@
     \begin{itemize}
         \item Nach Möglichkeit sollen die \glspl{belt} nicht geräumt werden
     \end{itemize}
-    \reqitem{43} In den Zuständen 'bestehend\_unquittiert' und 'bestehend\_quittiert' bleiben die
-    \glspl{belt} beider \glspl{anlage} stehen und \glspl{weiche} werden auf \gls{discard} gestellt
-    \begin{itemize}
-        \item Die Fehleranzeige mittels der \gls{ampel} ist in\refreq{37}spezifiziert
-    \end{itemize}
     \reqitem{36} Fehlerzustand soll wie in Abbildung~\ref{fig:stm-fehlerzustand} beschrieben sein. (65, 66, 67, 69, 70)
+    \reqitem{43} In den Zuständen 'bestehend\_unquittiert' und 'bestehend\_quittiert' bleiben die
+    \glspl{belt} beider \glspl{anlage} stehen
+    \begin{itemize}
+        \item Die Fehleranzeige mittels der \gls{ampel} ist in \refreq{37} spezifiziert
+    \end{itemize}
     \reqitem{46} Der Fehlerzustand beider \glspl{anlage} wird wie folgt festgelegt:
     \begin{itemize}
         \item Der aktuell bestehende Fehler mit der höchsten Fehlerstufe entspricht dem Fehlerzustand beider \glspl{anlage}.
         Die Fehlerstufen lauten wie folgt:
-    \begin{enumerate}
-        \item Anstehend unquittiert
-        \item Anstehend quittiert
-        \item Gegangen unquittiert
-        \item OK
-    \end{enumerate}
+        \begin{enumerate}
+            \item Anstehend unquittiert
+            \item Anstehend quittiert
+            \item Gegangen unquittiert
+            \item OK
+        \end{enumerate}
     \end{itemize}
+    \reqitem{48} In den Zuständen 'bestehend\_unquittiert' und 'bestehend\_quittiert'
+    werden alle \glspl{weiche} auf \gls{discard} gestellt
 \end{itemize}
 
 \begin{figure}[h]

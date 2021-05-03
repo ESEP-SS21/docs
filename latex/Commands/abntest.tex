@@ -1,0 +1,32 @@
+\newcounter{abntest}
+\newcounter{ablauf}[abntest]
+\newcommand{\erwartungText}{
+
+    \paragraph{Erwartung \alph{ablauf})}
+}
+
+\newenvironment{erwartung}{
+
+    \paragraph{Erwartung \alph{ablauf})}
+    \begin{enumerate}}{\end{enumerate}%
+}
+
+\newenvironment{ablauf}[1]{
+    \refstepcounter{ablauf}
+
+    \paragraph{Ablauf \alph{ablauf}) #1}
+    \begin{enumerate}}{\end{enumerate}%
+}
+
+\newenvironment{anmerkungen}{%
+    \paragraph{Anmerkungen}
+    \begin{itemize}}{\end{itemize}%
+}
+
+\newcommand{\abntest}[3]{%
+    \refstepcounter{abntest}
+
+    \subsection[#1]{Abnahmetest \theabntest: #1}
+    \paragraph{Überprüfte Anforderungen}\mbox{}\\#2
+
+    \paragraph{Voraussetzungen}\begin{itemize} #3 \end{itemize}}
