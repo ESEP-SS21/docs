@@ -10,30 +10,30 @@
     }
     \addCollum{Precondition}{
         \item Die \gls{anlage} befindet sich im \gls{betrieb-zst}
-        \item Es befindet sich kein \gls{workpiece} im Bereich von \gls{lb-st}
+        \item Es befindet sich kein \gls{workpiece} im Bereich von \gls{lb_st}
     }
     \addCollum{Trigger}{
-        \item \gls{lb-st}
+        \item \gls{lb_st}
     }
     \addCollum{Main flow}{
         \item[1)] Zuweisung der eindeutigen ID an das betroffene Werkstück
-        \item[2)] \gls{band} ist nicht in Bewegung \textbullet
-        \item[3)] \gls{band} wird in Bewegung gesetzt
-        \item[4)] Warte bis \gls{lb-st} nicht mehr unterbrochen \textbullet
+        \item[2)] \gls{belt} ist nicht in Bewegung \textbullet
+        \item[3)] \gls{belt} wird in Bewegung gesetzt
+        \item[4)] Warte bis \gls{lb_st} nicht mehr unterbrochen \textbullet
     }
     \addCollum{Alternative Flow 1}{
         \item at step 2) of Mainflow
-        \item[2a)] \gls{band} ist bereits in Bewegung und muss nicht gestartet werden
+        \item[2a)] \gls{belt} ist bereits in Bewegung und muss nicht gestartet werden
     }
     \addCollum{Alternative Flow 2}{
         \item at step 3) of Mainflow
         \item[3a)] \gls{workpiece} wartet am Ende der Anlage auf Übergabe
     \begin{itemize}
-        \item 3a1) \gls{band} wird nicht gestartet
+        \item 3a1) \gls{belt} wird nicht gestartet
     \end{itemize}
     }
     \addCollum{Postcondition}{
         \item \gls{workpiece} ist eindeutig erfasst
-        \item \gls{lb-st} ist nicht mehr unterbrochen
+        \item \gls{lb_st} ist nicht mehr unterbrochen
     }
 \end{usecase}
