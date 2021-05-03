@@ -99,7 +99,7 @@ m1=IDispatcher</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>850</x>
+      <x>910</x>
       <y>580</y>
       <w>160</w>
       <h>70</h>
@@ -253,35 +253,23 @@ Stoplight</panel_attributes>
     <coordinates>
       <x>710</x>
       <y>600</y>
-      <w>110</w>
+      <w>130</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=()-[]
 m2=IDispatcher</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>790</x>
+      <x>820</x>
       <y>590</y>
-      <w>80</w>
+      <w>110</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=)-[]</panel_attributes>
-    <additional_attributes>20.0;20.0;60.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>960</x>
-      <y>610</y>
-      <w>140</w>
-      <h>200</h>
-    </coordinates>
-    <panel_attributes>lt=()-[]
-m1=IHal</panel_attributes>
-    <additional_attributes>100.0;10.0;100.0;180.0;10.0;180.0</additional_attributes>
+    <additional_attributes>20.0;20.0;90.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -294,18 +282,6 @@ m1=IHal</panel_attributes>
     <panel_attributes>lt=)-[]
 m1=Qnet</panel_attributes>
     <additional_attributes>20.0;20.0;80.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1040</x>
-      <y>460</y>
-      <w>50</w>
-      <h>170</h>
-    </coordinates>
-    <panel_attributes>lt=)-[]
-</panel_attributes>
-    <additional_attributes>20.0;140.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -355,27 +331,5 @@ model</panel_attributes>
 Connection
 Management</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>530</x>
-      <y>730</y>
-      <w>30</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>910</x>
-      <y>780</y>
-      <w>80</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
