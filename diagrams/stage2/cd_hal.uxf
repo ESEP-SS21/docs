@@ -84,13 +84,14 @@ GPIOWrapper
     <id>UMLClass</id>
     <coordinates>
       <x>1022</x>
-      <y>490</y>
+      <y>462</y>
       <w>420</w>
-      <h>168</h>
+      <h>196</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
 Stoplight
 --
+- _blinker_thread: thread
 --
 + &lt;&lt;Create&gt;&gt; Stoplight(GPIOWrapper)
 + enable(Color): void
@@ -133,8 +134,9 @@ HAL
 SortingMechanism
 --
 --
-+ open(): void
-+ close(): void
++ discard(): void
++ do_not_discard(): void
++ reset(): void
 + is_open(): bool</panel_attributes>
     <additional_attributes/>
   </element>
@@ -173,18 +175,6 @@ Switch
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>60.0;10.0;60.0;130.0;10.0;130.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>420</x>
-      <y>1008</y>
-      <w>84</w>
-      <h>154</h>
-    </coordinates>
-    <panel_attributes>lt=.
-XOR</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -355,23 +345,23 @@ m1=_gpio
       <x>910</x>
       <y>168</y>
       <w>378</w>
-      <h>350</h>
+      <h>322</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>220.0;230.0;220.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>220.0;210.0;220.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>910</x>
       <y>112</y>
-      <w>588</w>
+      <w>1092</w>
       <h>868</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>110.0;590.0;400.0;590.0;400.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;590.0;760.0;590.0;760.0;20.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -420,10 +410,70 @@ creates</panel_attributes>
     <coordinates>
       <x>0</x>
       <y>0</y>
-      <w>1498</w>
+      <w>2002</w>
       <h>1260</h>
     </coordinates>
     <panel_attributes>cd HAL</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1582</x>
+      <y>448</y>
+      <w>378</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;active&gt;&gt;
+BlinkWorker
+--
+- running: bool
+- blink_lock: mutex
+- duty_cycle: useconds_t
+--
++ &lt;&lt;Create&gt;&gt; BlinkWorker(GPIOWrapper)
++ run(): void
++ set_duty_cycle(int ms): void
++ start_blinking(Color): void
++ stop_blinking(): void
++ stop_loop(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1414</x>
+      <y>728</y>
+      <w>350</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+uses</panel_attributes>
+    <additional_attributes>10.0;50.0;230.0;50.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1428</x>
+      <y>560</y>
+      <w>182</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1 _blinker</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>154</y>
+      <w>910</w>
+      <h>322</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=_gpio</panel_attributes>
+    <additional_attributes>600.0;210.0;600.0;90.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
