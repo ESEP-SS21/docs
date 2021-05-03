@@ -9,7 +9,7 @@
 \usepackage{graphicx}
 \usepackage[ngerman]{babel}
 \usepackage{float}
-\usepackage[margin=100pt]{geometry}
+\usepackage[margin=4cm]{geometry}
 \usepackage{enumitem}
 \usepackage{subfig}
 \usepackage{mwe}
@@ -20,6 +20,7 @@
 \usepackage{array} % for larger table cells
 \usepackage{hhline} % for better horizontal table lines
 \usepackage{placeins}
+\usepackage{pdfpages}
 \usepackage{ifthen}
 %Import package
 \usepackage[style=list,nonumberlist,
@@ -86,18 +87,20 @@
     \input{Chapters/7_lessons_learned}
     \clearpage
 
-    \appendix
+%    \appendix
 
+    \begin{appendix}
 
-    \chapter{Glossar}\label{ch:glossar}
-    \printnoidxglossary[type=abr]
-    \printnoidxglossary[type=term]
-    \printnoidxglossary[type=event]
-    \printnoidxglossary[type=var]
-    \printnoidxglossary[type=sensor]
-    \printnoidxglossary[type=aktor]
+        \chapter{Glossar}\label{ch:glossar}
+        \printnoidxglossary[type=abr]
+        \printnoidxglossary[type=term]
+        \printnoidxglossary[type=event]
+        \printnoidxglossary[type=aktor]
 
-    \clearpage
+        \clearpage
 
+        \includepdf[pages={1},pagecommand={ \chapter{Signalliste}\label{ch:signalliste}}]{anhang/signalliste.pdf}
+        \includepdf[pages={2},pagecommand={ }]{anhang/signalliste.pdf}
+    \end{appendix}
 \end{document}
 
