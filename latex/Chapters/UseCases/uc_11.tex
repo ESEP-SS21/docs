@@ -3,22 +3,22 @@
         \refreq{12}, \refreq{42}
     }
     \addTextCollum{Actors}{
-        FTS\_2, Control\_Panel
+        \gls{fts2} \gls{ctrlp}
     }
     \addCollum{Preconditions}{
         \item System ist im \gls{ruhe-zst}
         \item System ist nicht im \gls{fehler-zst}
     }
     \addCollum{Trigger}{
-        \item Der Startknopf wird gedrückt
+        \item Der \gls{t_start} wird gedrückt
     }
     \addCollum{Mainflow}{
         \item[1)] System wechselt in den \gls{betrieb-zst} \textbullet
-        \item[2)] LED im Stopptaster wird eingeschaltet
-        \item[3)] LED im Starttaster wird ausgeschaltet \textbullet
+        \item[2)] LED im \gls{t_stop} wird eingeschaltet
+        \item[3)] LED im \gls{t_stop} wird ausgeschaltet \textbullet
     }
     \addCollum{Postconditions}{
-        \item[2)] FTS\_2 ist im \gls{betrieb-zst}
+        \item[2)] \gls{fts2} ist im \gls{betrieb-zst}
         \item[3)] \gls{anlage} ist im \gls{betrieb-zst}
     }
 \end{usecase}
