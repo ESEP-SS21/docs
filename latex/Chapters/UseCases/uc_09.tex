@@ -4,8 +4,9 @@
     }
     \addTextCollum{Description}{
         Dieser Usecase betreibt das Durchführen des Servicemode.
-        Dieser kann durch das lange drücken des \gls{t_start} von beiden \glspl{anlage} aus aktiviert werden.
+        Dieser kann durch das \gls{longpress} des \gls{t_start} von beiden \glspl{anlage} aus aktiviert werden.
         Im Servicemode werden die Höhenmesser kalibriert sowie die korrekte Funktion der \gls{sortierer} geprüft.
+
     }
     \addTextCollum{Actors}{
         \gls{ampel}, \gls{he_sensor}, \gls{ctrlp}, \gls{sortierer}, \gls{fts2}
@@ -14,8 +15,10 @@
         \item System ist im \gls{ruhe-zst}
     }
     \addCollum{Triggers}{
-        \item \gls{t_start} länger als 3 Sekunden gedrückt
+        \item \gls{longpress} von \gls{t_start}
         \item Mitteilung von \gls{fts2} über Betreten des Service
+        \item \gls{longpress} von \gls{t_start}
+        \item Mitteilung von FTS\_2 über Betreten des Service
     }
     \addCollum{Mainflow}{
         \item[1)] Mitteilung an \gls{fts2} über Betreten des Service senden
