@@ -26,12 +26,12 @@
         \item System stellt keine Gefahr dar
         \item Information über Fehlerzustände
         \item Seltenes Eingreifen erforderlich
-        \item Hoher Durchsatz
+        \item Hoher \gls{durchsatz}
         \item Einfache Bedienung und Inbetriebnahme (Dokumentation)
     \end{itemize}
     \item Verwaltung TI-Labor
     \begin{itemize}
-        \item Keine Beschädigung der Anlagen
+        \item Keine Beschädigung der\glspl{anlage}
     \end{itemize}
 \end{itemize}
 
@@ -49,57 +49,56 @@
 \paragraph{Akteure}
 
 \begin{itemize}
-    \item Control\_Panel\\
-    \gls{ctrlp} der Anlage.
-    Es stellt den \gls{t_start}, \gls{t_stop} und \gls{t_reset} zur Verfügung.
+    \item \Gls{ctrlp}\\
+    Es stellt den \gls{t_start}, \gls{t_stop} und \gls{t_reset} der\gls{anlage} zur Verfügung.
 
-    \item Conveyor\_Belt\\
-    Auf dem \gls{belt} werden Werkstücke durch das System bewegt.
+    \item \Gls{belt}\\
+    Auf dem \gls{belt} werden \Glspl{workpiece} durch die \Gls{Anlage} bewegt.
     \item FTS\_2\\
-    Die jeweils andere Anlage des Systems.
+    Die jeweils andere\gls{anlage} des Systems.
     \item E\_Stop\\
     Ein Button zum Auslösen des Emergency-Stops. Ist er gedrückt, kann er durch Herausziehen
     und drücken des \gls{t_reset} deaktiviert werden.
     \item Metal\_Detector\\
-    Sensor zum Erfassen von Metall eines Werkstückes.
+    Sensor zum Erfassen von Metall eines \Gls{Werkstück}es.
     \item Height\_Measurement\\
-    Höhen-Sensor zum Erfassen der Höhe eines Werkstückes.
+    Höhen-Sensor zum Erfassen der Höhe eines \Gls{Werkstück}es.
     \item Stoplight\\
-    \gls{ampelled}, die durch verschiedene LED-Einstellungen Zustandsinformationen der Anlage anzeigt.
+    \gls{ampelled}, die durch verschiedene LED-Einstellungen Zustandsinformationen der\gls{anlage} anzeigt.
     \item Sorting\_Mechanism\\
-    Jede Anlage besitzt einen Aussortier-Mechanismus.
+    Jede\gls{anlage} besitzt einen \Gls{sortierer}.
     Dieser ist in einer von zwei Varianten eingebaut:
     \begin{itemize}
         \item Ejector\\
-        Der \gls{ejector}, der bei Stromzufluss ausfährt und so Werkstücke in die Rampe stoßen soll.
+        Der \gls{ejector}, der bei Stromzufluss ausfährt und so \Glspl{Werkstück}e in die \gls{rampe} stoßen soll.
         Ohne Strom steht der \gls{ejector} auf \gls{do_not_discard}.
         \item Switch\\
-        Die \gls{weiche}, die bei Stromzufluss auf \gls{do_not_discard} steht und Werkstücke durchlässt.
-        Ohne Strom steht die  \gls{weiche} auf \gls{discard} und befördert Werkstücke
-        langsam in die Rampe.
+        Die \gls{weiche}, die bei Stromzufluss auf \gls{do_not_discard} steht und \Glspl{Werkstück}e durchlässt.
+        Ohne Strom steht die  \gls{weiche} auf \gls{discard} und befördert \Glspl{Werkstück}e
+        langsam in die \gls{rampe}.
     \end{itemize}
     \item LightBarrier\\
-    Das System besitzt diverse Lichtschranken. Sie werden als Trigger und zur Steuerung
+    Das System besitzt diverse \gls{lb_he}n. Sie werden als Trigger und zur Steuerung
     des Kontrollflusses benutzt:
     \begin{itemize}
         \item \gls{lb_st}\\
-        Lichtschranke am Anfang eines Förderbandes.
+        \gls{lb_st} am Anfang eines Förderbandes.
         Die Unterbrechung dieser Lichtschranke setzt, vorausgesetzt es liegen keine
         Fehler vor, das \gls{belt} in Bewegung.
         \item \gls{lb_ra}\\
-        Lichtschranke an der Rampe. Aussortierte Werkstücke passieren diese Lichtschranke.
-        Die kurze Unterbrechung dieser Lichtschranke kann als erfolgreiche Aussortierung interpretiert werden.
-        Eine dauerhafte Unterbrechung signalisiert eine volle Rampe.
+        \gls{lb_ra} an der \gls{rampe}. Aussortierte \Glspl{Werkstück}e passieren diese \gls{lb_ra}.
+        Die kurze Unterbrechung dieser \gls{lb_ra} kann als erfolgreiche Aussortierung interpretiert werden.
+        Eine dauerhafte Unterbrechung signalisiert eine volle \gls{rampe}.
         \item \gls{lb_he}\\
-        Lichtschranke an der Position des Höhensensors.
+        \gls{lb_he} an der Position des Höhensensors.
         Sie wird als Trigger für den Start der Höhenmessung benutzt.
         \item \gls{lb_sw}\\
-        Lichtschranke vor dem Aussortier-Mechanismus der Anlage.
+        \gls{lb_sw} vor dem \Gls{sortierer} der\gls{anlage}.
         Die Unterbrechung startet den Aussortieralgorithmus.
         \item \gls{lb_en}\\
-        Lichtschranke am Ende eines Förderbandes.
-        Die Unterbrechung dieser Lichtschranke kann das Transferieren des Werkstückes an die nächste Anlage einleiten.
-        Am Ende der zweiten Anlage werden bei Unterbrechung dieser Lichtschranke Werkstück-Informationen an der Konsole ausgegeben.
+        \gls{lb_en} am Ende eines Förderbandes.
+        Die Unterbrechung dieser Lichtschranke kann das Transferieren des \Gls{Werkstück}es an die nächste\gls{anlage} einleiten.
+        Am Ende der zweiten\gls{anlage} werden bei Unterbrechung dieser \gls{lb_en} \Gls{Werkstück}-Informationen an der Konsole ausgegeben.
     \end{itemize}
 \end{itemize}
 
@@ -196,11 +195,11 @@ Die Farbgebung dient lediglich zur Veranschaulichung.
 \subsection{Art des Systems}
 
 Bei dem zu entwerfenden System handelt es sich um die Steuerung eines Festo-Transfersystems,
-welche auf dem BeagleBoneBlack Einplatinencomputer, von dem jede Anlage einen besitzt, zu realisieren ist.
+welche auf dem BeagleBoneBlack Einplatinencomputer, von dem jede\gls{anlage} einen besitzt, zu realisieren ist.
 Daher handelt es sich um ein Embedded System.
 Für das zu entwickelnde Softwaresystem bedeutet dies, dass es zur Steuerung der Prozesse sehr nah
-an der in der Anlage verbauten Hardware arbeiten muss.
-Ein weiterer wichtiger Punkt ist, dass das System mit einer weiteren gleichartigen Anlage über
+an der in der\gls{anlage} verbauten Hardware arbeiten muss.
+Ein weiterer wichtiger Punkt ist, dass das System mit einer weiteren gleichartigen\gls{anlage} über
 das Netzwerk kommunizieren muss. Dies ist ebenfalls im Entwurfsprozess zu berücksichtigen.
 
 \subsubsection{Eigenschaften des BeagleBoneBlack und Grundlagen QNX}
@@ -210,14 +209,14 @@ zwischen Prozessen und Threads mittels Message Passing bevorzugt.
 Dieses Message Passing kann auch über das Netzwerk erfolgen, sodass Messages auch an
 einen weiteren BeagleBoneBlack geschickt werden können.
 Die Architektur sollte sich daher auf Message-Passing stützen, gerade um die Kommunikation mit der
-anderen gleichartigen Anlage zu erleichtern.
+anderen gleichartigen\gls{anlage} zu erleichtern.
 Da der BeagleBoneBlack ein eigenes Stück Hardware mit eigenem Betriebssystem ist, muss für die
 Entwicklung die Entwicklungsumgebung QNX Momentics benutzt werden, die Debugging und Testing ermöglicht.
 Die Kommunikation mit dem BeagleBoneBlack und dem Entwicklungsrechner erfolgt über die Netzwerkverbindung.
 
 \subsection{Kommunikation mit der Hardware}
 
-Die Ansteuerung der Aktorik und Sensorik der Anlage erfolgt direkt über die GPIOs des BeagleBoneBlack.
+Die Ansteuerung der Aktorik und Sensorik der\gls{anlage} erfolgt direkt über die GPIOs des BeagleBoneBlack.
 Die Sensorik ist hierbei an GPIO0, die Aktorik des Transfersystems an GPIO1 und die LEDs des Bedienpanels an GPIO2
 gekoppelt.
 Bei den GPIOs können Bits einzeln gesetzt und gelöscht werden und es können die aktuellen Werte ausgelesen werden.
@@ -234,12 +233,12 @@ bestimmtes GPIO-Register aktiviert werden und kann dann nach erfolgreicher Messu
 Bei genauerer Betrachtung des Systemaufbaus fallen folgende Eigenschaften und Zusammenhänge besonders auf.
 Sie sind bei der Verhaltensmodellierung zu berücksichtigen und könnten das Erkennen von Szenarien vereinfachen.
 
-\subsubsection{Platzierung der Lichtschranke bei der Höhenmessung}
+\subsubsection{Platzierung der \gls{lb_he} bei der Höhenmessung}
 
-Die Lichtschranke an der Höhenmessung ist so platziert, dass sich die Mitte eines Werkstücks bei ihrer
+Die \gls{lb_he} an der Höhenmessung ist so platziert, dass sich die Mitte eines \Gls{Werkstück}s bei ihrer
 Unterbrechung genau unter dem Höhenmesser befindet.
-Auf diese Art lassen sich die unterschiedlichen Höhen von Werkstücken mittels einer einzelnen Messung unterscheiden.
-Die gemessenen Höhen bei unterschiedlichen Werkstückarten gehen aus Tabelle~\ref{tab:werkstuecke} hervor.
+Auf diese Art lassen sich die unterschiedlichen Höhen von \Glspl{Werkstück}en mittels einer einzelnen Messung unterscheiden.
+Die gemessenen Höhen bei unterschiedlichen \glspl{workpiece_type}en gehen aus Tabelle~\ref{tab:werkstuecke} hervor.
 
 \begin{table}[h]
     \begin{center}
@@ -255,22 +254,22 @@ Die gemessenen Höhen bei unterschiedlichen Werkstückarten gehen aus Tabelle~\r
             \hline
         \end{tabular}
     \end{center}
-    \caption{Höhen der unterschiedlichen Werkstückarten}
+    \caption{Höhen der unterschiedlichen \glspl{workpiece_type}en}
     \label{tab:werkstuecke}
 \end{table}
 
-Ebenso fällt auf, dass der Abstand der Lichtschranke für die Höhenmessung vom Anfang des Förderbands ca. 25 cm beträgt, 
-was für die Bestimmung des Abstands bei der Werkstückübergabe zwischen zwei Anlagen wichtig ist.
+Ebenso fällt auf, dass der Abstand der \gls{lb_he} für die Höhenmessung vom Anfang des Förderbands ca. 25 cm beträgt,
+was für die Bestimmung des Abstands bei der Werkstückübergabe zwischen zwei\glspl{anlage} wichtig ist.
 
 \subsubsection{Der Aufbau im Bereich des Aussortiermechnaismus}
 
-Im Transportweg der Werkstücke befindet sich an der Stelle, an der ein Werkstück vom Sortiermechanismus aussortiert
+Im Transportweg der \Glspl{Werkstück}e befindet sich an der Stelle, an der ein \Gls{Werkstück} vom Sortiermechanismus aussortiert
 werden muss, eine Lichtschranke.
-Das Unterbrechen dieser Lichtschranke kann daher als Signal zum Starten des Aussortiervorgangs verstanden werden.
+Das Unterbrechen dieser \gls{lb_sw} kann daher als Signal zum Starten des Aussortiervorgangs verstanden werden.
 Im Falle einer Weiche als Aussortiermechanismus müsste diese geöffnet werden, falls keine Aussortierung erfolgen soll.
-Im Falle eines Auswerfers müsste dieser aktiviert werden, falls das Werkstück aussortiert werden muss.
-Oberhalb des Werkstücks befindet sich in dieser Position auch der Metallsensor.
-Bei einer Anlage mit Weiche ist wichtig, dass diese bei längerem Verharren im geöffneten Zustand beschädigt werden kann.
+Im Falle eines \Gls{ejector}ss müsste dieser aktiviert werden, falls das \Gls{Werkstück} aussortiert werden muss.
+Oberhalb des \Gls{Werkstück}s befindet sich in dieser Position auch der Metallsensor.
+Bei einer\gls{anlage} mit Weiche ist wichtig, dass diese bei längerem Verharren im geöffneten Zustand beschädigt werden kann.
 
 \section{Softwareebene}\label{sec:softwareebene}
 
