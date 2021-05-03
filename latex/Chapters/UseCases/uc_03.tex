@@ -7,18 +7,18 @@
         Initial wird bei jedem \gls{workpiece} von Kunstoff-Material ausgegangen.
     }
     \addTextCollum{Actors}{
-        Metal\_Detector
+        \gls{me_sensor}
     }
     \addCollum{Precondition}{
         \item Die Anlage befindet sich im \gls{betrieb-zst}
     }
     \addCollum{Trigger}{
-        \item Metal\_Detector erfasst Metall
+        \item \gls{me_sensor} erfasst Metall
     }
     \addCollum{Mainflow}{
-        \item[1)] Aktuellem Werkstück wird Metall als Material zugewiesen
+        \item[1)] Aktuellem \gls{workpiece} wird Metall als Material zugewiesen
     }
     \addCollum{Postcondition}{
-        \item Das Material des \gls{workpiece}s ist bekannt.
+        \item Das Material des \gls{workpiece} ist bekannt.
     }
 \end{usecase}

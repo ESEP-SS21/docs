@@ -6,16 +6,16 @@
         Die Höhe eines \gls{workpiece}s wird gemessen.
     }
     \addTextCollum{Actors}{
-        Height\_Measurement, LightBarrier\_Height
+        \gls{he_sensor}, \gls{lb_he}
     }
     \addCollum{Preconditions}{
         \item System ist im \gls{betrieb-zst}
     }
     \addTextCollum{Trigger}{
-        LightBarrier\_Height
+        \gls{lb_he}
     }
     \addCollum{Mainflow}{
-        \item[1)] Messung bei Height\_Measurement anfragen
+        \item[1)] Messung beim \gls{he_sensor} anfragen
         \item[2)] Auf Rückmeldung warten
         \item[3)] Rückgabewert mit den in Höhenprofile erwähnten Werten vergleichen
         \item[4)] Rückgabewert fällt in einen der Bereiche (plus Toleranz) \textbullet
