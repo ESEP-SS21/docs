@@ -1,0 +1,24 @@
+\begin{usecase}{11}{Wechsel \gls{betrieb-zst}}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{12}, \refreq{42}
+    }
+    \addTextCollum{Actors}{
+        \gls{fts2}, \gls{ctrlp}
+    }
+    \addCollum{Preconditions}{
+        \item \gls{system} ist im \gls{ruhe-zst}
+        \item \gls{system} ist nicht im \gls{fehler-zst}
+    }
+    \addCollum{Trigger}{
+        \item Der \gls{t_start} wird gedrückt
+    }
+    \addCollum{Mainflow}{
+        \item[1)] \gls{system} wechselt in den \gls{betrieb-zst} \textbullet
+
+        \item[2)] LED im \gls{t_stop} wird eingeschaltet
+        \item[3)] LED im \gls{t_start} wird ausgeschaltet \textbullet
+    }
+    \addCollum{Postconditions}{
+        \item[3)] \gls{system} ist im \gls{betrieb-zst}
+    }
+\end{usecase}

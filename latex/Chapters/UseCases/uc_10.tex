@@ -1,0 +1,19 @@
+\begin{usecase}{10}{E-Stop benutzen}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{41}, \refreq{42}, \refreq{28}, \refreq{44}
+    }
+    \addTextCollum{Description}{
+        Dieser Use-Case beschreibt den Umgang des \gls{system}s bei Betätigung des \gls{estop}.
+    }
+    \addTextCollum{Actors}{
+        \gls{estop}, \gls{fts2}
+    }
+    \addCollum{Triggers}{
+        \item \gls{estop} wird reingedrückt
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Fehlerevent E\_Stopp auslösen
+        \item[2)] Warten bis \gls{estop} beider \gls{anlage}n rausgezogen
+        \item[3)] Fehler behoben senden und quittieren
+    }
+\end{usecase}

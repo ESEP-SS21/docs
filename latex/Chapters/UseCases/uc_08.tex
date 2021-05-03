@@ -1,0 +1,37 @@
+\begin{usecase}{08}{Transfer-Anfrage beantworten}{mittel}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{9}, \refreq{14}, \refreq{16}, \refreq{18}, \refreq{31}
+    }
+    \addTextCollum{Description}{
+        In diesem Use-Case geht es um eine Anfrage, ein \gls{workpiece} an diese \gls{anlage} zu übergeben.
+        Die Anfrage geht von einer \gls{anlage} in \gls{primary} aus und wird von dieser \gls{anlage}, die sich in \gls{secondary} befindet beantwortet.
+    }
+    \addTextCollum{Actors}{
+        \gls{belt}, \gls{fts2}, \gls{lb_he}, \gls{lb_st}
+    }
+    \addCollum{Precondition}{
+        \item \gls{system} ist im \gls{betrieb-zst}
+        \item \gls{anlage} befindet sich im \gls{secondary}
+    }
+    \addCollum{Trigger}{
+        \item Transfer Request mit \gls{workpiece}-Info von \gls{fts2}
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Kein \gls{workpiece} befindet sich zwischen \gls{lb_st} und \gls{lb_he} \textbullet
+        \item[2)] Sende 'OK' an \gls{fts2}
+        \item[3)] \gls{belt} starten
+    }
+
+    \addCollum{Alternative Flow 1}{
+        \item at stept 1) of Mainflow
+        \item[1a)] Es befindet sich ein \gls{workpiece} zwischen \gls{lb_st} und \gls{lb_he}
+        \begin{itemize}
+            \item[1a1)] Warten auf Unterbrechung von \gls{lb_he}
+            \item[1a1)] Go back to step 2) of Mainflow
+        \end{itemize}
+    }
+
+    \addCollum{Postcondition}{
+        \item Transfer Request beantwortet
+    }
+\end{usecase}

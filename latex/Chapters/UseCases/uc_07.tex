@@ -1,0 +1,41 @@
+\begin{usecase}{07}{\gls{workpiece}-Übergabe}{mittel}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{9}, \refreq{14}, \refreq{16}, \refreq{18}, \refreq{31}
+    }
+    \addTextCollum{Description}{
+        In diesem Use-Case erreicht ein \gls{workpiece} das Ende des Förderbandes.
+        Befindet sich das System in \gls{primary} wird das \gls{workpiece} an die \gls{anlage} in \gls{secondary} übergeben.
+    }
+    \addTextCollum{Actors}{
+        \gls{belt}, \gls{fts2}, \gls{lb_en}
+    }
+
+    \addCollum{Precondition}{
+        \item \gls{system} befindet sich im \gls{betrieb-zst}
+    }
+
+    \addCollum{Trigger}{
+        \item \gls{lb_en} wird unterbrochen
+    }
+
+    \addCollum{Mainflow}{
+        \item[1)] Die \gls{anlage} ist in \gls{primary} \textbullet
+        \item[2)] \gls{belt} stoppen
+        \item[3)] Anfrage zum transferieren und Werkstück\-Informationen an \gls{fts2} senden
+        \item[4)] Auf 'OK' von \gls{fts2} warten
+        \item[5)] \gls{belt} in Bewegung setzen und Werkstück transferieren
+    }
+
+    \addCollum{Alternative Flow 1}{
+        \item at step 1) of Mainflow
+        \item[1a)] Die \gls{anlage} ist in \gls{secondary}
+        \begin{itemize}
+            \item[1a1)] Ausgabe der ID, des Typs, Höhe\_FB1 und Höhe\_FB2 auf der Konsole
+            \item[1a2)] Ausgabe an der Konsole, ob sich das \gls{workpiece} bei der Übergabe zwischen den \glspl{anlage} überschlagen hat
+        \end{itemize}
+    }
+
+    \addCollum{Postcondition}{
+        \item \gls{workpiece} ist nicht mehr auf dem \gls{belt} der eigenen \gls{anlage}
+    }
+\end{usecase}

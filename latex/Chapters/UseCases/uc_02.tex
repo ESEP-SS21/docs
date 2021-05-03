@@ -1,0 +1,27 @@
+\begin{usecase}{02}{Höhe messen}{hoch}
+    \addTextCollum{Verwandte Requirements}{
+        \refreq{1}, \refreq{31}, \refreq{32}
+    }
+    \addTextCollum{Description}{
+        Die Höhe eines \gls{workpiece}s wird gemessen.
+    }
+    \addTextCollum{Actors}{
+        \gls{he_sensor}, \gls{lb_he}
+    }
+    \addCollum{Preconditions}{
+        \item \gls{system} ist im \gls{betrieb-zst}
+    }
+    \addTextCollum{Trigger}{
+        \gls{lb_he}
+    }
+    \addCollum{Mainflow}{
+        \item[1)] Messung beim \gls{he_sensor} anfragen
+        \item[2)] Auf Rückmeldung warten
+        \item[3)] Rückgabewert mit den in Höhenprofile erwähnten Werten vergleichen
+        \item[4)] Rückgabewert fällt in einen der Bereiche (plus Toleranz) \textbullet
+        \item[4)] Jeweiliges Höhenprofil zurückgeben
+    }
+    \addCollum{Postcondition}{
+        \item Die Höhe des \gls{workpiece}s ist gemessen
+    }
+\end{usecase}
