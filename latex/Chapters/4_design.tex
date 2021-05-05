@@ -53,13 +53,13 @@ Zum anderen gibt es Aktoren, diese abonnieren \glspl{event}, mit denen sie anges
 In der Logic befinden sich die Komponenten, welche die Logik für den Systemablauf bereitstellen.
 Dazu gehören folgende Komponenten:
 
-\subsubsubsection{Datamodel}
+\subsubsection{Datamodel}
 Das Datamodel verwaltet Informationen der \glspl{workpiece}.
 Für jeden Abschnitt der \gls{anlage}, welche durch Lichtschranken getrennt sind, gibt es eine Queue.
 In den Queues werden \glspl{workpiece} und deren Informationen verwaltet.
 Das bereitgestellte Interface IDatamodel ermöglicht den Zugriff auf die Daten.
 
-\subsubsubsection{Control}
+\subsubsection{Control}
 Die Control beinhaltet Komponenten, die mit FSMs den Systemablauf steuern.
 Dazu gehören die Komponenten MainControl, Stoplight, ErrorHandler und ConnectionManagement.
 Die Control hat Zugriff auf die Daten des Datamodel über das Innterface IDatamodel.
