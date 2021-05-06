@@ -9,17 +9,17 @@
         \gls{he_sensor}, \gls{lb_he}
     }
     \addCollum{Preconditions}{
-        \item \gls{system} ist im \gls{betrieb-zst}
+        \item Das \gls{system} befindet sich im \gls{betrieb-zst}
     }
-    \addTextCollum{Trigger}{
-        \gls{lb_he}
+    \addCollum{Trigger}{
+        \item \gls{lb_he} unterbrochen
     }
     \addCollum{Mainflow}{
         \item[1)] Messung beim \gls{he_sensor} anfragen
         \item[2)] Auf Rückmeldung warten
-        \item[3)] Rückgabewert mit den in Höhenprofile erwähnten Werten vergleichen
+        \item[3)] Rückgabewert mit den in \ref{tab:werkstuecke} erwähnten Höhen vergleichen
         \item[4)] Rückgabewert fällt in einen der Bereiche (plus Toleranz) \textbullet
-        \item[4)] Jeweiliges Höhenprofil zurückgeben
+        \item[5)] Jeweiliges Höhenprofil zurückgeben
     }
     \addCollum{Postcondition}{
         \item Die Höhe des \gls{workpiece}s ist gemessen
