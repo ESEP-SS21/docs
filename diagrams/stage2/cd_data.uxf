@@ -7,7 +7,7 @@
       <x>750</x>
       <y>230</y>
       <w>340</w>
-      <h>310</h>
+      <h>260</h>
     </coordinates>
     <panel_attributes>&lt;&lt;singleton&gt;&gt;
 WorkpieceManager
@@ -15,9 +15,6 @@ WorkpieceManager
 -_instance: WorkpieceManager
 -_cb_waiting_for_transfer: bool
 -_last_wrpc_passed: Workpiece&amp;
--_start_height_queue: CBSection
--_height_switch_queue: CBSection
--_switch_end_queue: CBSection
 --
 +get_instance(): WorkpieceManager
 +cb_waiting_for_transfer(void): bool
@@ -67,17 +64,17 @@ Workpiece
       <x>600</x>
       <y>440</y>
       <w>170</w>
-      <h>220</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>150.0;200.0;80.0;200.0;80.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>150.0;130.0;80.0;130.0;80.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>750</x>
-      <y>620</y>
+      <y>550</y>
       <w>160</w>
       <h>110</h>
     </coordinates>
@@ -108,24 +105,12 @@ CBSection
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>440</x>
-      <y>320</y>
-      <w>80</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-_queue</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLFrame</id>
     <coordinates>
       <x>300</x>
       <y>190</y>
       <w>820</w>
-      <h>550</h>
+      <h>490</h>
     </coordinates>
     <panel_attributes>cd Data</panel_attributes>
     <additional_attributes/>
@@ -149,9 +134,9 @@ _switch_end_queue</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>930</x>
-      <y>620</y>
+      <y>550</y>
       <w>160</w>
-      <h>100</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 SectionName
@@ -165,12 +150,24 @@ SWITCH_END</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1000</x>
-      <y>530</y>
+      <y>480</y>
       <w>60</w>
-      <h>110</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>320</y>
+      <w>30</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
