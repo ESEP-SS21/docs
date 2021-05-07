@@ -4,22 +4,33 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>300</y>
+      <x>750</x>
+      <y>230</y>
       <w>340</w>
-      <h>170</h>
+      <h>320</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;class&gt;&gt;
+    <panel_attributes>&lt;&lt;singleton&gt;&gt;
 WorkpieceManager
 --
+-_instance: WorkpieceManager
+-_cb_waiting_for_transfer: bool
 -_last_wrpc_passed: Workpiece&amp;
--_start_height_queue: WorkpieceQueue
--_height_switch_queue: WorkpieceQueue
--_switch_end_queue: WorkpieceQueue
+-_start_height_queue: CBSection
+-_height_switch_queue: CBSection
+-_switch_end_queue: CBSection
 --
+- «Create» WorkpieceManager()
++get_instance(): WorkpieceManager
++cb_waiting_for_transfer(void): bool
++exit_section(SectionName, Workpiece&amp;): void
++enter_section(SectionName, Workpiece&amp;): void
++is_empty(SectionName): bool
++size(SectionName): int
++front(SectionName): Workpiece&amp;
++back(SectionName): Workpiece&amp;
+
 -sorting_order_step(void): void
-+exit_section(Section from, Workpiece&amp;)
-+enter_section(Section, Workpiece&amp;)
+
 
 
 </panel_attributes>
@@ -28,10 +39,10 @@ WorkpieceManager
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>530</y>
+      <x>330</x>
+      <y>430</y>
       <w>240</w>
-      <h>190</h>
+      <h>230</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
 Workpiece
@@ -41,6 +52,7 @@ Workpiece
 -_height_1: float
 -_height_2: float
 --
++Workpiece(id, WorkpieceType)
 +get_id(void): int
 +get_type(void): WorkpieceType
 +set_height_1(float): void
@@ -53,20 +65,20 @@ Workpiece
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
-      <y>530</y>
+      <x>560</x>
+      <y>440</y>
       <w>210</w>
-      <h>40</h>
+      <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>190.0;200.0;100.0;200.0;100.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>530</y>
+      <x>750</x>
+      <y>620</y>
       <w>160</w>
       <h>110</h>
     </coordinates>
@@ -82,44 +94,39 @@ WRPC_L</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>300</y>
+      <x>330</x>
+      <y>230</y>
       <w>240</w>
-      <h>190</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
-WorkpieceQueue
+CBSection
 --
 -_queue: queue&lt;Workpiece&gt;
 -_lock: mutex
 --
-+push(Workpiece&amp;): void
-+pop(void): Workpiece&amp;
-+empty(void): bool
-+size(void): int
-+front(void): Workpiece&amp;
-+back(void): Workpiece&amp;</panel_attributes>
++get_queue(void): queue&amp;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>480</y>
-      <w>110</w>
-      <h>70</h>
+      <x>440</x>
+      <y>320</y>
+      <w>80</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-_wrpc_queue</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+_queue</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>170</x>
-      <y>250</y>
+      <x>300</x>
+      <y>190</y>
       <w>820</w>
-      <h>500</h>
+      <h>550</h>
     </coordinates>
     <panel_attributes>cd Data</panel_attributes>
     <additional_attributes/>
@@ -127,8 +134,8 @@ _wrpc_queue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
-      <y>300</y>
+      <x>560</x>
+      <y>230</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
@@ -142,13 +149,13 @@ _switch_end_queue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
-      <y>530</y>
+      <x>930</x>
+      <y>620</y>
       <w>160</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-Section
+SectionName
 --
 START_HEIGHT
 HEIGHT_SWITCH
@@ -158,13 +165,13 @@ SWITCH_END</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
-      <y>460</y>
+      <x>1000</x>
+      <y>540</y>
       <w>60</w>
-      <h>90</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
