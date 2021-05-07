@@ -6,7 +6,7 @@
     <coordinates>
       <x>750</x>
       <y>230</y>
-      <w>340</w>
+      <w>390</w>
       <h>260</h>
     </coordinates>
     <panel_attributes>&lt;&lt;singleton&gt;&gt;
@@ -109,7 +109,7 @@ CBSection
     <coordinates>
       <x>300</x>
       <y>190</y>
-      <w>870</w>
+      <w>880</w>
       <h>490</h>
     </coordinates>
     <panel_attributes>cd Data</panel_attributes>
@@ -133,7 +133,7 @@ _switch_end_queue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
+      <x>980</x>
       <y>550</y>
       <w>160</w>
       <h>110</h>
@@ -149,7 +149,7 @@ SWITCH_END</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
+      <x>1050</x>
       <y>480</y>
       <w>60</w>
       <h>90</h>
