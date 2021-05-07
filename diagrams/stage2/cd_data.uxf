@@ -13,14 +13,14 @@
 WorkpieceManager
 --
 -_instance: WorkpieceManager
--_cb_waiting_for_transfer: bool
+-_waiting_for_exit: bool
 --
 +get_instance(): WorkpieceManager
-+cb_waiting_for_transfer(void): bool
++waiting_for_exit(void): bool
 +exit_section(SectionName): void
 +enter(void): void
 +enter(Workpiece): void
-+transfer_front(SectionName): void
++transfer_from(SectionName): void
 +is_empty(SectionName): bool
 +size(SectionName): int
 +front(SectionName): Workpiece
