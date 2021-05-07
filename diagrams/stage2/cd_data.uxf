@@ -7,7 +7,7 @@
       <x>620</x>
       <y>300</y>
       <w>290</w>
-      <h>130</h>
+      <h>170</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
 WorkpieceManager
@@ -17,7 +17,8 @@ WorkpieceManager
 -_height_switch_queue: WorkpieceQueue
 -_switch_end_queue: WorkpieceQueue
 --
-+sorting_order_step(void): void
+-sorting_order_step(void): void
++transfer_
 
 
 </panel_attributes>
@@ -41,6 +42,8 @@ Workpiece
 --
 +get_id(void): int
 +get_type(void): WorkpieceType
++set_height_1(float): void
++set_height_2(float): void
 +get_height_1(void): float
 +get_height_2(void): float
 </panel_attributes>
