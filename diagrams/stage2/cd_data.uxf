@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>13</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>750</x>
-      <y>230</y>
-      <w>390</w>
-      <h>260</h>
+      <x>741</x>
+      <y>195</y>
+      <w>507</w>
+      <h>325</h>
     </coordinates>
     <panel_attributes>&lt;&lt;singleton&gt;&gt;
 WorkpieceManager
 --
 -_instance: WorkpieceManager
 -_cb_waiting_for_transfer: bool
--_last_wrpc_passed: Workpiece&amp;
 --
 +get_instance(): WorkpieceManager
 +cb_waiting_for_transfer(void): bool
-+exit_section(SectionName, Workpiece&amp;): void
-+enter_section(SectionName, Workpiece&amp;): void
++exit_section(SectionName): void
++enter(void): void
++enter(Workpiece): void
++transfer_front(SectionName): void
 +is_empty(SectionName): bool
 +size(SectionName): int
-+front(SectionName): Workpiece&amp;
-+back(SectionName): Workpiece&amp;
-
--sorting_order_step(void): void
-
-
++front(SectionName): Workpiece
++back(SectionName): Workpiece
 
 </panel_attributes>
     <additional_attributes/>
@@ -35,10 +32,10 @@ WorkpieceManager
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>430</y>
-      <w>320</w>
-      <h>230</h>
+      <x>195</x>
+      <y>455</y>
+      <w>416</w>
+      <h>325</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
 Workpiece
@@ -61,22 +58,22 @@ Workpiece
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
-      <y>440</y>
-      <w>130</w>
-      <h>150</h>
+      <x>598</x>
+      <y>468</y>
+      <w>169</w>
+      <h>221</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>110.0;130.0;60.0;130.0;60.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;150.0;60.0;150.0;60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>750</x>
-      <y>550</y>
-      <w>160</w>
-      <h>110</h>
+      <x>741</x>
+      <y>637</y>
+      <w>208</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 WorkpieceType
@@ -90,10 +87,10 @@ WRPC_L</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>230</y>
-      <w>240</w>
-      <h>100</h>
+      <x>195</x>
+      <y>195</y>
+      <w>312</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
 CBSection
@@ -101,16 +98,16 @@ CBSection
 -_queue: queue&lt;Workpiece&gt;
 -_lock: mutex
 --
-+get_queue(void): queue&amp;</panel_attributes>
++get_queue(void): queue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>300</x>
-      <y>190</y>
-      <w>880</w>
-      <h>490</h>
+      <x>156</x>
+      <y>143</y>
+      <w>1144</w>
+      <h>663</h>
     </coordinates>
     <panel_attributes>cd Data</panel_attributes>
     <additional_attributes/>
@@ -118,10 +115,10 @@ CBSection
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>230</y>
-      <w>210</w>
-      <h>80</h>
+      <x>494</x>
+      <y>195</y>
+      <w>273</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 
@@ -133,10 +130,10 @@ _switch_end_queue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>550</y>
-      <w>160</w>
-      <h>110</h>
+      <x>1040</x>
+      <y>637</y>
+      <w>208</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 SectionName
@@ -149,26 +146,38 @@ SWITCH_END</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1050</x>
-      <y>480</y>
-      <w>60</w>
-      <h>90</h>
+      <x>1131</x>
+      <y>507</y>
+      <w>78</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>320</y>
-      <w>50</w>
-      <h>130</h>
+      <x>338</x>
+      <y>312</y>
+      <w>65</w>
+      <h>169</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;
 m1=0..*
 m2=1</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>416</x>
+      <y>377</y>
+      <w>351</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;creates&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0;250.0;10.0</additional_attributes>
   </element>
 </diagram>
