@@ -7,7 +7,7 @@
       <x>750</x>
       <y>230</y>
       <w>340</w>
-      <h>320</h>
+      <h>310</h>
     </coordinates>
     <panel_attributes>&lt;&lt;singleton&gt;&gt;
 WorkpieceManager
@@ -19,7 +19,6 @@ WorkpieceManager
 -_height_switch_queue: CBSection
 -_switch_end_queue: CBSection
 --
-- «Create» WorkpieceManager()
 +get_instance(): WorkpieceManager
 +cb_waiting_for_transfer(void): bool
 +exit_section(SectionName, Workpiece&amp;): void
@@ -41,7 +40,7 @@ WorkpieceManager
     <coordinates>
       <x>330</x>
       <y>430</y>
-      <w>240</w>
+      <w>280</w>
       <h>230</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
@@ -52,7 +51,7 @@ Workpiece
 -_height_1: float
 -_height_2: float
 --
-+Workpiece(id, WorkpieceType)
++ &lt;&lt;Create&gt;&gt; Workpiece(id, WorkpieceType)
 +get_id(void): int
 +get_type(void): WorkpieceType
 +set_height_1(float): void
@@ -65,14 +64,14 @@ Workpiece
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>600</x>
       <y>440</y>
-      <w>210</w>
+      <w>170</w>
       <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>190.0;200.0;100.0;200.0;100.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>150.0;200.0;80.0;200.0;80.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -166,12 +165,12 @@ SWITCH_END</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1000</x>
-      <y>540</y>
+      <y>530</y>
       <w>60</w>
-      <h>100</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
