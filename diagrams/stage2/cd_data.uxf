@@ -37,7 +37,7 @@ WorkpieceManager
     <coordinates>
       <x>330</x>
       <y>430</y>
-      <w>280</w>
+      <w>320</w>
       <h>230</h>
     </coordinates>
     <panel_attributes>&lt;&lt;class&gt;&gt;
@@ -61,14 +61,14 @@ Workpiece
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
+      <x>640</x>
       <y>440</y>
-      <w>170</w>
+      <w>130</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>150.0;130.0;80.0;130.0;80.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;130.0;60.0;130.0;60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
