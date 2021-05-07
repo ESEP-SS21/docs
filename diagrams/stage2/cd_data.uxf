@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>300</y>
+      <w>290</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt;
+WorkpieceManager
+--
+-_last_wrpc_passed: Workpiece&amp;
+-_start_height_queue: WorkpieceQueue
+-_height_switch_queue: WorkpieceQueue
+-_switch_end_queue: WorkpieceQueue
+--
++sorting_order_step(void): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>530</y>
+      <w>240</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt;
+Workpiece
+--
+-_id: int
+-_type: WorkpieceType
+-_height_1: float
+-_height_2: float
+--
++get_id(void): int
++get_type(void): WorkpieceType
++get_height_1(void): float
++get_height_2(void): float
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>300</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+_start_height_queue
+_height_switch_queue
+_switch_end_queue</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>530</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+uses</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>530</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+WorkpieceType
+--
+WRPC_H
+WRPC_HB
+WRPC_HM
+WRPC_L</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>300</y>
+      <w>240</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt;
+WorkpieceQueue
+--
+-_wprc_queue: queue&lt;Workpiece&gt;
+-_lock: mutex
+--
++push(Workpiece&amp;): void
++pop(void): Workpiece&amp;
++empty(void): bool
++size(void): int
++front(void): Workpiece&amp;
++back(void): Workpiece&amp;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>480</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+_wrpc_queue</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;130.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>170</x>
+      <y>250</y>
+      <w>770</w>
+      <h>500</h>
+    </coordinates>
+    <panel_attributes>cd Data</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
