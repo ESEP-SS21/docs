@@ -85,9 +85,8 @@ m1=1</panel_attributes>
 - _client_thread: thread
 --
 + &lt;&lt;Create&gt;&gt; DispatcherClient (dispatcher_name: string, name: string)
-+ send_event(Event , prio: int)
-+ subscribe_evnt(EventType)
-+ connect_to_other(name: string)
++ send(Event , prio: int)
++ subscribe(EventType)
 + handle(Event)</panel_attributes>
     <additional_attributes/>
   </element>
