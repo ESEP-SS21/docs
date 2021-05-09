@@ -22,7 +22,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>948</x>
-      <y>864</y>
+      <y>888</y>
       <w>228</w>
       <h>48</h>
     </coordinates>
@@ -96,10 +96,13 @@ m1=1</panel_attributes>
       <x>708</x>
       <y>792</y>
       <w>228</w>
-      <h>48</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>QnxChannel
-
+--
+&lt;&lt;Create&gt;&gt; QnxChannel()
+&lt;&lt;Create&gt;&gt; QnxChannel(
+     attach_string: string)
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -109,11 +112,11 @@ m1=1</panel_attributes>
       <x>1008</x>
       <y>624</y>
       <w>168</w>
-      <h>264</h>
+      <h>288</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 _other_connection</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -133,11 +136,11 @@ _channel</panel_attributes>
       <x>360</x>
       <y>624</y>
       <w>612</w>
-      <h>288</h>
+      <h>312</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 _dispatcher_connection</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;220.0;490.0;220.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0;490.0;240.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -181,7 +184,7 @@ _channel</panel_attributes>
       <x>1056</x>
       <y>636</y>
       <w>240</w>
-      <h>252</h>
+      <h>276</h>
     </coordinates>
     <panel_attributes>lt=[EventType]-&gt;
 m2=0..n
@@ -191,7 +194,7 @@ m1=0..n
 
 
 _evnt_conn_multimap</panel_attributes>
-    <additional_attributes>40.0;10.0;40.0;190.0</additional_attributes>
+    <additional_attributes>40.0;10.0;40.0;210.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -248,13 +251,13 @@ type</panel_attributes>
       <x>1164</x>
       <y>636</y>
       <w>300</w>
-      <h>300</h>
+      <h>324</h>
     </coordinates>
     <panel_attributes>lt=[chid]-&gt;
 m2=1
 m1=0..n
 _chid_conn_map</panel_attributes>
-    <additional_attributes>120.0;10.0;120.0;220.0;10.0;220.0</additional_attributes>
+    <additional_attributes>120.0;10.0;120.0;240.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -287,10 +290,10 @@ wird diese beim subscriben erstellt.</panel_attributes>
       <x>1164</x>
       <y>624</y>
       <w>144</w>
-      <h>288</h>
+      <h>312</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;Creates&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;220.0;100.0;220.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;240.0;100.0;240.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>
