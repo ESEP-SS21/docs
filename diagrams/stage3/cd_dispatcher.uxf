@@ -15,7 +15,8 @@
 --
 + &lt;&lt;Create&gt;&gt; Dispatcher(name: string)
 + connect_to_other(name: string)
-- subscribe(subscr: EventSubscription)</panel_attributes>
+- subscribe(subscr: EventSubscription)
+- dispatch(e: Event)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
