@@ -74,9 +74,9 @@ m1=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
+      <x>288</x>
       <y>444</y>
-      <w>528</w>
+      <w>576</w>
       <h>192</h>
     </coordinates>
     <panel_attributes>/DispatcherClient/
@@ -210,9 +210,9 @@ _evnt_conn_multimap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>312</x>
+      <x>252</x>
       <y>72</y>
-      <w>1152</w>
+      <w>1212</w>
       <h>1044</h>
     </coordinates>
     <panel_attributes>cd dispatcher</panel_attributes>
@@ -259,9 +259,9 @@ _chid_conn_map</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>936</x>
+      <x>876</x>
       <y>972</y>
-      <w>468</w>
+      <w>528</w>
       <h>108</h>
     </coordinates>
     <panel_attributes>Wird gebraucht, da bei einer EventSubscription 
