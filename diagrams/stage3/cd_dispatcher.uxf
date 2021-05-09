@@ -215,9 +215,9 @@ _evnt_conn_multimap</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>252</x>
-      <y>72</y>
+      <y>216</y>
       <w>1212</w>
-      <h>1044</h>
+      <h>900</h>
     </coordinates>
     <panel_attributes>cd dispatcher</panel_attributes>
     <additional_attributes/>
