@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>444</y>
+      <w>468</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Dispatcher
+--
+- _dispatcher_thread: thread
+--
++ &lt;&lt;Create&gt;&gt; Dispatcher(name: string)
++ connect_to_other(name: string)
+- subscribe(subscr: EventSubscription)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>948</x>
+      <y>864</y>
+      <w>228</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>QnxConnection
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>252</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Event
+--
++ payload: int
++ broadcast: bool
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>948</x>
+      <y>264</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+EventType</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>276</y>
+      <w>132</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>type
+lt=&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>444</y>
+      <w>528</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>/DispatcherClient/
+--
+- _client_thread: thread
+--
++ &lt;&lt;Create&gt;&gt; DispatcherClient (dispatcher_name: string, name: string)
++ send_event(event: Event , prio: int)
++ subscribe_evnt(event_type: EventType)
++ connect_to_other(name: string)
++ handle(event: Event)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>708</x>
+      <y>792</y>
+      <w>228</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>QnxChannel
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>624</y>
+      <w>168</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+_other_connection</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>624</y>
+      <w>108</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+_channel</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>624</y>
+      <w>612</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+_dispatcher_connection</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0;490.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>624</y>
+      <w>132</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+_channel</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;90.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>324</y>
+      <w>264</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;recieves / sends&gt;&gt;</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;60.0;10.0;60.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>324</y>
+      <w>300</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;dispatches&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;230.0;60.0;230.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1056</x>
+      <y>636</y>
+      <w>240</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=[EventType]-&gt;
+m2=0..n
+m1=0..n
+
+
+
+
+_evnt_conn_multimap</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1200</x>
+      <y>336</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>EventSubscription
+--
++ chid: chid
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>312</x>
+      <y>72</y>
+      <w>1152</w>
+      <h>1044</h>
+    </coordinates>
+    <panel_attributes>cd dispatcher</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>648</x>
+      <y>744</y>
+      <w>552</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>cnnMngmnt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1056</x>
+      <y>276</y>
+      <w>252</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+type</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0;190.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1164</x>
+      <y>636</y>
+      <w>300</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=[chid]-&gt;
+m2=1
+m1=0..n
+_chid_conn_map</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;220.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>936</x>
+      <y>972</y>
+      <w>468</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Wird gebraucht, da bei einer EventSubscription 
+die chid übertragen wird.
+Falls für diese chid noch keine QnxConnection besteht, 
+wird diese beim subscriben erstellt.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1356</x>
+      <y>780</y>
+      <w>36</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1164</x>
+      <y>624</y>
+      <w>144</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;Creates&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;220.0;100.0;220.0;100.0;10.0</additional_attributes>
+  </element>
+</diagram>
