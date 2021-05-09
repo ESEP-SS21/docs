@@ -262,7 +262,7 @@ _chid_conn_map</panel_attributes>
       <x>936</x>
       <y>972</y>
       <w>468</w>
-      <h>96</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Wird gebraucht, da bei einer EventSubscription 
 die chid übertragen wird.
