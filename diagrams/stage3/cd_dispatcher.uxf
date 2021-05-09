@@ -15,8 +15,8 @@
 --
 + &lt;&lt;Create&gt;&gt; Dispatcher(name: string)
 + connect_to_other(name: string)
-- subscribe(subscr: EventSubscription)
-- dispatch(e: Event)</panel_attributes>
+- subscribe(EventSubscription)
+- dispatch(Event)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -85,10 +85,10 @@ m1=1</panel_attributes>
 - _client_thread: thread
 --
 + &lt;&lt;Create&gt;&gt; DispatcherClient (dispatcher_name: string, name: string)
-+ send_event(event: Event , prio: int)
-+ subscribe_evnt(event_type: EventType)
++ send_event(Event , prio: int)
++ subscribe_evnt(EventType)
 + connect_to_other(name: string)
-+ handle(event: Event)</panel_attributes>
++ handle(Event)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
