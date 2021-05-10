@@ -5,14 +5,14 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>500</x>
+      <x>520</x>
       <y>460</y>
-      <w>180</w>
-      <h>110</h>
+      <w>380</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Waiting for heigth
 --
-entry: ask_HeightSensor()
+entry: send_Event(EVNT_SEN_HEIGHT_REQ))(Messung)
 
 
 valign=top
@@ -22,10 +22,10 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>500</x>
-      <y>250</y>
+      <x>520</x>
+      <y>280</y>
       <w>180</w>
-      <h>140</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>Waiting for workpiece
 --
@@ -37,32 +37,32 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>380</y>
+      <x>600</x>
+      <y>370</y>
       <w>200</w>
-      <h>100</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_HE_BLCK</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>670</x>
-      <y>500</y>
-      <w>270</w>
-      <h>40</h>
+      <x>890</x>
+      <y>350</y>
+      <w>290</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_HE_SENSOR_HE</panel_attributes>
-    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+    <additional_attributes>10.0;140.0;270.0;140.0;270.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>920</x>
-      <y>480</y>
+      <x>1060</x>
+      <y>290</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -78,8 +78,8 @@ valign=top
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>390</x>
-      <y>290</y>
+      <x>420</x>
+      <y>320</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -89,21 +89,21 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>290</y>
-      <w>120</w>
+      <x>430</x>
+      <y>320</y>
+      <w>110</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>340</x>
-      <y>210</y>
-      <w>790</w>
-      <h>370</h>
+      <x>410</x>
+      <y>240</y>
+      <w>850</w>
+      <h>310</h>
     </coordinates>
     <panel_attributes>stm Höhenmessung</panel_attributes>
     <additional_attributes/>
@@ -111,13 +111,13 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>670</x>
-      <y>320</y>
-      <w>360</w>
-      <h>180</h>
+      <x>690</x>
+      <y>310</y>
+      <w>390</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-m2= EVNT_SEN_LB_HE_CLR</panel_attributes>
-    <additional_attributes>340.0;160.0;340.0;10.0;10.0;10.0</additional_attributes>
+EVNT_SEN_LB_HE_CLR</panel_attributes>
+    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
