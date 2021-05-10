@@ -78,45 +78,6 @@ EVNT_ACT_BELT_FWD</panel_attributes>
     <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>1320</x>
-      <y>410</y>
-      <w>180</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>Pending Transfer Request
---
-
-valign=top
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1070</x>
-      <y>430</y>
-      <w>270</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_WRPC_TRNS_RQ</panel_attributes>
-    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>440</x>
-      <y>290</y>
-      <w>990</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_ACT_BELT_FWD</panel_attributes>
-    <additional_attributes>970.0;120.0;970.0;20.0;10.0;20.0;10.0;120.0</additional_attributes>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>350</x>
@@ -138,32 +99,32 @@ new_wrpc()</panel_attributes>
       <h>140</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_ST_BLCK/
+EVNT_SEN_LB_ST_BLCK[!belt_blocked]/
 new_wrpc(), send_Event(EVNT_ACT_BELT_FWD)</panel_attributes>
     <additional_attributes>470.0;10.0;470.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1310</x>
-      <y>510</y>
-      <w>200</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_ST_BLCK/
-new_wrpc()</panel_attributes>
-    <additional_attributes>30.0;10.0;30.0;110.0;160.0;110.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
       <x>320</x>
-      <y>220</y>
-      <w>1220</w>
-      <h>460</h>
+      <y>300</y>
+      <w>890</w>
+      <h>380</h>
     </coordinates>
     <panel_attributes>stm Werkstück annahme</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>480</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK
+[belt_blocked]/new_wrpc()</panel_attributes>
+    <additional_attributes>40.0;40.0;40.0;90.0;130.0;90.0;130.0;10.0;80.0;10.0</additional_attributes>
   </element>
 </diagram>
