@@ -4,31 +4,17 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>741</x>
-      <y>195</y>
-      <w>507</w>
-      <h>403</h>
+      <x>1001</x>
+      <y>520</y>
+      <w>299</w>
+      <h>169</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;singleton&gt;&gt;
-WorkpieceManager
+    <panel_attributes>Anlage
 --
--_instance: WorkpieceManager
--_waiting_for_exit: bool
--_next_in_sorting_order: int
--_ramp_full: bool
+- _instance: Anlage {readonly}
++ _waiting_for_exit: bool
++ _ramp_full: bool
 --
-+get_instance(): WorkpieceManager
-+get_next(void): int
-+ramp_full(void): bool
-+waiting_for_exit(void): bool
-+exit_section(SectionName): void
-+enter(void): void
-+enter(Workpiece): void
-+transfer_from(SectionName): void
-+is_empty(SectionName): bool
-+size(SectionName): int
-+front(SectionName): Workpiece
-+back(SectionName): Workpiece
 
 </panel_attributes>
     <additional_attributes/>
@@ -36,48 +22,30 @@ WorkpieceManager
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>195</x>
-      <y>481</y>
+      <x>390</x>
+      <y>702</y>
       <w>416</w>
-      <h>325</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;class&gt;&gt;
-Workpiece
---
--_id: int
--_type: WorkpieceType
--_height_1: float
--_height_2: float
---
-+ &lt;&lt;Create&gt;&gt; Workpiece(id, WorkpieceType)
-+get_id(void): int
-+get_type(void): WorkpieceType
-+set_height_1(float): void
-+set_height_2(float): void
-+get_height_1(void): float
-+get_height_2(void): float
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>598</x>
-      <y>494</y>
-      <w>169</w>
       <h>221</h>
     </coordinates>
-    <panel_attributes>lt=&lt;.
-uses</panel_attributes>
-    <additional_attributes>110.0;150.0;60.0;150.0;60.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>Workpiece
+--
+/- last_id: id/
+- _id: id {readonly}
++ _height_1: float
++ _height_2: float
++ _is_metallic: bool
+--
++ &lt;&lt;Create&gt;&gt; Workpiece()
++ &lt;&lt;Create&gt;&gt; Workpiece(workpiece_info: int)</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>741</x>
-      <y>663</y>
+      <x>1053</x>
+      <y>819</y>
       <w>208</w>
-      <h>143</h>
+      <h>169</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 WorkpieceType
@@ -85,33 +53,36 @@ WorkpieceType
 WRPC_H
 WRPC_HB
 WRPC_HM
-WRPC_L</panel_attributes>
+WRPC_L
+unkown</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>195</x>
-      <y>195</y>
-      <w>312</w>
-      <h>130</h>
+      <x>390</x>
+      <y>390</y>
+      <w>377</w>
+      <h>221</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;class&gt;&gt;
-CBSection
+    <panel_attributes>CBSection
 --
--_queue: queue&lt;Workpiece&gt;
--_lock: mutex
+- _queue: queue&lt;Workpiece&gt;
 --
-+get_queue(void): queue</panel_attributes>
++ &lt;&lt;Create&gt;&gt; CBSection(next: CBSection)
++ size(): int
++ back(): Workpiece
++ transfer_last_wp_to_next_section()
++ exit_last_wp()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>156</x>
-      <y>143</y>
-      <w>1144</w>
-      <h>689</h>
+      <x>351</x>
+      <y>221</y>
+      <w>988</w>
+      <h>1001</h>
     </coordinates>
     <panel_attributes>cd Data</panel_attributes>
     <additional_attributes/>
@@ -119,69 +90,211 @@ CBSection
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>494</x>
-      <y>195</y>
+      <x>754</x>
+      <y>507</y>
       <w>273</w>
-      <h>104</h>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-
-_start_height_queue
-_height_switch_queue
-_switch_end_queue</panel_attributes>
++ _height_switch_sec
+{readonly}
+</panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1040</x>
-      <y>663</y>
-      <w>208</w>
-      <h>143</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
-SectionName
---
-START_HEIGHT
-HEIGHT_SWITCH
-SWITCH_END</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1131</x>
-      <y>585</y>
-      <w>78</w>
-      <h>104</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-uses</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>338</x>
-      <y>312</y>
-      <w>65</w>
-      <h>195</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
-m1=0..*
-m2=1</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>416</x>
-      <y>377</y>
-      <w>351</w>
+      <y>598</y>
+      <w>65</w>
       <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
+m1=0..*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>793</x>
+      <y>676</y>
+      <w>260</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;creates&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0;250.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;180.0;60.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>312</y>
+      <w>169</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+_next_section
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;20.0;90.0;20.0;90.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1027</x>
+      <y>364</y>
+      <w>195</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
++ _start_height_sec
+   {readonly}</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>754</x>
+      <y>559</y>
+      <w>273</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
++ _switch_end_sec
+{readonly}</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1183</x>
+      <y>676</y>
+      <w>143</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+_next_in
+sorting_order</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>793</x>
+      <y>871</y>
+      <w>286</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+_type</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>832</x>
+      <y>260</y>
+      <w>351</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>StartHeightSection
+--
+--
++ enter_workpiece()
++ enter_workpiece(Workpiece)
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>689</x>
+      <y>325</y>
+      <w>169</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>507</x>
+      <y>247</y>
+      <w>156</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>using id = int;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>793</x>
+      <y>676</y>
+      <w>390</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=[id]-&gt;
+
+_last
+workpieces
+m2=0..1
+m1=0..n
+</panel_attributes>
+    <additional_attributes>210.0;10.0;210.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>910</x>
+      <y>1027</y>
+      <w>364</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Wird gebraucht um den Typ 
+eines Werkstückes zu bestimmen,
+nachdem es die Anlage verlassen 
+hat. (Im Falle vom Erhalten von
+EVNT_WRPC_FLP wird die id
+übermittelt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>819</y>
+      <w>182</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;120.0;120.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>390</x>
+      <y>1027</y>
+      <w>481</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Im int workpiece_info wird die id, height_1 und is_metallic kodiert.Dies wird für die Netzwerkkommunikation verwendet.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>884</y>
+      <w>39</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
