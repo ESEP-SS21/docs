@@ -4,8 +4,8 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>780</x>
-      <y>320</y>
+      <x>730</x>
+      <y>290</y>
       <w>130</w>
       <h>40</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>830</x>
-      <y>220</y>
+      <x>780</x>
+      <y>190</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -24,21 +24,10 @@
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLSpecialState</id>
-    <coordinates>
-      <x>1570</x>
-      <y>250</y>
-      <w>20</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>type=final</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
-      <y>220</y>
+      <x>780</x>
+      <y>190</y>
       <w>30</w>
       <h>120</h>
     </coordinates>
@@ -48,8 +37,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
-      <y>350</y>
+      <x>780</x>
+      <y>320</y>
       <w>200</w>
       <h>220</h>
     </coordinates>
@@ -62,21 +51,20 @@ EVNT_SEN_LB_SW_BLCK
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>330</y>
-      <w>460</w>
+      <x>850</x>
+      <y>300</y>
+      <w>300</w>
       <h>270</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-[== _next_in_sorting_order]
-/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
-    <additional_attributes>160.0;250.0;210.0;250.0;210.0;10.0;10.0;10.0</additional_attributes>
+m2=[== _next_in_sorting_order]\n/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
+    <additional_attributes>160.0;250.0;280.0;250.0;280.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>620</x>
-      <y>550</y>
+      <x>570</x>
+      <y>520</y>
       <w>440</w>
       <h>60</h>
     </coordinates>
@@ -87,34 +75,32 @@ back(_switch_end_queue).get_type()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>560</y>
-      <w>220</w>
-      <h>40</h>
+      <x>780</x>
+      <y>570</y>
+      <w>200</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 [!= _next_in_sorting_order]</panel_attributes>
-    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>410</x>
-      <y>350</y>
-      <w>430</w>
-      <h>240</h>
+      <x>520</x>
+      <y>320</y>
+      <w>280</w>
+      <h>370</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-
-[ramp_full &amp;&amp; Prim Mode]
-/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
-    <additional_attributes>10.0;220.0;10.0;70.0;410.0;70.0;410.0;10.0</additional_attributes>
+m1= [ramp_full &amp;&amp; Prim Mode]\n/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
+    <additional_attributes>260.0;330.0;30.0;330.0;30.0;70.0;250.0;70.0;250.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>410</x>
-      <y>570</y>
+      <x>780</x>
+      <y>640</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -124,23 +110,23 @@ back(_switch_end_queue).get_type()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>250</x>
-      <y>320</y>
-      <w>550</w>
-      <h>280</h>
+      <x>510</x>
+      <y>300</y>
+      <w>450</w>
+      <h>450</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-[ramp_full &amp;&amp; Sec Mode]
-/ send(ERR)</panel_attributes>
-    <additional_attributes>160.0;260.0;10.0;260.0;10.0;10.0;530.0;10.0</additional_attributes>
+
+m1=[ramp_full &amp;&amp; Sec Mode]\n/ send(ERR)</panel_attributes>
+    <additional_attributes>280.0;360.0;280.0;430.0;10.0;430.0;10.0;10.0;220.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>220</x>
-      <y>210</y>
-      <w>1140</w>
-      <h>420</h>
+      <x>490</x>
+      <y>180</y>
+      <w>660</w>
+      <h>570</h>
     </coordinates>
     <panel_attributes>stm Werkstück sortieren</panel_attributes>
     <additional_attributes/>
