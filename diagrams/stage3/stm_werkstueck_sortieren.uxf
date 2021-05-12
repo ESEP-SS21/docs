@@ -123,9 +123,9 @@ m1=[ramp_full &amp;&amp; Sec Mode]\n/ send(ERR)</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>490</x>
+      <x>500</x>
       <y>180</y>
-      <w>660</w>
+      <w>650</w>
       <h>570</h>
     </coordinates>
     <panel_attributes>stm Werkstück sortieren</panel_attributes>
