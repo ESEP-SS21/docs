@@ -69,8 +69,7 @@ EVNT_SEN_LB_SW_BLCK
       <w>320</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>type=decision
-back(_switch_end_queue).get_type()</panel_attributes>
+    <panel_attributes>type of last wrpc in switch_end_sec</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
