@@ -14,7 +14,7 @@ WorkpieceManager
 --
 -_instance: WorkpieceManager
 -_waiting_for_exit: bool
--_next_in_sorting: int
+-_next_in_sorting_order: int
 --
 +get_instance(): WorkpieceManager
 +waiting_for_exit(void): bool
