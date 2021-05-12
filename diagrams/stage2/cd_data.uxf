@@ -12,7 +12,7 @@
     <panel_attributes>Anlage
 --
 - _instance: Anlage {readonly}
-+ _waiting_for_exit: bool
++ _belt_is_blocked: bool
 + _ramp_full: bool
 --
 + is_in_order(Workpiece)
