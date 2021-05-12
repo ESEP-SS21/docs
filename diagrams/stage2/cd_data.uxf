@@ -96,7 +96,7 @@ unkown</panel_attributes>
       <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ _height_switch_queue
++ _height_switch_sec
 {readonly}
 </panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
@@ -130,24 +130,26 @@ m2=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>507</x>
-      <y>325</y>
-      <w>143</w>
-      <h>91</h>
+      <y>312</y>
+      <w>169</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-_next_section</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;20.0;90.0;20.0;90.0;50.0</additional_attributes>
+_next_section
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;20.0;90.0;20.0;90.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1027</x>
       <y>364</y>
-      <w>221</w>
+      <w>195</w>
       <h>182</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ _start_height_queue
++ _start_height_sec
    {readonly}</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
@@ -160,7 +162,7 @@ _next_section</panel_attributes>
       <h>65</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ _switch_end_queue
++ _switch_end_sec
 {readonly}</panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
@@ -257,7 +259,7 @@ m1=0..n
     <panel_attributes>Wird gebraucht um den Typ 
 eines Werkstückes zu bestimmen,
 nachdem es die Anlage verlassen 
-hat. (Im Falle vom erhalten von
+hat. (Im Falle vom Erhalten von
 EVNT_WRPC_FLP wird die id
 übermittelt)</panel_attributes>
     <additional_attributes/>
