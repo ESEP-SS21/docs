@@ -4,10 +4,10 @@
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>144</x>
-      <y>324</y>
+      <x>264</x>
+      <y>300</y>
       <w>1668</w>
-      <h>468</h>
+      <h>564</h>
     </coordinates>
     <panel_attributes>stm workpiece_transfer</panel_attributes>
     <additional_attributes/>
@@ -15,8 +15,8 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>876</x>
-      <y>420</y>
+      <x>996</x>
+      <y>396</y>
       <w>24</w>
       <h>24</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>876</x>
-      <y>432</y>
+      <x>996</x>
+      <y>408</y>
       <w>36</w>
       <h>96</h>
     </coordinates>
@@ -37,20 +37,19 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>816</x>
-      <y>504</y>
+      <x>936</x>
+      <y>480</y>
       <w>144</w>
       <h>144</h>
     </coordinates>
-    <panel_attributes>Operation
-</panel_attributes>
+    <panel_attributes>Operation</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>948</x>
-      <y>504</y>
+      <x>1068</x>
+      <y>480</y>
       <w>480</w>
       <h>48</h>
     </coordinates>
@@ -61,8 +60,8 @@ EVNT_SEN_LB_EN_BLCK [Prim Mode]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>504</y>
+      <x>600</x>
+      <y>480</y>
       <w>360</w>
       <h>48</h>
     </coordinates>
@@ -73,20 +72,20 @@ EVNT_SEN_LB_EN_BLCK [Sec Mode]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>948</x>
-      <y>576</y>
-      <w>444</w>
-      <h>48</h>
+      <x>1356</x>
+      <y>552</y>
+      <w>156</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACK</panel_attributes>
-    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>168</x>
-      <y>504</y>
+      <x>288</x>
+      <y>480</y>
       <w>324</w>
       <h>144</h>
     </coordinates>
@@ -101,15 +100,14 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1368</x>
-      <y>360</y>
+      <x>1488</x>
+      <y>336</y>
       <w>408</w>
       <h>408</h>
     </coordinates>
     <panel_attributes>waiting for FTS_2
 --
 /entry send(EVNT_WRPC_TRANS_RQ_SND)
-/exit datamodel: remove last workpiece 
 
 valign=top</panel_attributes>
     <additional_attributes/>
@@ -117,8 +115,8 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>588</y>
+      <x>600</x>
+      <y>564</y>
       <w>360</w>
       <h>36</h>
     </coordinates>
@@ -128,8 +126,8 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1404</x>
-      <y>612</y>
+      <x>1524</x>
+      <y>588</y>
       <w>336</w>
       <h>132</h>
     </coordinates>
@@ -145,8 +143,8 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1404</x>
-      <y>480</y>
+      <x>1524</x>
+      <y>456</y>
       <w>336</w>
       <h>84</h>
     </coordinates>
@@ -159,13 +157,58 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1560</x>
-      <y>552</y>
+      <x>1680</x>
+      <y>528</y>
       <w>108</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 50ms</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1128</x>
+      <y>696</y>
+      <w>312</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>waiting for workpiece to leave
+--
+/exit if(warning){
+            send(EVNT_WRN_GONE)
+            warning = false
+        }
+
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>948</x>
+      <y>612</y>
+      <w>360</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_EN_CLR
+/datamodel: remove last workpiece </panel_attributes>
+    <additional_attributes>280.0;70.0;280.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>720</y>
+      <w>216</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+after 2s
+/send(EVNT_WRN)
+ warning = true</panel_attributes>
+    <additional_attributes>160.0;70.0;10.0;70.0;10.0;10.0;160.0;10.0</additional_attributes>
   </element>
 </diagram>
