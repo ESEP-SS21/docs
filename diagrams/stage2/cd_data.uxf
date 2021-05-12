@@ -306,13 +306,14 @@ EVNT_WRPC_FLP wird die id
       <x>637</x>
       <y>949</y>
       <w>416</w>
-      <h>182</h>
+      <h>195</h>
     </coordinates>
     <panel_attributes>EncodedWorkpiece
 --
 + _code: int {32 Bit} {readonly}
 --
 + &lt;&lt;Create&gt;&gt; Encoded_Workpiece(Workpiece)
++ &lt;&lt;Create&gt;&gt; Encoded_Workpiece(code: int)
 - get_id(): id
 - get_height_1(): float
 - get_type(): WorkpieceType</panel_attributes>
