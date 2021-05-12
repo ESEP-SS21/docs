@@ -53,38 +53,37 @@ EVNT_SEN_LB_SW_BLCK
     <coordinates>
       <x>860</x>
       <y>300</y>
-      <w>450</w>
+      <w>510</w>
       <h>310</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 [== _next_in_sorting_order] 
 / send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
-    <additional_attributes>70.0;290.0;200.0;290.0;200.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>130.0;290.0;260.0;290.0;260.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
       <x>670</x>
-      <y>530</y>
-      <w>260</w>
-      <h>120</h>
+      <y>550</y>
+      <w>320</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>type=decision
-back(_switch_end_queue)
-.get_type()</panel_attributes>
+back(_switch_end_queue).get_type()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>790</x>
-      <y>480</y>
-      <w>200</w>
-      <h>70</h>
+      <x>800</x>
+      <y>470</y>
+      <w>220</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 [!= _next_in_sorting_order]</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>30.0;80.0;30.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -129,7 +128,7 @@ back(_switch_end_queue)
     <coordinates>
       <x>550</x>
       <y>180</y>
-      <w>780</w>
+      <w>850</w>
       <h>490</h>
     </coordinates>
     <panel_attributes>stm Werkstück sortieren</panel_attributes>
