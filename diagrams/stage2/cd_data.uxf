@@ -7,13 +7,14 @@
       <x>741</x>
       <y>195</y>
       <w>507</w>
-      <h>325</h>
+      <h>338</h>
     </coordinates>
     <panel_attributes>&lt;&lt;singleton&gt;&gt;
 WorkpieceManager
 --
 -_instance: WorkpieceManager
 -_waiting_for_exit: bool
+-_next_in_sorting: int
 --
 +get_instance(): WorkpieceManager
 +waiting_for_exit(void): bool
@@ -147,13 +148,13 @@ SWITCH_END</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1131</x>
-      <y>507</y>
+      <y>520</y>
       <w>78</w>
-      <h>156</h>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
