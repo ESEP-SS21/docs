@@ -6,16 +6,17 @@
     <coordinates>
       <x>1040</x>
       <y>312</y>
-      <w>299</w>
-      <h>156</h>
+      <w>312</w>
+      <h>182</h>
     </coordinates>
     <panel_attributes>Anlage
 --
 - _instance: Anlage {readonly}
+- _next_in_order: int
 + belt_is_blocked: bool
 + ramp_full: bool
-+ next_in_order: int
 --
++ wrpc_fits_order(Workpiece): bool
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -122,13 +123,13 @@ m2=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>832</x>
-      <y>455</y>
+      <y>481</y>
       <w>260</w>
-      <h>117</h>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;70.0;180.0;70.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;180.0;50.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -174,14 +175,14 @@ m2=0..1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1222</x>
-      <y>455</y>
+      <y>481</y>
       <w>143</w>
-      <h>182</h>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 _next_in
 sorting_order</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -239,9 +240,9 @@ type</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>832</x>
-      <y>455</y>
+      <y>481</y>
       <w>390</w>
-      <h>182</h>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=[id]-&gt;
 
@@ -250,7 +251,7 @@ workpieces
 m2=0..1
 m1=0..n
 </panel_attributes>
-    <additional_attributes>210.0;10.0;210.0;110.0;10.0;110.0</additional_attributes>
+    <additional_attributes>210.0;10.0;210.0;90.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
