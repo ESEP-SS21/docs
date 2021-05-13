@@ -4,7 +4,7 @@
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>162</x>
+      <x>117</x>
       <y>0</y>
       <w>765</w>
       <h>441</h>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>594</x>
+      <x>549</x>
       <y>1314</y>
       <w>90</w>
-      <h>45</h>
+      <h>54</h>
     </coordinates>
     <panel_attributes>waiting for
 wrpc
@@ -30,7 +30,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>675</x>
+      <x>630</x>
       <y>1170</y>
       <w>297</w>
       <h>180</h>
@@ -46,7 +46,7 @@ EVNT_SEN_LB_SW_BLCK
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>594</x>
+      <x>549</x>
       <y>1152</y>
       <w>90</w>
       <h>54</h>
@@ -63,7 +63,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>675</x>
+      <x>630</x>
       <y>1332</y>
       <w>297</w>
       <h>81</h>
@@ -79,7 +79,7 @@ EVNT_SEN_LB_SW_BLCK
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>954</x>
+      <x>909</x>
       <y>1323</y>
       <w>108</w>
       <h>54</h>
@@ -97,7 +97,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>675</x>
+      <x>630</x>
       <y>1368</y>
       <w>324</w>
       <h>171</h>
@@ -109,7 +109,7 @@ m2=EVNT_SEN_LB_SW_CLR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
+      <x>477</x>
       <y>1170</y>
       <w>207</w>
       <h>180</h>
@@ -122,7 +122,7 @@ EVNT_SEN_LB_SW_CLR
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>594</x>
+      <x>549</x>
       <y>1494</y>
       <w>90</w>
       <h>72</h>
@@ -137,19 +137,19 @@ valign=bottom
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>1350</y>
+      <x>585</x>
+      <y>1359</y>
       <w>171</w>
-      <h>162</h>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_RA_CLR</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
+      <x>585</x>
       <y>1557</y>
       <w>90</w>
       <h>153</h>
@@ -161,7 +161,7 @@ after 200ms</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>567</x>
+      <x>522</x>
       <y>1692</y>
       <w>144</w>
       <h>72</h>
@@ -176,7 +176,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>414</x>
+      <x>369</x>
       <y>1341</y>
       <w>198</w>
       <h>405</h>
@@ -189,7 +189,7 @@ EVNT_SEN_LB_RA_CLR
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>990</x>
+      <x>945</x>
       <y>1521</y>
       <w>135</w>
       <h>54</h>
@@ -205,7 +205,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1026</x>
+      <x>981</x>
       <y>1368</y>
       <w>99</w>
       <h>171</h>
@@ -217,7 +217,7 @@ after 3000ms</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>675</x>
+      <x>630</x>
       <y>1539</y>
       <w>333</w>
       <h>36</h>
@@ -229,7 +229,7 @@ m1=EVNT_SEN_LB_SW_CLR/ send(WRN_GONE)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>702</x>
+      <x>657</x>
       <y>1692</y>
       <w>207</w>
       <h>81</h>
@@ -245,7 +245,7 @@ switch_end_sec.front().type
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>531</x>
+      <x>486</x>
       <y>1755</y>
       <w>225</w>
       <h>90</h>
