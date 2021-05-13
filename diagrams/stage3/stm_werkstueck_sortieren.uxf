@@ -32,13 +32,13 @@ valign=top
     <coordinates>
       <x>630</x>
       <y>1170</y>
-      <w>297</w>
+      <w>315</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
 EVNT_SEN_LB_SW_BLCK
-[switch_end_sec.front().type
+[datamodel: switch_end_sec.front().type
 == next_in_order]
 / send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
     <additional_attributes>10.0;180.0;80.0;180.0;80.0;10.0;10.0;10.0</additional_attributes>
@@ -71,7 +71,7 @@ valign=top
     <panel_attributes>lt=-&gt;
 
 EVNT_SEN_LB_SW_BLCK
-[switch_end_sec.front().type
+[datamodel: switch_end_sec.front().type
 != next_in_order]
 / send(EVNT_ACT_SORT_DSC)</panel_attributes>
     <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
@@ -231,13 +231,13 @@ m1=EVNT_SEN_LB_SW_CLR/ send(WRN_GONE)</panel_attributes>
     <coordinates>
       <x>657</x>
       <y>1692</y>
-      <w>207</w>
+      <w>270</w>
       <h>81</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_BLCK
 [Sec Mode &amp;&amp;
-switch_end_sec.front().type
+datamodel: switch_end_sec.front().type
 != next_in_order]
 / send(ERR)</panel_attributes>
     <additional_attributes>10.0;20.0;40.0;20.0;40.0;60.0;10.0;60.0</additional_attributes>
