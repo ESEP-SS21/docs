@@ -31,10 +31,10 @@
 --
 /- last_id: id/
 - _id: id {readonly}
-+ _height_1: float
-+ _height_2: float
-+ _is_metallic: bool
-+ _is_flipped: bool
++ height_1: float
++ height_2: float
++ is_metallic: bool
++ is_flipped: bool
 --
 + &lt;&lt;Create&gt;&gt; Workpiece()
 + &lt;&lt;Create&gt;&gt; Workpiece(EncodedWorkpiece)
@@ -192,7 +192,7 @@ sorting_order</panel_attributes>
       <h>52</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-_type</panel_attributes>
+type</panel_attributes>
     <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
   </element>
   <element>
@@ -287,7 +287,7 @@ EVNT_WRPC_FLP wird die id
       <w>494</w>
       <h>104</h>
     </coordinates>
-    <panel_attributes>Die Methode determine_workpiece_type ist notwendig, da der workpiece_type erst bestimmt werden kann, sobald das Teil an LB_SW angelangt ist.</panel_attributes>
+    <panel_attributes>Die Methode determine_workpiece_type ist notwendig,da der workpiece_type erst bestimmt werden kann, sobald das Teil an LB_SW angelangt ist.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
