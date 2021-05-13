@@ -4,26 +4,26 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1248</x>
-      <y>364</y>
+      <x>1040</x>
+      <y>312</y>
       <w>299</w>
-      <h>169</h>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Anlage
 --
 - _instance: Anlage {readonly}
 + _belt_is_blocked: bool
 + _ramp_full: bool
++ _next_in_order: int
 --
-+ is_in_order(Workpiece)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>637</x>
-      <y>546</y>
+      <x>429</x>
+      <y>494</y>
       <w>416</w>
       <h>260</h>
     </coordinates>
@@ -45,8 +45,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1300</x>
-      <y>663</y>
+      <x>1092</x>
+      <y>611</y>
       <w>208</w>
       <h>169</h>
     </coordinates>
@@ -63,8 +63,8 @@ unkown</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>637</x>
-      <y>234</y>
+      <x>429</x>
+      <y>182</y>
       <w>377</w>
       <h>221</h>
     </coordinates>
@@ -83,8 +83,8 @@ unkown</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>598</x>
-      <y>52</y>
+      <x>390</x>
+      <y>0</y>
       <w>988</w>
       <h>1183</h>
     </coordinates>
@@ -94,8 +94,8 @@ unkown</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1001</x>
-      <y>351</y>
+      <x>793</x>
+      <y>299</y>
       <w>273</w>
       <h>78</h>
     </coordinates>
@@ -108,8 +108,8 @@ unkown</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>663</x>
-      <y>442</y>
+      <x>455</x>
+      <y>390</y>
       <w>65</w>
       <h>130</h>
     </coordinates>
@@ -121,20 +121,20 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1040</x>
-      <y>520</y>
+      <x>832</x>
+      <y>455</y>
       <w>260</w>
-      <h>104</h>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;60.0;180.0;60.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;180.0;70.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>754</x>
-      <y>156</y>
+      <x>546</x>
+      <y>104</y>
       <w>169</w>
       <h>104</h>
     </coordinates>
@@ -147,8 +147,8 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1274</x>
-      <y>273</y>
+      <x>1066</x>
+      <y>221</y>
       <w>195</w>
       <h>117</h>
     </coordinates>
@@ -160,8 +160,8 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1001</x>
-      <y>403</y>
+      <x>793</x>
+      <y>351</y>
       <w>273</w>
       <h>65</h>
     </coordinates>
@@ -173,21 +173,21 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1430</x>
-      <y>520</y>
+      <x>1222</x>
+      <y>455</y>
       <w>143</w>
-      <h>169</h>
+      <h>182</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 _next_in
 sorting_order</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1040</x>
-      <y>715</y>
+      <x>832</x>
+      <y>663</y>
       <w>286</w>
       <h>52</h>
     </coordinates>
@@ -198,8 +198,8 @@ _type</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1079</x>
-      <y>169</y>
+      <x>871</x>
+      <y>117</y>
       <w>351</w>
       <h>117</h>
     </coordinates>
@@ -216,8 +216,8 @@ _type</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>936</x>
-      <y>169</y>
+      <x>728</x>
+      <y>117</y>
       <w>169</w>
       <h>91</h>
     </coordinates>
@@ -227,8 +227,8 @@ _type</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1235</x>
-      <y>91</y>
+      <x>1027</x>
+      <y>39</y>
       <w>312</w>
       <h>52</h>
     </coordinates>
@@ -238,10 +238,10 @@ _type</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1040</x>
-      <y>520</y>
+      <x>832</x>
+      <y>455</y>
       <w>390</w>
-      <h>169</h>
+      <h>182</h>
     </coordinates>
     <panel_attributes>lt=[id]-&gt;
 
@@ -250,13 +250,13 @@ workpieces
 m2=0..1
 m1=0..n
 </panel_attributes>
-    <additional_attributes>210.0;10.0;210.0;100.0;10.0;100.0</additional_attributes>
+    <additional_attributes>210.0;10.0;210.0;110.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1157</x>
-      <y>871</y>
+      <x>949</x>
+      <y>819</y>
       <w>364</w>
       <h>156</h>
     </coordinates>
@@ -271,8 +271,8 @@ EVNT_WRPC_FLP wird die id
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1079</x>
-      <y>663</y>
+      <x>871</x>
+      <y>611</y>
       <w>104</w>
       <h>234</h>
     </coordinates>
@@ -282,8 +282,8 @@ EVNT_WRPC_FLP wird die id
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1053</x>
-      <y>1092</y>
+      <x>845</x>
+      <y>1040</y>
       <w>494</w>
       <h>104</h>
     </coordinates>
@@ -293,8 +293,8 @@ EVNT_WRPC_FLP wird die id
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>897</x>
-      <y>767</y>
+      <x>689</x>
+      <y>715</y>
       <w>221</w>
       <h>351</h>
     </coordinates>
@@ -304,8 +304,8 @@ EVNT_WRPC_FLP wird die id
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>637</x>
-      <y>858</y>
+      <x>429</x>
+      <y>806</y>
       <w>416</w>
       <h>195</h>
     </coordinates>
@@ -323,8 +323,8 @@ EVNT_WRPC_FLP wird die id
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>650</x>
-      <y>1079</y>
+      <x>442</x>
+      <y>1027</y>
       <w>377</w>
       <h>104</h>
     </coordinates>
@@ -338,8 +338,8 @@ EVNT_WRPC_FLP wird die id
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>611</x>
-      <y>897</y>
+      <x>403</x>
+      <y>845</y>
       <w>65</w>
       <h>208</h>
     </coordinates>
