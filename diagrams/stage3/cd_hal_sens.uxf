@@ -84,7 +84,7 @@ EStop
 --
 - _instance: HAL
 --
-+ &lt;&lt;Create&gt;&gt; HAL(GPIOWrapper)
++ &lt;&lt;Create&gt;&gt; HAL(GPIOWrapper, mngr_chid)
 +get_instance(): HAL
 +get_light_barrier(): LightBarrier
 +get_height_sensor(): HeightSensor
