@@ -12,9 +12,9 @@
     <panel_attributes>Anlage
 --
 - _instance: Anlage {readonly}
-+ _belt_is_blocked: bool
-+ _ramp_full: bool
-+ _next_in_order: int
++ belt_is_blocked: bool
++ ramp_full: bool
++ next_in_order: int
 --
 </panel_attributes>
     <additional_attributes/>
