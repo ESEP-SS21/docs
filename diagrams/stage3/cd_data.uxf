@@ -16,8 +16,8 @@
 + ramp_full: bool
 --
 + wrpc_fits_order(Workpiece): bool
-+ wrpc_order_step(void): void
-+ wrpc_order_reset_to(WorkpieceType): void
++ wrpc_order_step()
++ wrpc_order_reset_to(WorkpieceType)
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -150,14 +150,14 @@ m2=0..1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1066</x>
-      <y>221</y>
+      <y>182</y>
       <w>182</w>
-      <h>117</h>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 + start_height_sec
    {readonly}</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -194,7 +194,7 @@ sorting_order</panel_attributes>
       <h>52</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-type</panel_attributes>
+type = unknown</panel_attributes>
     <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
   </element>
   <element>
@@ -203,16 +203,12 @@ type</panel_attributes>
       <x>871</x>
       <y>117</y>
       <w>351</w>
-      <h>117</h>
+      <h>78</h>
     </coordinates>
     <panel_attributes>StartHeightSection
 --
 --
-+ enter_workpiece()
-+ enter_workpiece(Workpiece)
-
-
-</panel_attributes>
++ enter_workpiece(Workpiece)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
