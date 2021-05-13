@@ -76,8 +76,8 @@ unkown</panel_attributes>
 + size(): int
 + back(): Workpiece
 + front(): Workpiece
-+ transfer_last_wp_to_next_section()
-+ exit_last_wp()</panel_attributes>
++ transfer_first_wp_to_next_section()
++ exit_first_wp()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
