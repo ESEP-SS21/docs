@@ -2,31 +2,9 @@
 <diagram program="umlet" version="14.3.0">
   <zoom_level>9</zoom_level>
   <element>
-    <id>UMLSpecialState</id>
-    <coordinates>
-      <x>549</x>
-      <y>684</y>
-      <w>18</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes>type=initial</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>558</x>
-      <y>684</y>
-      <w>126</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>0</x>
+      <x>162</x>
       <y>0</y>
       <w>765</w>
       <h>441</h>
@@ -37,26 +15,47 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>981</x>
-      <y>657</y>
+      <x>594</x>
+      <y>1314</y>
       <w>90</w>
-      <h>72</h>
+      <h>45</h>
     </coordinates>
-    <panel_attributes>ramp full
---
-valign=top</panel_attributes>
+    <panel_attributes>waiting for
+wrpc
+valign=top
+
+</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>1170</y>
+      <w>297</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+
+EVNT_SEN_LB_SW_BLCK
+[switch_end_sec.front().type
+== next_in_order]
+/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
+    <additional_attributes>10.0;180.0;80.0;180.0;80.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>666</x>
-      <y>657</y>
-      <w>126</w>
-      <h>252</h>
+      <x>594</x>
+      <y>1152</y>
+      <w>90</w>
+      <h>54</h>
     </coordinates>
-    <panel_attributes>waiting for wrpc
---
+    <panel_attributes>waiting for 
+switch to clear
+(no discard)
+
+
 valign=top
 </panel_attributes>
     <additional_attributes/>
@@ -64,75 +63,198 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>783</x>
-      <y>666</y>
-      <w>216</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_RA_BLCK</panel_attributes>
-    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>783</x>
-      <y>693</y>
-      <w>216</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_RA_CLR</panel_attributes>
-    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>693</x>
-      <y>900</y>
-      <w>288</w>
-      <h>126</h>
+      <x>675</x>
+      <y>1332</y>
+      <w>297</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
-r1=EVNT_SEN_LB_SW_BLCK\n[switch_end_sec.front().type\n== next_in_order]\n/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
-    <additional_attributes>70.0;10.0;70.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
+EVNT_SEN_LB_SW_BLCK
+[switch_end_sec.front().type
+!= next_in_order]
+/ send(EVNT_ACT_SORT_DSC)</panel_attributes>
+    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>954</x>
+      <y>1323</y>
+      <w>108</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>waiting for
+switch to clear
+(discard)
+
+
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+      <x>675</x>
+      <y>1368</y>
+      <w>324</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=EVNT_SEN_LB_SW_CLR</panel_attributes>
+    <additional_attributes>340.0;10.0;340.0;160.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>1170</y>
+      <w>207</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_SW_CLR
+/ send(EVNT_ACT_SORT_RST)</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0;10.0;180.0;80.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>594</x>
+      <y>1494</y>
+      <w>90</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>waiting for 
+ramp to clear
+valign=bottom
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>1350</y>
+      <w>171</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_RA_CLR</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>1557</y>
+      <w>90</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+after 200ms</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>567</x>
+      <y>1692</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ramp full
+--
+/entry send(WRN)
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>1341</y>
+      <w>198</w>
+      <h>405</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_RA_CLR 
+/ send(WRN_GONE)</panel_attributes>
+    <additional_attributes>170.0;430.0;10.0;430.0;10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
       <x>990</x>
-      <y>720</y>
-      <w>288</w>
+      <y>1521</y>
+      <w>135</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>wrpc stuck
+--
+/entry send(WRN)
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1026</x>
+      <y>1368</y>
+      <w>99</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+after 3000ms</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>1539</y>
+      <w>333</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=EVNT_SEN_LB_SW_CLR/ send(WRN_GONE)</panel_attributes>
+    <additional_attributes>350.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>702</x>
+      <y>1692</y>
+      <w>207</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_SW_BLCK
+[Sec Mode &amp;&amp;
+switch_end_sec.front().type
+!= next_in_order]
+/ send(ERR)</panel_attributes>
+    <additional_attributes>10.0;20.0;40.0;20.0;40.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>531</x>
+      <y>1755</y>
+      <w>225</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
-r1=EVNT_SEN_LB_SW_BLCK\n[Prim Mode]\n/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
-    <additional_attributes>70.0;10.0;70.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>693</x>
-      <y>477</y>
-      <w>261</w>
-      <h>198</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-r1=EVNT_SEN_LB_SW_BLCK\n[switch_end_sec.front().type\n!= next_in_order]\n/ send(EVNT_ACT_SORT_DSC)</panel_attributes>
-    <additional_attributes>70.0;200.0;70.0;10.0;10.0;10.0;10.0;200.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>990</x>
-      <y>567</y>
-      <w>234</w>
-      <h>108</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-r1=EVNT_SEN_LB_SW_BLCK\n[Sec Mode &amp;&amp;\nswitch_end_sec.front().type\n== next_in_order]\n/ send(ERR)</panel_attributes>
-    <additional_attributes>70.0;100.0;70.0;40.0;10.0;40.0;10.0;100.0</additional_attributes>
+EVNT_SEN_LB_SW_BLCK
+[Prim Mode]
+/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;40.0;100.0;40.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>
