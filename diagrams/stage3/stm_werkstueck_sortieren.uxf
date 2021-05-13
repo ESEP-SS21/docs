@@ -4,8 +4,8 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>288</x>
-      <y>414</y>
+      <x>549</x>
+      <y>684</y>
       <w>18</w>
       <h>18</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>297</x>
-      <y>414</y>
+      <x>558</x>
+      <y>684</y>
       <w>126</w>
       <h>27</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>270</x>
-      <y>207</y>
+      <x>0</x>
+      <y>0</y>
       <w>765</w>
       <h>441</h>
     </coordinates>
@@ -37,8 +37,8 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>720</x>
-      <y>387</y>
+      <x>981</x>
+      <y>657</y>
       <w>90</w>
       <h>72</h>
     </coordinates>
@@ -50,10 +50,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>405</x>
-      <y>387</y>
+      <x>666</x>
+      <y>657</y>
       <w>126</w>
-      <h>72</h>
+      <h>252</h>
     </coordinates>
     <panel_attributes>waiting for wrpc
 --
@@ -64,8 +64,8 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
-      <y>396</y>
+      <x>783</x>
+      <y>666</y>
       <w>216</w>
       <h>36</h>
     </coordinates>
@@ -76,8 +76,8 @@ EVNT_SEN_LB_RA_BLCK</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
-      <y>423</y>
+      <x>783</x>
+      <y>693</y>
       <w>216</w>
       <h>36</h>
     </coordinates>
@@ -88,21 +88,21 @@ EVNT_SEN_LB_RA_CLR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
-      <y>450</y>
+      <x>693</x>
+      <y>900</y>
       <w>288</w>
-      <h>99</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
 r1=EVNT_SEN_LB_SW_BLCK\n[switch_end_sec.front().type\n== next_in_order]\n/ send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
-    <additional_attributes>70.0;10.0;70.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>70.0;10.0;70.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>729</x>
-      <y>450</y>
+      <x>990</x>
+      <y>720</y>
       <w>288</w>
       <h>90</h>
     </coordinates>
@@ -114,20 +114,20 @@ r1=EVNT_SEN_LB_SW_BLCK\n[Prim Mode]\n/ send(EVNT_ACT_SORT_NO_DSC)</panel_attribu
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
-      <y>306</y>
+      <x>693</x>
+      <y>477</y>
       <w>261</w>
-      <h>99</h>
+      <h>198</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 r1=EVNT_SEN_LB_SW_BLCK\n[switch_end_sec.front().type\n!= next_in_order]\n/ send(EVNT_ACT_SORT_DSC)</panel_attributes>
-    <additional_attributes>70.0;90.0;70.0;30.0;10.0;30.0;10.0;90.0</additional_attributes>
+    <additional_attributes>70.0;200.0;70.0;10.0;10.0;10.0;10.0;200.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>729</x>
-      <y>297</y>
+      <x>990</x>
+      <y>567</y>
       <w>234</w>
       <h>108</h>
     </coordinates>
