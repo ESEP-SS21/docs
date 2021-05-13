@@ -91,9 +91,9 @@ m1=EVNT_SEN_LB_RA_CLR </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
+      <x>234</x>
       <y>612</y>
-      <w>243</w>
+      <w>225</w>
       <h>117</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -101,9 +101,9 @@ m1=EVNT_SEN_LB_RA_CLR </panel_attributes>
 EVNT_SEN_LB_SW_BLCK
 [Sec Mode &amp;&amp;
 datamodel: 
-not(is_in_order(switch_end_sec.front()))]
+!(is_in_order(switch_end_sec.front()))]
 / send(ERR)</panel_attributes>
-    <additional_attributes>150.0;10.0;150.0;40.0;110.0;40.0;110.0;10.0</additional_attributes>
+    <additional_attributes>140.0;10.0;140.0;40.0;100.0;40.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -130,9 +130,9 @@ not(is_in_order(switch_end_sec.front()))]
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>855</x>
+      <x>864</x>
       <y>351</y>
-      <w>369</w>
+      <w>360</w>
       <h>261</h>
     </coordinates>
     <panel_attributes>waiting for switch to clear
@@ -186,14 +186,14 @@ EVNT_SEN_LB_SW_CLR
     <coordinates>
       <x>324</x>
       <y>387</y>
-      <w>549</w>
+      <w>558</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
 r1=EVNT_SEN_LB_SW_BLCK[datamodel: is_in_sorting_order(switch_end_sec.front())]
 </panel_attributes>
-    <additional_attributes>10.0;20.0;590.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;600.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -204,7 +204,7 @@ r1=EVNT_SEN_LB_SW_BLCK[datamodel: is_in_sorting_order(switch_end_sec.front())]
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-m1=EVNT_SEN_LB_SW_BLCK[datamodel: not(is_in_sorting_order(switch_end_sec.front()))]</panel_attributes>
+m1=EVNT_SEN_LB_SW_BLCK[datamodel: !(is_in_sorting_order(switch_end_sec.front()))]</panel_attributes>
     <additional_attributes>10.0;10.0;650.0;10.0;650.0;50.0</additional_attributes>
   </element>
   <element>
@@ -212,13 +212,14 @@ m1=EVNT_SEN_LB_SW_BLCK[datamodel: not(is_in_sorting_order(switch_end_sec.front()
     <coordinates>
       <x>405</x>
       <y>576</y>
-      <w>468</w>
-      <h>54</h>
+      <w>477</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
-m1=EVNT_SEN_LB_SW_BLCK\n[Prim Mode]</panel_attributes>
-    <additional_attributes>10.0;20.0;500.0;20.0</additional_attributes>
+m1=EVNT_SEN_LB_SW_BLCK
+m2=[Prim Mode]</panel_attributes>
+    <additional_attributes>10.0;20.0;510.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
@@ -264,9 +265,9 @@ EVNT_SEN_LB_SW_CLR</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>225</x>
+      <x>207</x>
       <y>351</y>
-      <w>369</w>
+      <w>396</w>
       <h>378</h>
     </coordinates>
     <panel_attributes>operating
