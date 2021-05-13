@@ -100,7 +100,7 @@ unkown</panel_attributes>
       <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ _height_switch_sec
++ height_switch_sec
 {readonly}
 </panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
@@ -149,11 +149,11 @@ m2=0..1</panel_attributes>
     <coordinates>
       <x>1066</x>
       <y>221</y>
-      <w>195</w>
+      <w>182</w>
       <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ _start_height_sec
++ start_height_sec
    {readonly}</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
@@ -166,7 +166,7 @@ m2=0..1</panel_attributes>
       <h>65</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ _switch_end_sec
++ switch_end_sec
 {readonly}</panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
