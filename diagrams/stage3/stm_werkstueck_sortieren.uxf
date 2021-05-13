@@ -7,7 +7,7 @@
       <x>528</x>
       <y>112</y>
       <w>664</w>
-      <h>640</h>
+      <h>664</h>
     </coordinates>
     <panel_attributes>stm Werkstück sortieren</panel_attributes>
     <additional_attributes/>
@@ -229,33 +229,34 @@ m1=EVNT_SEN_LB_SW_CLR/ send(WRN_GONE)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>608</y>
-      <w>240</w>
-      <h>72</h>
+      <x>640</x>
+      <y>664</y>
+      <w>216</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
+
 EVNT_SEN_LB_SW_BLCK
 [Sec Mode &amp;&amp;
 datamodel: switch_end_sec.front().type
 != next_in_order]
 / send(ERR)</panel_attributes>
-    <additional_attributes>10.0;20.0;40.0;20.0;40.0;60.0;10.0;60.0</additional_attributes>
+    <additional_attributes>150.0;10.0;150.0;40.0;110.0;40.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>664</y>
-      <w>200</w>
-      <h>80</h>
+      <x>800</x>
+      <y>632</y>
+      <w>248</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
 EVNT_SEN_LB_SW_BLCK
 [Prim Mode]
 / send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
-    <additional_attributes>140.0;10.0;140.0;40.0;100.0;40.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -278,5 +279,33 @@ EVNT_SEN_LB_SW_BLCK
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1032</x>
+      <y>608</y>
+      <w>88</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>waiting for
+switch to clear
+(ramp full)
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>608</y>
+      <w>248</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_SW_CLR
+/ send(EVNT_ACT_SORT_RST)</panel_attributes>
+    <additional_attributes>290.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
