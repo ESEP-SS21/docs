@@ -287,7 +287,9 @@ EVNT_WRPC_FLP wird die id
       <w>494</w>
       <h>104</h>
     </coordinates>
-    <panel_attributes>Die Methode determine_workpiece_type ist notwendig,da der workpiece_type erst bestimmt werden kann, sobald das Teil an LB_SW angelangt ist.</panel_attributes>
+    <panel_attributes>Die Methode determine_workpiece_type ist notwendig,
+da der workpiece_type erst bestimmt werden kann,
+sobald das Teil an LB_SW angelangt ist.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
