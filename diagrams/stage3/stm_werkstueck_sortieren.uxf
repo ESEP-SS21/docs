@@ -16,9 +16,9 @@
     <id>UMLState</id>
     <coordinates>
       <x>549</x>
-      <y>1314</y>
+      <y>1296</y>
       <w>90</w>
-      <h>54</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>waiting for
 wrpc
@@ -112,12 +112,12 @@ m2=EVNT_SEN_LB_SW_CLR</panel_attributes>
       <x>477</x>
       <y>1170</y>
       <w>207</w>
-      <h>180</h>
+      <h>171</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
 / send(EVNT_ACT_SORT_RST)</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;10.0;10.0;180.0;80.0;180.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0;10.0;170.0;80.0;170.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
@@ -138,13 +138,13 @@ valign=bottom
     <id>Relation</id>
     <coordinates>
       <x>585</x>
-      <y>1359</y>
+      <y>1377</y>
       <w>171</w>
-      <h>153</h>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_RA_CLR</panel_attributes>
-    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -177,14 +177,14 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>369</x>
-      <y>1341</y>
+      <y>1350</y>
       <w>198</w>
-      <h>405</h>
+      <h>396</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_RA_CLR 
 / send(WRN_GONE)</panel_attributes>
-    <additional_attributes>170.0;430.0;10.0;430.0;10.0;10.0;200.0;10.0</additional_attributes>
+    <additional_attributes>170.0;420.0;10.0;420.0;10.0;10.0;200.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
@@ -256,5 +256,27 @@ EVNT_SEN_LB_SW_BLCK
 [Prim Mode]
 / send(EVNT_ACT_SORT_NO_DSC)</panel_attributes>
     <additional_attributes>140.0;10.0;140.0;40.0;100.0;40.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>423</x>
+      <y>1251</y>
+      <w>144</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;140.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>423</x>
+      <y>1242</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
