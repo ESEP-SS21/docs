@@ -6,17 +6,18 @@
     <coordinates>
       <x>1040</x>
       <y>312</y>
-      <w>312</w>
-      <h>182</h>
+      <w>390</w>
+      <h>195</h>
     </coordinates>
     <panel_attributes>Anlage
 --
 - _instance: Anlage {readonly}
-- _next_in_order: int
 + belt_is_blocked: bool
 + ramp_full: bool
 --
 + wrpc_fits_order(Workpiece): bool
++ wrpc_order_step(void): void
++ wrpc_order_reset_to(WorkpieceType): void
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -46,7 +47,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1092</x>
+      <x>1170</x>
       <y>611</y>
       <w>208</w>
       <h>169</h>
@@ -86,7 +87,7 @@ unkown</panel_attributes>
     <coordinates>
       <x>390</x>
       <y>0</y>
-      <w>988</w>
+      <w>1066</w>
       <h>1183</h>
     </coordinates>
     <panel_attributes>cd Data</panel_attributes>
@@ -123,13 +124,13 @@ m2=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>832</x>
-      <y>481</y>
+      <y>494</y>
       <w>260</w>
-      <h>91</h>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;50.0;180.0;50.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;180.0;40.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -174,27 +175,27 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1222</x>
-      <y>481</y>
+      <x>1300</x>
+      <y>494</y>
       <w>143</w>
-      <h>156</h>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 _next_in
 sorting_order</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>832</x>
       <y>663</y>
-      <w>286</w>
+      <w>364</w>
       <h>52</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 type</panel_attributes>
-    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -233,16 +234,17 @@ type</panel_attributes>
       <w>312</w>
       <h>52</h>
     </coordinates>
-    <panel_attributes>using id = int; {max 21 Bit}</panel_attributes>
+    <panel_attributes>using id = int; {max 21 Bit}
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>832</x>
-      <y>481</y>
+      <y>494</y>
       <w>390</w>
-      <h>156</h>
+      <h>169</h>
     </coordinates>
     <panel_attributes>lt=[id]-&gt;
 
@@ -251,7 +253,7 @@ workpieces
 m2=0..1
 m1=0..n
 </panel_attributes>
-    <additional_attributes>210.0;10.0;210.0;90.0;10.0;90.0</additional_attributes>
+    <additional_attributes>210.0;10.0;210.0;100.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -266,19 +268,20 @@ eines Werkstückes zu bestimmen,
 nachdem es die Anlage verlassen 
 hat. (Im Falle vom Erhalten von
 EVNT_WRPC_FLP wird die id
-übermittelt)</panel_attributes>
+übermittelt)
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>871</x>
-      <y>611</y>
+      <y>637</y>
       <w>104</w>
-      <h>234</h>
+      <h>208</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0;60.0;160.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;60.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -290,19 +293,20 @@ EVNT_WRPC_FLP wird die id
     </coordinates>
     <panel_attributes>Die Methode determine_workpiece_type ist notwendig,
 da der workpiece_type erst bestimmt werden kann,
-sobald das Teil an LB_SW angelangt ist.</panel_attributes>
+sobald das Teil an LB_SW angelangt ist.
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>689</x>
-      <y>715</y>
+      <y>728</y>
       <w>221</w>
-      <h>351</h>
+      <h>338</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>150.0;250.0;150.0;40.0;130.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>150.0;240.0;150.0;40.0;130.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -335,7 +339,7 @@ sobald das Teil an LB_SW angelangt ist.</panel_attributes>
   - 21 Bit id
   - 9 Bit height_1 als Festkommazahl
   - 2 Bit type
-</panel_attributes>
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
