@@ -48,12 +48,12 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>490</x>
+      <x>480</x>
       <y>510</y>
-      <w>180</w>
+      <w>200</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>waiting for space
+    <panel_attributes>waiting for space b/w wrpcs
 --
 /exit send(EVNT_ACK)
 valign=top</panel_attributes>
@@ -81,7 +81,7 @@ WRPC_TRNS_RQ [Sec Mode &amp;&amp; _start_height_sec.size() &gt; 0]</panel_attrib
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_HE_BLCK</panel_attributes>
-    <additional_attributes>120.0;130.0;10.0;130.0;10.0;10.0;170.0;10.0</additional_attributes>
+    <additional_attributes>110.0;130.0;10.0;130.0;10.0;10.0;170.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
