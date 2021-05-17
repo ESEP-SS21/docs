@@ -101,7 +101,7 @@ enter_workpiece(new Workpiece())</panel_attributes>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[!belt_blocked&amp;prim mode]/
 enter_workpiece(new Workpiece()), 
-send_Event(EVNT_ACT_BELT_FWD)</panel_attributes>
+send(EVNT_ACT_BELT_FWD)</panel_attributes>
     <additional_attributes>470.0;10.0;470.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -153,7 +153,7 @@ enter_workpiece(wrpc from FTS1)</panel_attributes>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[!belt_blocked&amp;sec mode]/
 enter_workpiece(wrpc from FTS1), 
-send_Event(EVNT_ACT_BELT_FWD)</panel_attributes>
+send(EVNT_ACT_BELT_FWD)</panel_attributes>
     <additional_attributes>470.0;100.0;470.0;20.0;10.0;20.0;10.0;100.0</additional_attributes>
   </element>
   <element>
