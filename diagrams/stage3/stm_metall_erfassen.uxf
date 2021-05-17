@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>18</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
-      <y>240</y>
-      <w>120</w>
-      <h>30</h>
+      <x>162</x>
+      <y>468</y>
+      <w>216</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>180</x>
-      <y>240</y>
-      <w>20</w>
-      <h>20</h>
+      <x>144</x>
+      <y>468</y>
+      <w>36</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>290</x>
-      <y>200</y>
-      <w>180</w>
-      <h>100</h>
+      <x>342</x>
+      <y>396</y>
+      <w>342</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>Waiting for workpiece
 --
@@ -39,51 +39,25 @@ valign=top
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>710</x>
-      <y>200</y>
-      <w>180</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>Metal detected
---
-entry: set_Material(metal)
-
-valign=top
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>460</x>
-      <y>220</y>
-      <w>270</w>
-      <h>40</h>
+      <x>666</x>
+      <y>414</y>
+      <w>450</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_MATAL_DTC</panel_attributes>
-    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>460</x>
-      <y>260</y>
-      <w>270</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;250.0;10.0</additional_attributes>
+EVNT_SEN_MATAL_DTC/
+set_metallic(bool)</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;70.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>170</x>
-      <y>150</y>
-      <w>770</w>
-      <h>190</h>
+      <x>126</x>
+      <y>306</y>
+      <w>1044</w>
+      <h>342</h>
     </coordinates>
     <panel_attributes>stm Metall erfassen</panel_attributes>
     <additional_attributes/>
