@@ -270,7 +270,8 @@ _chid_conn_map</panel_attributes>
     <panel_attributes>Wird gebraucht, da bei einer EventSubscription 
 die chid übertragen wird.
 Falls für diese chid noch keine QnxConnection besteht, 
-wird diese beim subscriben erstellt.</panel_attributes>
+wird diese beim subscriben erstellt.
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
