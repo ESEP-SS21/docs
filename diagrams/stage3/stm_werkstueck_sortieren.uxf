@@ -6,7 +6,7 @@
     <coordinates>
       <x>63</x>
       <y>84</y>
-      <w>854</w>
+      <w>875</w>
       <h>357</h>
     </coordinates>
     <panel_attributes>stm Werkstück sortieren</panel_attributes>
@@ -132,7 +132,7 @@ datamodel:
     <coordinates>
       <x>602</x>
       <y>112</y>
-      <w>301</w>
+      <w>322</w>
       <h>210</h>
     </coordinates>
     <panel_attributes>waiting for switch to clear
