@@ -5,7 +5,7 @@
     <id>UMLState</id>
     <coordinates>
       <x>330</x>
-      <y>160</y>
+      <y>170</y>
       <w>180</w>
       <h>110</h>
     </coordinates>
@@ -21,7 +21,7 @@ valign=top
     <id>UMLSpecialState</id>
     <coordinates>
       <x>200</x>
-      <y>210</y>
+      <y>220</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -32,7 +32,7 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>500</x>
-      <y>180</y>
+      <y>190</y>
       <w>470</w>
       <h>40</h>
     </coordinates>
@@ -44,7 +44,7 @@ EVNT_SEN_ESTOP_ON/send_event(EVNT_ERR(ESTOP))</panel_attributes>
     <id>UMLState</id>
     <coordinates>
       <x>950</x>
-      <y>160</y>
+      <y>170</y>
       <w>180</w>
       <h>110</h>
     </coordinates>
@@ -60,7 +60,7 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>500</x>
-      <y>220</y>
+      <y>230</y>
       <w>470</w>
       <h>40</h>
     </coordinates>
@@ -72,11 +72,22 @@ EVNT_SEN_ESTOP_OFF/send_event(EVNT_ERR_GONE(ESTOP))</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>210</y>
+      <y>220</y>
       <w>150</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>190</x>
+      <y>110</y>
+      <w>960</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>stm estop</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
