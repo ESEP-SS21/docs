@@ -39,11 +39,11 @@ valign=top
     <coordinates>
       <x>312</x>
       <y>299</y>
-      <w>260</w>
+      <w>429</w>
       <h>182</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_HE_BLCK</panel_attributes>
+EVNT_SEN_LB_HE_BLCK/datamodel: transfer()</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
