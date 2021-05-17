@@ -28,7 +28,7 @@
     <coordinates>
       <x>780</x>
       <y>90</y>
-      <w>130</w>
+      <w>120</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>Waiting</panel_attributes>
@@ -264,10 +264,10 @@ EVNT_SEN_CTRL_T_RST_PRS_SRT</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1390</x>
-      <y>390</y>
-      <w>90</w>
-      <h>40</h>
+      <x>1350</x>
+      <y>330</y>
+      <w>120</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Error</panel_attributes>
     <additional_attributes/>
@@ -276,24 +276,24 @@ EVNT_SEN_CTRL_T_RST_PRS_SRT</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1230</x>
-      <y>390</y>
-      <w>180</w>
+      <y>350</y>
+      <w>140</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ERR</panel_attributes>
-    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>120</y>
-      <w>290</w>
-      <h>150</h>
+      <x>1230</x>
+      <y>650</y>
+      <w>210</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0;270.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;190.0;90.0;190.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -320,14 +320,25 @@ EVNT_ERR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>120</y>
-      <w>530</w>
-      <h>150</h>
+      <x>1200</x>
+      <y>490</y>
+      <w>270</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_CTRL_T_STR_PRS_LONG
 </panel_attributes>
-    <additional_attributes>260.0;130.0;260.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>40.0;20.0;220.0;20.0;220.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1360</x>
+      <y>570</y>
+      <w>120</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Idle</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
