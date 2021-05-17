@@ -3,7 +3,7 @@
         \refreq{7}, \refreq{24}, \refreq{26}
     }
     \addTextCollum{Description}{
-        In diesem Use-Case ein \gls{workpiece} von der \gls{anlage} entgegengenommen.
+        In diesem Use-Case wird ein \gls{workpiece} von der \gls{anlage} entgegengenommen.
     }
     \addTextCollum{Actors}{
         \gls{belt}, \gls{lb_st}
@@ -13,7 +13,7 @@
         \item Es befindet sich kein \gls{workpiece} im Bereich von \gls{lb_st}
     }
     \addCollum{Trigger}{
-        \item \gls{lb_st}
+        \item \gls{lb_st} unterbrochen
     }
     \addCollum{Main flow}{
         \item[1)] Zuweisung der eindeutigen ID an das betroffene \gls{workpiece}
@@ -24,12 +24,17 @@
     \addCollum{Alternative Flow 1}{
         \item at step 2) of Mainflow
         \item[2a)] \gls{belt} ist bereits in Bewegung und muss nicht gestartet werden
+        \begin{itemize}
+            \item[2a1)] Go to step 4) of Mainflow
+        \end{itemize}
     }
     \addCollum{Alternative Flow 2}{
         \item at step 3) of Mainflow
-        \item[3a)] Ein anderes \gls{workpiece} wartet am Ende der Anlage auf Übergabe
+        \item[3a)] Ein anderes \gls{workpiece} wartet am Ende der \gls{anlage} auf Übergabe
     \begin{itemize}
-        \item 3a1) \gls{belt} wird nicht gestartet
+        \item [3a1)] \gls{belt} wird nicht gestartet
+        \item [3a2)] Warte bis anderes \gls{workpiece} übergeben wurde
+        \item [3a3)] Go to step 3) of Mainflow
     \end{itemize}
     }
     \addCollum{Postcondition}{

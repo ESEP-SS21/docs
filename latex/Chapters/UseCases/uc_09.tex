@@ -23,20 +23,21 @@
         \item[3)] Messung bei \gls{he_sensor} anfragen
         \item[4)] Auf Rückmeldung warten
         \item[5)] Bestimmten Wert als Nullwert im \gls{he_sensor} eintragen
-        \item[6)] Sorting Mechanism aktivieren
+        \item[6)] \gls{sortierer} aktivieren
         \item[7)] Auf Zustandsänderungssignal des \gls{sortierer}s warten \textbullet
         \item[8)] Sorting Mechanism deaktivieren
         \item[9)] Auf Zustandsänderungssignal des \gls{sortierer}s warten \textbullet
         \item[10)] In \gls{ruhe-zst} wechseln
     }
     \addCollum{Exceptional flow}{
-    \item at step 6 or 8 of Mainflow
-    \item[1)] Timeout beim Empfang des Signals
-    \item[2)] Fehler auslösen
+        \item at step 7 or 9 of Mainflow
+        \item[a)] Timeout beim Empfang des Signals
+        \begin{itemize}
+            \item[a1)] Fehler auslösen
+        \end{itemize}
     }
     \addCollum{Postconditions}{
-        \item[1)] \gls{system} ist im \gls{ruhe-zst}
-        \item[2)] \gls{he_sensor} wurde kalibriert
+        \item \gls{system} ist im \gls{ruhe-zst}
+        \item \gls{he_sensor} wurde kalibriert
     }
-
 \end{usecase}
