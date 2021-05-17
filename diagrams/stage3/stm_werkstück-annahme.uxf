@@ -4,8 +4,8 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1564</x>
-      <y>527</y>
+      <x>1632</x>
+      <y>612</y>
       <w>34</w>
       <h>34</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1377</x>
-      <y>527</y>
+      <x>1445</x>
+      <y>612</y>
       <w>221</w>
       <h>51</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1088</x>
-      <y>442</y>
+      <x>1156</x>
+      <y>527</y>
       <w>306</w>
       <h>187</h>
     </coordinates>
@@ -41,8 +41,8 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>187</x>
-      <y>442</y>
+      <x>255</x>
+      <y>527</y>
       <w>306</w>
       <h>187</h>
     </coordinates>
@@ -56,8 +56,8 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>459</y>
+      <x>544</x>
+      <y>544</y>
       <w>646</w>
       <h>68</h>
     </coordinates>
@@ -68,8 +68,8 @@ EVNT_ACT_BELT_STOP</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>544</y>
+      <x>544</x>
+      <y>629</y>
       <w>646</w>
       <h>68</h>
     </coordinates>
@@ -80,8 +80,8 @@ EVNT_ACT_BELT_FWD</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>85</x>
-      <y>612</y>
+      <x>153</x>
+      <y>697</y>
       <w>459</w>
       <h>170</h>
     </coordinates>
@@ -93,8 +93,8 @@ enter_workpiece(new Workpiece())</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>442</x>
-      <y>612</y>
+      <x>510</x>
+      <y>697</y>
       <w>833</w>
       <h>187</h>
     </coordinates>
@@ -107,9 +107,9 @@ send(EVNT_ACT_BELT_FWD)</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>102</x>
-      <y>221</y>
-      <w>1615</w>
+      <x>153</x>
+      <y>306</y>
+      <w>1632</w>
       <h>595</h>
     </coordinates>
     <panel_attributes>stm Werkstück annahme</panel_attributes>
@@ -118,8 +118,8 @@ send(EVNT_ACT_BELT_FWD)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1207</x>
-      <y>561</y>
+      <x>1275</x>
+      <y>646</y>
       <w>408</w>
       <h>221</h>
     </coordinates>
@@ -132,41 +132,41 @@ enter_workpiece(new Workpiece())</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1122</x>
-      <y>323</y>
+      <x>1190</x>
+      <y>408</y>
       <w>578</w>
       <h>221</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[belt_blocked&amp;sec mode]/
-enter_workpiece(wrpc from FTS1)</panel_attributes>
+enter_workpiece(_pending_transfer)</panel_attributes>
     <additional_attributes>120.0;70.0;120.0;20.0;210.0;20.0;210.0;110.0;160.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>442</x>
-      <y>272</y>
+      <x>510</x>
+      <y>357</y>
       <w>833</w>
       <h>204</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[!belt_blocked&amp;sec mode]/
-enter_workpiece(wrpc from FTS1), 
+enter_workpiece(_pending_transfer), 
 send(EVNT_ACT_BELT_FWD)</panel_attributes>
     <additional_attributes>470.0;100.0;470.0;20.0;10.0;20.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>85</x>
-      <y>306</y>
+      <x>153</x>
+      <y>391</y>
       <w>442</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[sec mode]/
-enter_workpiece(wrpc from FTS1)</panel_attributes>
+enter_workpiece(_pending_transfer)</panel_attributes>
     <additional_attributes>80.0;80.0;80.0;20.0;180.0;20.0;180.0;80.0</additional_attributes>
   </element>
 </diagram>
