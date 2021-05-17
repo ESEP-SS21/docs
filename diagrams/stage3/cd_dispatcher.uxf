@@ -214,9 +214,9 @@ _evnt_conn_multimap</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>176</x>
-      <y>0</y>
-      <w>1344</w>
-      <h>1184</h>
+      <y>16</y>
+      <w>1360</w>
+      <h>1168</h>
     </coordinates>
     <panel_attributes>cd dispatcher</panel_attributes>
     <additional_attributes/>
@@ -255,7 +255,8 @@ m2=type</panel_attributes>
     </coordinates>
     <panel_attributes>lt=[chid]-&gt;
 m2=1
-m1=0..n\n\n_chid_conn_map</panel_attributes>
+m1=0..n
+_chid_conn_map</panel_attributes>
     <additional_attributes>80.0;10.0;80.0;210.0;10.0;210.0</additional_attributes>
   </element>
   <element>
@@ -276,12 +277,12 @@ wird diese beim subscriben erstellt.</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1392</x>
-      <y>656</y>
+      <y>736</y>
       <w>48</w>
-      <h>368</h>
+      <h>288</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
