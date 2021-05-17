@@ -6,8 +6,8 @@
     <coordinates>
       <x>63</x>
       <y>84</y>
-      <w>833</w>
-      <h>336</h>
+      <w>854</w>
+      <h>357</h>
     </coordinates>
     <panel_attributes>stm Werkstück sortieren</panel_attributes>
     <additional_attributes/>
@@ -91,9 +91,9 @@ m1=EVNT_SEN_LB_RA_CLR </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>112</x>
+      <x>105</x>
       <y>315</y>
-      <w>175</w>
+      <w>189</w>
       <h>91</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -101,9 +101,9 @@ m1=EVNT_SEN_LB_RA_CLR </panel_attributes>
 EVNT_SEN_LB_SW_BLCK
 [Sec Mode &amp;&amp;
 datamodel: 
-!(is_in_order(switch_end_sec.front()))]
+!(is_in_order(height_switch_sec.front()))]
 / send(ERR)</panel_attributes>
-    <additional_attributes>140.0;10.0;140.0;40.0;100.0;40.0;100.0;10.0</additional_attributes>
+    <additional_attributes>150.0;10.0;150.0;40.0;110.0;40.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -132,12 +132,12 @@ datamodel:
     <coordinates>
       <x>602</x>
       <y>112</y>
-      <w>280</w>
-      <h>203</h>
+      <w>301</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>waiting for switch to clear
 --
-/exit send(EVNT_ACT_SORT_RST)
+/exit send(EVNT_ACT_SORT_RST); height_switch_sec.transfer()
 
 valign=top
 </panel_attributes>
@@ -201,16 +201,13 @@ r1=EVNT_SEN_LB_SW_BLCK[datamodel: is_in_sorting_order(height_switch_sec.front())
     <id>Relation</id>
     <coordinates>
       <x>182</x>
-      <y>154</y>
+      <y>161</y>
       <w>469</w>
-      <h>56</h>
+      <h>49</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-m1=EVNT_SEN_LB_SW_BLCK[datamodel: !(is_in_sorting_order(height_switch_sec.front()))]
-
-
-/ height_switch_sec.transfer()</panel_attributes>
-    <additional_attributes>10.0;20.0;650.0;20.0;650.0;60.0</additional_attributes>
+m1=EVNT_SEN_LB_SW_BLCK[datamodel: !(is_in_sorting_order(height_switch_sec.front()))]</panel_attributes>
+    <additional_attributes>10.0;10.0;650.0;10.0;650.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -288,14 +285,13 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>343</x>
-      <y>308</y>
-      <w>413</w>
-      <h>70</h>
+      <y>315</y>
+      <w>399</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_SW_CLR
-/ height_switch_sec.transfer()</panel_attributes>
-    <additional_attributes>390.0;10.0;390.0;80.0;10.0;80.0</additional_attributes>
+EVNT_SEN_LB_SW_CLR</panel_attributes>
+    <additional_attributes>390.0;10.0;390.0;70.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLSpecialState</id>
