@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>20</zoom_level>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>980</x>
-      <y>330</y>
-      <w>20</w>
-      <h>20</h>
+      <x>1740</x>
+      <y>480</y>
+      <w>40</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -15,21 +15,21 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>980</x>
-      <y>340</y>
-      <w>30</w>
-      <h>90</h>
+      <x>1520</x>
+      <y>480</y>
+      <w>260</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>900</x>
-      <y>410</y>
-      <w>180</w>
-      <h>110</h>
+      <x>1180</x>
+      <y>380</y>
+      <w>360</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>BeltNotRunning
 --
@@ -41,10 +41,10 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>370</x>
-      <y>410</y>
-      <w>180</w>
-      <h>110</h>
+      <x>120</x>
+      <y>380</y>
+      <w>360</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>BeltRunning
 --
@@ -56,10 +56,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>420</y>
-      <w>380</w>
-      <h>40</h>
+      <x>460</x>
+      <y>400</y>
+      <w>760</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACT_BELT_STOP</panel_attributes>
@@ -68,10 +68,10 @@ EVNT_ACT_BELT_STOP</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>470</y>
-      <w>380</w>
-      <h>40</h>
+      <x>460</x>
+      <y>500</y>
+      <w>760</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACT_BELT_FWD</panel_attributes>
@@ -80,36 +80,36 @@ EVNT_ACT_BELT_FWD</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>510</y>
-      <w>190</w>
-      <h>140</h>
+      <x>80</x>
+      <y>580</y>
+      <w>380</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK/
-new_wrpc()</panel_attributes>
-    <additional_attributes>40.0;10.0;40.0;110.0;140.0;110.0;140.0;10.0</additional_attributes>
+Workpiece()</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;70.0;140.0;70.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>510</y>
-      <w>490</w>
-      <h>140</h>
+      <x>420</x>
+      <y>580</y>
+      <w>980</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[!belt_blocked]/
-new_wrpc(), send_Event(EVNT_ACT_BELT_FWD)</panel_attributes>
-    <additional_attributes>470.0;10.0;470.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
+Workpiece(), send_Event(EVNT_ACT_BELT_FWD)</panel_attributes>
+    <additional_attributes>470.0;10.0;470.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>320</x>
-      <y>300</y>
-      <w>890</w>
-      <h>380</h>
+      <x>20</x>
+      <y>120</y>
+      <w>1900</w>
+      <h>700</h>
     </coordinates>
     <panel_attributes>stm Werkstück annahme</panel_attributes>
     <additional_attributes/>
@@ -117,14 +117,54 @@ new_wrpc(), send_Event(EVNT_ACT_BELT_FWD)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
-      <y>480</y>
-      <w>180</w>
-      <h>120</h>
+      <x>1380</x>
+      <y>520</y>
+      <w>360</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK
-[belt_blocked]/new_wrpc()</panel_attributes>
+[belt_blocked]/Workpiece()</panel_attributes>
     <additional_attributes>40.0;40.0;40.0;90.0;130.0;90.0;130.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>240</y>
+      <w>560</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK[belt_blocked]/
+enter_workpiece(Workpiece)</panel_attributes>
+    <additional_attributes>90.0;70.0;90.0;20.0;180.0;20.0;180.0;110.0;130.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>180</y>
+      <w>980</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK[!belt_blocked]/
+enter_workpiece(Workpiece), 
+send_Event(EVNT_ACT_BELT_FWD)</panel_attributes>
+    <additional_attributes>470.0;100.0;470.0;20.0;10.0;20.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>220</y>
+      <w>380</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK/
+enter_workpiece(Workpiece)</panel_attributes>
+    <additional_attributes>40.0;80.0;40.0;20.0;140.0;20.0;140.0;80.0</additional_attributes>
   </element>
 </diagram>
