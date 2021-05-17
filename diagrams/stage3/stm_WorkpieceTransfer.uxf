@@ -4,7 +4,7 @@
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>264</x>
+      <x>0</x>
       <y>300</y>
       <w>1668</w>
       <h>564</h>
@@ -15,7 +15,7 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>996</x>
+      <x>732</x>
       <y>396</y>
       <w>24</w>
       <h>24</h>
@@ -26,7 +26,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>996</x>
+      <x>732</x>
       <y>408</y>
       <w>36</w>
       <h>96</h>
@@ -37,18 +37,18 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>936</x>
+      <x>672</x>
       <y>480</y>
       <w>144</w>
       <h>144</h>
     </coordinates>
-    <panel_attributes>Idle</panel_attributes>
+    <panel_attributes>Waiting</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1068</x>
+      <x>804</x>
       <y>480</y>
       <w>480</w>
       <h>48</h>
@@ -60,7 +60,7 @@ EVNT_SEN_LB_EN_BLCK [Prim Mode]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
+      <x>336</x>
       <y>480</y>
       <w>360</w>
       <h>48</h>
@@ -72,7 +72,7 @@ EVNT_SEN_LB_EN_BLCK [Sec Mode]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1356</x>
+      <x>1092</x>
       <y>552</y>
       <w>156</w>
       <h>168</h>
@@ -84,7 +84,7 @@ EVNT_ACK</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>288</x>
+      <x>24</x>
       <y>480</y>
       <w>324</w>
       <h>144</h>
@@ -100,14 +100,14 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1488</x>
+      <x>1224</x>
       <y>336</y>
       <w>408</w>
       <h>408</h>
     </coordinates>
     <panel_attributes>waiting for FTS_2
 --
-/entry send(EVNT_WRPC_TRANS_RQ_SND)
+/entry send(EVNT_WRPC_TRANS_RQ)
 
 valign=top</panel_attributes>
     <additional_attributes/>
@@ -115,7 +115,7 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
+      <x>336</x>
       <y>564</y>
       <w>360</w>
       <h>36</h>
@@ -126,7 +126,7 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1524</x>
+      <x>1260</x>
       <y>588</y>
       <w>336</w>
       <h>132</h>
@@ -143,7 +143,7 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1524</x>
+      <x>1260</x>
       <y>456</y>
       <w>336</w>
       <h>84</h>
@@ -157,7 +157,7 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1680</x>
+      <x>1416</x>
       <y>528</y>
       <w>108</w>
       <h>84</h>
@@ -169,7 +169,7 @@ after 50ms</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1128</x>
+      <x>864</x>
       <y>696</y>
       <w>312</w>
       <h>132</h>
@@ -187,7 +187,7 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>948</x>
+      <x>684</x>
       <y>612</y>
       <w>360</w>
       <h>108</h>
@@ -200,7 +200,7 @@ EVNT_SEN_LB_EN_CLR
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>936</x>
+      <x>672</x>
       <y>720</y>
       <w>216</w>
       <h>108</h>
