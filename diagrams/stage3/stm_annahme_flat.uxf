@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1111</x>
+      <y>363</y>
+      <w>341</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>BeltNotRunning
+--
+/entry: curr_state = BNRunning
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>330</x>
+      <y>363</y>
+      <w>407</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>BeltRunning
+--
+/entry: curr_state = BRunning
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>374</y>
+      <w>407</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ACT_BELT_STOP</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>429</y>
+      <w>407</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ACT_BELT_FWD</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>682</x>
+      <y>473</y>
+      <w>539</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK[!belt_blocked&amp;prim mode]/
+enter_workpiece(new Workpiece()), 
+send(EVNT_ACT_BELT_FWD)</panel_attributes>
+    <additional_attributes>470.0;10.0;470.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1320</x>
+      <y>429</y>
+      <w>319</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK
+[belt_blocked&amp;prim mode]/
+enter_workpiece(new Workpiece())</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;100.0;270.0;100.0;270.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1331</x>
+      <y>286</y>
+      <w>374</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK[belt_blocked&amp;sec mode]/
+enter_workpiece(_pending_transfer)</panel_attributes>
+    <additional_attributes>60.0;70.0;60.0;20.0;270.0;20.0;270.0;110.0;110.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>682</x>
+      <y>253</y>
+      <w>539</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK[!belt_blocked&amp;sec mode]/
+enter_workpiece(_pending_transfer), 
+send(EVNT_ACT_BELT_FWD)</panel_attributes>
+    <additional_attributes>470.0;100.0;470.0;20.0;10.0;20.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>231</y>
+      <w>308</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK[sec mode]/
+enter_workpiece(_pending_transfer)</panel_attributes>
+    <additional_attributes>120.0;180.0;10.0;180.0;10.0;10.0;260.0;10.0;260.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1188</x>
+      <y>715</y>
+      <w>99</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Service</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>693</x>
+      <y>1001</y>
+      <w>517</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>EStop</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1111</x>
+      <y>803</y>
+      <w>165</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON
+/count = 1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>759</x>
+      <y>803</y>
+      <w>297</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_RST_PRS_SRT
+[count == 0]</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>902</x>
+      <y>715</y>
+      <w>308</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_
+T_STR_PRS_LNG</panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>902</x>
+      <y>759</y>
+      <w>308</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+when service complete
+or when service aborted</panel_attributes>
+    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>176</y>
+      <w>198</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>121</y>
+      <w>264</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==BRunning]
+/send(EVNT_ACT_BELT_FWD)</panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>121</y>
+      <w>209</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==BNRunning]</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0;170.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>165</y>
+      <w>198</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>90.0;180.0;90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>737</x>
+      <y>473</y>
+      <w>539</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==BNRunning]</panel_attributes>
+    <additional_attributes>10.0;220.0;10.0;150.0;470.0;150.0;470.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>737</x>
+      <y>88</y>
+      <w>396</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>Error
+--
+/entry: send(EVNT_ACT_BELT_STOP)
+
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>627</x>
+      <y>715</y>
+      <w>286</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Idle
+state
+-
+entry: send(EVNT_ACT_BELT_STOP)
+
+
+
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>704</x>
+      <y>627</y>
+      <w>33</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>748</x>
+      <y>1078</y>
+      <w>154</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_OFF
+/count --</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;40.0;100.0;40.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>957</x>
+      <y>1078</y>
+      <w>154</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON
+/count ++</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;40.0;100.0;40.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>440</y>
+      <w>297</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_ST_BLCK[prim mode]/
+enter_workpiece(new Workpiece())</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0;10.0;130.0;250.0;130.0;250.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>176</x>
+      <y>0</y>
+      <w>1562</w>
+      <h>1166</h>
+    </coordinates>
+    <panel_attributes>stm Werkstück Annahme Flat Parallel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>198</x>
+      <y>44</y>
+      <w>1518</w>
+      <h>770</h>
+    </coordinates>
+    <panel_attributes>Operation
+-
+/exit: send(EVNT_ACT_BELT_STOP)
+
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>319</x>
+      <y>473</y>
+      <w>330</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==BNRunning]</panel_attributes>
+    <additional_attributes>280.0;260.0;10.0;260.0;10.0;150.0;170.0;150.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>649</x>
+      <y>473</y>
+      <w>297</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STP_PRS_SRT</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>781</x>
+      <y>473</y>
+      <w>539</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STP_PRS_SRT</panel_attributes>
+    <additional_attributes>470.0;10.0;470.0;190.0;10.0;190.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>704</x>
+      <y>627</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
