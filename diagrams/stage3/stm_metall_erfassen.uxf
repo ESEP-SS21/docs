@@ -48,7 +48,7 @@ valign=top
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_MATAL_DTC/
-set_metallic(bool)</panel_attributes>
+is_metallic =  true</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;10.0;60.0;70.0;10.0;70.0</additional_attributes>
   </element>
   <element>
@@ -56,7 +56,7 @@ set_metallic(bool)</panel_attributes>
     <coordinates>
       <x>126</x>
       <y>306</y>
-      <w>1044</w>
+      <w>990</w>
       <h>342</h>
     </coordinates>
     <panel_attributes>stm Metall erfassen</panel_attributes>
