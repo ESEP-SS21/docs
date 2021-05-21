@@ -59,7 +59,7 @@ is_metallic =  true</panel_attributes>
       <w>990</w>
       <h>342</h>
     </coordinates>
-    <panel_attributes>stm Metall erfassen</panel_attributes>
+    <panel_attributes>stm Metal detection</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
