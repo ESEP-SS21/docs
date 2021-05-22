@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>12</zoom_level>
+  <zoom_level>15</zoom_level>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>732</x>
-      <y>300</y>
-      <w>24</w>
-      <h>24</h>
+      <x>525</x>
+      <y>375</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>780</x>
-      <y>252</y>
-      <w>468</w>
-      <h>156</h>
+      <x>585</x>
+      <y>315</y>
+      <w>585</w>
+      <h>195</h>
     </coordinates>
     <panel_attributes>Idle
 --
@@ -35,10 +35,10 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>780</x>
-      <y>84</y>
-      <w>468</w>
-      <h>108</h>
+      <x>585</x>
+      <y>105</y>
+      <w>585</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Service
 --
@@ -52,10 +52,10 @@ symbol=substate</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>852</x>
-      <y>1188</y>
-      <w>360</w>
-      <h>36</h>
+      <x>675</x>
+      <y>1470</y>
+      <w>450</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Error
 valign=center
@@ -66,10 +66,10 @@ group=8</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>840</x>
-      <y>516</y>
-      <w>408</w>
-      <h>624</h>
+      <x>660</x>
+      <y>645</y>
+      <w>510</w>
+      <h>765</h>
     </coordinates>
     <panel_attributes>Running
 --
@@ -84,10 +84,10 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>444</x>
-      <y>1272</y>
-      <w>936</w>
-      <h>216</h>
+      <x>165</x>
+      <y>1575</y>
+      <w>1170</w>
+      <h>255</h>
     </coordinates>
     <panel_attributes>E-STOP
 --
@@ -104,10 +104,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>744</x>
-      <y>300</y>
-      <w>60</w>
-      <h>36</h>
+      <x>540</x>
+      <y>375</y>
+      <w>75</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;30.0;10.0</additional_attributes>
@@ -115,10 +115,10 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>456</x>
-      <y>36</y>
-      <w>924</w>
-      <h>1212</h>
+      <x>180</x>
+      <y>45</y>
+      <w>1155</w>
+      <h>1500</h>
     </coordinates>
     <panel_attributes>operation
 --
@@ -129,10 +129,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1152</x>
-      <y>1236</y>
-      <w>180</w>
-      <h>168</h>
+      <x>1050</x>
+      <y>1530</y>
+      <w>225</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -145,10 +145,10 @@ EVNT_ESTOP_ON
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1020</x>
-      <y>396</y>
-      <w>360</w>
-      <h>144</h>
+      <x>885</x>
+      <y>495</y>
+      <w>450</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_CTRL_T_STR_PRS_SRT/
@@ -160,10 +160,10 @@ send(EVNT_ACT_CTRL_T_STR_LED_ON)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
-      <y>372</y>
-      <w>444</w>
-      <h>216</h>
+      <x>330</x>
+      <y>465</y>
+      <w>555</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_CTRL_T_STP_PRS_SRT[wrn_count ==0]/
@@ -175,10 +175,10 @@ send(EVNT_ACT_CTRL_T_STR_LED_OFF)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>852</x>
-      <y>180</y>
-      <w>216</w>
-      <h>96</h>
+      <x>675</x>
+      <y>225</y>
+      <w>270</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 when service complete
@@ -188,10 +188,10 @@ or when service aborted</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1128</x>
-      <y>180</y>
-      <w>180</w>
-      <h>96</h>
+      <x>1020</x>
+      <y>225</y>
+      <w>225</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_CTRL_
@@ -201,10 +201,10 @@ T_STR_PRS_LNG</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
-      <y>1128</y>
-      <w>36</w>
-      <h>84</h>
+      <x>990</x>
+      <y>1395</y>
+      <w>45</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -215,10 +215,10 @@ T_STR_PRS_LNG</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>972</x>
-      <y>1128</y>
-      <w>120</w>
-      <h>84</h>
+      <x>825</x>
+      <y>1395</y>
+      <w>150</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ERR</panel_attributes>
@@ -227,10 +227,10 @@ EVNT_ERR</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>408</x>
+      <x>150</x>
       <y>0</y>
-      <w>1008</w>
-      <h>1524</h>
+      <w>1215</w>
+      <h>1860</h>
     </coordinates>
     <panel_attributes>stm top-level</panel_attributes>
     <additional_attributes/>
@@ -238,10 +238,10 @@ EVNT_ERR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
-      <y>792</y>
-      <w>396</w>
-      <h>144</h>
+      <x>195</x>
+      <y>990</y>
+      <w>495</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVT_WRN/
@@ -253,10 +253,10 @@ send(EVNT_ACT_STPL_LED_OFF, yellow) }</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
-      <y>612</y>
-      <w>396</w>
-      <h>168</h>
+      <x>195</x>
+      <y>765</y>
+      <w>495</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVT_WRN_GONE/
@@ -268,10 +268,10 @@ send(EVNT_ACT_STPL_LED_SLW, yellow) }</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
-      <y>1092</y>
-      <w>396</w>
-      <h>144</h>
+      <x>195</x>
+      <y>1365</y>
+      <w>495</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_CTRL_
@@ -279,15 +279,15 @@ T_STP_PRS_SRT
 [wrn_count &gt; 0]/
 send_Event(EVNT_ERR)
 m2=schon gegangen</panel_attributes>
-    <additional_attributes>310.0;10.0;10.0;10.0;10.0;90.0;310.0;90.0</additional_attributes>
+    <additional_attributes>310.0;10.0;10.0;10.0;10.0;80.0;310.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>588</y>
-      <w>96</w>
-      <h>36</h>
+      <x>735</x>
+      <y>735</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 group=2</panel_attributes>
@@ -296,10 +296,10 @@ group=2</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>948</x>
-      <y>564</y>
-      <w>240</w>
-      <h>72</h>
+      <x>795</x>
+      <y>705</y>
+      <w>300</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Sort Workpieces
 symbol=substate
@@ -310,10 +310,10 @@ group=2</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>888</x>
-      <y>588</y>
-      <w>24</w>
-      <h>24</h>
+      <x>720</x>
+      <y>735</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=initial
 group=2</panel_attributes>
@@ -322,48 +322,48 @@ group=2</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>948</x>
-      <y>660</y>
-      <w>240</w>
-      <h>72</h>
+      <x>795</x>
+      <y>1305</y>
+      <w>195</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Metall detection
-symbol=substate
+valign=center
 halign=right
-group=3</panel_attributes>
+group=10</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>888</x>
-      <y>684</y>
-      <w>24</w>
-      <h>24</h>
+      <x>720</x>
+      <y>1335</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=initial
-group=3</panel_attributes>
+group=10</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>684</y>
-      <w>96</w>
-      <h>36</h>
+      <x>735</x>
+      <y>1335</y>
+      <w>90</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-group=3</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+group=10</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>948</x>
-      <y>756</y>
-      <w>240</w>
-      <h>72</h>
+      <x>795</x>
+      <y>825</y>
+      <w>300</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Height Messurement
 symbol=substate
@@ -374,10 +374,10 @@ group=4</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>888</x>
-      <y>780</y>
-      <w>24</w>
-      <h>24</h>
+      <x>720</x>
+      <y>855</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=initial
 group=4</panel_attributes>
@@ -386,10 +386,10 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>780</y>
-      <w>96</w>
-      <h>36</h>
+      <x>735</x>
+      <y>855</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 group=4</panel_attributes>
@@ -398,10 +398,10 @@ group=4</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>948</x>
-      <y>852</y>
-      <w>240</w>
-      <h>72</h>
+      <x>795</x>
+      <y>945</y>
+      <w>300</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Workpiece Transfer
 symbol=substate
@@ -412,10 +412,10 @@ group=5</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>888</x>
-      <y>876</y>
-      <w>24</w>
-      <h>24</h>
+      <x>720</x>
+      <y>975</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=initial
 group=5</panel_attributes>
@@ -424,10 +424,10 @@ group=5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>876</y>
-      <w>96</w>
-      <h>36</h>
+      <x>735</x>
+      <y>975</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 group=5</panel_attributes>
@@ -436,10 +436,10 @@ group=5</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>972</x>
-      <y>588</y>
-      <w>24</w>
-      <h>24</h>
+      <x>825</x>
+      <y>735</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=history_deep
 group=2</panel_attributes>
@@ -448,22 +448,10 @@ group=2</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>972</x>
-      <y>684</y>
-      <w>24</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>type=history_deep
-group=3</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLSpecialState</id>
-    <coordinates>
-      <x>972</x>
-      <y>780</y>
-      <w>24</w>
-      <h>24</h>
+      <x>825</x>
+      <y>855</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=history_deep
 group=4</panel_attributes>
@@ -472,10 +460,10 @@ group=4</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>972</x>
-      <y>876</y>
-      <w>24</w>
-      <h>24</h>
+      <x>825</x>
+      <y>975</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=history_deep
 group=5</panel_attributes>
@@ -484,10 +472,10 @@ group=5</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>948</x>
-      <y>948</y>
-      <w>240</w>
-      <h>72</h>
+      <x>795</x>
+      <y>1065</y>
+      <w>300</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Answer Transfer Req
 symbol=substate
@@ -498,10 +486,10 @@ group=7</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>972</y>
-      <w>96</w>
-      <h>36</h>
+      <x>735</x>
+      <y>1095</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 group=7</panel_attributes>
@@ -510,10 +498,10 @@ group=7</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>972</x>
-      <y>972</y>
-      <w>24</w>
-      <h>24</h>
+      <x>825</x>
+      <y>1095</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=history_deep
 group=7</panel_attributes>
@@ -522,10 +510,10 @@ group=7</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>888</x>
-      <y>972</y>
-      <w>24</w>
-      <h>24</h>
+      <x>720</x>
+      <y>1095</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=initial
 group=7</panel_attributes>
@@ -534,10 +522,10 @@ group=7</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
-      <y>636</y>
-      <w>444</w>
-      <h>36</h>
+      <x>645</x>
+      <y>795</y>
+      <w>555</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;350.0;10.0</additional_attributes>
@@ -545,10 +533,10 @@ group=7</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
-      <y>732</y>
-      <w>444</w>
-      <h>36</h>
+      <x>645</x>
+      <y>915</y>
+      <w>555</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;350.0;10.0</additional_attributes>
@@ -556,10 +544,10 @@ group=7</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
-      <y>828</y>
-      <w>444</w>
-      <h>36</h>
+      <x>645</x>
+      <y>1035</y>
+      <w>555</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;350.0;10.0</additional_attributes>
@@ -567,10 +555,10 @@ group=7</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
-      <y>924</y>
-      <w>444</w>
-      <h>36</h>
+      <x>645</x>
+      <y>1155</y>
+      <w>555</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;350.0;10.0</additional_attributes>
@@ -578,10 +566,10 @@ group=7</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>780</x>
-      <y>1380</y>
-      <w>492</w>
-      <h>36</h>
+      <x>585</x>
+      <y>1710</y>
+      <w>615</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>E-STOPP pressed
 valign=center
@@ -591,10 +579,10 @@ valign=center
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
-      <y>1236</y>
-      <w>324</w>
-      <h>168</h>
+      <x>645</x>
+      <y>1530</y>
+      <w>405</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -607,10 +595,10 @@ EVNT_SEN_CTRL_T_RST_PRS_SRT
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1044</x>
-      <y>1404</y>
-      <w>168</w>
-      <h>84</h>
+      <x>915</x>
+      <y>1740</y>
+      <w>210</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ESTOP_ON
@@ -620,10 +608,10 @@ EVNT_ESTOP_ON
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
-      <y>1404</y>
-      <w>180</w>
-      <h>84</h>
+      <x>690</x>
+      <y>1740</y>
+      <w>225</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ESTOP_OFF
@@ -633,10 +621,10 @@ EVNT_ESTOP_OFF
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>840</x>
-      <y>1188</y>
-      <w>24</w>
-      <h>24</h>
+      <x>660</x>
+      <y>1470</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=flow_final
 group=8</panel_attributes>
@@ -645,10 +633,10 @@ group=8</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>1068</y>
-      <w>96</w>
-      <h>36</h>
+      <x>735</x>
+      <y>1215</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 group=9</panel_attributes>
@@ -657,10 +645,10 @@ group=9</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>972</x>
-      <y>1068</y>
-      <w>24</w>
-      <h>24</h>
+      <x>825</x>
+      <y>1215</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=history_deep
 group=9</panel_attributes>
@@ -669,10 +657,10 @@ group=9</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>888</x>
-      <y>1068</y>
-      <w>24</w>
-      <h>24</h>
+      <x>720</x>
+      <y>1215</y>
+      <w>30</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>type=initial
 group=9</panel_attributes>
@@ -681,10 +669,10 @@ group=9</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>948</x>
-      <y>1044</y>
-      <w>240</w>
-      <h>72</h>
+      <x>795</x>
+      <y>1185</y>
+      <w>300</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Receive Workpiece
 symbol=substate
@@ -695,12 +683,26 @@ group=9</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
-      <y>1020</y>
-      <w>444</w>
-      <h>36</h>
+      <x>645</x>
+      <y>1275</y>
+      <w>555</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;350.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>975</x>
+      <y>1320</y>
+      <w>330</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_MATAL_DTC/
+is_metallic =  true
+group=10</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;10.0;30.0;30.0;10.0;30.0</additional_attributes>
   </element>
 </diagram>
