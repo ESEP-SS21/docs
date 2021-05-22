@@ -82,7 +82,7 @@ END
 --
 - _instance: HAL
 --
-+ &lt;&lt;Create&gt;&gt; HAL(GPIOWrapper, mngr_chid)
++ &lt;&lt;Create&gt;&gt; HAL(GPIOWrapper)
 + get_instance(): HAL
 + get_light_barrier(): LightBarrier
 + get_height_sensor(): HeightSensor
@@ -101,36 +101,19 @@ lw=2
       <x>756</x>
       <y>708</y>
       <w>312</w>
-      <h>192</h>
+      <h>216</h>
     </coordinates>
     <panel_attributes>HeightSensor
 --
 - _zero_point: int
 - _scaling_factor: float
 --
-+ &lt;&lt;Create&gt;&gt; HeightSensor(int chid)
++ &lt;&lt;Create&gt;&gt; HeightSensor()
 + sample()
++ reset_interrupt()
 + convert_to_mm(int): float
-+ set_zero_point()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>924</x>
-      <y>984</y>
-      <w>276</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>ADC
---
-
---
-+ADC(TSCADC&amp;)
-+registerADCISR(int, char): void
-+unregister(void): void
-+sample(void): void
-+adcDisable(void): void</panel_attributes>
++ set_zero_point(int)
++ get_value():int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -214,19 +197,6 @@ lw=2
     <panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>732</x>
-      <y>984</y>
-      <w>96</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>TSCADC
-
-</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
@@ -315,41 +285,6 @@ m1=_metal_sensor</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>888</y>
-      <w>108</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;creates&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>816</x>
-      <y>996</y>
-      <w>132</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1008</x>
-      <y>888</y>
-      <w>72</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-m1=_adc</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>324</x>
       <y>264</y>
       <w>396</w>
@@ -396,50 +331,12 @@ m1=_gpio</panel_attributes>
     <additional_attributes>90.0;610.0;90.0;660.0;410.0;660.0;410.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>696</x>
-      <y>1080</y>
-      <w>168</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>From 
-ADC_Sources
-package
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>852</x>
-      <y>1092</y>
-      <w>96</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>lt=..
-</panel_attributes>
-    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>768</x>
-      <y>1020</y>
-      <w>36</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>lt=..
-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLFrame</id>
     <coordinates>
       <x>144</x>
       <y>0</y>
       <w>1464</w>
-      <h>1188</h>
+      <h>972</h>
     </coordinates>
     <panel_attributes>cd HAL_sens</panel_attributes>
     <additional_attributes/>
