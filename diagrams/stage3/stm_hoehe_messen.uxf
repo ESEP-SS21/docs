@@ -5,14 +5,14 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>143</x>
-      <y>442</y>
+      <x>299</x>
+      <y>533</y>
       <w>559</w>
       <h>78</h>
     </coordinates>
     <panel_attributes>Waiting for heigth
 --
-entry: send_Event(EVNT_SEN_HEIGHT_REQ))(Messung)
+entry: send(EVNT_SEN_HEIGHT_REQ)
 
 
 valign=top
@@ -22,10 +22,10 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>143</x>
-      <y>169</y>
+      <x>299</x>
+      <y>260</y>
       <w>234</w>
-      <h>130</h>
+      <h>143</h>
     </coordinates>
     <panel_attributes>Waiting for workpiece
 --
@@ -37,33 +37,33 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>247</x>
-      <y>286</y>
+      <x>403</x>
+      <y>390</y>
       <w>481</w>
-      <h>182</h>
+      <h>169</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_HE_BLCK/start_height_sec.transfer()</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>689</x>
-      <y>312</y>
+      <x>845</x>
+      <y>403</y>
       <w>429</w>
       <h>182</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_HE_SENSOR_HE [prim mode]
-/set_heigth_1(heigth)</panel_attributes>
+/heigth_1 = heigth</panel_attributes>
     <additional_attributes>10.0;110.0;310.0;110.0;310.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>884</x>
-      <y>260</y>
+      <x>1040</x>
+      <y>351</y>
       <w>234</w>
       <h>65</h>
     </coordinates>
@@ -77,8 +77,8 @@ valign=top
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>13</x>
-      <y>221</y>
+      <x>169</x>
+      <y>312</y>
       <w>26</w>
       <h>26</h>
     </coordinates>
@@ -88,8 +88,8 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>26</x>
-      <y>221</y>
+      <x>182</x>
+      <y>312</y>
       <w>143</w>
       <h>39</h>
     </coordinates>
@@ -99,19 +99,19 @@ valign=top
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>0</x>
-      <y>117</y>
+      <x>156</x>
+      <y>208</y>
       <w>1261</w>
       <h>468</h>
     </coordinates>
-    <panel_attributes>stm Höhenmessung</panel_attributes>
+    <panel_attributes>stm Height Messurement</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>364</x>
-      <y>260</y>
+      <x>520</x>
+      <y>351</y>
       <w>546</w>
       <h>52</h>
     </coordinates>
@@ -122,8 +122,8 @@ EVNT_SEN_LB_HE_CLR</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>884</x>
-      <y>130</y>
+      <x>1040</x>
+      <y>221</y>
       <w>338</w>
       <h>104</h>
     </coordinates>
@@ -131,7 +131,7 @@ EVNT_SEN_LB_HE_CLR</panel_attributes>
 --
 entry: determine_if_flipped()
 do: if is_flipped == true then 
-      send_Event(EVNT_WRPC_FLP)
+      send(EVNT_WRPC_FLP)
 
 
 
@@ -142,21 +142,21 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>689</x>
-      <y>221</y>
+      <x>845</x>
+      <y>312</y>
       <w>533</w>
       <h>325</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_HE_SENSOR_HE [sec mode]
-/set_heigth_2(heigth)</panel_attributes>
+/heigth_2 = heigth</panel_attributes>
     <additional_attributes>10.0;220.0;390.0;220.0;390.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>364</x>
-      <y>182</y>
+      <x>520</x>
+      <y>273</y>
       <w>546</w>
       <h>52</h>
     </coordinates>
