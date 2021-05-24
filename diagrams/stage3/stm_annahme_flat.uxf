@@ -290,7 +290,7 @@ valign=top
     </coordinates>
     <panel_attributes>Idle
 state
--
+--
 entry: send(EVNT_ACT_BELT_STOP)
 
 
@@ -342,7 +342,7 @@ EVNT_ESTOP_ON
     <coordinates>
       <x>198</x>
       <y>440</y>
-      <w>297</w>
+      <w>308</w>
       <h>165</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -370,7 +370,7 @@ enter_workpiece(new Workpiece())</panel_attributes>
       <h>770</h>
     </coordinates>
     <panel_attributes>Operation
--
+--
 /exit: send(EVNT_ACT_BELT_STOP)
 
 
