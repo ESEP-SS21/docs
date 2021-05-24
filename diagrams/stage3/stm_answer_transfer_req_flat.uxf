@@ -5,7 +5,7 @@
     <id>UMLSpecialState</id>
     <coordinates>
       <x>580</x>
-      <y>330</y>
+      <y>100</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -16,7 +16,7 @@
     <id>Relation</id>
     <coordinates>
       <x>580</x>
-      <y>340</y>
+      <y>110</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -27,7 +27,7 @@
     <id>UMLState</id>
     <coordinates>
       <x>160</x>
-      <y>650</y>
+      <y>420</y>
       <w>200</w>
       <h>110</h>
     </coordinates>
@@ -42,7 +42,7 @@ valign=top</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>350</x>
-      <y>680</y>
+      <y>450</y>
       <w>430</w>
       <h>40</h>
     </coordinates>
@@ -54,7 +54,7 @@ WRPC_TRNS_RQ [Sec Mode &amp;&amp; _start_height_sec.size() &gt; 0]</panel_attrib
     <id>Relation</id>
     <coordinates>
       <x>350</x>
-      <y>650</y>
+      <y>420</y>
       <w>430</w>
       <h>40</h>
     </coordinates>
@@ -65,22 +65,22 @@ EVNT_SEN_LB_HE_BLCK</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>650</y>
-      <w>400</w>
-      <h>70</h>
+      <x>980</x>
+      <y>440</y>
+      <w>360</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 WRPC_TRNS_RQ 
 [Sec Mode &amp;&amp; _start_height_sec.size() == 0]
 / send(EVNT_ACK)</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0;100.0;50.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;60.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
       <x>540</x>
-      <y>410</y>
+      <y>180</y>
       <w>190</w>
       <h>90</h>
     </coordinates>
@@ -91,7 +91,7 @@ WRPC_TRNS_RQ
     <id>Relation</id>
     <coordinates>
       <x>250</x>
-      <y>490</y>
+      <y>260</y>
       <w>350</w>
       <h>180</h>
     </coordinates>
@@ -100,23 +100,11 @@ EVNT_SEN_CTRL_T_STP_PRS_SRT</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;50.0;330.0;50.0;330.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>720</x>
-      <y>440</y>
-      <w>460</w>
-      <h>230</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_SEN_CTRL_T_STP_PRS_SRT</panel_attributes>
-    <additional_attributes>200.0;210.0;200.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLState</id>
     <coordinates>
       <x>760</x>
-      <y>650</y>
-      <w>190</w>
+      <y>420</y>
+      <w>230</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>Waiting
@@ -130,7 +118,7 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>630</x>
-      <y>490</y>
+      <y>260</y>
       <w>260</w>
       <h>180</h>
     </coordinates>
@@ -143,7 +131,7 @@ EVNT_SEN_CTRL_T_STR_PRS_SRT
     <id>UMLState</id>
     <coordinates>
       <x>210</x>
-      <y>420</y>
+      <y>190</y>
       <w>90</w>
       <h>70</h>
     </coordinates>
@@ -154,7 +142,7 @@ EVNT_SEN_CTRL_T_STR_PRS_SRT
     <id>Relation</id>
     <coordinates>
       <x>290</x>
-      <y>410</y>
+      <y>180</y>
       <w>270</w>
       <h>50</h>
     </coordinates>
@@ -167,7 +155,7 @@ T_STR_PRS_LNG</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>290</x>
-      <y>450</y>
+      <y>220</y>
       <w>270</w>
       <h>50</h>
     </coordinates>
@@ -180,7 +168,7 @@ or when service aborted</panel_attributes>
     <id>UMLState</id>
     <coordinates>
       <x>480</x>
-      <y>840</y>
+      <y>610</y>
       <w>230</w>
       <h>70</h>
     </coordinates>
@@ -195,7 +183,7 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>250</x>
-      <y>750</y>
+      <y>520</y>
       <w>250</w>
       <h>160</h>
     </coordinates>
@@ -208,7 +196,7 @@ EVNT_ERR_GONE
     <id>Relation</id>
     <coordinates>
       <x>700</x>
-      <y>750</y>
+      <y>520</y>
       <w>210</w>
       <h>160</h>
     </coordinates>
@@ -221,32 +209,32 @@ EVNT_ERR_GONE
     <id>Relation</id>
     <coordinates>
       <x>700</x>
-      <y>750</y>
+      <y>520</y>
       <w>160</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE</panel_attributes>
+EVNT_ERR</panel_attributes>
     <additional_attributes>140.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>350</x>
-      <y>740</y>
+      <y>510</y>
       <w>150</w>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE</panel_attributes>
+EVNT_ERR</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
       <x>140</x>
-      <y>290</y>
-      <w>1220</w>
+      <y>70</y>
+      <w>1200</w>
       <h>640</h>
     </coordinates>
     <panel_attributes>Operation
@@ -260,7 +248,7 @@ valign=top
     <id>UMLState</id>
     <coordinates>
       <x>530</x>
-      <y>1050</y>
+      <y>820</y>
       <w>440</w>
       <h>70</h>
     </coordinates>
@@ -271,33 +259,33 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>560</x>
-      <y>920</y>
+      <y>700</y>
       <w>270</w>
-      <h>150</h>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_CTRL_T_RST_PRS_SRT
 [count == 0]</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>910</x>
-      <y>920</y>
+      <y>700</y>
       <w>150</w>
-      <h>150</h>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ESTOP_ON
 /count = 1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>540</x>
-      <y>1110</y>
+      <y>880</y>
       <w>150</w>
       <h>80</h>
     </coordinates>
@@ -310,7 +298,7 @@ EVNT_ESTOP_OFF
     <id>Relation</id>
     <coordinates>
       <x>810</x>
-      <y>1110</y>
+      <y>880</y>
       <w>140</w>
       <h>80</h>
     </coordinates>
@@ -322,14 +310,38 @@ EVNT_ESTOP_ON
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>490</y>
-      <w>350</w>
+      <x>270</x>
+      <y>260</y>
+      <w>340</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_CTRL_T_STR_PRS_SRT
 [curr_state==WFSpace]</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;100.0;330.0;100.0;330.0;10.0</additional_attributes>
+    <additional_attributes>320.0;10.0;320.0;130.0;10.0;130.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>240</y>
+      <w>350</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL
+_T_STP_PRS_SRT</panel_attributes>
+    <additional_attributes>210.0;180.0;210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>110</x>
+      <y>30</y>
+      <w>1260</w>
+      <h>930</h>
+    </coordinates>
+    <panel_attributes>stm AnswerTransferReqFlat</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
