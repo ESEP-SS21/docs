@@ -25,7 +25,7 @@ visualisiert.
 
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage2/cd_hal}}
-    \caption{}
+    \caption{Klassendiagramm HAL}
     \label{fig:cd-hal}
 \end{figure}
 
@@ -34,6 +34,13 @@ visualisiert.
     \caption{}
     \label{fig:cd-hal-sens}
 \end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/cd_dispatcher}}
+    \caption{Klassendiagramm Dispatcher}
+    \label{fig:cd-dispatcher}
+\end{figure}
+
 
 \section{Datenmodellierung}\label{sec:datenmodellierung}
 
@@ -45,6 +52,52 @@ visualisiert.
 
 
 \section{Verhaltensmodellierung}\label{sec:verhaltensmodellierung}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[height=0.93\textheight]{../out/diagrams/stage3/stm_top_level}}
+    \caption{Der Einstiegspunkt einer \gls{anlage}.
+    Verwaltet die Betriebszustände und Sub-State Machines}
+    \label{fig:stm_top_level}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_error}}
+    \caption{Umgang mit Fehlern und Anzeige derer mithilfe der \gls{ampel}}
+    \label{fig:stm_error}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_werkstueck_annahme}}
+    \caption{Die Annahme eines \glspl{workpiece}s am Anfang der \gls{anlage}}
+    \label{fig:stm_werkstueck_annahme}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_hoehe_messen}}
+    \caption{Messung der Höhe eines \glspl{workpiece}s}
+    \label{fig:stm_hoehe_messen}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_werkstueck_sortieren}}
+    \caption{Sortierung von \glspl{workpiece}n}
+    \label{fig:stm_werkstueck_sortieren}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_werkstueck_transfer}}
+    \caption{Transfer eines \glspl{workpiece}s an die nächste \gls{anlage}}
+    \label{fig:stm_werkstueck_transfer}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.5]{../out/diagrams/stage3/stm_werkstueck_transfer_req_antworten}
+    \caption{Antworten eines Transfer-Request der vorherigen \gls{anlage}.
+    Ein Transfer-Request wird in stm Workpiece Transfer (Abbildung~\ref{fig:stm_werkstueck_transfer}) gesendet}
+    \label{fig:stm_werkstueck_transfer_req_antworten}
+\end{figure}
+
 
 %% Ihre Software muss zur Bearbeitung der Aufgaben ein Verhalten aufweisen.
 %% Überlegen Sie sich dieses Verhalten auf Basis der Anforderungen und modellieren
