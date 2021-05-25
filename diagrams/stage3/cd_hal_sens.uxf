@@ -4,9 +4,9 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1452</x>
+      <x>1464</x>
       <y>672</y>
-      <w>120</w>
+      <w>144</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
@@ -21,9 +21,9 @@ CPRESET
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>264</x>
-      <y>708</y>
-      <w>132</w>
+      <x>240</x>
+      <y>672</y>
+      <w>144</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
@@ -47,7 +47,7 @@ LBEND
     </coordinates>
     <panel_attributes>MetalSensor
 --
--_old_state: int
+- _old_state: int
 --
 + &lt;&lt;Create&gt;&gt; MetalSensor(GPIOWrapper)
 + was_metal(): bool</panel_attributes>
@@ -63,7 +63,7 @@ LBEND
     </coordinates>
     <panel_attributes>EStop
 --
--_old_state: int
+- _old_state: int
 --
 + &lt;&lt;Create&gt;&gt; EStop(GPIOWrapper)
 + was_pressed(void): bool
@@ -117,7 +117,7 @@ lw=2
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
+      <x>156</x>
       <y>408</y>
       <w>336</w>
       <h>216</h>
@@ -130,9 +130,9 @@ lw=2
 - _old_state_ramp: int
 - _old_state_end: int
 --
-+&lt;&lt;Create&gt;&gt; LightBarriers(GPIOWrapper)
-+was_blocked(LBType): bool
-+was_cleared(LBType): bool
++ &lt;&lt;Create&gt;&gt; LightBarriers(GPIOWrapper)
++ was_blocked(LBType): bool
++ was_cleared(LBType): bool
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -159,7 +159,7 @@ lw=2
 + set_debounce_time(int bank, int time_ms) 
 + enable_interrupt_falling(int bank, int pin)
 + enable_interrupt_rising(int bank, int pin)
-+ reset_interrupt():
++ reset_interrupt()
 
 </panel_attributes>
     <additional_attributes/>
@@ -235,14 +235,14 @@ m1=_e_stop</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
+      <x>480</x>
       <y>468</y>
-      <w>156</w>
+      <w>180</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 _light_barriers</panel_attributes>
-    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -259,38 +259,38 @@ m1=_metal_sensor</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
+      <x>288</x>
       <y>612</y>
       <w>84</w>
-      <h>120</h>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1392</x>
       <y>672</y>
-      <w>84</w>
+      <w>96</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes>
-    <additional_attributes>50.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
+      <x>300</x>
       <y>264</y>
-      <w>396</w>
+      <w>420</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>10.0;120.0;10.0;10.0;310.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;30.0;10.0;330.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -307,33 +307,33 @@ m1=_gpio</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>156</x>
+      <x>120</x>
       <y>156</y>
-      <w>564</w>
+      <w>600</w>
       <h>780</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>390.0;550.0;390.0;630.0;10.0;630.0;10.0;10.0;450.0;10.0</additional_attributes>
+    <additional_attributes>420.0;550.0;420.0;630.0;10.0;630.0;10.0;10.0;480.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1092</x>
       <y>156</y>
-      <w>516</w>
+      <w>552</w>
       <h>780</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>90.0;580.0;90.0;630.0;410.0;630.0;410.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>90.0;580.0;90.0;630.0;440.0;630.0;440.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>144</x>
+      <x>120</x>
       <y>0</y>
-      <w>1464</w>
+      <w>1524</w>
       <h>936</h>
     </coordinates>
     <panel_attributes>cd HAL_sens</panel_attributes>
