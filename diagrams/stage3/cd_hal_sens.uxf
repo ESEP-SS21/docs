@@ -290,7 +290,7 @@ m1=_metal_sensor</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>10.0;120.0;30.0;10.0;330.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;330.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
