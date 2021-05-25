@@ -1,43 +1,46 @@
-\begin{usecase}{09}{Kalibrierung}{hoch}
+\begin{usecase}{13}{Durchführung Selbsttests}{mittel}
     \addTextCollum{Verwandte Requirements}{
-        \refreq{11}, \refreq{15}, \refreq{40}
+        \refreq{40}, \refreq{15}, \refreq{11}
     }
     \addTextCollum{Description}{
         Dieser Usecase betreibt das Durchführen des Servicemode.
         Dieser kann durch das \gls{longpress} des \gls{t_start} von beiden \glspl{anlage} aus aktiviert werden.
         Im Servicemode werden die Höhenmesser kalibriert sowie die korrekte Funktion der \gls{sortierer} geprüft.
+        Die detaillierte Durchführung wird im Kapitel "Verhaltensmodellierung" beschrieben.
     }
     \addTextCollum{Actors}{
-        \gls{ampel}, \gls{he_sensor}, \gls{ctrlp}, \gls{sortierer}, \gls{fts2}
+        \gls{ampel}, \gls{ctrlp}, \gls{fts2}, \gls{belt}, \gls{sortierer}, \gls{t_start}, \gls{t_reset}
     }
-    \addCollum{Preconditions}{
+    \addCollum{Precondition}{
         \item \gls{system} ist im \gls{ruhe-zst}
     }
     \addCollum{Triggers}{
-        \item \gls{longpress} von \gls{t_start}
-        \item Mitteilung von \gls{fts2} über Betreten des Service
+        \item[1a)] \gls{t_start} \(\geq 3\) sek gedrückt 
     }
     \addCollum{Mainflow}{
-        \item[1)] Mitteilung an \gls{fts2} über Betreten des Service senden
-        \item[2)] \gls{ampelled} grün blinken lassen
-        \item[3)] Messung bei \gls{he_sensor} anfragen
-        \item[4)] Auf Rückmeldung warten
-        \item[5)] Bestimmten Wert als Nullwert im \gls{he_sensor} eintragen
-        \item[6)] \gls{sortierer} aktivieren
-        \item[7)] Auf Zustandsänderungssignal des \gls{sortierer}s warten \textbullet
-        \item[8)] Sorting Mechanism deaktivieren
-        \item[9)] Auf Zustandsänderungssignal des \gls{sortierer}s warten \textbullet
-        \item[10)] In \gls{ruhe-zst} wechseln
+        \item[2)] \gls{ampel} auf schnell grün blinken schalten
+        \item[3)] \gls{he_sensor} kalibrieren
+        \item[4)] \gls{belt} schnell vorwärts für 1 sek
+        \item[5)] \gls{belt} schnell Rückwärts für 1 sek
+        \item[6)] \gls{belt} stopp
+        \item[7)] LED in \gls{t_reset} aktivieren
+        \item[8)] Warten auf \gls{t_reset} gedrückt
+        \item[9)] LED in \gls{t_reset} deaktivieren] 
+        \item[10)] \gls{sortierer} aktivieren
+        \item[11)] \gls{sortierer} deaktivieren
+        \item[12)] LED in \gls{t_reset} aktivieren
+        \item[13)] Warten auf \gls{t_reset} gedrückt
+        \item[14)] LED in \gls{t_reset} deaktivieren
+        \item[15)] \gls{ampel} auf gelb leuchten schalten
+        \item[16)] Wechsel in Ruhezustand
     }
-    \addCollum{Exceptional flow}{
-        \item at step 7 or 9 of Mainflow
-        \item[a)] Timeout beim Empfang des Signals
-        \begin{itemize}
-            \item[a1)] Fehler auslösen
-        \end{itemize}
-    }
-    \addCollum{Postconditions}{
+    \addCollum{Postcondition}{
         \item \gls{system} ist im \gls{ruhe-zst}
-        \item \gls{he_sensor} wurde kalibriert
+        \item \gls{he_sensor} ist kalibriert
+    }
+    \addCollum{Excepional Flow}{
+        \item[1)] \gls{t_start} \(\geq 3\) sek gedrückt
+        \item[2)] \gls{ampel} auf gelb leuchten schalten
+        \item[3)] Wechsel in Ruhezustand
     }
 \end{usecase}

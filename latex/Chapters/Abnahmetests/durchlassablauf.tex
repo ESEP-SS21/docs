@@ -6,11 +6,11 @@
     \refreq{20},
     \refreq{24},
     \refreq{26},
-    \refreq{31}
+\refreq{31}
 }{
-    \item Das System befindet sich im Idle
+    \item Das System befindet sich im Betriebszustand
 }
-\label{abntest-fehlerumgang}
+\label{abntest-durchlassablauf}
 
 \begin{anmerkungen}
     \item Fehler erzeugen ist in diesem Abnahmetest wie folgt definiert:
@@ -22,8 +22,8 @@
     \end{enumerate}
 \end{anmerkungen}
 
-\begin{ablauf}{Anstehened quittiert}
-    \item \label{itm:1err} Fehler erzeugen
+\begin{ablauf}{Werkstückt-Transport}
+    \item  Drei Werkstücke im Abstand von mindestens 2 Sekunden am Anfang auf das Förderband legen
     \item\label{itm:1quitt} \gls{t_reset} drücken
     \item\label{itm:1ok} Die \gls{rampe} von \gls{anlage} 2 leeren
 \end{ablauf}
