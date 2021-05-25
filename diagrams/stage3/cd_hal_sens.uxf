@@ -21,7 +21,7 @@ CPRESET
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
+      <x>216</x>
       <y>672</y>
       <w>144</w>
       <h>168</h>
@@ -117,9 +117,9 @@ lw=2
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>156</x>
+      <x>132</x>
       <y>408</y>
-      <w>336</w>
+      <w>372</w>
       <h>216</h>
     </coordinates>
     <panel_attributes>LightBarriers
@@ -235,14 +235,14 @@ m1=_e_stop</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
+      <x>492</x>
       <y>468</y>
-      <w>180</w>
+      <w>168</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 _light_barriers</panel_attributes>
-    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -259,7 +259,7 @@ m1=_metal_sensor</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>288</x>
+      <x>264</x>
       <y>612</y>
       <w>84</w>
       <h>84</h>
@@ -283,14 +283,14 @@ m1=_metal_sensor</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>276</x>
       <y>264</y>
-      <w>420</w>
+      <w>444</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>10.0;120.0;10.0;10.0;330.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;350.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -307,14 +307,14 @@ m1=_gpio</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
+      <x>96</x>
       <y>156</y>
-      <w>600</w>
+      <w>624</w>
       <h>780</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>420.0;550.0;420.0;630.0;10.0;630.0;10.0;10.0;480.0;10.0</additional_attributes>
+    <additional_attributes>440.0;550.0;440.0;630.0;10.0;630.0;10.0;10.0;500.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -331,9 +331,9 @@ m1=_gpio</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>120</x>
+      <x>96</x>
       <y>0</y>
-      <w>1524</w>
+      <w>1548</w>
       <h>936</h>
     </coordinates>
     <panel_attributes>cd HAL_sens</panel_attributes>
