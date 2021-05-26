@@ -188,7 +188,7 @@ valign=top
       <h>160</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE
+EVNT_ERR_GONE_ALL
 [curr_state==WFSpace]</panel_attributes>
     <additional_attributes>230.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
   </element>
@@ -201,7 +201,7 @@ EVNT_ERR_GONE
       <h>160</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE
+EVNT_ERR_GONE_ALL
 [curr_state==Waiting]</panel_attributes>
     <additional_attributes>10.0;130.0;190.0;130.0;190.0;10.0</additional_attributes>
   </element>

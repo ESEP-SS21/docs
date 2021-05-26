@@ -411,14 +411,14 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1152</x>
+      <x>1143</x>
       <y>684</y>
-      <w>306</w>
+      <w>324</w>
       <h>216</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE[current_state == NoDiscard]</panel_attributes>
-    <additional_attributes>10.0;220.0;320.0;220.0;320.0;10.0</additional_attributes>
+EVNT_ERR_GONE_ALL[current_state == NoDiscard]</panel_attributes>
+    <additional_attributes>20.0;220.0;330.0;220.0;330.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -429,7 +429,7 @@ EVNT_ERR_GONE[current_state == NoDiscard]</panel_attributes>
       <h>162</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE[current_state == RampFull]</panel_attributes>
+EVNT_ERR_GONE_ALL[current_state == RampFull]</panel_attributes>
     <additional_attributes>350.0;160.0;10.0;160.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -437,11 +437,11 @@ EVNT_ERR_GONE[current_state == RampFull]</panel_attributes>
     <coordinates>
       <x>612</x>
       <y>432</y>
-      <w>432</w>
+      <w>459</w>
       <h>378</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE[current_state == WFWrpc]</panel_attributes>
+EVNT_ERR_GONE_ALL[current_state == WFWrpc]</panel_attributes>
     <additional_attributes>420.0;400.0;420.0;340.0;170.0;340.0;170.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -453,7 +453,7 @@ EVNT_ERR_GONE[current_state == WFWrpc]</panel_attributes>
       <h>351</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE[current_state == Discard]</panel_attributes>
+EVNT_ERR_GONE_ALL[current_state == Discard]</panel_attributes>
     <additional_attributes>10.0;370.0;10.0;340.0;600.0;340.0;600.0;10.0;380.0;10.0</additional_attributes>
   </element>
   <element>
