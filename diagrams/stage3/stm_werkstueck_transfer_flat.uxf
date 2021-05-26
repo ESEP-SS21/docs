@@ -303,7 +303,7 @@ valign=top
       <h>153</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE
+EVNT_ERR_GONE_ALL
 [curr_state==WFWrpcToLeave]
 /send(EVNT_ACT_BELT_FWD)</panel_attributes>
     <additional_attributes>240.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
@@ -317,7 +317,7 @@ EVNT_ERR_GONE
       <h>144</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE
+EVNT_ERR_GONE_ALL
 [curr_state==Blocked]</panel_attributes>
     <additional_attributes>10.0;130.0;160.0;130.0;160.0;10.0</additional_attributes>
   </element>
@@ -366,7 +366,7 @@ EVNT_ERR</panel_attributes>
       <h>477</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR_GONE
+EVNT_ERR_GONE_ALL
 [curr_state==Waiting]</panel_attributes>
     <additional_attributes>450.0;510.0;10.0;510.0;10.0;210.0;230.0;210.0;230.0;10.0</additional_attributes>
   </element>
@@ -375,10 +375,12 @@ EVNT_ERR_GONE
     <coordinates>
       <x>1179</x>
       <y>441</y>
-      <w>324</w>
+      <w>459</w>
       <h>495</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE_ALL
+[curr_state==NBlocked]</panel_attributes>
     <additional_attributes>10.0;530.0;340.0;530.0;340.0;10.0;170.0;10.0</additional_attributes>
   </element>
   <element>
@@ -386,7 +388,7 @@ EVNT_ERR_GONE
     <coordinates>
       <x>342</x>
       <y>99</y>
-      <w>1188</w>
+      <w>1305</w>
       <h>900</h>
     </coordinates>
     <panel_attributes>Operation
@@ -486,7 +488,7 @@ EVNT_ESTOP_ON
     <coordinates>
       <x>315</x>
       <y>0</y>
-      <w>1242</w>
+      <w>1359</w>
       <h>1278</h>
     </coordinates>
     <panel_attributes>stm Transfer Flat</panel_attributes>
