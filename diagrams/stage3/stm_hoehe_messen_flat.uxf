@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>630</x>
+      <y>720</y>
+      <w>390</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Waiting for heigth
+--
+entry: send(EVNT_SEN_HEIGHT_REQ)
+/entry: curr_state = WFHeight
+
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>620</x>
+      <y>460</y>
+      <w>190</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Waiting for workpiece
+--
+/entry: curr_state = WFWrpc
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>560</y>
+      <w>370</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_BLCK/start_height_sec.transfer()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>610</y>
+      <w>300</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_HE_SENSOR_HE [prim mode]
+/heigth_1 = heigth</panel_attributes>
+    <additional_attributes>280.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>210</x>
+      <y>520</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>workpiece primary
+--
+/entry: curr_state = WPrim
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>520</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_CLR</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1110</x>
+      <y>500</y>
+      <w>260</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>workpiece secondary
+--
+/entry: curr_state = WSec
+entry: determine_if_flipped()
+
+
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>610</y>
+      <w>300</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_HE_SENSOR_HE [sec mode]
+/heigth_2 = heigth</panel_attributes>
+    <additional_attributes>10.0;140.0;280.0;140.0;280.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>520</y>
+      <w>330</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_CLR
+/if is_flipped == true then 
+      send(EVNT_WRPC_FLP)
+</panel_attributes>
+    <additional_attributes>310.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>670</x>
+      <y>260</y>
+      <w>100</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Idle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>380</x>
+      <y>260</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Service</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>260</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_
+T_STR_PRS_LNG</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>300</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+when service complete
+or when service aborted</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>340</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==WFWrpc]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>710</x>
+      <y>220</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>220</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>340</y>
+      <w>530</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==WSec]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;510.0;30.0;510.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>340</y>
+      <w>430</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==WPrim]</panel_attributes>
+    <additional_attributes>410.0;10.0;410.0;30.0;10.0;30.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>280</y>
+      <w>950</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==WPrim]</panel_attributes>
+    <additional_attributes>10.0;10.0;690.0;10.0;690.0;550.0;230.0;550.0;230.0;500.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>440</x>
+      <y>880</y>
+      <w>650</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Error
+--
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>770</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>610</y>
+      <w>330</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>240.0;10.0;240.0;290.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>610</y>
+      <w>230</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0;210.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>480</y>
+      <w>450</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>430.0;10.0;10.0;10.0;10.0;440.0;250.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>770</y>
+      <w>180</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==WFHeight]</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>610</y>
+      <w>260</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==WFPrim]</panel_attributes>
+    <additional_attributes>240.0;270.0;240.0;230.0;10.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>610</y>
+      <w>290</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==WSec]</panel_attributes>
+    <additional_attributes>10.0;320.0;270.0;320.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>430</y>
+      <w>820</w>
+      <h>550</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==WFHeight]</panel_attributes>
+    <additional_attributes>340.0;530.0;650.0;530.0;650.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>170</x>
+      <y>170</y>
+      <w>1560</w>
+      <h>830</h>
+    </coordinates>
+    <panel_attributes>Operation
+--
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>770</x>
+      <y>1120</y>
+      <w>440</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>EStop</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>990</y>
+      <w>270</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_RST_PRS_SRT
+[count == 0]</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>990</y>
+      <w>150</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON
+/count = 1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>1210</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_OFF
+/count --</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;50.0;110.0;50.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>1210</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON
+/count ++</panel_attributes>
+    <additional_attributes>30.0;10.0;30.0;50.0;110.0;50.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>930</x>
+      <y>90</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>90</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>140</x>
+      <y>60</y>
+      <w>1620</w>
+      <h>1240</h>
+    </coordinates>
+    <panel_attributes>stm MeasureHeightFlat</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
