@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>828</x>
+      <y>432</y>
+      <w>270</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_EN_BLCK [Prim Mode]</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>423</x>
+      <y>414</y>
+      <w>261</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_EN_BLCK [Sec Mode]
+/print_wrpc_details_on_console</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;10.0;10.0;60.0;270.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>927</x>
+      <y>720</y>
+      <w>243</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ACK
+/send(EVNT_ACT_BELT_FWD);
+datamodel: blocked = false;</panel_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1152</x>
+      <y>684</y>
+      <w>252</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>blocked
+--
+/entry: current_state=Blocked
+
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1080</x>
+      <y>405</y>
+      <w>252</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>not blocked
+--
+/entry: current_state=NBlocked
+
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1269</x>
+      <y>459</y>
+      <w>207</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+after 50ms
+/send(EVNT_ACT_BELT_STP);
+datamodel: blocked = true;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>702</x>
+      <y>693</y>
+      <w>234</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>waiting for workpiece to leave
+--
+/entry: current_state=WFWrpcToLeave
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>477</y>
+      <w>225</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_EN_CLR
+/datamodel: remove last workpiece;
+if(warning){
+    send(EVNT_WRN_GONE);
+    warning = false;
+}</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>549</x>
+      <y>711</y>
+      <w>171</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+after 2s
+/send(EVNT_WRN)
+warning = true</panel_attributes>
+    <additional_attributes>170.0;60.0;10.0;60.0;10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>891</x>
+      <y>459</y>
+      <w>288</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ACK</panel_attributes>
+    <additional_attributes>300.0;10.0;300.0;190.0;10.0;190.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>666</x>
+      <y>405</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Waiting
+--
+/entry: current_state=Waiting
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>990</x>
+      <y>234</y>
+      <w>81</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Idle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1296</x>
+      <y>234</y>
+      <w>81</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Service</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1062</x>
+      <y>225</y>
+      <w>252</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_
+T_STR_PRS_LNG</panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1062</x>
+      <y>279</y>
+      <w>252</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+when service complete
+or when service aborted</panel_attributes>
+    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>702</x>
+      <y>270</y>
+      <w>306</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==Waiting]</panel_attributes>
+    <additional_attributes>320.0;20.0;10.0;20.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1017</x>
+      <y>297</y>
+      <w>243</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==NBlocked]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0;70.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>297</y>
+      <w>441</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==Blocked]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;470.0;40.0;470.0;480.0;400.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>243</y>
+      <w>639</w>
+      <h>486</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+[curr_state==WFWrpcToLeave]</panel_attributes>
+    <additional_attributes>690.0;10.0;10.0;10.0;10.0;520.0;370.0;520.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1017</x>
+      <y>153</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1017</x>
+      <y>153</y>
+      <w>27</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>918</x>
+      <y>873</y>
+      <w>270</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Error
+--
+/entry: send(EVNT_ACT_BELT_STOP)
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>702</x>
+      <y>774</y>
+      <w>234</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==WFWrpcToLeave]
+/send(EVNT_ACT_BELT_FWD)</panel_attributes>
+    <additional_attributes>240.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1179</x>
+      <y>774</y>
+      <w>162</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==Blocked]</panel_attributes>
+    <additional_attributes>10.0;130.0;160.0;130.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>774</y>
+      <w>135</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1071</x>
+      <y>774</y>
+      <w>117</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>486</x>
+      <y>477</y>
+      <w>450</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>230.0;10.0;230.0;180.0;10.0;180.0;10.0;530.0;480.0;530.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>477</y>
+      <w>423</w>
+      <h>477</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE
+[curr_state==Waiting]</panel_attributes>
+    <additional_attributes>450.0;510.0;10.0;510.0;10.0;210.0;230.0;210.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1179</x>
+      <y>441</y>
+      <w>324</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;530.0;340.0;530.0;340.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>342</x>
+      <y>99</y>
+      <w>1188</w>
+      <h>900</h>
+    </coordinates>
+    <panel_attributes>Operation
+--
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>918</x>
+      <y>27</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>27</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>702</x>
+      <y>1107</y>
+      <w>423</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>EStop</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1053</x>
+      <y>990</y>
+      <w>135</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON
+/count = 1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>990</y>
+      <w>243</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_RST_PRS_SRT
+[count == 0]</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>1188</y>
+      <w>126</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_OFF
+/count --</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;120.0;60.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>963</x>
+      <y>1188</y>
+      <w>126</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON
+/count ++</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;120.0;60.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>315</x>
+      <y>0</y>
+      <w>1242</w>
+      <h>1278</h>
+    </coordinates>
+    <panel_attributes>stm Transfer Flat</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
