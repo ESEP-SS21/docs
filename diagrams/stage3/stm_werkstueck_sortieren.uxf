@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>13</zoom_level>
+  <zoom_level>12</zoom_level>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>52</x>
-      <y>390</y>
-      <w>1742</w>
-      <h>624</h>
+      <x>144</x>
+      <y>300</y>
+      <w>1608</w>
+      <h>600</h>
     </coordinates>
     <panel_attributes>stm Sort Workpieces</panel_attributes>
     <additional_attributes/>
@@ -15,24 +15,26 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>130</x>
-      <y>494</y>
-      <w>273</w>
-      <h>78</h>
+      <x>216</x>
+      <y>396</y>
+      <w>252</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>waiting for
 wrpc
 --
-/entry: lb_already_cleared = 0</panel_attributes>
+/entry
+    lb_already_cleared = 0
+valign=top</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>572</x>
-      <y>611</y>
-      <w>156</w>
-      <h>130</h>
+      <x>624</x>
+      <y>528</y>
+      <w>144</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>waiting for 
 ramp to clear</panel_attributes>
@@ -41,10 +43,10 @@ ramp to clear</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>325</x>
-      <y>559</y>
-      <w>273</w>
-      <h>143</h>
+      <x>396</x>
+      <y>480</y>
+      <w>252</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_RA_CLR</panel_attributes>
@@ -53,10 +55,10 @@ EVNT_SEN_LB_RA_CLR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>507</x>
-      <y>728</y>
-      <w>221</w>
-      <h>65</h>
+      <x>564</x>
+      <y>636</y>
+      <w>204</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 200ms</panel_attributes>
@@ -65,10 +67,10 @@ after 200ms</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>130</x>
-      <y>728</y>
-      <w>390</w>
-      <h>104</h>
+      <x>216</x>
+      <y>636</y>
+      <w>360</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>ramp full
 --
@@ -81,10 +83,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>299</x>
-      <y>559</y>
-      <w>247</w>
-      <h>195</h>
+      <x>372</x>
+      <y>480</y>
+      <w>228</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=EVNT_SEN_LB_RA_CLR </panel_attributes>
@@ -93,10 +95,10 @@ m1=EVNT_SEN_LB_RA_CLR </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>247</x>
-      <y>819</y>
-      <w>351</w>
-      <h>169</h>
+      <x>324</x>
+      <y>720</y>
+      <w>324</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -110,10 +112,10 @@ datamodel:
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>247</x>
-      <y>416</y>
-      <w>39</w>
-      <h>104</h>
+      <x>360</x>
+      <y>324</y>
+      <w>36</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -121,10 +123,10 @@ datamodel:
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>247</x>
-      <y>403</y>
-      <w>26</w>
-      <h>26</h>
+      <x>360</x>
+      <y>312</y>
+      <w>24</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -132,10 +134,10 @@ datamodel:
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1170</x>
-      <y>442</y>
-      <w>598</w>
-      <h>390</h>
+      <x>1176</x>
+      <y>372</y>
+      <w>552</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>waiting for switch to clear
 --
@@ -148,10 +150,10 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1183</x>
-      <y>598</y>
-      <w>351</w>
-      <h>91</h>
+      <x>1188</x>
+      <y>516</y>
+      <w>324</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>discard
 --
@@ -162,10 +164,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>715</x>
-      <y>624</y>
-      <w>494</w>
-      <h>78</h>
+      <x>756</x>
+      <y>540</y>
+      <w>456</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
@@ -176,10 +178,10 @@ EVNT_SEN_LB_SW_CLR
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>676</x>
-      <y>845</y>
-      <w>26</w>
-      <h>26</h>
+      <x>720</x>
+      <y>744</y>
+      <w>24</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>type=history_shallow</panel_attributes>
     <additional_attributes/>
@@ -187,10 +189,10 @@ EVNT_SEN_LB_SW_CLR
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>494</y>
-      <w>806</w>
-      <h>78</h>
+      <x>456</x>
+      <y>420</y>
+      <w>744</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -202,10 +204,10 @@ r1=EVNT_SEN_LB_SW_BLCK[datamodel: is_in_sorting_order(height_switch_sec.front())
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>533</y>
-      <w>871</w>
-      <h>91</h>
+      <x>456</x>
+      <y>456</y>
+      <w>804</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=EVNT_SEN_LB_SW_BLCK[datamodel: !(is_in_sorting_order(height_switch_sec.front()))]</panel_attributes>
@@ -214,10 +216,10 @@ m1=EVNT_SEN_LB_SW_BLCK[datamodel: !(is_in_sorting_order(height_switch_sec.front(
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>507</x>
-      <y>767</y>
-      <w>689</w>
-      <h>65</h>
+      <x>564</x>
+      <y>672</y>
+      <w>636</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -228,10 +230,10 @@ m2=[Prim Mode]</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1183</x>
-      <y>702</y>
-      <w>234</w>
-      <h>78</h>
+      <x>1188</x>
+      <y>612</y>
+      <w>216</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>wrpc stuck
 --
@@ -245,10 +247,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1404</x>
-      <y>676</y>
-      <w>195</w>
-      <h>91</h>
+      <x>1392</x>
+      <y>588</y>
+      <w>180</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 3000ms</panel_attributes>
@@ -257,10 +259,10 @@ after 3000ms</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>715</x>
-      <y>689</y>
-      <w>494</w>
-      <h>65</h>
+      <x>756</x>
+      <y>600</y>
+      <w>456</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
@@ -270,10 +272,10 @@ EVNT_SEN_LB_SW_CLR
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>117</x>
-      <y>442</y>
-      <w>676</w>
-      <h>546</h>
+      <x>204</x>
+      <y>348</y>
+      <w>624</w>
+      <h>528</h>
     </coordinates>
     <panel_attributes>operating
 --
@@ -286,10 +288,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>689</x>
-      <y>819</y>
-      <w>741</w>
-      <h>65</h>
+      <x>732</x>
+      <y>720</y>
+      <w>684</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR</panel_attributes>
@@ -298,10 +300,10 @@ EVNT_SEN_LB_SW_CLR</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1599</x>
-      <y>650</y>
-      <w>26</w>
-      <h>26</h>
+      <x>1572</x>
+      <y>564</y>
+      <w>24</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -309,10 +311,10 @@ EVNT_SEN_LB_SW_CLR</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1300</x>
-      <y>507</y>
-      <w>377</w>
-      <h>78</h>
+      <x>1296</x>
+      <y>432</y>
+      <w>348</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>no discard
 --
@@ -323,10 +325,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1599</x>
-      <y>572</y>
-      <w>39</w>
-      <h>104</h>
+      <x>1572</x>
+      <y>492</y>
+      <w>36</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
@@ -334,10 +336,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>351</x>
-      <y>559</y>
-      <w>247</w>
-      <h>104</h>
+      <x>420</x>
+      <y>480</y>
+      <w>228</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 [lb_already_cleared]</panel_attributes>
@@ -346,10 +348,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>143</x>
-      <y>559</y>
-      <w>195</w>
-      <h>195</h>
+      <x>228</x>
+      <y>480</y>
+      <w>180</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m2=[lb_already_cleared]</panel_attributes>
@@ -358,10 +360,10 @@ m2=[lb_already_cleared]</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>819</x>
-      <y>884</y>
-      <w>637</w>
-      <h>104</h>
+      <x>852</x>
+      <y>780</y>
+      <w>588</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Die Variable lb_already_cleared wird im Error Zustand auf 1 gesetzt, falls in diesem EVNT_SEN_LB_RA_CLR auftritt.
 bg=yellow</panel_attributes>
