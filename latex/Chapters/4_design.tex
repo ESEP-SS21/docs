@@ -53,7 +53,50 @@ visualisiert.
 
 \section{Verhaltensmodellierung}\label{sec:verhaltensmodellierung}
 
-\subsection{Beschreibung der Selbsttests}
+\subsection{Beschreibung des Servicemode}
+
+Die detaillierte Durchführung des Servicemode ist in untenstehende Schritte unterteilt. Dabei ist mit der Quittierung
+durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint.
+\begin{enumerate}
+
+    \item[1)] System schaltet \gls{ampelled} auf schnell grün blinkend
+    \item[2)] Kalibrierung des \gls{lb_he}
+    \begin{itemize}
+        \item Der \gls{lb_he} wird kalibriert
+        \item LED am \gls{t_reset} wird aktiviert
+        \item Benutzer quittiert Kalibrierung der \gls{lb_he}
+        \item LED am \gls{t_reset} wird deaktiviert
+    \end{itemize}
+    \item[3)] Testen des \gls{belt}s
+    \begin{itemize}
+        \item \Gls{belt} fährt für eine Sekunde schnell vorwärts
+        \item \Gls{belt} fährt für eine Sekunde schnell rückwärts
+        \item \Gls{belt} stoppt
+        \item LED am \gls{t_reset} wird aktiviert
+        \item Benutzer quittiert korrekte Funktionsweise des \gls{belt}s
+        \item LED am \gls{t_reset} wird deaktiviert
+    \end{itemize}
+    \item[4)] Testen des \gls{sortierer}s
+    \begin{enumerate}
+        \item[4a)] \Gls{sortierer} ist \gls{weiche}
+        \begin{itemize}
+            \item \gls{weiche} wird für zwei Sekunden auf \gls{do_not_discard} gesetzt
+            \item \gls{weiche} wird auf \gls{discard} gesetzt
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert korrekte Funktionsweise der \gls{weiche}
+            \item LED am \gls{t_reset} wird deaktiviert
+        \end{itemize}
+        \item[4b)] \gls{sortierer} ist \gls{ejector}
+        \begin{itemize}
+            \item \Gls{ejector} wird aktiviert
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert korrekte Funktionsweise des \gls{ejector}s
+            \item LED am \gls{t_reset} wird deaktiviert
+        \end{itemize}
+    \end{enumerate}
+    \item[]
+
+\end{enumerate}
 
 
 \begin{figure}
