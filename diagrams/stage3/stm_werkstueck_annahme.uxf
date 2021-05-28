@@ -28,11 +28,12 @@
     <coordinates>
       <x>336</x>
       <y>504</y>
-      <w>252</w>
+      <w>364</w>
       <h>154</h>
     </coordinates>
     <panel_attributes>BeltNotRunning
 --
+/entry: send(EVNT_ACT_BELT_STOP) 
 
 valign=top
 </panel_attributes>
@@ -41,13 +42,14 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1148</x>
+      <x>1120</x>
       <y>504</y>
-      <w>252</w>
+      <w>364</w>
       <h>154</h>
     </coordinates>
     <panel_attributes>BeltRunning
 --
+/entry: send(EVNT_ACT_BELT_FWD)
 
 valign=top
 </panel_attributes>
@@ -56,26 +58,26 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>574</x>
+      <x>686</x>
       <y>518</y>
-      <w>602</w>
+      <w>462</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACT_BELT_STOP</panel_attributes>
-    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>310.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>574</x>
+      <x>686</x>
       <y>602</y>
-      <w>602</w>
+      <w>462</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACT_BELT_FWD</panel_attributes>
-    <additional_attributes>10.0;20.0;410.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -88,7 +90,7 @@ EVNT_ACT_BELT_FWD</panel_attributes>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[prim mode]/
 enter_workpiece(new Workpiece())</panel_attributes>
-    <additional_attributes>30.0;50.0;30.0;120.0;230.0;120.0;230.0;10.0;150.0;10.0</additional_attributes>
+    <additional_attributes>30.0;50.0;30.0;120.0;230.0;120.0;230.0;10.0;210.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -96,12 +98,11 @@ enter_workpiece(new Workpiece())</panel_attributes>
       <x>546</x>
       <y>644</y>
       <w>658</w>
-      <h>168</h>
+      <h>154</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[!belt_blocked&amp;prim mode]/
-enter_workpiece(new Workpiece()), 
-send(EVNT_ACT_BELT_FWD)</panel_attributes>
+enter_workpiece(new Workpiece())</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0;450.0;80.0;450.0;10.0</additional_attributes>
   </element>
   <element>
@@ -153,8 +154,8 @@ enter_workpiece(_pending_transfer)</panel_attributes>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[!belt_blocked&amp;sec mode]/
-enter_workpiece(_pending_transfer), 
-send(EVNT_ACT_BELT_FWD)</panel_attributes>
+enter_workpiece(_pending_transfer)
+</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;20.0;450.0;20.0;450.0;80.0</additional_attributes>
   </element>
   <element>
@@ -168,6 +169,6 @@ send(EVNT_ACT_BELT_FWD)</panel_attributes>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK[sec mode]/
 enter_workpiece(_pending_transfer)</panel_attributes>
-    <additional_attributes>30.0;80.0;30.0;20.0;230.0;20.0;230.0;120.0;150.0;120.0</additional_attributes>
+    <additional_attributes>30.0;80.0;30.0;20.0;230.0;20.0;230.0;120.0;210.0;120.0</additional_attributes>
   </element>
 </diagram>
