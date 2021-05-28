@@ -23,9 +23,9 @@ valign=top
     <id>UMLState</id>
     <coordinates>
       <x>299</x>
-      <y>260</y>
+      <y>247</y>
       <w>234</w>
-      <h>143</h>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Waiting for workpiece
 --
@@ -129,9 +129,7 @@ EVNT_SEN_LB_HE_CLR</panel_attributes>
     </coordinates>
     <panel_attributes>workpiece secondary
 --
-entry: determine_if_flipped()
-do: if is_flipped == true then 
-      send(EVNT_WRPC_FLP)
+
 
 
 
@@ -156,12 +154,15 @@ EVNT_SEN_HE_SENSOR_HE [sec mode]
     <id>Relation</id>
     <coordinates>
       <x>520</x>
-      <y>273</y>
+      <y>247</y>
       <w>546</w>
-      <h>52</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_HE_CLR</panel_attributes>
+EVNT_SEN_LB_HE_CLR
+determine_if_flipped();
+if is_flipped == true then 
+      send(EVNT_WRPC_FLP)</panel_attributes>
     <additional_attributes>400.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
