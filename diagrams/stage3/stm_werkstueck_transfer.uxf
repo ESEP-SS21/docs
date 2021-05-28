@@ -76,20 +76,20 @@ EVNT_SEN_LB_EN_BLCK [Sec Mode]
     <coordinates>
       <x>828</x>
       <y>648</y>
-      <w>264</w>
+      <w>300</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACK
 /datamodel: blocked = false;</panel_attributes>
-    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1068</x>
+      <x>1104</x>
       <y>576</y>
-      <w>348</w>
+      <w>312</w>
       <h>132</h>
     </coordinates>
     <panel_attributes>blocked
@@ -172,5 +172,18 @@ after 2s
 /send(EVNT_WRN)
  warning = true</panel_attributes>
     <additional_attributes>140.0;70.0;10.0;70.0;10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>828</x>
+      <y>504</y>
+      <w>264</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ACK
+</panel_attributes>
+    <additional_attributes>200.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
   </element>
 </diagram>
