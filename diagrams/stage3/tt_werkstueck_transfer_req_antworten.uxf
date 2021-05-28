@@ -4,7 +4,7 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>520</x>
+      <x>560</x>
       <y>250</y>
       <w>200</w>
       <h>60</h>
@@ -26,7 +26,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
+      <x>360</x>
       <y>290</y>
       <w>280</w>
       <h>110</h>
@@ -34,7 +34,7 @@
     <panel_attributes>lt=-&gt;
 WRPC_TRNS_RQ
 [Sec Mode &amp;&amp; _start_height_sec.size() &gt; 0]</panel_attributes>
-    <additional_attributes>210.0;10.0;60.0;90.0</additional_attributes>
+    <additional_attributes>230.0;10.0;40.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -51,21 +51,21 @@ EVNT_SEN_LB_HE_BLCK</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
+      <x>690</x>
       <y>290</y>
-      <w>300</w>
+      <w>290</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 WRPC_TRNS_RQ 
 [Sec Mode &amp;&amp; _start_height_sec.size() == 0]
 / send(EVNT_ACK)</panel_attributes>
-    <additional_attributes>70.0;10.0;220.0;90.0</additional_attributes>
+    <additional_attributes>40.0;10.0;240.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>740</x>
+      <x>830</x>
       <y>380</y>
       <w>200</w>
       <h>60</h>
@@ -89,7 +89,7 @@ WRPC_TRNS_RQ
     <coordinates>
       <x>280</x>
       <y>230</y>
-      <w>680</w>
+      <w>770</w>
       <h>340</h>
     </coordinates>
     <panel_attributes>tt Answer Transfer-Request</panel_attributes>
