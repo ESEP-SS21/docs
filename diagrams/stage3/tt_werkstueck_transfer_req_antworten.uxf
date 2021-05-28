@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>520</x>
+      <y>250</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>waiting</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>300</x>
+      <y>380</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>waiting for space</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>290</y>
+      <w>280</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+WRPC_TRNS_RQ
+[Sec Mode &amp;&amp; _start_height_sec.size() &gt; 0]</panel_attributes>
+    <additional_attributes>210.0;10.0;60.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>430</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_BLCK</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>290</y>
+      <w>300</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+WRPC_TRNS_RQ 
+[Sec Mode &amp;&amp; _start_height_sec.size() == 0]
+/ send(EVNT_ACK)</panel_attributes>
+    <additional_attributes>70.0;10.0;220.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>740</x>
+      <y>380</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>waiting</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>300</x>
+      <y>490</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>waiting</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>280</x>
+      <y>230</y>
+      <w>680</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>tt Answer Transfer-Request</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

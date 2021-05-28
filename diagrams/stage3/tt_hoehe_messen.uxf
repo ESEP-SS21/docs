@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>320</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_BLCK/
+start_height_sec.transfer()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>510</x>
+      <y>270</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Waiting for workpiece</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>510</x>
+      <y>400</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Waiting for height</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>240</x>
+      <y>530</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>workpiece primary</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>780</x>
+      <y>530</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>workpiece secondary</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>450</y>
+      <w>300</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_HE_SENSOR_HE [prim mode]
+/heigth_1 = heigth</panel_attributes>
+    <additional_attributes>260.0;10.0;30.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>450</y>
+      <w>280</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_HE_SENSOR_HE [sec mode]
+/heigth_2 = heigth</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>580</y>
+      <w>190</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_CLR</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>580</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_CLR
+determine_if_flipped();
+if is_flipped == true then 
+      send(EVNT_WRPC_FLP)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>240</x>
+      <y>660</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Waiting for workpiece</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>230</x>
+      <y>250</y>
+      <w>850</w>
+      <h>500</h>
+    </coordinates>
+    <panel_attributes>tt Height Messurement</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>780</x>
+      <y>660</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Waiting for workpiece</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
