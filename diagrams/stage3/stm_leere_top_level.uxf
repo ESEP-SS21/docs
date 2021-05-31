@@ -166,7 +166,7 @@ EVNT_SEN_CTRL_T_RST_PRS_SRT
       <x>540</x>
       <y>516</y>
       <w>324</w>
-      <h>312</h>
+      <h>216</h>
     </coordinates>
     <panel_attributes>Running
 --
@@ -179,9 +179,9 @@ symbol=substate
     <id>UMLState</id>
     <coordinates>
       <x>528</x>
-      <y>888</y>
-      <w>336</w>
-      <h>96</h>
+      <y>828</y>
+      <w>348</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>Error
 --
@@ -195,13 +195,13 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>672</x>
-      <y>816</y>
+      <y>720</y>
       <w>120</w>
-      <h>96</h>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ERR</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -253,13 +253,41 @@ m1=EVNT_ESTOP_ON</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>852</x>
+      <x>864</x>
       <y>384</y>
-      <w>564</w>
-      <h>588</h>
+      <w>552</w>
+      <h>612</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=EVNT_ESTOP_ON</panel_attributes>
-    <additional_attributes>10.0;460.0;450.0;460.0;450.0;10.0</additional_attributes>
+    <additional_attributes>10.0;480.0;440.0;480.0;440.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>756</y>
+      <w>240</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_xx/
+send(EVNT_ERR_GONE)</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;20.0;180.0;20.0;180.0;130.0;80.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1008</x>
+      <y>780</y>
+      <w>240</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Das Event 'EVNT_xx'
+ist das Event, welches 
+den Fehler in dieser
+STM behebt
+bg=yellow</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
