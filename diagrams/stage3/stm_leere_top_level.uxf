@@ -116,12 +116,11 @@ EVNT_SEN_CTRL_T_STP_PRS_SRT
     <coordinates>
       <x>708</x>
       <y>156</y>
-      <w>216</w>
+      <w>180</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-when service complete
-or when service aborted</panel_attributes>
+EVNT_SRV_DONE</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
@@ -187,7 +186,7 @@ symbol=substate
     <panel_attributes>Error
 --
 
-//symbol=substate
+symbol=substate
 valign=top
 //halign=right</panel_attributes>
     <additional_attributes/>
