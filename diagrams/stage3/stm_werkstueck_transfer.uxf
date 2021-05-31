@@ -7,7 +7,7 @@
       <x>192</x>
       <y>336</y>
       <w>1260</w>
-      <h>432</h>
+      <h>504</h>
     </coordinates>
     <panel_attributes>stm Workpiece Transfer</panel_attributes>
     <additional_attributes/>
@@ -49,7 +49,7 @@
     <id>Relation</id>
     <coordinates>
       <x>660</x>
-      <y>456</y>
+      <y>444</y>
       <w>432</w>
       <h>60</h>
     </coordinates>
@@ -74,29 +74,29 @@ EVNT_SEN_LB_EN_BLCK [Sec Mode]
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
-      <y>648</y>
+      <x>816</x>
+      <y>732</y>
       <w>300</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACK
-/datamodel: blocked = false;</panel_attributes>
+/datamodel: blocked = false</panel_attributes>
     <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1104</x>
-      <y>576</y>
+      <x>1092</x>
+      <y>648</y>
       <w>312</w>
       <h>132</h>
     </coordinates>
     <panel_attributes>blocked
 --
-/entry send(EVNT_ACT_BELT_STP);
+/entry send(EVNT_ACT_BELT_STP)
 
-/exit send(EVNT_ACT_BELT_FWD);
+/exit send(EVNT_ACT_BELT_FWD)
        
 valign=top</panel_attributes>
     <additional_attributes/>
@@ -105,9 +105,9 @@ valign=top</panel_attributes>
     <id>UMLState</id>
     <coordinates>
       <x>1068</x>
-      <y>444</y>
+      <y>432</y>
       <w>348</w>
-      <h>84</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>not blocked
 --
@@ -121,27 +121,24 @@ valign=top</panel_attributes>
       <x>1176</x>
       <y>516</y>
       <w>240</w>
-      <h>84</h>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 50ms
 /datamodel: blocked = true;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>552</x>
-      <y>612</y>
+      <x>540</x>
+      <y>696</y>
       <w>288</w>
-      <h>120</h>
+      <h>84</h>
     </coordinates>
     <panel_attributes>waiting for workpiece to leave
 --
-/exit if(warning){
-            send(EVNT_WRN_GONE)
-            warning = false
-        }
+
 
 valign=top</panel_attributes>
     <additional_attributes/>
@@ -151,39 +148,43 @@ valign=top</panel_attributes>
     <coordinates>
       <x>600</x>
       <y>540</y>
-      <w>288</w>
-      <h>96</h>
+      <w>300</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_EN_CLR
-/datamodel: remove last workpiece </panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+/datamodel: remove last workpiece;
+if(warning){
+            send(EVNT_WRN_GONE)
+            warning = false
+        }</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>384</x>
-      <y>636</y>
-      <w>192</w>
-      <h>108</h>
+      <y>696</y>
+      <w>180</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 2s
 /send(EVNT_WRN)
  warning = true</panel_attributes>
-    <additional_attributes>140.0;70.0;10.0;70.0;10.0;10.0;140.0;10.0</additional_attributes>
+    <additional_attributes>130.0;60.0;10.0;60.0;10.0;10.0;130.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>828</x>
+      <x>816</x>
       <y>504</y>
-      <w>264</w>
-      <h>156</h>
+      <w>276</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACK
 </panel_attributes>
-    <additional_attributes>200.0;10.0;70.0;10.0;70.0;110.0;10.0;110.0</additional_attributes>
+    <additional_attributes>210.0;10.0;130.0;10.0;130.0;180.0;10.0;180.0</additional_attributes>
   </element>
 </diagram>
