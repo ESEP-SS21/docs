@@ -61,7 +61,6 @@ symbol=substate</panel_attributes>
 --
 /entry: send(EVNT_ACT_STPL_LED_SLW, red)
 /exit: send(EVNT_ACT_STPL_OFF, red)
-         send(EVNT_ALL_ERR_GONE)
 
 valign=top
 //halign=left
@@ -424,5 +423,22 @@ EVNT_ERR_GONE</panel_attributes>
 EVNT_CTRL_T_STR_PRS_SRT/
 send(EVNT_ERR_GONE_ALL)</panel_attributes>
     <additional_attributes>10.0;410.0;230.0;410.0;230.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>946</x>
+      <y>1353</y>
+      <w>374</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+
+
+EVNT_CONN_LOST
+/count=3;
+showErrMsg()
+send(EVNT_ESTOP_ON)</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;130.0;10.0;130.0</additional_attributes>
   </element>
 </diagram>

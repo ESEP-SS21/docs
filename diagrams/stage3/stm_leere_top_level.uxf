@@ -4,7 +4,7 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>576</x>
+      <x>432</x>
       <y>300</y>
       <w>24</w>
       <h>24</h>
@@ -15,7 +15,7 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>684</x>
+      <x>540</x>
       <y>252</y>
       <w>324</w>
       <h>144</h>
@@ -31,7 +31,7 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>684</x>
+      <x>540</x>
       <y>36</y>
       <w>324</w>
       <h>132</h>
@@ -46,7 +46,7 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1332</x>
+      <x>1188</x>
       <y>252</y>
       <w>336</w>
       <h>144</h>
@@ -64,7 +64,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>588</x>
+      <x>444</x>
       <y>300</y>
       <w>120</w>
       <h>36</h>
@@ -75,7 +75,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>996</x>
+      <x>852</x>
       <y>84</y>
       <w>516</w>
       <h>192</h>
@@ -87,7 +87,7 @@ EVNT_ESTOP_ON</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>948</x>
+      <x>804</x>
       <y>384</y>
       <w>324</w>
       <h>156</h>
@@ -100,7 +100,7 @@ EVNT_SEN_CTRL_T_STR_PRS_SRT
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>492</x>
+      <x>348</x>
       <y>348</y>
       <w>324</w>
       <h>240</h>
@@ -114,7 +114,7 @@ EVNT_SEN_CTRL_T_STP_PRS_SRT
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>708</x>
+      <x>564</x>
       <y>156</y>
       <w>180</w>
       <h>120</h>
@@ -126,7 +126,7 @@ EVNT_SRV_DONE</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>948</x>
+      <x>804</x>
       <y>156</y>
       <w>180</w>
       <h>120</h>
@@ -139,7 +139,7 @@ T_STR_PRS_LNG</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>432</x>
+      <x>288</x>
       <y>0</y>
       <w>1260</w>
       <h>1020</h>
@@ -150,7 +150,7 @@ T_STR_PRS_LNG</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>996</x>
+      <x>852</x>
       <y>276</y>
       <w>360</w>
       <h>60</h>
@@ -163,7 +163,7 @@ EVNT_SEN_CTRL_T_RST_PRS_SRT
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>684</x>
+      <x>540</x>
       <y>516</y>
       <w>324</w>
       <h>312</h>
@@ -178,7 +178,7 @@ symbol=substate
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>672</x>
+      <x>528</x>
       <y>888</y>
       <w>336</w>
       <h>96</h>
@@ -194,7 +194,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
+      <x>672</x>
       <y>816</y>
       <w>120</w>
       <h>96</h>
@@ -206,7 +206,7 @@ EVNT_ERR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>456</x>
+      <x>312</x>
       <y>684</y>
       <w>276</w>
       <h>288</h>
@@ -218,8 +218,8 @@ m1=EVNT_ALL_ERR_GONE</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>996</x>
-      <y>348</y>
+      <x>852</x>
+      <y>336</y>
       <w>360</w>
       <h>48</h>
     </coordinates>
@@ -230,7 +230,7 @@ EVNT_ESTOP_ON</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>996</x>
+      <x>852</x>
       <y>384</y>
       <w>516</w>
       <h>216</h>
@@ -242,12 +242,24 @@ m1=EVNT_ESTOP_ON</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>708</x>
+      <x>564</x>
       <y>684</y>
       <w>24</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>type=history_deep</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>384</y>
+      <w>564</w>
+      <h>588</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=EVNT_ESTOP_ON</panel_attributes>
+    <additional_attributes>10.0;460.0;450.0;460.0;450.0;10.0</additional_attributes>
   </element>
 </diagram>

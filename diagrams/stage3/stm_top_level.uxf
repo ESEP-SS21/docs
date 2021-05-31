@@ -86,7 +86,7 @@ valign=top
     <coordinates>
       <x>216</x>
       <y>945</y>
-      <w>702</w>
+      <w>792</w>
       <h>153</h>
     </coordinates>
     <panel_attributes>E-STOP
@@ -117,7 +117,7 @@ valign=top
     <coordinates>
       <x>225</x>
       <y>27</y>
-      <w>693</w>
+      <w>783</w>
       <h>900</h>
     </coordinates>
     <panel_attributes>operation
@@ -129,7 +129,7 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>747</x>
+      <x>711</x>
       <y>918</y>
       <w>135</w>
       <h>126</h>
@@ -228,7 +228,7 @@ EVNT_ERR</panel_attributes>
     <coordinates>
       <x>207</x>
       <y>0</y>
-      <w>729</w>
+      <w>837</w>
       <h>1116</h>
     </coordinates>
     <panel_attributes>stm top-level</panel_attributes>
@@ -567,7 +567,7 @@ group=7</panel_attributes>
     <coordinates>
       <x>468</x>
       <y>1026</y>
-      <w>369</w>
+      <w>513</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>E-STOPP pressed
@@ -578,7 +578,7 @@ valign=center
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
+      <x>486</x>
       <y>918</y>
       <w>243</w>
       <h>126</h>
@@ -703,5 +703,22 @@ EVNT_SEN_MATAL_DTC/
 is_metallic =  true
 group=10</panel_attributes>
     <additional_attributes>10.0;10.0;30.0;10.0;30.0;30.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>837</x>
+      <y>918</y>
+      <w>171</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+
+
+EVNT_CONN_LOST
+/count=3;
+showErrMsg()
+send(EVNT_ESTOP_ON)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
 </diagram>
