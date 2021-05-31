@@ -51,11 +51,10 @@
       <x>504</x>
       <y>558</y>
       <w>360</w>
-      <h>108</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>waiting for space
 --
-/exit send(EVNT_ACK)
 valign=top</panel_attributes>
     <additional_attributes/>
   </element>
@@ -80,7 +79,8 @@ WRPC_TRNS_RQ [Sec Mode &amp;&amp; _start_height_sec.size() &gt; 0]</panel_attrib
       <h>270</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_HE_BLCK</panel_attributes>
+EVNT_SEN_LB_HE_BLCK/
+send(EVNT_ACK)</panel_attributes>
     <additional_attributes>110.0;130.0;10.0;130.0;10.0;10.0;170.0;10.0</additional_attributes>
   </element>
   <element>
