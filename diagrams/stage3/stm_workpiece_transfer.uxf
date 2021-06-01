@@ -77,11 +77,12 @@ EVNT_SEN_LB_EN_BLCK [Sec Mode]
       <x>816</x>
       <y>732</y>
       <w>300</w>
-      <h>60</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACK
-/datamodel: blocked = false</panel_attributes>
+/datamodel: blocked = false;
+send(EVNT_ACT_BELT_FWD)</panel_attributes>
     <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
@@ -95,8 +96,6 @@ EVNT_ACK
     <panel_attributes>blocked
 --
 /entry send(EVNT_ACT_BELT_STP)
-
-/exit send(EVNT_ACT_BELT_FWD)
        
 valign=top</panel_attributes>
     <additional_attributes/>
