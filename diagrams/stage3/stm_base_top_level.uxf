@@ -144,7 +144,7 @@ T_STR_PRS_LNG</panel_attributes>
       <w>1260</w>
       <h>1020</h>
     </coordinates>
-    <panel_attributes>stm empty-top-level</panel_attributes>
+    <panel_attributes>stm base top-level</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
