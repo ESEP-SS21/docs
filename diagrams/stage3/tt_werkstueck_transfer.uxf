@@ -54,8 +54,7 @@
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_EN_BLCK [Prim Mode]
-/send(EVNT_WRPC_TRANS_RQ)</panel_attributes>
+EVNT_SEN_LB_EN_BLCK [Prim Mode]</panel_attributes>
     <additional_attributes>200.0;10.0;50.0;80.0</additional_attributes>
   </element>
   <element>
@@ -63,12 +62,12 @@ EVNT_SEN_LB_EN_BLCK [Prim Mode]
     <coordinates>
       <x>580</x>
       <y>300</y>
-      <w>200</w>
+      <w>90</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 50ms
-/datamodel: blocked = true;</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
@@ -100,12 +99,12 @@ EVNT_ACK
     <coordinates>
       <x>580</x>
       <y>430</y>
-      <w>200</w>
+      <w>100</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACK
-/datamodel: blocked = false;</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
@@ -122,15 +121,15 @@ EVNT_ACK
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
+      <x>400</x>
       <y>540</y>
-      <w>240</w>
+      <w>180</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_EN_CLR
-/datamodel: remove last workpiece </panel_attributes>
-    <additional_attributes>150.0;10.0;80.0;80.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>120.0;10.0;50.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
@@ -163,23 +162,21 @@ EVNT_SEN_LB_EN_CLR
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_EN_BLCK [Sec Mode]
-/print_wrpc_data()</panel_attributes>
+EVNT_SEN_LB_EN_BLCK [Sec Mode]</panel_attributes>
     <additional_attributes>60.0;10.0;190.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
+      <x>650</x>
       <y>540</y>
-      <w>150</w>
+      <w>110</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 2s
-/send(EVNT_WRN)
- warning = true</panel_attributes>
-    <additional_attributes>30.0;10.0;110.0;80.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
