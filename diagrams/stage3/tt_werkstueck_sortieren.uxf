@@ -115,12 +115,12 @@ ramp to clear</panel_attributes>
     <coordinates>
       <x>496</x>
       <y>344</y>
-      <w>200</w>
+      <w>184</w>
       <h>160</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
-/ height_switch_sec.exit_first()
+
 </panel_attributes>
     <additional_attributes>80.0;10.0;10.0;180.0</additional_attributes>
   </element>
@@ -129,12 +129,12 @@ EVNT_SEN_LB_SW_CLR
     <coordinates>
       <x>920</x>
       <y>464</y>
-      <w>176</w>
+      <w>152</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
-/ height_switch_sec.exit_first()</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
@@ -243,7 +243,7 @@ EVNT_SEN_LB_SW_BLCK
 [Sec Mode &amp;&amp;
 datamodel: 
 !(is_in_order(height_switch_sec.front()))]
-/ send(ERR)</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;10.0;150.0;150.0</additional_attributes>
   </element>
   <element>
@@ -307,19 +307,19 @@ EVNT_SEN_LB_SW_BLCK[Prim Mode]</panel_attributes>
     <coordinates>
       <x>1224</x>
       <y>352</y>
-      <w>168</w>
-      <h>72</h>
+      <w>152</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
-/ height_switch_sec.transfer()</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
       <x>1152</x>
-      <y>408</y>
+      <y>416</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -336,5 +336,28 @@ EVNT_SEN_LB_SW_CLR
     </coordinates>
     <panel_attributes>tt Sort Workpieces</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1152</x>
+      <y>520</y>
+      <w>160</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>operating</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1224</x>
+      <y>456</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+after 500ms</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
 </diagram>
