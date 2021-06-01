@@ -24,6 +24,7 @@
 --
 /entry: send(EVNT_ACT_CTRL_T_STP_LED_ON)
            send(EVNT_ACT_STPL_LED_ON)(yellow)
+           wrn_Count = 0
 
 /exit: send(EVNT_ACT_STPL_LED_OFF)(yellow)
          sendEVNT_ACT_CTRL_T_STP_LED_OFF)
