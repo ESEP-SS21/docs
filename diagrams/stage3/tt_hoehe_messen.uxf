@@ -10,8 +10,7 @@
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_HE_BLCK/
-start_height_sec.transfer()</panel_attributes>
+EVNT_SEN_LB_HE_BLCK</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
@@ -68,7 +67,7 @@ start_height_sec.transfer()</panel_attributes>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_HE_SENSOR_HE [prim mode]
-/heigth_1 = heigth</panel_attributes>
+</panel_attributes>
     <additional_attributes>260.0;10.0;30.0;80.0</additional_attributes>
   </element>
   <element>
@@ -81,7 +80,7 @@ EVNT_SEN_HE_SENSOR_HE [prim mode]
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_HE_SENSOR_HE [sec mode]
-/heigth_2 = heigth</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;10.0;260.0;80.0</additional_attributes>
   </element>
   <element>
@@ -101,14 +100,12 @@ EVNT_SEN_LB_HE_CLR</panel_attributes>
     <coordinates>
       <x>870</x>
       <y>580</y>
-      <w>210</w>
+      <w>190</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_HE_CLR
-determine_if_flipped();
-if is_flipped == true then 
-      send(EVNT_WRPC_FLP)</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
