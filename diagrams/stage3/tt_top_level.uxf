@@ -4,8 +4,8 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>497</x>
-      <y>315</y>
+      <x>532</x>
+      <y>371</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1050</x>
-      <y>315</y>
+      <x>1085</x>
+      <y>371</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>777</x>
-      <y>203</y>
+      <x>812</x>
+      <y>259</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -37,19 +37,8 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>434</x>
-      <y>497</y>
-      <w>140</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>Error</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>434</x>
-      <y>658</y>
+      <x>1001</x>
+      <y>483</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -59,8 +48,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>861</x>
-      <y>238</y>
+      <x>896</x>
+      <y>294</y>
       <w>273</w>
       <h>91</h>
     </coordinates>
@@ -72,23 +61,21 @@ T_STR_PRS_LNG</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>238</y>
+      <x>595</x>
+      <y>294</y>
       <w>280</w>
       <h>91</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_CTRL_T_STR_PRS_SRT/
-send(EVNT_ACT_STPL_LED_ON, green),
-send(EVNT_ACT_CTRL_T_STR_LED_ON)
+EVNT_SEN_CTRL_T_STR_PRS_SRT
 </panel_attributes>
     <additional_attributes>380.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1141</x>
-      <y>406</y>
+      <x>1176</x>
+      <y>462</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -98,36 +85,33 @@ send(EVNT_ACT_CTRL_T_STR_LED_ON)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1162</x>
-      <y>343</y>
-      <w>147</w>
+      <x>1197</x>
+      <y>399</y>
+      <w>126</w>
       <h>77</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-when service complete
-or when service aborted</panel_attributes>
+EVNT_SRV_DONE</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
-      <y>336</y>
+      <x>644</x>
+      <y>392</y>
       <w>259</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_CTRL_T_STP_PRS_SRT[wrn_count ==0]/
-send(EVNT_ACT_STPL_LED_OFF, green),
-send(EVNT_ACT_CTRL_T_STR_LED_OFF)
+EVNT_SEN_CTRL_T_STP_PRS_SRT[wrn_count ==0]
 </panel_attributes>
     <additional_attributes>30.0;10.0;330.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>770</x>
-      <y>406</y>
+      <x>805</x>
+      <y>462</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -137,38 +121,32 @@ send(EVNT_ACT_CTRL_T_STR_LED_OFF)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>329</y>
-      <w>224</w>
-      <h>70</h>
+      <x>378</x>
+      <y>385</y>
+      <w>168</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVT_WRN/
-increase_Wrn_Count();
-if (wrn_Count == 0) {
-send(EVNT_ACT_STPL_LED_OFF, yellow) }</panel_attributes>
-    <additional_attributes>300.0;10.0;10.0;70.0</additional_attributes>
+EVT_WRN</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>329</x>
-      <y>343</y>
-      <w>217</w>
+      <x>378</x>
+      <y>399</y>
+      <w>189</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVT_WRN_GONE/
-decrease_Wrn_Count();
-if (wrn_Count &gt; 0) {
-send(EVNT_ACT_STPL_LED_SLW, yellow) }</panel_attributes>
-    <additional_attributes>270.0;10.0;30.0;220.0</additional_attributes>
+EVT_WRN_GONE</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>168</x>
-      <y>371</y>
+      <x>259</x>
+      <y>476</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -178,8 +156,8 @@ send(EVNT_ACT_STPL_LED_SLW, yellow) }</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>280</x>
-      <y>497</y>
+      <x>315</x>
+      <y>553</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -189,8 +167,8 @@ send(EVNT_ACT_STPL_LED_SLW, yellow) }</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>497</x>
-      <y>350</y>
+      <x>532</x>
+      <y>406</y>
       <w>91</w>
       <h>161</h>
     </coordinates>
@@ -201,9 +179,9 @@ EVNT_ERR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>574</x>
-      <y>350</y>
-      <w>168</w>
+      <x>609</x>
+      <y>406</y>
+      <w>161</w>
       <h>161</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -214,65 +192,28 @@ EVNT_ERR</panel_attributes>
 
 EVNT_SEN_CTRL_
 T_STP_PRS_SRT
-[wrn_count &gt; 0]/
-send_Event(EVNT_ERR)
+[wrn_count &gt; 0]
 </panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;210.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>588</x>
-      <y>497</y>
-      <w>140</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>Error</panel_attributes>
-    <additional_attributes/>
+    <additional_attributes>10.0;10.0;160.0;210.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>497</x>
-      <y>532</y>
-      <w>21</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-
-
-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>434</x>
-      <y>574</y>
-      <w>140</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>Running</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>497</x>
-      <y>609</y>
-      <w>105</w>
-      <h>63</h>
+      <x>1064</x>
+      <y>406</y>
+      <w>133</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ESTOP_ON
-/count = 1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>686</y>
+      <x>882</x>
+      <y>511</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
@@ -284,80 +225,32 @@ EVNT_SEN_CTRL_T_RST_PRS_SRT
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>651</x>
-      <y>532</y>
+      <x>875</x>
+      <y>294</y>
       <w>105</w>
-      <h>56</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ESTOP_ON
-/count = 1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>588</x>
-      <y>574</y>
-      <w>140</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>E-STOPP pressed</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>833</x>
-      <y>441</y>
-      <w>105</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_ESTOP_ON
-/count = 1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>770</x>
-      <y>497</y>
-      <w>140</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>E-STOPP pressed</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>959</x>
-      <y>406</y>
-      <w>140</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>E-STOPP pressed</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1022</x>
+      <x>812</x>
       <y>343</y>
-      <w>126</w>
-      <h>77</h>
+      <w>140</w>
+      <h>42</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_ESTOP_ON
-/count = 1</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;90.0</additional_attributes>
+    <panel_attributes>E-STOPP pressed</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>287</x>
-      <y>735</y>
+      <x>854</x>
+      <y>560</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -367,45 +260,45 @@ EVNT_ESTOP_ON
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>154</x>
-      <y>189</y>
-      <w>1148</w>
-      <h>644</h>
+      <x>147</x>
+      <y>245</y>
+      <w>1190</w>
+      <h>602</h>
     </coordinates>
-    <panel_attributes>tt top-level</panel_attributes>
+    <panel_attributes>tt Operation Manager</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>497</x>
-      <y>693</y>
+      <x>1064</x>
+      <y>518</y>
       <w>112</w>
       <h>98</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ESTOP_OFF
-/count --</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>686</y>
+      <x>1113</x>
+      <y>511</y>
       <w>133</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ESTOP_ON
-/count ++</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;10.0;170.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>434</x>
-      <y>777</y>
+      <x>1001</x>
+      <y>602</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
@@ -415,8 +308,169 @@ EVNT_ESTOP_ON
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>595</x>
-      <y>735</y>
+      <x>1162</x>
+      <y>560</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>E-STOPP pressed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>469</x>
+      <y>553</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Anstehend Unquittiert</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>343</x>
+      <y>644</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Anstehend quittiert</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>651</x>
+      <y>553</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Gegangen unquittiert</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>343</x>
+      <y>721</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>OK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>588</y>
+      <w>119</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>574</x>
+      <y>644</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Gegangen unquittiert</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>525</x>
+      <y>588</y>
+      <w>154</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_CTRL_T_RST_PRS_SRT</panel_attributes>
+    <additional_attributes>50.0;10.0;160.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>574</x>
+      <y>714</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>OK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>637</x>
+      <y>679</y>
+      <w>105</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR_GONE</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>406</x>
+      <y>679</y>
+      <w>161</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_CTRL_T_RST_PRS_SRT</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>343</x>
+      <y>791</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Running</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>406</x>
+      <y>756</y>
+      <w>161</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_CTRL_T_STR_PRS_SRT</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>511</y>
+      <w>98</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON
+</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>161</x>
+      <y>553</y>
       <w>140</w>
       <h>42</h>
     </coordinates>
