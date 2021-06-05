@@ -33,11 +33,15 @@ valign=top</panel_attributes>
     <coordinates>
       <x>516</x>
       <y>444</y>
-      <w>144</w>
+      <w>312</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>waiting for 
-ramp to clear</panel_attributes>
+ramp to clear
+--
+/entry: if(datamodel: is_belt_empty()){
+            send(EVNT_ACT_BELT_STP)
+        }</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -164,16 +168,16 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
+      <x>816</x>
       <y>456</y>
-      <w>456</w>
+      <w>288</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
 / height_switch_sec.exit_first()
 </panel_attributes>
-    <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLSpecialState</id>
@@ -259,22 +263,22 @@ after 3000ms</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
+      <x>816</x>
       <y>516</y>
-      <w>456</w>
+      <w>288</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
 / height_switch_sec.exit_first()</panel_attributes>
-    <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
       <x>96</x>
       <y>264</y>
-      <w>624</w>
+      <w>744</w>
       <h>528</h>
     </coordinates>
     <panel_attributes>operating
@@ -362,7 +366,7 @@ m2=[lb_already_cleared]</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>732</x>
+      <x>888</x>
       <y>744</y>
       <w>540</w>
       <h>72</h>
