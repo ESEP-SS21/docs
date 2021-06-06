@@ -445,7 +445,7 @@ send(EVNT_HIST)</panel_attributes>
     <coordinates>
       <x>910</x>
       <y>1729</y>
-      <w>442</w>
+      <w>403</w>
       <h>208</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -453,8 +453,7 @@ send(EVNT_HIST)</panel_attributes>
 
 EVNT_CONN_LOST
 /count=3;
-showErrMsg()
-send(EVNT_ESTOP_ON)</panel_attributes>
+showErrMsg()</panel_attributes>
     <additional_attributes>160.0;10.0;160.0;140.0;10.0;140.0</additional_attributes>
   </element>
   <element>
@@ -470,8 +469,7 @@ send(EVNT_ESTOP_ON)</panel_attributes>
 
 EVNT_CONN_LOST
 /count=3;
-showErrMsg()
-send(EVNT_ESTOP_ON)</panel_attributes>
+showErrMsg()</panel_attributes>
     <additional_attributes>180.0;10.0;10.0;10.0;10.0;130.0;200.0;130.0;200.0;100.0</additional_attributes>
   </element>
 </diagram>
