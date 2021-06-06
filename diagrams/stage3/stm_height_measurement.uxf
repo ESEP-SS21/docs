@@ -104,7 +104,7 @@ valign=top
       <w>1261</w>
       <h>468</h>
     </coordinates>
-    <panel_attributes>stm Height Messurement</panel_attributes>
+    <panel_attributes>stm HeightMeasurement</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -160,7 +160,7 @@ EVNT_SEN_HE_SENSOR_HE [sec mode]
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_HE_CLR
-determine_if_flipped();
+is_flipped = determine_if_flipped();
 if is_flipped == true then 
       send(EVNT_WRPC_FLP)</panel_attributes>
     <additional_attributes>400.0;20.0;10.0;20.0</additional_attributes>

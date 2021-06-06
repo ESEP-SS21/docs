@@ -9,7 +9,7 @@
       <w>1260</w>
       <h>768</h>
     </coordinates>
-    <panel_attributes>stm Workpiece Transfer</panel_attributes>
+    <panel_attributes>stm WorkpieceTransfer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -133,7 +133,7 @@ after 50ms
       <x>540</x>
       <y>696</y>
       <w>288</w>
-      <h>84</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>waiting for workpiece to leave
 --
@@ -147,12 +147,12 @@ valign=top</panel_attributes>
     <coordinates>
       <x>600</x>
       <y>552</y>
-      <w>300</w>
+      <w>312</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_EN_CLR
-/datamodel: remove last workpiece;
+/datamodel: remove last workpiece();
 if(warning){
     send(EVNT_WRN_GONE)
     warning = false
@@ -162,16 +162,16 @@ if(warning){
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>384</x>
+      <x>360</x>
       <y>696</y>
-      <w>180</w>
-      <h>96</h>
+      <w>204</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 2s
 /send(EVNT_WRN)
  warning = true</panel_attributes>
-    <additional_attributes>130.0;60.0;10.0;60.0;10.0;10.0;130.0;10.0</additional_attributes>
+    <additional_attributes>150.0;80.0;10.0;80.0;10.0;10.0;150.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -206,7 +206,7 @@ EVNT_ACK
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-After 500ms
+after 500ms
 if(datamodel: is_belt_empty())
     send(EVNT_ACT_BELT_STP)
 }</panel_attributes>
