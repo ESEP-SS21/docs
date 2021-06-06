@@ -59,7 +59,7 @@ Die detaillierte Durchführung des Servicemode ist in untenstehende Schritte unt
 durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint. Alle nachfolgenden Tests sind an beiden
 \glspl{anlage} durchzuführen.
 \begin{enumerate}
-    \item[1)] System schaltet \gls{ampelled} auf schnell grün blinkend
+    \item[1)] System schaltet \gls{ampel} auf schnell grün blinkend
     \item[2)] Kalibrierung des \gls{lb_he}
     \begin{itemize}
         \item Der \gls{lb_he} wird kalibriert
@@ -69,7 +69,7 @@ durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint. Alle 
     \end{itemize}
     \item[3)] Testen der Sensoren
     \begin{enumerate}
-        \item[I)] Testen der \gls{lb_st} und \gls{lb_en}
+        \item[I)] \Gls{lb_st} und \gls{lb_en}
         \begin{itemize}
             \item Benutzer legt beliebiges \gls{workpiece} in \gls{lb_st}
             \item LED am \gls{t_reset} wird aktiviert
@@ -82,7 +82,7 @@ durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint. Alle 
             \item LED am \gls{t_reset} wird deaktiviert
             \item Benutzer entfernt \gls{workpiece}
         \end{itemize}
-        \item[II)] Testen der \gls{lb_sw} und \gls{lb_ra}
+        \item[II)] \Gls{lb_sw} und \gls{lb_ra}
         \begin{itemize}
             \item Benutzer legt beliebiges \gls{workpiece} in \gls{lb_sw}
             \item LED am \gls{t_reset} wird aktiviert
@@ -95,17 +95,24 @@ durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint. Alle 
             \item LED am \gls{t_reset} wird deaktiviert
             \item Benutzer entfernt \gls{workpiece}
         \end{itemize}
-        \item[III)] Testen des \gls{me_sensor}s
+        \item[III)] \Gls{me_sensor}
         \begin{itemize}
             \item Benutzer legt \gls{workpiece_metall} mit dem Metalleinsatz nach oben zeigend unter den \gls{me_sensor}
             \item LED am \gls{t_reset} wird aktiviert
             \item Benutzer quittiert Funktion des \gls{me_sensor}s
             \item LED am \gls{t_reset} wird deaktiviert
         \end{itemize}
+        \item[IV)] LED's am \gls{ctrlp}
+        \begin{itemize}
+            \item LED am \gls{t_start}, \gls{t_reset} und Q1 und Q2 blinken drei mal auf
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert Funktion der LED's
+            \item LED am \gls{t_reset} wird deaktiviert
+        \end{itemize}
     \end{enumerate}
     \item[4)] Testen der Aktoren
     \begin{enumerate}
-        \item[I)] Testen der \gls{ampelleuchte}
+        \item[I)] \Gls{ampel}
         \begin{itemize}
             \item Benutzer betätigt mit \gls{shortpress} den \gls{t_start} am \gls{ctrlp}
             \item rote \gls{ampelled} blinkt 3 mal langsam
@@ -114,38 +121,37 @@ durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint. Alle 
             \item LED am \gls{t_reset} wird aktiviert
             \item Benutzer quittiert Funktion der \gls{ampel}
             \item LED am \gls{t_reset} wird deaktiviert
+            \item System schaltet \gls{ampel} wieder auf schnell grün blinkend
         \end{itemize}
-        \item[II)] Testen d
-    \end{enumerate}
-
-    \item[3)] Testen des \gls{belt}s
-    \begin{itemize}
-        \item \Gls{belt} fährt für eine Sekunde schnell vorwärts
-        \item \Gls{belt} fährt für eine Sekunde schnell rückwärts
-        \item \Gls{belt} stoppt
-        \item LED am \gls{t_reset} wird aktiviert
-        \item Benutzer quittiert korrekte Funktionsweise des \gls{belt}s
-        \item LED am \gls{t_reset} wird deaktiviert
-    \end{itemize}
-    \item[4)] Testen des \gls{sortierer}s
-    \begin{enumerate}
-        \item[4a)] \Gls{sortierer} ist \gls{weiche}
+        \item[II)] \Gls{belt}
         \begin{itemize}
-            \item \gls{weiche} wird für zwei Sekunden auf \gls{do_not_discard} gesetzt
-            \item \gls{weiche} wird auf \gls{discard} gesetzt
+            \item \Gls{belt} fährt für eine Sekunde schnell vorwärts
+            \item \Gls{belt} fährt für eine Sekunde schnell rückwärts
+            \item \Gls{belt} stoppt
             \item LED am \gls{t_reset} wird aktiviert
-            \item Benutzer quittiert korrekte Funktionsweise der \gls{weiche}
+            \item Benutzer quittiert korrekte Funktionsweise des \gls{belt}s
             \item LED am \gls{t_reset} wird deaktiviert
         \end{itemize}
-        \item[4b)] \gls{sortierer} ist \gls{ejector}
-        \begin{itemize}
-            \item \Gls{ejector} wird aktiviert
-            \item LED am \gls{t_reset} wird aktiviert
-            \item Benutzer quittiert korrekte Funktionsweise des \gls{ejector}s
-            \item LED am \gls{t_reset} wird deaktiviert
-        \end{itemize}
+        \item[III)] \Gls{sortierer}
+        \begin{enumerate}
+            \item[a)] \Gls{sortierer} ist \gls{weiche}
+            \begin{itemize}
+                \item \gls{weiche} wird für zwei Sekunden auf \gls{do_not_discard} gesetzt
+                \item \gls{weiche} wird auf \gls{discard} gesetzt
+                \item LED am \gls{t_reset} wird aktiviert
+                \item Benutzer quittiert korrekte Funktionsweise der \gls{weiche}
+                \item LED am \gls{t_reset} wird deaktiviert
+            \end{itemize}
+            \item[b)] \gls{sortierer} ist \gls{ejector}
+            \begin{itemize}
+                \item \Gls{ejector} wird aktiviert
+                \item LED am \gls{t_reset} wird aktiviert
+                \item Benutzer quittiert korrekte Funktionsweise des \gls{ejector}s
+                \item LED am \gls{t_reset} wird deaktiviert
+            \end{itemize}
+        \end{enumerate}
     \end{enumerate}
-    \item[5)] System schaltet \gls{ampelled} auf gelb leuchtend
+    \item[5a)] System schaltet \gls{ampel} auf gelb leuchtend
 \end{enumerate}
 Nach den oben genannten Schritten befindet sich das System wieder im Ruhezustand.
 
