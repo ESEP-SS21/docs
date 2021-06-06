@@ -51,7 +51,86 @@ visualisiert.
 %% und deren wichtigsten Klassen und Methoden an.
 
 
+\FloatBarrier
 \section{Verhaltensmodellierung}\label{sec:verhaltensmodellierung}
+
+\subsection{Beschreibung des Servicemode}\label{subsec:beschreibung-des-servicemode}
+Die detaillierte Durchführung des Servicemode ist in untenstehende Schritte unterteilt.
+Dabei ist mit der Quittierung durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint.
+Sobald die Anlage einen Test als erfolgreich eingestuft hat, wird die LED am \gls{t_reset} aktiviert.
+Diese wird deaktiviert, sobald quittiert wurde.
+Alle nachfolgenden Tests sind an beiden \glspl{anlage} durchzuführen.
+\begin{enumerate}
+    \item Der \gls{lb_he} wird kalibriert
+    \item Testen der Sensoren
+    \begin{enumerate}
+        \item Die folgenden Lichtschranken werden überprüft.
+        Dafür legt der Benutzer jeweils ein beliebiges \gls{workpiece} in die zu testende Lichtschranke und
+        quittiert anschließend.
+        \begin{itemize}
+            \item \gls{lb_st}
+            \item \gls{lb_en}
+            \item \gls{lb_sw}
+            \item \gls{lb_ra}
+        \end{itemize}
+
+        \item \Gls{me_sensor}
+        \begin{itemize}
+            \item Benutzer legt \gls{workpiece_metall} unter den \gls{me_sensor}
+            \item Benutzer quittiert
+        \end{itemize}
+    \end{enumerate}
+
+    \item Testen der Aktoren
+    \begin{enumerate}
+        \item LED's am \gls{ctrlp}
+        \begin{itemize}
+            \item LED am \gls{t_start}, \gls{t_reset} blinken dreimal
+            \item Benutzer quittiert Funktion der LEDs
+        \end{itemize}
+        \item \Gls{ampel}
+        \begin{itemize}
+            \item Die folgenden \glspl{ampelled} blinken nacheinander schnell.
+            \begin{itemize}
+                \item 3x rot
+                \item 3x gelb
+                \item 3x grün
+            \end{itemize}
+            \item Benutzer quittiert Funktion der \gls{ampel}
+            \item Die grüne \Gls{ampelled} wird wieder auf schnell blinkend geschaltet.
+        \end{itemize}
+        \item \Gls{belt}
+        \begin{itemize}
+            \item Das \Gls{belt} führt die folgende Aktionen aus:
+            \begin{itemize}
+                \item fährt für eine Sekunde schnell vorwärts
+                \item fährt für eine Sekunde schnell rückwärts
+                \item stoppt
+            \end{itemize}
+            \item Benutzer quittiert korrekte Funktionsweise des \gls{belt}s
+        \end{itemize}
+        \item \Gls{sortierer}
+        \begin{enumerate}
+            \item \Gls{sortierer} ist \gls{weiche}
+            \begin{itemize}
+                \item \gls{weiche} wird für zwei Sekunden auf \gls{do_not_discard} gesetzt
+                \item \gls{weiche} wird auf \gls{discard} gesetzt
+                \item Benutzer quittiert korrekte Funktionsweise der \gls{weiche}
+            \end{itemize}
+            \item \gls{sortierer} ist \gls{ejector}
+            \begin{itemize}
+                \item \Gls{ejector} wird aktiviert
+                \item Benutzer quittiert korrekte Funktionsweise des \gls{ejector}s
+            \end{itemize}
+        \end{enumerate}
+    \end{enumerate}
+    \item Der Servicemodus wird beendet.
+\end{enumerate}
+Nach den oben genannten Schritten befindet sich das System wieder im Ruhezustand.
+
+
+\subsection{Statemachines}\label{subsec:stm}
+In diesem Abschnitt werden die Statemachines aufgelistet.
 
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[height=0.93\textheight]{../out/diagrams/stage3/stm_top_level}}
