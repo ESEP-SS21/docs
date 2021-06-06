@@ -61,45 +61,32 @@ Sobald die Anlage einen Test als erfolgreich eingestuft hat, wird die LED am \gl
 Diese wird deaktiviert, diese wird deaktiviert, sobald quittiert wird.
 Alle nachfolgenden Tests sind an beiden \glspl{anlage} durchzuführen.
 \begin{enumerate}
-    \item System schaltet \gls{ampel} auf schnell grün blinkend
-    \item Kalibrierung des \gls{lb_he}
-    \begin{itemize}
-        \item Der \gls{lb_he} wird kalibriert
-        \item Benutzer quittiert Kalibrierung der \gls{lb_he}
-    \end{itemize}
+    \item Der \gls{lb_he} wird kalibriert
     \item Testen der Sensoren
     \begin{enumerate}
-        \item \Gls{lb_st} und \gls{lb_en}
+        \item Die folgenden Lichtschranken werden überprüft.
+        Dafür legt der Benutzer jeweils ein beliebiges \gls{workpiece} in die zu testende Lichtschranke und
+        quittiert anschließend.
         \begin{itemize}
-            \item Benutzer legt beliebiges \gls{workpiece} in \gls{lb_st}
-            \item Benutzer quittiert Funktion der \gls{lb_st}
-            \item Benutzer entfernt \gls{workpiece}
-            \item Benutzer legt beliebiges \gls{workpiece} in \gls{lb_en}
-            \item Benutzer quittiert Funktion der \gls{lb_en}
-            \item Benutzer entfernt \gls{workpiece}
+            \item \gls{lb_st}
+            \item \gls{lb_en}
+            \item \gls{lb_sw}
+            \item \gls{lb_ra}
         \end{itemize}
-        \item \Gls{lb_sw} und \gls{lb_ra}
-        \begin{itemize}
-            \item Benutzer legt beliebiges \gls{workpiece} in \gls{lb_sw}
-            \item Benutzer quittiert Funktion der \gls{lb_sw}
-            \item Benutzer entfernt \gls{workpiece}
-            \item Benutzer hält beliebiges \gls{workpiece} in \gls{lb_ra}
-            \item Benutzer quittiert Funktion der \gls{lb_ra}
-            \item Benutzer entfernt \gls{workpiece}
-        \end{itemize}
+
         \item \Gls{me_sensor}
         \begin{itemize}
-            \item Benutzer legt \gls{workpiece_metall} mit dem Metalleinsatz nach oben zeigend unter den \gls{me_sensor}
-            \item Benutzer quittiert Funktion des \gls{me_sensor}s
-        \end{itemize}
-        \item LED's am \gls{ctrlp}
-        \begin{itemize}
-            \item LED am \gls{t_start}, \gls{t_reset} und Q1 und Q2 blinken drei mal auf
-            \item Benutzer quittiert Funktion der LED's
+            \item Benutzer legt \gls{workpiece_metall} unter den \gls{me_sensor}
+            \item Benutzer quittiert
         \end{itemize}
     \end{enumerate}
     \item Testen der Aktoren
     \begin{enumerate}
+        \item LED's am \gls{ctrlp}
+        \begin{itemize}
+            \item LED am \gls{t_start}, \gls{t_reset} blinken dreimal
+            \item Benutzer quittiert Funktion der LEDs
+        \end{itemize}
         \item \Gls{ampel}
         \begin{itemize}
             \item Benutzer betätigt mit \gls{shortpress} den \gls{t_start} am \gls{ctrlp}
@@ -131,7 +118,7 @@ Alle nachfolgenden Tests sind an beiden \glspl{anlage} durchzuführen.
             \end{itemize}
         \end{enumerate}
     \end{enumerate}
-    \item System schaltet \gls{ampel} auf gelb leuchtend
+    \item Der Servicemodus wird beendet.
 \end{enumerate}
 Nach den oben genannten Schritten befindet sich das System wieder im Ruhezustand.
 
