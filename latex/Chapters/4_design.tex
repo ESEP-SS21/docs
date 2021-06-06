@@ -80,6 +80,7 @@ Alle nachfolgenden Tests sind an beiden \glspl{anlage} durchzuführen.
             \item Benutzer quittiert
         \end{itemize}
     \end{enumerate}
+
     \item Testen der Aktoren
     \begin{enumerate}
         \item LED's am \gls{ctrlp}
@@ -89,18 +90,23 @@ Alle nachfolgenden Tests sind an beiden \glspl{anlage} durchzuführen.
         \end{itemize}
         \item \Gls{ampel}
         \begin{itemize}
-            \item Benutzer betätigt mit \gls{shortpress} den \gls{t_start} am \gls{ctrlp}
-            \item rote \gls{ampelled} blinkt 3 mal langsam
-            \item gelbe \gls{ampelled} blinkt 3 mal langsam
-            \item grüne \gls{ampelled} blinkt 3 mal langsam
+            \item Die folgenden \glspl{ampelled} blinken nacheinander schnell.
+            \begin{itemize}
+                \item 3x rot
+                \item 3x gelb
+                \item 3x grün
+            \end{itemize}
             \item Benutzer quittiert Funktion der \gls{ampel}
-            \item System schaltet \gls{ampel} wieder auf schnell grün blinkend
+            \item Die grüne \Gls{ampelled} wird wieder auf schnell blinkend geschaltet.
         \end{itemize}
         \item \Gls{belt}
         \begin{itemize}
-            \item \Gls{belt} fährt für eine Sekunde schnell vorwärts
-            \item \Gls{belt} fährt für eine Sekunde schnell rückwärts
-            \item \Gls{belt} stoppt
+            \item Das \Gls{belt} führt die folgende Aktionen aus:
+            \begin{itemize}
+                \item fährt für eine Sekunde schnell vorwärts
+                \item fährt für eine Sekunde schnell rückwärts
+                \item stoppt
+            \end{itemize}
             \item Benutzer quittiert korrekte Funktionsweise des \gls{belt}s
         \end{itemize}
         \item \Gls{sortierer}
