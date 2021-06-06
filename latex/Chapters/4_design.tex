@@ -56,9 +56,9 @@ visualisiert.
 \subsection{Beschreibung des Servicemode}\label{subsec:beschreibung-des-servicemode}
 
 Die detaillierte Durchführung des Servicemode ist in untenstehende Schritte unterteilt. Dabei ist mit der Quittierung
-durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint.
+durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint. Alle nachfolgenden Tests sind an beiden
+\glspl{anlage} durchzuführen.
 \begin{enumerate}
-
     \item[1)] System schaltet \gls{ampelled} auf schnell grün blinkend
     \item[2)] Kalibrierung des \gls{lb_he}
     \begin{itemize}
@@ -67,6 +67,57 @@ durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint.
         \item Benutzer quittiert Kalibrierung der \gls{lb_he}
         \item LED am \gls{t_reset} wird deaktiviert
     \end{itemize}
+    \item[3)] Testen der Sensoren
+    \begin{enumerate}
+        \item[I)] Testen der \gls{lb_st} und \gls{lb_en}
+        \begin{itemize}
+            \item Benutzer legt beliebiges \gls{workpiece} in \gls{lb_st}
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert Funktion der \gls{lb_st}
+            \item LED am \gls{t_reset} wird deaktiviert
+            \item Benutzer entfernt \gls{workpiece}
+            \item Benutzer legt beliebiges \gls{workpiece} in \gls{lb_en}
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert Funktion der \gls{lb_en}
+            \item LED am \gls{t_reset} wird deaktiviert
+            \item Benutzer entfernt \gls{workpiece}
+        \end{itemize}
+        \item[II)] Testen der \gls{lb_sw} und \gls{lb_ra}
+        \begin{itemize}
+            \item Benutzer legt beliebiges \gls{workpiece} in \gls{lb_sw}
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert Funktion der \gls{lb_sw}
+            \item LED am \gls{t_reset} wird deaktiviert
+            \item Benutzer entfernt \gls{workpiece}
+            \item Benutzer hält beliebiges \gls{workpiece} in \gls{lb_ra}
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert Funktion der \gls{lb_ra}
+            \item LED am \gls{t_reset} wird deaktiviert
+            \item Benutzer entfernt \gls{workpiece}
+        \end{itemize}
+        \item[III)] Testen des \gls{me_sensor}s
+        \begin{itemize}
+            \item Benutzer legt \gls{workpiece_metall} mit dem Metalleinsatz nach oben zeigend unter den \gls{me_sensor}
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert Funktion des \gls{me_sensor}s
+            \item LED am \gls{t_reset} wird deaktiviert
+        \end{itemize}
+    \end{enumerate}
+    \item[4)] Testen der Aktoren
+    \begin{enumerate}
+        \item[I)] Testen der \gls{ampelleuchte}
+        \begin{itemize}
+            \item Benutzer betätigt mit \gls{shortpress} den \gls{t_start} am \gls{ctrlp}
+            \item rote \gls{ampelled} blinkt 3 mal langsam
+            \item gelbe \gls{ampelled} blinkt 3 mal langsam
+            \item grüne \gls{ampelled} blinkt 3 mal langsam
+            \item LED am \gls{t_reset} wird aktiviert
+            \item Benutzer quittiert Funktion der \gls{ampel}
+            \item LED am \gls{t_reset} wird deaktiviert
+        \end{itemize}
+        \item[II)] Testen d
+    \end{enumerate}
+
     \item[3)] Testen des \gls{belt}s
     \begin{itemize}
         \item \Gls{belt} fährt für eine Sekunde schnell vorwärts
