@@ -55,7 +55,6 @@ visualisiert.
 \section{Verhaltensmodellierung}\label{sec:verhaltensmodellierung}
 
 \subsection{Beschreibung des Servicemode}\label{subsec:beschreibung-des-servicemode}
-
 Die detaillierte Durchführung des Servicemode ist in untenstehende Schritte unterteilt.
 Dabei ist mit der Quittierung durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint.
 Sobald die Anlage einen Test als erfolgreich eingestuft hat, wird die LED am \gls{t_reset} aktiviert.
@@ -129,6 +128,9 @@ Alle nachfolgenden Tests sind an beiden \glspl{anlage} durchzuführen.
 \end{enumerate}
 Nach den oben genannten Schritten befindet sich das System wieder im Ruhezustand.
 
+
+\subsection{Statemachines}\label{subsec:stm}
+In diesem Abschnitt werden die Statemachines aufgelistet.
 
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[height=0.93\textheight]{../out/diagrams/stage3/stm_top_level}}
