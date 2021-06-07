@@ -18,16 +18,19 @@
       <x>494</x>
       <y>299</y>
       <w>507</w>
-      <h>208</h>
+      <h>234</h>
     </coordinates>
     <panel_attributes>Idle
 --
 /entry: 
     _operation_mode = IDLE
     send(EVNT_ACT_STPL_LED_ON)(yellow)
+    send(EVNT_ACT_CTRL_T_STR_LED_ON)
     wrn_Count = 0
 
-/exit: send(EVNT_ACT_STPL_LED_OFF)(yellow)
+/exit: 
+    send(EVNT_ACT_STPL_LED_OFF)(yellow)
+    send(EVNT_ACT_CTRL_T_STR_LED_OFF)
 valign=top
 //symbol=substate
 </panel_attributes>
@@ -115,9 +118,9 @@ EVNT_ESTOP_ON
     <id>Relation</id>
     <coordinates>
       <x>754</x>
-      <y>494</y>
+      <y>520</y>
       <w>364</w>
-      <h>143</h>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_CTRL_T_STR_PRS_SRT/
@@ -125,7 +128,7 @@ _operation_mode = RUNNING
 send(EVNT_RST_TO_SRT)
 
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -265,21 +268,19 @@ EVNT_ESTOP_OFF
     <id>UMLState</id>
     <coordinates>
       <x>559</x>
-      <y>611</y>
+      <y>650</y>
       <w>520</w>
-      <h>572</h>
+      <h>533</h>
     </coordinates>
     <panel_attributes>Running
 --
 /entry:
     send(EVNT_ACT_STPL_LED_ON, green),
-    send(EVNT_ACT_CTRL_T_STP_LED_ON)
 
 /exit:
     send(EVNT_ACT_BELT_STP)
     send(EVNT_ACT_SORT_RST)
     send(EVNT_ACT_STPL_LED_OFF, green),
-    send(EVNT_ACT_CTRL_T_STP_LED_OFF)
 	 
 	
 valign=top
