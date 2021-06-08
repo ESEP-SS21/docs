@@ -17,12 +17,12 @@
     <coordinates>
       <x>510</x>
       <y>430</y>
-      <w>180</w>
-      <h>110</h>
+      <w>240</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>WaitingForError
 --
-
+/entry: _current_error = NO_ERROR
 
 valign=top
 </panel_attributes>
@@ -34,7 +34,7 @@ valign=top
       <x>960</x>
       <y>440</y>
       <w>180</w>
-      <h>110</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>WaitingForResolve
 --
@@ -46,39 +46,40 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>500</y>
-      <w>300</w>
-      <h>40</h>
+      <x>740</x>
+      <y>540</y>
+      <w>240</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_ERR</panel_attributes>
-    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+EVNT_ERR
+_current_error = &lt;&lt;ErrorType&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
+      <x>740</x>
       <y>440</y>
-      <w>300</w>
+      <w>240</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_XX/
 send(EVNT_ERR_GONE)</panel_attributes>
-    <additional_attributes>280.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
       <x>620</x>
       <y>300</y>
-      <w>420</w>
+      <w>450</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>EVNT_XX ist das Event welches empfangen werden muss,
 um den vorliegenden Fehler zu lösen.
-Dieses Event wird in der Payload von EVNT_ERR übertragen
+Die Art des Fehlers wird über die Payload von EVNT_ERR signalisiert
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -92,5 +93,30 @@ bg=yellow</panel_attributes>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>480</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+EVNT_ESTOP_ON
+</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>510</y>
+      <w>240</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+EVNT_CONN_LOST</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
 </diagram>
