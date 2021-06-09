@@ -22,11 +22,27 @@
 
 %% Versuchen Sie, so gut wie möglich, Ihre Tests zu automatisieren.
 
-Die Basis für die Implementation der STM-Tests ist in Kapitel~\ref{sec:basis-fuer-stms} beschrieben.
+\subsection{STM-Tests}\label{subsec:stm-tests}
 
-Im StmTestClient werden die über das Interface verschickten Events zwischengespeichert, sodass im Test
+
+\subsubsection{Implementation}
+Im \textit{StmTestClient} werden die von der STM über das Interface \textit{IEventSender}
+verschickten Events zwischengespeichert, sodass im Test
 sichergestellt werden kann, dass an einer Transition genau die erwarteten Events (und keine weiteren)
 verschickt werden.
+Die Klasse ist in Abbildung~\ref{fig:cd_basis_stm_test} dargestellt.
+Die Klasse \textit{StmTestBase} ist eine Basis-Klasse für \textit{gtest} Test-Fixtures,
+und stellt die STMs inkl.\ Datenmodel und entsprechende Testmethoden zur Verfügung.
+Der Parameter \textit{trigger} ist bei den Methoden das Event, welches eine Transition auslöst.
+Die Liste an Events sind jene, die durch das Ausführen der Transition erzeugt werden sollen.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{../out/diagrams/stage3/cd_stm_test}
+    \caption{Basisklasse für Unit tests der STMs}
+    \label{fig:cd_basis_stm_test}
+\end{figure}
+
 
 \section{Testszenarien}\label{sec:testszenarien}
 
