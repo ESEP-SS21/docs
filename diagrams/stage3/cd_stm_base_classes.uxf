@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>14</zoom_level>
+  <zoom_level>16</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>602</x>
-      <y>210</y>
-      <w>238</w>
-      <h>112</h>
+      <x>608</x>
+      <y>144</y>
+      <w>272</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;abstract&gt;&gt;
 DispatcherClient
 --
-void handle(Event)
-group=2</panel_attributes>
+--
+void handle(Event)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>602</x>
-      <y>588</y>
-      <w>322</w>
-      <h>224</h>
+      <x>624</x>
+      <y>624</y>
+      <w>352</w>
+      <h>256</h>
     </coordinates>
     <panel_attributes>&lt;&lt;abstract&gt;&gt;
 BaseContext
 --
 + &lt;&lt;Create&gt;&gt; BaseContext(
-        BaseBaseState,
+        BaseBaseState startState,
         UnitData,
         IEventSender
         name: string)
@@ -41,165 +41,150 @@ BaseContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>490</y>
-      <w>126</w>
-      <h>126</h>
+      <x>688</x>
+      <y>432</y>
+      <w>144</w>
+      <h>224</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-- _context</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+m1=- _context</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>602</x>
-      <y>868</y>
-      <w>322</w>
-      <h>196</h>
+      <x>1008</x>
+      <y>624</y>
+      <w>384</w>
+      <h>256</h>
     </coordinates>
     <panel_attributes>&lt;&lt;abstract&gt;&gt;
 BaseBaseState
 --
+/+ string _name {readonly}/
+/- string dispatcher_name{readonly}/
+--
 + &lt;&lt;Create&gt;&gt; BaseBaseState(
        IEventSender, 
        UnitData)
-+ switch_state&lt;State&gt;()
---
-/+ string _name {readonly}/
-</panel_attributes>
++ switch_state&lt;BaseBaseState&gt;()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>798</y>
-      <w>112</w>
-      <h>98</h>
+      <x>880</x>
+      <y>864</y>
+      <w>224</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 # _state</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;120.0;50.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>308</y>
-      <w>196</w>
-      <h>672</h>
+      <x>1232</x>
+      <y>272</y>
+      <w>208</w>
+      <h>384</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=# _event_sender</panel_attributes>
-    <additional_attributes>10.0;460.0;30.0;440.0;30.0;10.0</additional_attributes>
+    <additional_attributes>10.0;220.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>882</x>
-      <y>210</y>
-      <w>350</w>
-      <h>112</h>
+      <x>1152</x>
+      <y>144</y>
+      <w>272</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 IEventSender
 --
-void send(Event, int prio = 0)
-group=2</panel_attributes>
+--
+void send(
+   Event, int prio = 0)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>826</x>
-      <y>266</y>
-      <w>84</w>
-      <h>42</h>
+      <x>864</x>
+      <y>208</y>
+      <w>320</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1050</x>
-      <y>434</y>
-      <w>182</w>
-      <h>70</h>
+      <x>880</x>
+      <y>384</y>
+      <w>208</w>
+      <h>64</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;abstract&gt;&gt;
-StmTestClient
-valign=center
-group=4</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1148</x>
-      <y>308</y>
-      <w>42</w>
-      <h>154</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>910</x>
-      <y>490</y>
-      <w>266</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-m1= - _context</panel_attributes>
-    <additional_attributes>110.0;10.0;110.0;80.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLPackage</id>
-    <coordinates>
-      <x>574</x>
-      <y>154</y>
-      <w>686</w>
-      <h>196</h>
-    </coordinates>
-    <panel_attributes>Dispatcher
-group=2</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>602</x>
-      <y>434</y>
-      <w>322</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;abstract&gt;&gt;
-StmClient
+    <panel_attributes>StmTestClient
 valign=center</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>770</x>
-      <y>308</y>
-      <w>42</w>
-      <h>154</h>
+      <x>1056</x>
+      <y>256</y>
+      <w>128</w>
+      <h>160</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>944</x>
+      <y>432</y>
+      <w>144</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1= - _context</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>574</x>
-      <y>378</y>
-      <w>406</w>
-      <h>840</h>
+      <x>592</x>
+      <y>96</y>
+      <w>304</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>Dispatcher</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>272</y>
+      <w>48</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>592</x>
+      <y>512</y>
+      <w>848</w>
+      <h>608</h>
     </coordinates>
     <panel_attributes>Logic</panel_attributes>
     <additional_attributes/>
@@ -207,97 +192,127 @@ valign=center</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1022</x>
-      <y>378</y>
-      <w>238</w>
-      <h>182</h>
+      <x>864</x>
+      <y>336</y>
+      <w>240</w>
+      <h>128</h>
     </coordinates>
-    <panel_attributes>Test::Logic
-group=4</panel_attributes>
+    <panel_attributes>Test::Logic::stm</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>658</x>
-      <y>1092</y>
-      <w>210</w>
-      <h>98</h>
+      <x>1136</x>
+      <y>992</y>
+      <w>224</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Datamodel
-group=3</panel_attributes>
+group=6</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>686</x>
-      <y>1134</y>
-      <w>140</w>
-      <h>42</h>
+      <x>1168</x>
+      <y>1040</y>
+      <w>160</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>UnitData
-group=3</panel_attributes>
+group=6</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
-      <y>1050</y>
-      <w>140</w>
-      <h>112</h>
+      <x>1264</x>
+      <y>864</y>
+      <w>160</w>
+      <h>208</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-# _unitdata</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>910</x>
-      <y>490</y>
-      <w>224</w>
-      <h>168</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;Create&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;100.0;140.0;100.0;140.0;10.0</additional_attributes>
+m1=# _unitdata</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>546</x>
-      <y>112</y>
-      <w>742</w>
-      <h>1134</h>
+      <x>560</x>
+      <y>32</y>
+      <w>912</w>
+      <h>1120</h>
     </coordinates>
     <panel_attributes>cd stm base classes</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLClass</id>
     <coordinates>
-      <x>798</x>
-      <y>798</y>
-      <w>126</w>
-      <h>98</h>
+      <x>608</x>
+      <y>384</y>
+      <w>208</w>
+      <h>64</h>
     </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;Create&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <panel_attributes>ExampleStmClient
+valign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>592</x>
+      <y>336</y>
+      <w>240</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Clients</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>608</x>
+      <y>560</y>
+      <w>816</w>
+      <h>416</h>
+    </coordinates>
+    <panel_attributes>stm</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>800</x>
+      <y>32</y>
+      <w>96</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>QNET</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>490</y>
-      <w>126</w>
-      <h>126</h>
+      <x>816</x>
+      <y>64</y>
+      <w>80</w>
+      <h>112</h>
     </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;Create&gt;&gt;
+    <panel_attributes>lt=)-
 </panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>20.0;20.0;20.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1136</x>
+      <y>96</y>
+      <w>304</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>Event</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
