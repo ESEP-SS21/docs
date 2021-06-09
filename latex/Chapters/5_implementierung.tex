@@ -14,4 +14,17 @@
     \label{fig:cd-stm-base}
 \end{figure}
 
+In Abbildung~\ref{fig:cd-stm-base} ist ein Klassendiagramm der Basisklassen für STMs dargestellt.
+Die vorliegende Architektur hat unter anderem das Ziel, die Logik unabhängig von GNX und
+dem Dispatcher – damit unabhängig von QNET – zu gestalten.
+Hierdurch wird das Testen der Logik ohne GNS-Services ermöglicht.
+
+Der ExampleStmClient und ExampleTestClient sind im Klassendiagramm jeweils Beispielklassen für
+das Umsetzten der Clients und TestClients.
+Diese erzeugen jeweils den entsprechenden Context und übergeben sich selbst als IEventSender an diesen,
+der diesen wiederum an den Zustand übergibt.
+Die Zustände haben somit die Möglichkeit Events zu verschicken.
+
+
+
 %TODO ^^^ text hierfür

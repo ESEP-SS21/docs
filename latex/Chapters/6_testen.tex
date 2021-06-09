@@ -22,6 +22,11 @@
 
 %% Versuchen Sie, so gut wie möglich, Ihre Tests zu automatisieren.
 
+Die Basis für die Implementation der STM-Tests ist in Kapitel~\ref{sec:basis-fuer-stms} beschrieben.
+
+Im StmTestClient werden die über das Interface verschickten Events zwischengespeichert, sodass im Test
+sichergestellt werden kann, dass an einer Transition genau die erwarteten Events (und keine weiteren)
+verschickt werden.
 
 \section{Testszenarien}\label{sec:testszenarien}
 
