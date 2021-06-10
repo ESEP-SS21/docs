@@ -42,20 +42,20 @@ EVNT_SEN_LB_SW_BLCK
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>592</x>
+      <x>584</x>
       <y>232</y>
-      <w>312</w>
+      <w>320</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_BLCK
 [datamodel:!(is_in_sorting_order(height_switch_sec.front()))]</panel_attributes>
-    <additional_attributes>350.0;10.0;30.0;100.0</additional_attributes>
+    <additional_attributes>360.0;10.0;30.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>536</x>
+      <x>528</x>
       <y>312</y>
       <w>160</w>
       <h>48</h>
@@ -66,8 +66,8 @@ EVNT_SEN_LB_SW_BLCK
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>848</x>
-      <y>424</y>
+      <x>896</x>
+      <y>416</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -77,20 +77,20 @@ EVNT_SEN_LB_SW_BLCK
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>664</x>
+      <x>656</x>
       <y>344</y>
-      <w>280</w>
-      <h>96</h>
+      <w>336</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 3000ms</panel_attributes>
-    <additional_attributes>10.0;10.0;330.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;400.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>416</x>
-      <y>488</y>
+      <x>528</x>
+      <y>424</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -101,7 +101,7 @@ ramp to clear</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>848</x>
+      <x>896</x>
       <y>520</y>
       <w>160</w>
       <h>48</h>
@@ -113,35 +113,35 @@ ramp to clear</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>344</y>
-      <w>184</w>
-      <h>160</h>
+      <x>600</x>
+      <y>352</y>
+      <w>152</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
 
 </panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;180.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>464</y>
+      <x>968</x>
+      <y>456</y>
       <w>152</w>
-      <h>72</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_SW_CLR
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>520</y>
+      <x>432</x>
+      <y>456</y>
       <w>152</w>
       <h>80</h>
     </coordinates>
@@ -152,8 +152,8 @@ EVNT_SEN_LB_RA_CLR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>544</x>
-      <y>520</y>
+      <x>656</x>
+      <y>456</y>
       <w>136</w>
       <h>80</h>
     </coordinates>
@@ -164,8 +164,8 @@ EVNT_SEN_LB_RA_CLR</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>488</x>
-      <y>528</y>
+      <x>600</x>
+      <y>464</y>
       <w>80</w>
       <h>152</h>
     </coordinates>
@@ -176,8 +176,8 @@ after 200ms</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>264</x>
-      <y>584</y>
+      <x>376</x>
+      <y>520</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -187,8 +187,8 @@ after 200ms</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>584</x>
-      <y>584</y>
+      <x>696</x>
+      <y>520</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -198,8 +198,8 @@ after 200ms</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>424</x>
-      <y>664</y>
+      <x>536</x>
+      <y>600</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -209,20 +209,20 @@ after 200ms</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>384</x>
-      <y>704</y>
+      <x>504</x>
+      <y>640</y>
       <w>192</w>
       <h>136</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_RA_CLR </panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>100.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>696</y>
+      <x>424</x>
+      <y>632</y>
       <w>152</w>
       <h>64</h>
     </coordinates>
@@ -233,8 +233,8 @@ EVNT_SEN_LB_RA_CLR </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>704</y>
+      <x>632</x>
+      <y>640</y>
       <w>280</w>
       <h>136</h>
     </coordinates>
@@ -249,8 +249,8 @@ datamodel:
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>560</x>
-      <y>824</y>
+      <x>672</x>
+      <y>760</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -260,8 +260,8 @@ datamodel:
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>240</x>
-      <y>744</y>
+      <x>352</x>
+      <y>680</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -271,8 +271,8 @@ datamodel:
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>312</x>
-      <y>824</y>
+      <x>432</x>
+      <y>760</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -282,8 +282,8 @@ datamodel:
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
-      <y>680</y>
+      <x>688</x>
+      <y>616</y>
       <w>304</w>
       <h>72</h>
     </coordinates>
@@ -294,8 +294,8 @@ EVNT_SEN_LB_SW_BLCK[Prim Mode]</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>784</x>
-      <y>736</y>
+      <x>896</x>
+      <y>672</y>
       <w>160</w>
       <h>48</h>
     </coordinates>
@@ -323,16 +323,16 @@ EVNT_SEN_LB_SW_CLR
       <w>160</w>
       <h>48</h>
     </coordinates>
-    <panel_attributes>operating</panel_attributes>
+    <panel_attributes>Waiting to pass</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>224</x>
+      <x>328</x>
       <y>176</y>
-      <w>1176</w>
-      <h>720</h>
+      <w>1056</w>
+      <h>672</h>
     </coordinates>
     <panel_attributes>tt Sort Workpieces</panel_attributes>
     <additional_attributes/>
@@ -345,7 +345,8 @@ EVNT_SEN_LB_SW_CLR
       <w>160</w>
       <h>48</h>
     </coordinates>
-    <panel_attributes>operating</panel_attributes>
+    <panel_attributes>operating
+(composite state)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

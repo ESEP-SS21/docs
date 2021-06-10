@@ -115,7 +115,7 @@ EVNT_ACK
       <w>200</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>Waiting</panel_attributes>
+    <panel_attributes>Waiting for finished transfer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -137,7 +137,7 @@ EVNT_SEN_LB_EN_CLR
       <x>330</x>
       <y>100</y>
       <w>800</w>
-      <h>600</h>
+      <h>750</h>
     </coordinates>
     <panel_attributes>tt Workpiece Transfer</panel_attributes>
     <additional_attributes/>
@@ -188,5 +188,29 @@ after 2s
     </coordinates>
     <panel_attributes>waiting for workpiece to leave</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>350</x>
+      <y>730</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Waiting</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>670</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+after 500ms
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>
