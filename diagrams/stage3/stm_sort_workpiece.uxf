@@ -99,9 +99,9 @@ m1=EVNT_SEN_LB_RA_CLR </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
+      <x>204</x>
       <y>636</y>
-      <w>324</w>
+      <w>348</w>
       <h>156</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -110,8 +110,8 @@ EVNT_SEN_LB_SW_BLCK
 [Sec Mode &amp;&amp;
 datamodel: 
 !(is_in_order(height_switch_sec.front()))]
-/ send(ERR)</panel_attributes>
-    <additional_attributes>150.0;10.0;150.0;40.0;110.0;40.0;110.0;10.0</additional_attributes>
+/ send(ERR), height_switch_sec.exit_first()</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;40.0;120.0;40.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
