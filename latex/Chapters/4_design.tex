@@ -54,16 +54,24 @@ visualisiert.
 \section{Verhaltensmodellierung}\label{sec:verhaltensmodellierung}
 
 \begin{figure}
-    \makebox[\textwidth][c]{\includegraphics[height=0.93\textheight]{../out/diagrams/stage3/stm_top_level}}
+    \makebox[\textwidth][c]{\includegraphics[height=0.9\textheight]{../out/diagrams/stage3/stm_top_level}}
     \caption{Der Einstiegspunkt einer \gls{anlage}.
     Verwaltet die Betriebszustände und Sub-State Machines}
     \label{fig:stm_top_level}
 \end{figure}
 
+Die Top-Level-STM \ref{fig:stm_top_level} stellt die allgemeine Logik einer Anlage dar.
+Diese State-Machine dient zur Veranschaulichung des der Logik und wurde nicht direkt implementiert.
+Um tiefe Hierarchien in den STMs zu vermeiden und die parallel laufenden STMs einfacher zu verwirklichen wurde
+für die Implementation wurden basierend auf der \ref{fig:stm_top_level} STM modelliert.
+
+Die folgenden STMs modellieren das Verhalten der Anlage.
+Sie laufen alle parallel.
+
 \begin{figure}
-    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_error}}
-    \caption{Umgang mit Fehlern und Anzeige derer mithilfe der \gls{ampel}}
-    \label{fig:stm_error}
+    \makebox[\textwidth][c]{\includegraphics[height=0.9\textheight]{../out/diagrams/stage3/stm_operation_manager}}
+    \caption{Steuerung der Betriebszustände mit dazugehörigem Schalten der \gls{ampel} und Fehlerbehandlung}
+    \label{fig:stm_operation_manager}
 \end{figure}
 
 \begin{figure}
@@ -97,6 +105,19 @@ visualisiert.
     Ein Transfer-Request wird in stm Workpiece Transfer (Abbildung~\ref{fig:stm_workpiece_transfer_request}) gesendet}
     \label{fig:stm_workpiece_transfer_request}
 \end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_small_stms}}
+    \caption{Kleine STMs}
+    \label{fig:stm_small_stms}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_error_listener}}
+    \caption{Umgang mit Fehlern}
+    \label{fig:stm_error_listener}
+\end{figure}
+
 
 
 %% Ihre Software muss zur Bearbeitung der Aufgaben ein Verhalten aufweisen.
