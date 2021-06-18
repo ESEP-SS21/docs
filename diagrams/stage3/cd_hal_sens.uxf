@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>12</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1464</x>
-      <y>672</y>
-      <w>144</w>
-      <h>120</h>
+      <x>1100</x>
+      <y>902</y>
+      <w>297</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 CPButtonType
@@ -21,10 +21,10 @@ CPRESET
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>216</x>
-      <y>672</y>
-      <w>144</w>
-      <h>168</h>
+      <x>583</x>
+      <y>946</y>
+      <w>132</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 LBType
@@ -40,26 +40,27 @@ LBEND
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1212</x>
-      <y>408</y>
-      <w>360</w>
-      <h>120</h>
+      <x>1221</x>
+      <y>473</y>
+      <w>209</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>MetalSensor
 --
 - _old_state: int
 --
-+ &lt;&lt;Create&gt;&gt; MetalSensor(GPIOWrapper)
++ &lt;&lt;Create&gt;&gt; MetalSensor(
+     GPIOWrapper)
 + was_metal(): bool</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>456</x>
-      <y>672</y>
-      <w>288</w>
-      <h>144</h>
+      <x>748</x>
+      <y>946</y>
+      <w>264</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>EStop
 --
@@ -73,10 +74,10 @@ LBEND
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>636</x>
-      <y>408</y>
-      <w>528</w>
-      <h>168</h>
+      <x>693</x>
+      <y>473</y>
+      <w>484</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>HAL
 --
@@ -96,10 +97,10 @@ lw=2
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>672</y>
-      <w>312</w>
-      <h>216</h>
+      <x>1100</x>
+      <y>1034</y>
+      <w>297</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>HeightSensor
 --
@@ -117,10 +118,10 @@ lw=2
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>132</x>
-      <y>408</y>
-      <w>372</w>
-      <h>216</h>
+      <x>583</x>
+      <y>704</y>
+      <w>341</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>LightBarriers
 --
@@ -139,10 +140,10 @@ lw=2
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>24</y>
-      <w>408</w>
-      <h>312</h>
+      <x>814</x>
+      <y>143</y>
+      <w>374</w>
+      <h>286</h>
     </coordinates>
     <panel_attributes>GPIOWrapper
 --
@@ -167,10 +168,10 @@ lw=2
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
-      <y>672</y>
-      <w>324</w>
-      <h>180</h>
+      <x>1100</x>
+      <y>704</y>
+      <w>297</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>CPButtons
 --
@@ -187,70 +188,70 @@ lw=2
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>888</x>
-      <y>324</y>
-      <w>84</w>
-      <h>108</h>
+      <x>924</x>
+      <y>418</y>
+      <w>77</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>888</x>
-      <y>564</y>
-      <w>144</w>
-      <h>132</h>
+      <x>1034</x>
+      <y>616</y>
+      <w>132</w>
+      <h>495</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=_height_sensor</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;430.0;60.0;430.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1140</x>
-      <y>564</y>
-      <w>120</w>
-      <h>132</h>
+      <x>1155</x>
+      <y>616</y>
+      <w>110</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 _cp_buttons</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>636</x>
-      <y>564</y>
-      <w>96</w>
-      <h>132</h>
+      <x>935</x>
+      <y>616</y>
+      <w>88</w>
+      <h>352</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=_e_stop</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>492</x>
-      <y>468</y>
-      <w>168</w>
-      <h>48</h>
+      <x>803</x>
+      <y>616</y>
+      <w>132</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 _light_barriers</panel_attributes>
-    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1152</x>
-      <y>516</y>
-      <w>168</w>
-      <h>84</h>
+      <x>1166</x>
+      <y>572</y>
+      <w>154</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=_metal_sensor</panel_attributes>
@@ -259,10 +260,10 @@ m1=_metal_sensor</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
-      <y>612</y>
-      <w>84</w>
-      <h>84</h>
+      <x>649</x>
+      <y>891</y>
+      <w>77</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes>
@@ -271,72 +272,72 @@ m1=_metal_sensor</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1392</x>
-      <y>672</y>
-      <w>96</w>
-      <h>48</h>
+      <x>1210</x>
+      <y>858</y>
+      <w>77</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes>
-    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>276</x>
-      <y>264</y>
-      <w>444</w>
-      <h>168</h>
+      <x>627</x>
+      <y>363</y>
+      <w>209</w>
+      <h>363</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>10.0;120.0;10.0;10.0;350.0;10.0</additional_attributes>
+    <additional_attributes>10.0;310.0;10.0;10.0;170.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1092</x>
-      <y>264</y>
-      <w>372</w>
-      <h>168</h>
+      <x>1177</x>
+      <y>363</y>
+      <w>209</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>260.0;120.0;260.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;100.0;140.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>96</x>
-      <y>156</y>
-      <w>624</w>
-      <h>780</h>
+      <x>550</x>
+      <y>341</y>
+      <w>407</w>
+      <h>825</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>440.0;550.0;440.0;630.0;10.0;630.0;10.0;10.0;500.0;10.0</additional_attributes>
+    <additional_attributes>320.0;690.0;320.0;730.0;10.0;730.0;10.0;10.0;240.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1092</x>
-      <y>156</y>
-      <w>552</w>
-      <h>780</h>
+      <x>1177</x>
+      <y>341</y>
+      <w>297</w>
+      <h>473</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=_gpio</panel_attributes>
-    <additional_attributes>90.0;580.0;90.0;630.0;440.0;630.0;440.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>200.0;400.0;250.0;400.0;250.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>96</x>
-      <y>0</y>
-      <w>1548</w>
-      <h>936</h>
+      <x>539</x>
+      <y>121</y>
+      <w>935</w>
+      <h>1133</h>
     </coordinates>
-    <panel_attributes>cd HAL_sens</panel_attributes>
+    <panel_attributes>cd HAL_sen</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
