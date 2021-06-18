@@ -7,7 +7,7 @@
       <x>36</x>
       <y>216</y>
       <w>1668</w>
-      <h>612</h>
+      <h>600</h>
     </coordinates>
     <panel_attributes>stm SortWorkpiece</panel_attributes>
     <additional_attributes/>
@@ -49,10 +49,11 @@ ramp to clear
       <x>288</x>
       <y>396</y>
       <w>252</w>
-      <h>108</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_RA_CLR</panel_attributes>
+EVNT_SEN_LB_RA_CLR
+</panel_attributes>
     <additional_attributes>190.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -60,11 +61,11 @@ EVNT_SEN_LB_RA_CLR</panel_attributes>
     <coordinates>
       <x>456</x>
       <y>552</y>
-      <w>204</w>
+      <w>300</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-after 200ms</panel_attributes>
+after 200ms/send(WRN)</panel_attributes>
     <additional_attributes>80.0;10.0;80.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
@@ -77,7 +78,7 @@ after 200ms</panel_attributes>
     </coordinates>
     <panel_attributes>ramp full
 --
-/entry send(WRN)
+
 
 valign=top
 </panel_attributes>
@@ -159,9 +160,9 @@ valign=top
     <id>UMLState</id>
     <coordinates>
       <x>1080</x>
-      <y>432</y>
+      <y>444</y>
       <w>324</w>
-      <h>84</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>discard
 --
@@ -215,11 +216,11 @@ r1=EVNT_SEN_LB_SW_BLCK[datamodel: is_in_sorting_order(height_switch_sec.front())
       <x>348</x>
       <y>372</y>
       <w>804</w>
-      <h>84</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=EVNT_SEN_LB_SW_BLCK[datamodel: !(is_in_sorting_order(height_switch_sec.front()))]</panel_attributes>
-    <additional_attributes>10.0;10.0;650.0;10.0;650.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;650.0;10.0;650.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -297,15 +298,15 @@ valign=top
     <id>Relation</id>
     <coordinates>
       <x>1320</x>
-      <y>408</y>
+      <y>420</y>
       <w>372</w>
-      <h>300</h>
+      <h>288</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
 EVNT_SEN_LB_SW_CLR
 / height_switch_sec.transfer()</panel_attributes>
-    <additional_attributes>110.0;10.0;110.0;230.0;10.0;230.0</additional_attributes>
+    <additional_attributes>110.0;10.0;110.0;220.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>UMLSpecialState</id>
@@ -324,11 +325,12 @@ EVNT_SEN_LB_SW_CLR
       <x>1320</x>
       <y>348</y>
       <w>348</w>
-      <h>72</h>
+      <h>84</h>
     </coordinates>
     <panel_attributes>no discard
 --
 /entry send(EVNT_ACT_SORT_NO_DSC)
+if(is_in_order) wrpc_order_step();
 valign=top</panel_attributes>
     <additional_attributes/>
   </element>
