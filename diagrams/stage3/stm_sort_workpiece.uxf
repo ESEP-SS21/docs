@@ -23,8 +23,7 @@
     <panel_attributes>waiting for
 wrpc
 --
-/entry
-    lb_already_cleared = 0
+
 valign=top</panel_attributes>
     <additional_attributes/>
   </element>
@@ -50,11 +49,11 @@ ramp to clear
       <x>288</x>
       <y>396</y>
       <w>252</w>
-      <h>132</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_RA_CLR</panel_attributes>
-    <additional_attributes>190.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>190.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -79,7 +78,7 @@ after 200ms</panel_attributes>
     <panel_attributes>ramp full
 --
 /entry send(WRN)
-/exit send(WRN_GONE)
+
 valign=top
 </panel_attributes>
     <additional_attributes/>
@@ -87,13 +86,18 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
+      <x>108</x>
       <y>396</y>
       <w>228</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-m1=EVNT_SEN_LB_RA_CLR </panel_attributes>
+
+
+
+
+EVNT_SEN_LB_RA_CLR 
+/send(WRN_GONE)</panel_attributes>
     <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -338,43 +342,6 @@ valign=top</panel_attributes>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>312</x>
-      <y>396</y>
-      <w>228</w>
-      <h>96</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-[lb_already_cleared]</panel_attributes>
-    <additional_attributes>170.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>120</x>
-      <y>396</y>
-      <w>180</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-m2=[lb_already_cleared]</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>888</x>
-      <y>744</y>
-      <w>540</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>Die Variable lb_already_cleared wird im Error Zustand auf 1 gesetzt,
-falls in diesem EVNT_SEN_LB_RA_CLR auftritt.
-bg=yellow</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
