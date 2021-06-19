@@ -108,13 +108,10 @@ Stoplight
       <w>348</w>
       <h>204</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;singleton&gt;&gt;
-HAL
+    <panel_attributes>HAL
 --
-- _instance: HAL
 --
-- &lt;&lt;Create&gt;&gt; HAL()
-+ get_instance(): HAL
++ &lt;&lt;Create&gt;&gt; HAL()
 + get_leds: LEDs
 + get_eject_mechanism: EjectMechanism
 + get_cb_motor: CBMotor
