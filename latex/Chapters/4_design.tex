@@ -34,18 +34,18 @@ visualisiert.
 \end{figure}
 
 Die Aktorik-Hal enthält Abstraktionen für die Ansteuerung der Aktorik-Hardware.
-Die Low-Level Hardwarezugriffe auf einzelne GPIO\-Register werden von der GPIOWrapper-Klasse gekapselt.
-Sie erlaubt es gezielt die Funktionalität einzelner Pins der GPIO-Banks des BeagleBoneBlacks zu
-Konfigurieren sowie einzelne Pins anzusteuern und auszulesen. Die einzelen Aktoren sind in Klassen unterteilt, 
+Die Low-Level Hardwarezugriffe auf einzelne GPIO-Register werden von der GPIO Wrapper-Klasse gekapselt.
+Sie erlaubt es, gezielt die Funktionalität einzelner Pins der GPIO-Banks des BeagleBoneBlacks zu
+konfigurieren sowie einzelne Pins anzusteuern und auszulesen. Die einzelen Aktoren sind in Klassen unterteilt,
 welche Funktionalität zum Ansprechen von diesen bereitstellen. 
-Das SortingMechanism-Interface stellt Methoden zum Versetzen in Auswerfe- und Durchlassposition, 
+Das SortingMechanism-Interface stellt Methoden zum Versetzen in Auswerf- und Durchlassposition,
 sowie zum Zurücksetzten in Ruhelage bereit. Die HAL-Klasse entscheidet bei der Erzeugung mittels 
-eines Reads auf den WeicheOffen Sensor-Pin des GPIOs welche konkrete Ausprägung des SortingMechanism erzeugt wird
-(1 Ejector, 0 Switch).
+eines Reads auf den WeicheOffen Sensor-Pin des GPIOs, welche konkrete Ausprägung des \gls{sortierer}s erzeugt wird
+(1:Ejector, 0:Switch).
 Die CBMotor-Klasse enthält Methoden zum Setzen des Bewegungszustandes. Das Enum Direction gibt dafür mögliche Werte an.
-Die LEDs-Klasse erlaubt Zugriff auf die LEDs am Bedienpanel. Über das Enum LED\_Type kann die gewünschte LED ausgewählt werden.
-Die Ansteuerung der Ampel wird von der Stoplight-Klasse übernommen Sie erlaubt es, einzelne Farben der Ampel anzusteuern.
-Der Blink-Worker erlaubt es als aktive Komponente die Ampel in einer gewünschten Farbe blinken zu lassen.
+Die LEDs-Klasse erlaubt Zugriff auf die LEDs am \gls{ctrlp}. Über das Enum LED\_Type kann die gewünschte LED ausgewählt werden.
+Die Ansteuerung der \gls{ampel} wird von der Stoplight-Klasse übernommen. Sie erlaubt es, einzelne Farben der \gls{ampel} anzusteuern.
+Der Blink-Worker erlaubt es, als aktive Komponente die \gls{ampel} in einer gewünschten Farbe blinken zu lassen.
 Zusätzlich dazu gibt es noch eine HalManagerAct Klasse, die als Schnittstelle zum Dispatcher eingehende Events auf Methodenaufrüfe der Aktorik-Hal 
 mappt und aus Übersichtlichkeitsgründen in diesem Diagramm weggelassen wurde.
 
@@ -59,19 +59,19 @@ mappt und aus Übersichtlichkeitsgründen in diesem Diagramm weggelassen wurde.
 
 Die Sensorik\-Hal enthält Abstraktionen für das Auslesen der Sensorik. 
 Für den Low-Level Zugriff nutzt sie dieselbe GPIO-Abstraktion wie die Aktorik\-Hal.
-Alle Sensorabstraktionen außer der HeightSensor stellen Methoden bereit, die Zustandsveränderungen 
+Alle Sensorabstraktionen außer der \gls{he_sensor} stellen Methoden bereit, die Zustandsveränderungen
 seit dem letzten Auslesen erkennen. 
 Lichtschranken werden über die LightBarriers-Klasse ausgelesen. 
 Die Wahl der gewünschten Lichtschranke erfolgt über das LBType Enum.
-Die Knöpfe des Bedienfelds lassen sich über die Klasse CPButtons abfragen. 
+Die Knöpfe des \gls{ctrlp}s lassen sich über die Klasse CPButtons abfragen.
 Der gewünschte Knopf kann über das Enum CPButtonType ausgewählt werden.
-Metallsensor und EStop-Schalter können über die MetalSensor bzw. EStop Klasse ausgelesen werden.
+\Gls{me_sensor} und \gls{estop} können über die MetalSensor- bzw. EStop-Klasse ausgelesen werden.
 Eine in diesem Diagramm aus Übersichtlichkeitsgründen weggelassene HalManagerSen-Klasse wartet
 auf Interrupts vom GPIO, fragt dann alle Sensoren ab und sendet bei Veränderung das entsprechende 
 Event an den Dispatcher. 
-Der Höhensensor wird etwas anders verwaltet. Eine Messung lässt sich über sample() anfordern. 
+Der \gls{he_sensor} wird etwas anders verwaltet. Eine Messung lässt sich über sample() anfordern.
 Nach erfolgreicher Messung tritt ein Interrupt auf, welcher dem HalManagerSen mitteilt,
-dass ein neuer Wert über get\_value abgefragt werden kann.
+dass ein neuer Wert über get\_value() abgefragt werden kann.
 Zu Kalibrierungszwecken kann ein neuer Nullwert mit set\_zero\_point() gesetzt werden.
 
 \subsection{dispatcher}\label{subsec:dispatcher}
