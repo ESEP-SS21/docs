@@ -33,9 +33,9 @@ Client wird dieses an alle Clients geschickt, die das Event abboniert haben. Sch
 verwalteten Eventsystem stellt das DispatcherClient Interface bereit, welches die Möglichkeit bietet Events zu abbonieren,
 zu Verschicken und auf erhaltene Events zu reagieren. Da die Übermittlung von Events asynchron über das Message Passing System
 von QNX erfolgt, befindet sich im Dispatcher zusätzlich eine connection\_management Komponente, die das Message Passing System 
-kapselt und verwaltet. Die Kommunikation zur anderen Anlage findet über das QNX-Eigene Qnet Protokoll statt. 
+kapselt und verwaltet. Die Kommunikation zur anderen Anlage findet über das QNX-eigene Qnet Protokoll statt. 
 Der Dispatcher erlaubt es beim Senden eines Events auszuwählen, ob dieses nur auf der eigenen Anlage empfangen werden soll,
-oder auch an den Dispatcher der verbundenen, anderen Anlage weitergeleitet werden soll.
+oder auch an den Dispatcher der verbundenen anderen Anlage weitergeleitet werden soll.
 
 \subsection{hal}\label{subsec:hal}
 Die hal stellt die Schnittstelle der Software zu Sensorik und Aktorik der \gls{anlage} bereit. 
@@ -55,7 +55,7 @@ Im Abspielmodus werden die aufgenommenen Events zu den jeweiligen Zeitpunkten an
 Diese Komponente enthält die Steuerungslogik für die Verhaltenssteuerung, Betriebszustandsverwaltung sowie Fehlerbehandlung des \gls{system}.
 Die stm-Unterkomponente enthält die für die Anlagensteuerung zuständigen Zustandsautomaten. Die Zustandsautomaten interagieren über das 
 UnitData-Interface mit dem datamodel, welches für die Verwaltung der Werkstücke, sowie die Speicherung von allen weiteren für den Betrieb der \gls{anlage} nötigen
-Informationen wie z.B. Informationen über den aktuellen Betriebszustand verantwortlich ist. 
+Informationen wie z.B. über den aktuellen Betriebszustand verantwortlich ist. 
 
 \subsection{clients}\label{subsec:clients}
 Die Clients-Komponente stellt einen Adapter zwischen dispatcher und den Zustandsautomaten dar. 
