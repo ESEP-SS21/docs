@@ -25,7 +25,7 @@ visualisiert.
 
 Die Architektur der Software für eine \gls{anlage} ist in \ref{fig:cmp} abgebildet.
 
-/subsection{dispatcher}\label{subsec:dispatcher}
+\subsection{dispatcher}\label{subsec:dispatcher}
 Da das System auf größtenteils eventbasierte Kommunikation zwischen den einzelnen Komponenten setzt,
 ist der dispatcher das Herzstück der Software. Der Dispatcher erlaubt es Clients bestimmte Events zu abbonieren
 und Events für die Verteilung auf dem System an den Dispatcher zu schicken. Erhält der Dispatcher ein Event von einem 
@@ -37,7 +37,7 @@ kapselt und verwaltet. Die Kommunikation zur anderen Anlage findet über das QNX
 Der Dispatcher erlaubt es beim Senden eines Events auszuwählen, ob dieses nur auf der eigenen Anlage empfangen werden soll,
 oder auch an den Dispatcher der verbundenen, anderen Anlage weitergeleitet werden soll.
 
-/subsection{hal}\label{subsec:hal}
+\subsection{hal}\label{subsec:hal}
 Die hal stellt die Schnittstelle der Software zu Sensorik und Aktorik der \gls{anlage} bereit. 
 Sie besteht zum einen aus der sensors-Komponente, die bei Ereignissen an Sensoren, wie z.B. 
 dem Drücken eines Tasters oder dem Unterbrechen einer Lichtschranke,
