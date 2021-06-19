@@ -26,13 +26,11 @@ In den Programm-Argumenten kann mit \verb|-R| bzw.
 \verb|--record=[filename]| die Record-Funktion aktiviert werden.
 Die Events werden in eine json-Datei mit dem angegebenen Dateinamen geschrieben.
 Wird kein Name angegeben, wird ein Timestamp als Dateiname verwendet.
-
 Mit dem in C\# geschriebenen \textit{EmbeddedRecordCreator} können die erstellten
 Eventaufzeichnungen
 eingelesen werden.
 Das Programm erlaubt dem Benutzer die Aufzeichnungen zu bearbeiten.
 Es gibt auch die Möglichkeit eine Eventabfolge neu zu erstellen.
-
 \begin{figure}[h]
     \centering
     \includegraphics[scale = 0.7]{anhang/EmbeddedRecordCreator.PNG}
@@ -40,7 +38,9 @@ Es gibt auch die Möglichkeit eine Eventabfolge neu zu erstellen.
     \label{fig:embedded-record-creator}
 \end{figure}
 
-Die Replay-Funktion des Embedded-Recorders kann die Events einer json-Datei wieder abspielen.
+\FloatBarrier
+\noindent Die Replay-Funktion des Embedded-Recorders kann die Events einer json-Datei wieder
+abspielen.
 In den Programm-Argumenten wird mit \verb|-P [filename]| angegeben, dass eine bestimmte json-Datei
 abgespielt werden soll.
 Wenn die Replay-Funktion läuft, wird die Sensorik-HAL deaktiviert,
