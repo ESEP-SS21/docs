@@ -23,6 +23,47 @@ visualisiert.
     \label{fig:cmp}
 \end{figure}
 
+Die Architektur der Software für eine \gls{anlage} ist in \ref{fig:cmp} abgebildet.
+
+\subsection{dispatcher}\label{subsec:dispatcher}
+Da das System auf größtenteils eventbasierte Kommunikation zwischen den einzelnen Komponenten setzt,
+ist der dispatcher das Herzstück der Software. Der Dispatcher erlaubt es Clients bestimmte Events zu abbonieren
+und Events für die Verteilung auf dem System an den Dispatcher zu schicken. Erhält der Dispatcher ein Event von einem 
+Client wird dieses an alle Clients geschickt, die das Event abboniert haben. Schnittstelle zum durch den Dispatcher 
+verwalteten Eventsystem stellt das DispatcherClient Interface bereit, welches die Möglichkeit bietet Events zu abbonieren,
+zu Verschicken und auf erhaltene Events zu reagieren. Da die Übermittlung von Events asynchron über das Message Passing System
+von QNX erfolgt, befindet sich im Dispatcher zusätzlich eine connection\_management Komponente, die das Message Passing System 
+kapselt und verwaltet. Die Kommunikation zur anderen Anlage findet über das QNX-eigene Qnet Protokoll statt. 
+Der Dispatcher erlaubt es beim Senden eines Events auszuwählen, ob dieses nur auf der eigenen Anlage empfangen werden soll,
+oder auch an den Dispatcher der verbundenen anderen Anlage weitergeleitet werden soll.
+
+\subsection{hal}\label{subsec:hal}
+Die hal stellt die Schnittstelle der Software zu Sensorik und Aktorik der \gls{anlage} bereit. 
+Sie besteht zum einen aus der sensors-Komponente, die bei Ereignissen an Sensoren, wie z.B. 
+dem Drücken eines Tasters oder dem Unterbrechen einer Lichtschranke,
+ein entsprechendes Event an den Dispatcher schickt.
+Zum anderen besitzt die hal eine actuators-Komponente.
+Diese hat Events zur Hardwareansteuerung abboniert und führt bei Erhalt eines solchen Events die entsprechende Aktion durch.
+
+\subsection{embedded\_recorder}\label{subsec:embedded_recorder}
+Der Embedded Recorder erlaubt es Sequenzen von Ereignissen aufzunehmen und abzuspeichern, sowie diese Aufzeichnungen abzuspielen.
+Dafür hat er im Aufnahmemodus beim Dispatcher die Sensorikevents der hal abboniert. 
+Erhaltene Events werden mit Zeitstempel in einer Datei abgelegt.
+Im Abspielmodus werden die aufgenommenen Events zu den jeweiligen Zeitpunkten an den Dispatcher gesendet und so auf dem Softwaresystem verteilt.
+
+\subsection{logic}\label{subsec:logic}
+Diese Komponente enthält die Steuerungslogik für die Verhaltenssteuerung, Betriebszustandsverwaltung sowie Fehlerbehandlung des \gls{system}.
+Die stm-Unterkomponente enthält die für die Anlagensteuerung zuständigen Zustandsautomaten. Die Zustandsautomaten interagieren über das 
+UnitData-Interface mit dem datamodel, welches für die Verwaltung der Werkstücke, sowie die Speicherung von allen weiteren für den Betrieb der \gls{anlage} nötigen
+Informationen wie z.B. über den aktuellen Betriebszustand verantwortlich ist. 
+
+\subsection{clients}\label{subsec:clients}
+Die Clients-Komponente stellt einen Adapter zwischen dispatcher und den Zustandsautomaten dar. 
+Sie übersetzt vom Dispatcher eingehende Events in Methodenaufrufe im Kontext der Statemachines.
+Ebenso stellt sie den Zustandsautomaten eine Möglichkeit bereit, Events an den Dispatcher zu schicken.
+Zusätzlich enthält die Komponente noch kleinere Hilfsclients die.z.B. einen Heartbeat für die Erkennung
+von Verbindungsabbrüchen zwischen den Anlagen erzeugen.
+
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage2/cd_hal}}
     \caption{Klassendiagramm der HAL Aktorik}
