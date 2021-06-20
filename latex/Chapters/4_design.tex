@@ -1,3 +1,4 @@
+\FloatBarrier
 \chapter{Design}\label{ch:design}
 
 %% Anmerkung: Die Implementierung MUSS zu Ihrem Design-Modell konsistent sein.
@@ -42,6 +43,7 @@ visualisiert.
 \end{figure}
 
 
+\FloatBarrier
 \section{Datenmodellierung}\label{sec:datenmodellierung}
 
 %% Bestimmen Sie das Datenmodell und dokumentieren Sie es hier mit Hilfe von UML Klassendiagrammen
@@ -53,20 +55,23 @@ visualisiert.
 
 \section{Verhaltensmodellierung}\label{sec:verhaltensmodellierung}
 
+Die Top-Level-STM~\ref{fig:stm_top_level} stellt die allgemeine Logik einer Anlage dar.
+Diese State-Machine dient zur Veranschaulichung des der Logik und wurde nicht direkt implementiert.
+Um tiefe Hierarchien in den STMs zu vermeiden und die parallel laufenden STMs einfacher zu verwirklichen wurde
+für die Implementation wurden basierend auf der~\ref{fig:stm_top_level} STM modelliert.
+
+\begin{figure}[h]
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_workpiece_transfer}}
+    \caption{Transfer eines \glspl{workpiece}s an die nächste \gls{anlage}}
+    \label{fig:stm_workpiece_transfer}
+\end{figure}
+
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[height=0.9\textheight]{../out/diagrams/stage3/stm_top_level}}
     \caption{Der Einstiegspunkt einer \gls{anlage}.
     Verwaltet die Betriebszustände und Sub-State Machines}
     \label{fig:stm_top_level}
 \end{figure}
-
-Die Top-Level-STM~\ref{fig:stm_top_level} stellt die allgemeine Logik einer Anlage dar.
-Diese State-Machine dient zur Veranschaulichung des der Logik und wurde nicht direkt implementiert.
-Um tiefe Hierarchien in den STMs zu vermeiden und die parallel laufenden STMs einfacher zu verwirklichen wurde
-für die Implementation wurden basierend auf der~\ref{fig:stm_top_level} STM modelliert.
-
-Die folgenden STMs modellieren das Verhalten der Anlage.
-Sie laufen alle parallel.
 
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[height=0.9\textheight]{../out/diagrams/stage3/stm_operation_manager}}
@@ -93,32 +98,24 @@ Sie laufen alle parallel.
 \end{figure}
 
 \begin{figure}
-    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_workpiece_transfer}}
-    \caption{Transfer eines \glspl{workpiece}s an die nächste \gls{anlage}}
-    \label{fig:stm_workpiece_transfer}
-\end{figure}
-
-\begin{figure}
     \centering
-    \includegraphics[scale = 0.5]{../out/diagrams/stage3/stm_answer_transfer_request}
+    \includegraphics[scale = 0.45]{../out/diagrams/stage3/stm_answer_transfer_request}
     \caption{Beantworten eines Transfer-Request der vorherigen \gls{anlage}.
     Ein Transfer-Request wird in stm Workpiece Transfer (Abbildung~\ref{fig:stm_workpiece_transfer_request}) gesendet}
     \label{fig:stm_workpiece_transfer_request}
 \end{figure}
 
 \begin{figure}
-    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_small_stms}}
-    \caption{Sonstige STMs}
-    \label{fig:stm_small_stms}
-\end{figure}
-
-\begin{figure}
-    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/stm_error_listener}}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.45]{../out/diagrams/stage3/stm_error_listener}}
     \caption{Umgang mit Fehlern}
     \label{fig:stm_error_listener}
 \end{figure}
 
-
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.45]{../out/diagrams/stage3/stm_small_stms}}
+    \caption{Sonstige STMs}
+    \label{fig:stm_small_stms}
+\end{figure}
 
 %% Ihre Software muss zur Bearbeitung der Aufgaben ein Verhalten aufweisen.
 %% Überlegen Sie sich dieses Verhalten auf Basis der Anforderungen und modellieren
