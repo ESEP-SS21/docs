@@ -8,23 +8,19 @@
 
 \section{Limitationen des Systems}\label{sec:limitations}
 
-Im Laufe des Entwicklungsprozesses stößt man immer wieder mal auf Probleme, die ggfs. kleinere Abweichungen der
-Anforderungen erfordern, sodass das System am Ende reibungslos funktioniert. Diese sind untenstehend aufgeführt.\\
-
-Sind die Anlagen aufgrund von Drücken des \gls{estop}s angehalten, gibt es die Möglichkeit, nach Herausziehen aller
-Estopp-Schalter,die Anlage wieder durch Drücken eines beliebigen Reset-Tasters in Betriebszustand zu versetzen. Dies weicht leicht
-von der Anforderung, dass, nach Drücken des \gls{estop}s, zum Starten des Systems an beiden Anlagen der \gls{t_reset} gedrückt
-werden muss, ab. Die Sicherheit wird dadurch aber nicht gefährdet, da die letzte Aktion vor Wiederaufnahme des Betriebs
-stets durch den Benutzer geschieht.\\
-
+Im \refreq{28} wird beschrieben, dass der Betrieb, nachdem ein \gls{estop}-Schalter gedrückt wurde, durch Herausziehen allesr
+\gls{estop}-Schalter und Drücken des \gls{t_reset}
+der Anlage, an dem auch der \gls{estop} gedrückt wurde, neu gestartet werden kann. Die Implementierung weicht leicht davon
+ab. Welcher der \glspl{t_reset} zum erneuten Starten des Sytems benutzt wird, spielt keine Rolle mehr. Grund für diese Änderung ist, dass das
+System keine Unterscheidung darin macht, von welcher Anlage ein Event geschickt wird. Die Sicherheit wird dadurch aber nicht gefährdet, da die letzte Aktion vor Wiederaufnahme des Betriebs
+stets durch den Benutzer geschieht.
 Ist die Kapazität der \glspl{rampe} beider Anlagen ausgeschöpft und ein aufgelegtes \gls{workpiece} passt nicht in die
 Sortierreihenfolge, wird das System in Fehlerzustand versetzt. Um dort rauszukommen, müssen stets beide \glspl{rampe} geleert
 werden! Geschieht das nämlich nur bei einer \gls{rampe}, wird danach keine Warnung mehr ausgegeben, obwohl noch eine der
 beiden \gls{rampe}n voll ist. Dies ist so realisiert worden, da der Durchsatz, falls immer nur eine \gls{rampe} geleert wird,
 verschlechtert wird, weil das System aufgrund von ausgeschöpften \glspl{rampe} schneller wieder in Fehlerzustand gerät und
-stoppt.\\
-
-Der Durchsatz des Systems ist insofern beschränkt, dass \glspl{workpiece} nur im Abstand von 20 cm sortiert werden können.
+stoppt.
+Der \gls{durchsatz} des Systems ist insofern beschränkt, dass \glspl{workpiece} nur im Abstand von 20 cm sortiert werden können.
 Liegen die Werkstücke zu nah beieinander auf dem \gls{belt}, kann es sein, dass es bei einem langsameren Aussortieren
 der \gls{weiche} zu Stau kommt und die korrekte Funktion des Sysmtems nicht mehr gewährleistet werden kann.
 Durch einige Tests hat sich der oben genannte Sicherheitsabstand als unkritisch erwiesen.
