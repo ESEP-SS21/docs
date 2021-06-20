@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>16</zoom_level>
+  <zoom_level>18</zoom_level>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>544</x>
-      <y>256</y>
-      <w>288</w>
-      <h>176</h>
+      <x>828</x>
+      <y>252</y>
+      <w>324</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>Metal detection
 
@@ -18,10 +18,10 @@ valign=top
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>448</x>
-      <y>320</y>
-      <w>32</w>
-      <h>32</h>
+      <x>720</x>
+      <y>324</y>
+      <w>36</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -29,10 +29,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>320</y>
-      <w>112</w>
-      <h>48</h>
+      <x>738</x>
+      <y>324</y>
+      <w>126</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
@@ -40,10 +40,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>272</y>
-      <w>384</w>
-      <h>160</h>
+      <x>1134</x>
+      <y>270</y>
+      <w>432</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_METAL_DTC/
@@ -53,10 +53,10 @@ is_metallic = true</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>544</x>
-      <y>480</y>
-      <w>288</w>
-      <h>176</h>
+      <x>828</x>
+      <y>504</y>
+      <w>324</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>Heartbeat
 valign=top
@@ -66,10 +66,10 @@ valign=top
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>448</x>
-      <y>544</y>
-      <w>32</w>
-      <h>32</h>
+      <x>720</x>
+      <y>576</y>
+      <w>36</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -77,10 +77,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>544</y>
-      <w>112</w>
-      <h>48</h>
+      <x>738</x>
+      <y>576</y>
+      <w>126</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
@@ -88,10 +88,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>496</y>
-      <w>304</w>
-      <h>160</h>
+      <x>1134</x>
+      <y>522</y>
+      <w>342</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 after 100ms/
@@ -101,10 +101,10 @@ send(EVNT_HRTB)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>544</x>
-      <y>704</y>
-      <w>288</w>
-      <h>176</h>
+      <x>828</x>
+      <y>756</y>
+      <w>324</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>Wait for flip
 valign=top
@@ -114,10 +114,10 @@ valign=top
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>448</x>
-      <y>768</y>
-      <w>32</w>
-      <h>32</h>
+      <x>720</x>
+      <y>828</y>
+      <w>36</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -125,10 +125,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>768</y>
-      <w>112</w>
-      <h>48</h>
+      <x>738</x>
+      <y>828</y>
+      <w>126</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
@@ -136,10 +136,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>720</y>
-      <w>464</w>
-      <h>160</h>
+      <x>1134</x>
+      <y>774</y>
+      <w>522</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_WRPC_FLP[prim mode]/
@@ -149,61 +149,46 @@ wrpc_order_reset_to(event.payload)</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>128</x>
-      <y>304</y>
-      <w>320</w>
-      <h>64</h>
+      <x>342</x>
+      <y>558</y>
+      <w>360</w>
+      <h>108</h>
     </coordinates>
-    <panel_attributes>Substatemachine in Running
+    <panel_attributes>Zur Sicherstellung der Verbindung mit der Anderen Anlage
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>128</x>
-      <y>528</y>
-      <w>320</w>
-      <h>96</h>
+      <x>342</x>
+      <y>792</y>
+      <w>360</w>
+      <h>144</h>
     </coordinates>
-    <panel_attributes>Dauerhaftes senden des 
-Heartbeats 
-(auch als Thread realisierbar) 
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>128</x>
-      <y>752</y>
-      <w>320</w>
-      <h>96</h>
-    </coordinates>
-    <panel_attributes>Handler für ein geflipptes
-Workpiece (läuft durchgehend)
-(auch als Thread realisierbar) 
+    <panel_attributes>Nur im PRIMARY Mode
+Setzt Sortierreihenfolge auf überschlagenes Werkstück züruck
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>96</x>
-      <y>224</y>
-      <w>1216</w>
-      <h>224</h>
+      <x>306</x>
+      <y>216</y>
+      <w>1368</w>
+      <h>252</h>
     </coordinates>
-    <panel_attributes>stm Metal detection</panel_attributes>
+    <panel_attributes>stm MetalDetection</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>96</x>
-      <y>448</y>
-      <w>1216</w>
-      <h>224</h>
+      <x>306</x>
+      <y>468</y>
+      <w>1368</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes>stm Heartbeat</panel_attributes>
     <additional_attributes/>
@@ -211,12 +196,12 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>96</x>
-      <y>672</y>
-      <w>1216</w>
-      <h>224</h>
+      <x>306</x>
+      <y>720</y>
+      <w>1368</w>
+      <h>252</h>
     </coordinates>
-    <panel_attributes>stm Wait for flip</panel_attributes>
+    <panel_attributes>stm Flip handler</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

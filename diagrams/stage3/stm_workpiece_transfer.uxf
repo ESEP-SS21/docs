@@ -5,9 +5,9 @@
     <id>UMLFrame</id>
     <coordinates>
       <x>192</x>
-      <y>72</y>
+      <y>156</y>
       <w>1260</w>
-      <h>768</h>
+      <h>684</h>
     </coordinates>
     <panel_attributes>stm WorkpieceTransfer</panel_attributes>
     <additional_attributes/>

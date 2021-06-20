@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>19</zoom_level>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>480</x>
-      <y>260</y>
-      <w>690</w>
-      <h>340</h>
+      <x>266</x>
+      <y>361</y>
+      <w>1311</w>
+      <h>532</h>
     </coordinates>
     <panel_attributes>stm ErrorListener</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>510</x>
-      <y>430</y>
-      <w>240</w>
-      <h>150</h>
+      <x>323</x>
+      <y>570</y>
+      <w>456</w>
+      <h>285</h>
     </coordinates>
     <panel_attributes>WaitingForError
 --
@@ -31,10 +31,10 @@ valign=top
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>960</x>
-      <y>440</y>
-      <w>180</w>
-      <h>150</h>
+      <x>1178</x>
+      <y>589</y>
+      <w>342</w>
+      <h>285</h>
     </coordinates>
     <panel_attributes>WaitingForResolve
 --
@@ -46,10 +46,10 @@ valign=top
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>540</y>
-      <w>240</w>
-      <h>50</h>
+      <x>760</x>
+      <y>779</y>
+      <w>456</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ERR
@@ -59,10 +59,10 @@ _current_error = &lt;&lt;ErrorType&gt;&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>440</y>
-      <w>240</w>
-      <h>50</h>
+      <x>760</x>
+      <y>589</y>
+      <w>456</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_XX/
@@ -72,10 +72,10 @@ send(EVNT_ERR_GONE)</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>620</x>
-      <y>300</y>
-      <w>450</w>
-      <h>70</h>
+      <x>532</x>
+      <y>399</y>
+      <w>855</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>EVNT_XX ist das Event welches empfangen werden muss,
 um den vorliegenden Fehler zu lösen.
@@ -86,21 +86,21 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>360</y>
-      <w>30</w>
-      <h>100</h>
+      <x>893</x>
+      <y>513</y>
+      <w>57</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>480</y>
-      <w>240</w>
-      <h>50</h>
+      <x>760</x>
+      <y>665</y>
+      <w>456</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 EVNT_ESTOP_ON
@@ -110,10 +110,10 @@ EVNT_ESTOP_ON
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>510</y>
-      <w>240</w>
-      <h>40</h>
+      <x>760</x>
+      <y>722</y>
+      <w>456</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 EVNT_CONN_LOST</panel_attributes>
@@ -122,10 +122,10 @@ EVNT_CONN_LOST</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>550</x>
-      <y>350</y>
-      <w>20</w>
-      <h>20</h>
+      <x>399</x>
+      <y>456</y>
+      <w>38</w>
+      <h>38</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -133,12 +133,12 @@ EVNT_CONN_LOST</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>550</x>
-      <y>360</y>
-      <w>30</w>
-      <h>90</h>
+      <x>399</x>
+      <y>475</y>
+      <w>57</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
 </diagram>
