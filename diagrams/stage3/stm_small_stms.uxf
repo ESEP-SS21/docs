@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>18</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>828</x>
+      <y>252</y>
+      <w>324</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Metal detection
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>720</x>
+      <y>324</y>
+      <w>36</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>324</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1134</x>
+      <y>270</y>
+      <w>432</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_METAL_DTC/
+is_metallic = true</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;80.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>828</x>
+      <y>504</y>
+      <w>324</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Heartbeat
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>720</x>
+      <y>576</y>
+      <w>36</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>576</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1134</x>
+      <y>522</y>
+      <w>342</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+after 100ms/
+send(EVNT_HRTB)</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;80.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>828</x>
+      <y>756</y>
+      <w>324</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Wait for flip
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>720</x>
+      <y>828</y>
+      <w>36</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>828</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1134</x>
+      <y>774</y>
+      <w>522</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_WRPC_FLP[prim mode]/
+wrpc_order_reset_to(event.payload)</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;80.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>342</x>
+      <y>558</y>
+      <w>360</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Zur Sicherstellung der Verbindung mit der Anderen Anlage
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>342</x>
+      <y>792</y>
+      <w>360</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Nur im PRIMARY Mode
+Setzt Sortierreihenfolge auf überschlagenes Werkstück züruck
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>306</x>
+      <y>216</y>
+      <w>1368</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>stm MetalDetection</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>306</x>
+      <y>468</y>
+      <w>1368</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>stm Heartbeat</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>306</x>
+      <y>720</y>
+      <w>1368</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>stm Flip handler</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

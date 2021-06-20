@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>572</x>
+      <y>546</y>
+      <w>377</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Waiting for heigth
+--
+entry: send(EVNT_SEN_HEIGHT_REQ)
+
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>572</x>
+      <y>260</y>
+      <w>234</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Waiting for workpiece
+--
+
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>676</x>
+      <y>403</y>
+      <w>481</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_BLCK/start_height_sec.transfer()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>221</x>
+      <y>351</y>
+      <w>390</w>
+      <h>247</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_HE_SENSOR_HE [prim mode]
+/heigth_1 = heigth</panel_attributes>
+    <additional_attributes>270.0;170.0;10.0;170.0;10.0;10.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>156</x>
+      <y>325</y>
+      <w>26</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>169</x>
+      <y>325</y>
+      <w>429</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>143</x>
+      <y>221</y>
+      <w>1378</w>
+      <h>468</h>
+    </coordinates>
+    <panel_attributes>stm HeightMeasurement</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>793</x>
+      <y>299</y>
+      <w>728</w>
+      <h>338</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_HE_SENSOR_HE [sec mode]
+/heigth_2 = heigth
+is_flipped = determine_if_flipped();
+if is_flipped == true then 
+      send(EVNT_WRPC_FLP)</panel_attributes>
+    <additional_attributes>120.0;240.0;270.0;240.0;270.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

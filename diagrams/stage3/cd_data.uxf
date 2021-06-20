@@ -1,41 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>16</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>960</x>
-      <y>384</y>
-      <w>480</w>
-      <h>240</h>
+      <x>1120</x>
+      <y>370</y>
+      <w>300</w>
+      <h>280</h>
     </coordinates>
-    <panel_attributes>Anlage
+    <panel_attributes>UnitData
 --
-- _instance: Anlage {readonly}
-+ _belt_is_blocked: bool
-+ _ramp_full: bool
-+ _pending_transfer: Workpiece
++ belt_is_blocked: bool
++ ramp_full: bool
++ pending_transfer: Workpiece
++ estop_count: int
++ estop_triggered:bool
++ warning_count: int
++ srv_pending: int
+- _unit_mutex: mutex
 --
 + wrpc_fits_order(Workpiece): bool
 + wrpc_order_step()
 + wrpc_order_reset_to(WorkpieceType)
-</panel_attributes>
++ get_switch_end_sec(): CBSection
++ get_height_switch_sec(): CBSection
++ get_start_height_sec(): CBSection</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>208</x>
-      <y>608</y>
-      <w>512</w>
-      <h>320</h>
+      <x>650</x>
+      <y>630</y>
+      <w>320</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>Workpiece
 --
-/- last_id: id/
+- _last_id: id {static}
 + id: id {readonly}
-+ height_1: float
-+ height_2: float
++ height_1: int
++ height_2: int
 + is_metallic: bool
 + is_flipped: bool
 --
@@ -48,10 +54,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1040</x>
-      <y>688</y>
-      <w>256</w>
-      <h>208</h>
+      <x>1150</x>
+      <y>680</y>
+      <w>160</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 WorkpieceType
@@ -66,55 +72,57 @@ unkown</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>208</x>
-      <y>224</y>
-      <w>464</w>
-      <h>272</h>
+      <x>650</x>
+      <y>360</y>
+      <w>290</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>CBSection
 --
 - _queue: queue&lt;Workpiece&gt;
+- _section_mutex: mutex
 --
++ &lt;&lt;Create&gt;&gt; CBSection()
 + &lt;&lt;Create&gt;&gt; CBSection(next: CBSection)
 + size(): int
 + back(): Workpiece
 + front(): Workpiece
 + transfer()
++ enter_workpiece(Workpiece)
 + exit_first()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>160</x>
-      <y>0</y>
-      <w>1328</w>
-      <h>1280</h>
+      <x>620</x>
+      <y>140</y>
+      <w>890</w>
+      <h>910</h>
     </coordinates>
-    <panel_attributes>cd Data</panel_attributes>
+    <panel_attributes>cd Datamodel</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>656</x>
-      <y>368</y>
-      <w>336</w>
-      <h>96</h>
+      <x>930</x>
+      <y>450</y>
+      <w>210</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ height_switch_sec
-{readonly}
+- _height_switch_sec
 </panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>480</y>
-      <w>80</w>
-      <h>160</h>
+      <x>670</x>
+      <y>550</y>
+      <w>50</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;
 m1=0..*
@@ -124,22 +132,22 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>704</x>
-      <y>608</y>
-      <w>320</w>
-      <h>96</h>
+      <x>960</x>
+      <y>640</y>
+      <w>200</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;40.0;180.0;40.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;180.0;30.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>128</y>
-      <w>208</w>
-      <h>128</h>
+      <x>740</x>
+      <y>300</y>
+      <w>130</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 _next_section
@@ -150,86 +158,59 @@ m2=0..1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>992</x>
-      <y>224</y>
-      <w>224</w>
-      <h>192</h>
+      <x>930</x>
+      <y>410</y>
+      <w>210</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ start_height_sec
-   {readonly}</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>656</x>
-      <y>432</y>
-      <w>336</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-+ switch_end_sec
-{readonly}</panel_attributes>
+- _start_height_sec</panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1168</x>
-      <y>608</y>
-      <w>176</w>
-      <h>112</h>
+      <x>930</x>
+      <y>490</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+-_switch_end_sec</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1300</x>
+      <y>640</y>
+      <w>170</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 _next_in
 sorting_order</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>70.0;10.0;70.0;100.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>704</x>
-      <y>752</y>
-      <w>368</w>
-      <h>64</h>
+      <x>960</x>
+      <y>720</y>
+      <w>210</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 type = unknown</panel_attributes>
-    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>752</x>
-      <y>144</y>
-      <w>432</w>
-      <h>96</h>
-    </coordinates>
-    <panel_attributes>StartHeightSection
---
---
-+ enter_workpiece(Workpiece)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>576</x>
-      <y>144</y>
-      <w>208</w>
-      <h>112</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>944</x>
-      <y>48</y>
-      <w>384</w>
-      <h>64</h>
+      <x>650</x>
+      <y>230</y>
+      <w>240</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>using id = int; {max 21 Bit}
 bg=yellow</panel_attributes>
@@ -238,22 +219,24 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>816</x>
-      <y>912</y>
-      <w>592</w>
-      <h>144</h>
+      <x>1030</x>
+      <y>820</y>
+      <w>370</w>
+      <h>90</h>
     </coordinates>
-    <panel_attributes>Die Methode determine_workpiece_type ist notwendig, da der workpiece_type erst bestimmt werden kann, sobald das Teil an LB_SW angelangt ist.
+    <panel_attributes>Die Methode determine_workpiece_type ist notwendig, 
+da der workpiece_type erst bestimmt werden kann,
+sobald das Teil an LB_SW angelangt ist.
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>528</x>
-      <y>896</y>
-      <w>320</w>
-      <h>80</h>
+      <x>850</x>
+      <y>810</y>
+      <w>200</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
     <additional_attributes>180.0;30.0;150.0;10.0;10.0;10.0</additional_attributes>
@@ -261,29 +244,28 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>208</x>
-      <y>992</y>
-      <w>512</w>
-      <h>240</h>
+      <x>650</x>
+      <y>870</y>
+      <w>320</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>EncodedWorkpiece
 --
 + _code: int {32 Bit} {readonly}
 --
-+ &lt;&lt;Create&gt;&gt; Encoded_Workpiece(Workpiece)
 + &lt;&lt;Create&gt;&gt; Encoded_Workpiece(code: int)
-- get_id(): id
-- get_height_1(): float
-- get_type(): WorkpieceType</panel_attributes>
++ get_id(): id
++ get_height(): float
++ get_type(): WorkpieceType</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>816</x>
-      <y>1088</y>
-      <w>464</w>
-      <h>144</h>
+      <x>1030</x>
+      <y>930</y>
+      <w>290</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>_code ist wie folgt codiert:
   - 21 Bit id
@@ -295,12 +277,97 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>512</x>
-      <y>1024</y>
-      <w>336</w>
-      <h>112</h>
+      <x>840</x>
+      <y>890</y>
+      <w>210</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
     <additional_attributes>190.0;50.0;140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>180</y>
+      <w>160</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+UnitType
+--
+PRIMARY
+SECONDARY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1310</x>
+      <y>180</y>
+      <w>160</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+OperatingMode
+--
+IDLE
+RUNNING
+ERROR
+ESTOP
+SERVICE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>300</y>
+      <w>140</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+unit_type</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;120.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1380</x>
+      <y>300</y>
+      <w>130</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+operating_mode</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>180</y>
+      <w>160</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Error
+--
+OTHER_SYSTEM
+RAMP_FULL
+NO_ERROR</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>300</y>
+      <w>120</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+pending_error</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
 </diagram>

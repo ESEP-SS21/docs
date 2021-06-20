@@ -23,11 +23,65 @@
 %% Versuchen Sie, so gut wie möglich, Ihre Tests zu automatisieren.
 
 
-\section{Testszenarien}\label{sec:testszenarien}
+\section{Abdeckungsbäume}\label{sec:abdeckungsbaueme}
 
 %% <konkrete Beschreibungen der Test Szenarien. Bei Bedarf die Tabelle vervielfältigen>
+Für jede implementierte State-Machine wurden Unit-Tests geschrieben.
+Diese Tests basieren auf den Abdeckungsbaum der jeweiligen State-Machine.
+Mithilfe der Abdeckungsbäume wird sichergestellt, dass jeder Zustand getestet wird.
+Dementsprechend wird auch ein möglichst großer Abdeckungsgrad sichergestellt.
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/tt_operation_manager}}
+    \caption{Abdeckungsbaum der STM operation\_manager
+        (Abbildung~\ref{fig:stm_operation_manager})}
+    \label{fig:tt_operation_manager}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/tt_recieve_workpiece}}
+    \caption{Abdeckungsbaum der STM receive\_workpiece
+        (Abbildung~\ref{fig:stm_recieve_workpiece})}
+    \label{fig:tt_recieve_workpiece}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_height_measurement}}
+    \caption{Abdeckungsbaum der STM height\_measurement
+        (Abbildung~\ref{fig:stm_hoehe_messen})}
+    \label{fig:tt_height_measurement}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_sort_workpiece}}
+    \caption{Abdeckungsbaum der STM sort\_workpiece
+        (Abbildung~\ref{fig:stm_sort_workpiece})}
+    \label{fig:tt_sort_workpiece}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_workpiece_transfer}}
+    \caption{Abdeckungsbaum der STM workpiece\_transfer
+        (Abbildung~\ref{fig:stm_workpiece_transfer})}
+    \label{fig:tt_workpiece_transfer}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_workpiece_transfer_request}}
+    \caption{Abdeckungsbaum der STM workpiece\_transfer\_request
+        (Abbildung~\ref{fig:stm_workpiece_transfer_request})}
+    \label{fig:tt_workpiece_transfer_request}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_error_listener}}
+    \caption{Abdeckungsbaum der STM error\_listener
+        (Abbildung~\ref{fig:stm_error_listener})}
+    \label{fig:tt_error_listener}
+\end{figure}
 
 
+\FloatBarrier
 \section{Abnahmetests}\label{sec:abnahmetest}
 
 %% 6.3	Abnahmetest
@@ -49,3 +103,79 @@ vor.
 %% Es enthält eine Auflistung der erfolgreich vorgeführten Funktionen des Systems
 %% sowie eine Mängelliste mit Erklärungen der Ursachen der Fehlfunktionen und  Vorschlägen zur Abhilfe
 
+\subsection{Hal Tests}\label{subsec:hal-tests}
+
+Das Testen der Hal kann kaum automatisiert werden, da beim Test der Aktorik physikalisches Verhalten der Anlage beobachtet werden muss.
+Die Sensoriktests erfordern ebenfalls direkte Interaktion mit den Tastern, Lichtschranken, etc.
+Daher müssen diese Tests manuell durchgeführt werden.
+
+\subsubsection{Sensorik Tests}\label{subsubsec:sensorik-tests}
+Für die durchführung der Tests wird das Logging des Dispatchers verwendet.
+Das Ereignis wird ausgeführt und überprüft, ob das richtige Event im Console Logger erscheint.
+Zur Erzeugung Lichtschranken- und Metallsensorevents werden verschiedene \gls{workpiece} durch eine \gls{anlage} gefahren.
+Bei der Höhenmessung werden \gls{workpiece} unter dem Sensor platziert und der Messwert mit dem für den \gls{workpiece_type}
+spezifizierten abgeglichen.
+
+\begin{table}[H]
+    \resizebox{\textwidth}{!}{%
+    \setlength{\tabcolsep}{20pt}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    Ereignis                  & Kommentar                                                                                        & Erw. Event       & Bestanden \\ \hline
+    LB\_ST unterbrochen       &                                                                                                  & LB\_ST\_BLCK     & x         \\ \hline
+    LB\_ST wieder frei        &                                                                                                  & LB\_ST\_CLR      & x         \\ \hline
+    LB\_SW unterbrochen       &                                                                                                  & LB\_SW\_BLCK     & x         \\ \hline
+    LB\_SW wieder frei        &                                                                                                  & LB\_SW\_CLR      & x         \\ \hline
+    LB\_RA unterbrochen       &                                                                                                  & LB\_RA\_BLCK     & x         \\ \hline
+    LB\_RA wieder frei        &                                                                                                  & LB\_RA\_CLR      & x         \\ \hline
+    LB\_EN unterbrochen       &                                                                                                  & LB\_EN\_BLCK     & x         \\ \hline
+    LB\_EN wieder frei        &                                                                                                  & LB\_EN\_CLR      & x         \\ \hline
+    LB\_HE unterbrochen       &                                                                                                  & LB\_HE\_BLCK     & x         \\ \hline
+    LB\_HE wieder frei        &                                                                                                  & LB\_HE\_CLR      & x         \\ \hline
+    Metall unter Metallsens.  &                                                                                                  & METAL\_DTC       & x         \\ \hline
+    Höhenmessung durchgeführt & \begin{tabular}[c]{@{}l@{}}Muss von DemoClient\\ mit HEIGHT\_REQ\\ angefragt werden\end{tabular} & HEIGHT\_HE       & x         \\ \hline
+    EStop gedrückt            &                                                                                                  & ESTOP\_ON        & x         \\ \hline
+    EStop herausgezogen       &                                                                                                  & ESTOP\_OFF       & x         \\ \hline
+    T\_STR kurz drücken       &                                                                                                  & T\_STR\_PRS\_SRT & x         \\ \hline
+    T\_STR lang drücken       & \textgreater 3 sec                                                                               & T\_STR\_PRS\_LNG & x         \\ \hline
+    T\_STP kurz drücken       &                                                                                                  & T\_STP\_PRS\_SRT & x         \\ \hline
+    T\_STP lang drücken       & \textgreater 3 sec                                                                               & T\_STP\_PRS\_LNG & x         \\ \hline
+    T\_RST kurz drücken       &                                                                                                  & T\_RST\_PRS\_LNG & x         \\ \hline
+    T\_RST lang drücken       & \textgreater 3 sec                                                                               & T\_RST\_PRS\_SRT & x         \\ \hline
+    \end{tabular}}
+    \end{table}
+
+
+\subsubsection{Aktorik Tests}\label{subsubsec:aktorik-tests}
+Für die Durchführung der Tests wird ein spezieller DispatcherClient (DemoClient)
+benutzt, der beim Drücken auf die Knöpfe am Bedienfeld der Anlage wählbare zur Compilezeit
+wählbare Events an den Dispatcher schickt. Die Reaktion der Aktorik auf diese Events wird beobachtet.
+Die Events sind hier ohne das Prefix EVNT\_ACT aufgelistet.
+
+\begin{table}[H]
+    \resizebox{\textwidth}{!}{%
+    \setlength{\tabcolsep}{20pt}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    Event                             & Kommentar          & Erwartetes Ereignis         & Bestanden \\ \hline
+    CTRL\_T\_STR\_LED\_ON  &                    & LED T\_STR an               & x         \\ \hline
+    CTRL\_T\_STR\_LED\_OFF &                    & LED T\_SRT aus              & x         \\ \hline
+    CTRL\_T\_RST\_LED\_ON  &                    & LED T\_RST an               & x         \\ \hline
+    CTRL\_T\_RST\_LED\_OFF &                    & LED T\_RST aus              & x         \\ \hline
+    SORT\_DSC              & Mit Weiche         & Weiche in Auswerfpos.       & x         \\ \hline
+    SORT\_NO\_DSC          & Mit Weiche         & Weiche in Durchlasspos.     & x         \\ \hline
+    SORT\_RST              & Mit Weiche         & Weiche in Auswerfpos.       & x         \\ \hline
+    SORT\_DSC              & Mit Pusher         & Pusher ausgefahren          & x         \\ \hline
+    SORT\_NO\_DSC          & Mit Pusher         & Pusher eingefahren          & x         \\ \hline
+    SORT\_RST              & Mit Pusher         & Pusher eingefahren          & x         \\ \hline
+    BELT\_FWD              &                    & Band fährt vorwärts         & x         \\ \hline
+    BELT\_BWD              &                    & Band fährt rückwärts        & x         \\ \hline
+    BELT\_STP              &                    & Band hält an                & x         \\ \hline
+    STPL\_LED\_ON          & Alle Farben testen & Ampelfarbe geht an          & x         \\ \hline
+    STPL\_LED\_OFF         & Alle Farben testen & Ampelfarbe geht wieder aus  & x         \\ \hline
+    STPL\_LED\_BLNK\_FST   & Alle Farben testen & Ampelfarbe blinkt mit 1Hz   & x         \\ \hline
+    STPL\_LED\_BLNK\_SLW   & Alle Farben testen & Ampelfarbe blinkt mit 0.5Hz & x         \\ \hline
+    \end{tabular}}
+    \end{table}
