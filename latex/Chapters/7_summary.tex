@@ -12,20 +12,21 @@
 \begin{itemize}
     \item Im \refreq{28} wird beschrieben, dass der Betrieb, nachdem ein \gls{estop}-Schalter gedrückt wurde,
     durch das Herausziehen aller \gls{estop}-Schalter und das Drücken des \gls{t_reset}
-    \textit{der Anlage, an dem auch der \gls{estop} gedrückt wurde}, neu gestartet werden kann.
+    \textit{an der Anlage, an dem auch der \gls{estop} gedrückt wurde}, neu gestartet werden kann.
     Die Implementierung weicht leicht davon ab.
     Der Betrieb kann durch Drücken eines beliebigen \glspl{t_reset} erneut aufgenommen werden.
-    Die Sicherheit wird durch diese Limitierung nicht gefährdet, da für das Verlassen des
-    \gls{estop}-Modus beide \gls{estop}-Schalter herausgezogen werden und anschließend bestätigt muss.
-    Die Änderung wurde aufgrund der Implementation des Dispatchers vorgenommen:
-    Beim broadcasten eines Events (hier des Tasters) kann nicht darauf geschlossen werden, an
+    Die Sicherheit wird durch diese Limitation nicht gefährdet, da für das Verlassen des
+    \gls{estop}-Modus beide \gls{estop}-Schalter herausgezogen werden müssen und anschließend
+    bestätigt werden muss.
+    Die Änderung wurde aufgrund der Implementierung des Dispatchers vorgenommen:
+    Beim Broadcasten eines Events (hier des Tasters) kann nicht darauf geschlossen werden, an
     welcher \gls{anlage} dieses Event verursacht wurde.
     \item Wenn sich der Anlagenverbund aufgrund ausgeschöpfter Kapazität im Fehlerzustand befindet,
     die Kapazität beider Rampen ausgelastet ist und anschließen die Rampe der zweiten Anlage
     geleert wird, werden alle vorliegenden Warnungen gelöscht.
     Um diesen Fehler zu verhindern, müssen bei Vorliegen eines Fehlers stets beide \glspl{rampe}
     geleert werden.
-    \item Der \gls{durchsatz} des Systems ist auf das Einlegen von \glspl{workpiece} im
+    \item Der \gls{durchsatz} des Systems ist auf das Einlegen von \glspl{workpiece}n im
     Abstand von 20 cm beschränkt.
     Werden \glspl{workpiece} im Abstand von weniger als 20 cm eingelegt, kann das korrekte Sortieren
     nicht garantiert werden.
