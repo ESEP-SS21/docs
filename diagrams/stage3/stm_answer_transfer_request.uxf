@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>18</zoom_level>
+  <zoom_level>14</zoom_level>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>612</x>
-      <y>324</y>
-      <w>144</w>
-      <h>144</h>
+      <x>406</x>
+      <y>238</y>
+      <w>112</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>waiting</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>666</x>
-      <y>180</y>
-      <w>36</w>
-      <h>36</h>
+      <x>448</x>
+      <y>126</y>
+      <w>28</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -26,10 +26,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
-      <y>198</y>
-      <w>54</w>
-      <h>162</h>
+      <x>448</x>
+      <y>140</y>
+      <w>42</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=-&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -37,64 +37,66 @@
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>288</x>
-      <y>144</y>
-      <w>1188</w>
-      <h>558</h>
+      <x>126</x>
+      <y>98</y>
+      <w>952</w>
+      <h>434</h>
     </coordinates>
-    <panel_attributes>stm Answer Transfer-Request</panel_attributes>
+    <panel_attributes>stm AnswerTransferRequest</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>504</x>
-      <y>558</y>
-      <w>360</w>
-      <h>108</h>
+      <x>322</x>
+      <y>434</y>
+      <w>280</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>waiting for space
 --
-/exit send(EVNT_ACK)
 valign=top</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
-      <y>450</y>
-      <w>756</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-WRPC_TRNS_RQ [Sec Mode &amp;&amp; _start_height_sec.size() &gt; 0]</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>306</x>
-      <y>378</y>
-      <w>360</w>
-      <h>270</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-EVNT_SEN_LB_HE_BLCK</panel_attributes>
-    <additional_attributes>110.0;130.0;10.0;130.0;10.0;10.0;170.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>738</x>
-      <y>342</y>
-      <w>612</w>
+      <x>448</x>
+      <y>336</y>
+      <w>490</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
+WRPC_TRNS_RQ [Sec Mode &amp;&amp; _is_belt_blocked]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>280</y>
+      <w>308</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_LB_HE_BLCK/
+send(EVNT_ACK)
+send(EVNT_ACT_BELT_FWD)</panel_attributes>
+    <additional_attributes>130.0;140.0;10.0;140.0;10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>252</y>
+      <w>364</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
 WRPC_TRNS_RQ 
-[Sec Mode &amp;&amp; _start_height_sec.size() == 0]
-/ send(EVNT_ACK)</panel_attributes>
+[Sec Mode &amp;&amp; !_is_belt_blocked]
+/ send(EVNT_ACK)
+send(EVNT_ACT_BELT_FWD)</panel_attributes>
     <additional_attributes>10.0;10.0;40.0;10.0;40.0;50.0;10.0;50.0</additional_attributes>
   </element>
 </diagram>

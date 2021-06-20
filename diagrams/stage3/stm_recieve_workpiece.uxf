@@ -113,7 +113,7 @@ enter_workpiece(new Workpiece())</panel_attributes>
       <w>1400</w>
       <h>490</h>
     </coordinates>
-    <panel_attributes>stm Receive Workpiece</panel_attributes>
+    <panel_attributes>stm ReceiveWorkpiece</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
