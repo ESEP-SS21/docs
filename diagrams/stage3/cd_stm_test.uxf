@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>19</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>513</x>
+      <y>380</y>
+      <w>1102</w>
+      <h>456</h>
+    </coordinates>
+    <panel_attributes>test::logic::stm</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1102</x>
+      <y>437</y>
+      <w>475</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+StmTestBase
+--
+# context: logic::stm::BaseContext
+# data: logic::datamodel::UnitData
+# eventQueue: queue&lt;Event&gt;
+--
++ test_transition_to&lt;State&gt;(
+    Event trigger, 
+    List&lt;Event&gt; expectedToBeSend)
++ test_start_state(
+    List&lt;Event&gt; expectedToBeSend)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>475</x>
+      <y>133</y>
+      <w>1178</w>
+      <h>741</h>
+    </coordinates>
+    <panel_attributes>cd stm test</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1254</x>
+      <y>247</y>
+      <w>304</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>gtest::testing::Test</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1387</x>
+      <y>285</y>
+      <w>57</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>551</x>
+      <y>532</y>
+      <w>418</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>StmTestClient
+--
+# eventQueue: queue&lt;Event&gt;
+--
+get_last_event() Event;
+empty() bool;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>950</x>
+      <y>608</y>
+      <w>190</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
++ _client</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>551</x>
+      <y>209</y>
+      <w>418</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Event::IEventSender
+--
+send(Event event, prio: int = 0)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>741</x>
+      <y>323</y>
+      <w>57</w>
+      <h>247</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+</diagram>
