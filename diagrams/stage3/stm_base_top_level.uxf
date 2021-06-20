@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>432</x>
+      <y>300</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>540</x>
+      <y>252</y>
+      <w>324</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Idle
+--
+
+valign=top
+//symbol=substate
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>540</x>
+      <y>36</y>
+      <w>324</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>Service
+--
+
+valign=top
+//symbol=substate</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1188</x>
+      <y>252</y>
+      <w>336</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>E-STOP
+--
+
+
+valign=top
+//halign=left
+//symbol=substate
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>300</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>84</y>
+      <w>516</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON</panel_attributes>
+    <additional_attributes>10.0;20.0;410.0;20.0;410.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>384</y>
+      <w>324</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STR_PRS_SRT
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>348</y>
+      <w>324</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_STP_PRS_SRT
+[wrn_count ==0]
+</panel_attributes>
+    <additional_attributes>160.0;180.0;10.0;180.0;10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>564</x>
+      <y>156</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SRV_DONE</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>156</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_
+T_STR_PRS_LNG</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>288</x>
+      <y>0</y>
+      <w>1260</w>
+      <h>1020</h>
+    </coordinates>
+    <panel_attributes>stm base top-level</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>276</y>
+      <w>360</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_SEN_CTRL_T_RST_PRS_SRT 
+[count == 0]</panel_attributes>
+    <additional_attributes>280.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>540</x>
+      <y>516</y>
+      <w>324</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>Running
+--
+valign=top
+symbol=substate
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>528</x>
+      <y>828</y>
+      <w>348</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Error
+--
+
+symbol=substate
+valign=top
+//halign=right</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>720</y>
+      <w>120</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ERR</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>684</y>
+      <w>276</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=EVNT_ALL_ERR_GONE</panel_attributes>
+    <additional_attributes>180.0;210.0;40.0;210.0;40.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>336</y>
+      <w>360</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_ESTOP_ON</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>384</y>
+      <w>516</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=EVNT_ESTOP_ON</panel_attributes>
+    <additional_attributes>10.0;150.0;410.0;150.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>564</x>
+      <y>684</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=history_deep</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>384</y>
+      <w>552</w>
+      <h>612</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=EVNT_ESTOP_ON</panel_attributes>
+    <additional_attributes>10.0;480.0;440.0;480.0;440.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>756</y>
+      <w>240</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVNT_xx/
+send(EVNT_ERR_GONE)</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;20.0;180.0;20.0;180.0;130.0;80.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1008</x>
+      <y>780</y>
+      <w>240</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Das Event 'EVNT_xx'
+ist das Event, welches 
+den Fehler in dieser
+STM behebt
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

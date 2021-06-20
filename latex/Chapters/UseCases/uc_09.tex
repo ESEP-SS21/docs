@@ -1,43 +1,13 @@
-\begin{usecase}{09}{Kalibrierung}{hoch}
+\begin{usecase}{09}{Durchführung Selbsttests}{mittel}
     \addTextCollum{Verwandte Requirements}{
-        \refreq{11}, \refreq{15}, \refreq{40}
+        \refreq{40}, \refreq{15}, \refreq{11}
     }
     \addTextCollum{Description}{
-        Dieser Usecase betreibt das Durchführen des Servicemode.
-        Dieser kann durch das \gls{longpress} des \gls{t_start} von beiden \glspl{anlage} aus aktiviert werden.
-        Im Servicemode werden die Höhenmesser kalibriert sowie die korrekte Funktion der \gls{sortierer} geprüft.
-    }
-    \addTextCollum{Actors}{
-        \gls{ampel}, \gls{he_sensor}, \gls{ctrlp}, \gls{sortierer}, \gls{fts2}
-    }
-    \addCollum{Preconditions}{
-        \item \gls{system} ist im \gls{ruhe-zst}
-    }
-    \addCollum{Triggers}{
-        \item \gls{longpress} von \gls{t_start}
-        \item Mitteilung von \gls{fts2} über Betreten des Service
-    }
-    \addCollum{Mainflow}{
-        \item[1)] Mitteilung an \gls{fts2} über Betreten des Service senden
-        \item[2)] \gls{ampelled} grün blinken lassen
-        \item[3)] Messung bei \gls{he_sensor} anfragen
-        \item[4)] Auf Rückmeldung warten
-        \item[5)] Bestimmten Wert als Nullwert im \gls{he_sensor} eintragen
-        \item[6)] \gls{sortierer} aktivieren
-        \item[7)] Auf Zustandsänderungssignal des \gls{sortierer}s warten \textbullet
-        \item[8)] Sorting Mechanism deaktivieren
-        \item[9)] Auf Zustandsänderungssignal des \gls{sortierer}s warten \textbullet
-        \item[10)] In \gls{ruhe-zst} wechseln
-    }
-    \addCollum{Exceptional flow}{
-        \item at step 7 or 9 of Mainflow
-        \item[a)] Timeout beim Empfang des Signals
-        \begin{itemize}
-            \item[a1)] Fehler auslösen
-        \end{itemize}
-    }
-    \addCollum{Postconditions}{
-        \item \gls{system} ist im \gls{ruhe-zst}
-        \item \gls{he_sensor} wurde kalibriert
+        Dieser Use-Case beschreibt das Durchführen des Servicemode.
+        Dieser kann durch \gls{longpress} von \gls{t_start} an beiden \glspl{anlage} aktiviert werden.
+        Im Servicemode werden die \glspl{lb_he} kalibriert, die \glspl{belt} getestet sowie die korrekte Funktion der
+        \gls{sortierer} geprüft. Nach jedem Test muss vom Benutzer am \gls{ctrlp} mit \gls{t_reset}
+        das korrekte Verhalten des Systems quittiert werden.
+        Die detaillierte Durchführung wird im Kapitel~\ref{subsec:beschreibung-des-servicemode} beschrieben.
     }
 \end{usecase}
