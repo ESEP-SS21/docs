@@ -1,4 +1,3 @@
-\FloatBarrier
 \chapter{Design}\label{ch:design}
 
 %% Anmerkung: Die Implementierung MUSS zu Ihrem Design-Modell konsistent sein.
@@ -24,17 +23,98 @@ visualisiert.
     \label{fig:cmp}
 \end{figure}
 
+Die Architektur der Software für eine \gls{anlage} ist in \ref{fig:cmp} abgebildet.
+
+\subsection{dispatcher}\label{subsec:dispatcher}
+Da das System auf größtenteils eventbasierte Kommunikation zwischen den einzelnen Komponenten setzt,
+ist der dispatcher das Herzstück der Software. Der Dispatcher erlaubt es Clients bestimmte Events zu abbonieren
+und Events für die Verteilung auf dem System an den Dispatcher zu schicken. Erhält der Dispatcher ein Event von einem
+Client wird dieses an alle Clients geschickt, die das Event abboniert haben. Schnittstelle zum durch den Dispatcher
+verwalteten Eventsystem stellt das DispatcherClient Interface bereit, welches die Möglichkeit bietet Events zu abbonieren,
+zu Verschicken und auf erhaltene Events zu reagieren. Da die Übermittlung von Events asynchron über das Message Passing System
+von QNX erfolgt, befindet sich im Dispatcher zusätzlich eine connection\_management Komponente, die das Message Passing System
+kapselt und verwaltet. Die Kommunikation zur anderen Anlage findet über das QNX-eigene Qnet Protokoll statt.
+Der Dispatcher erlaubt es beim Senden eines Events auszuwählen, ob dieses nur auf der eigenen Anlage empfangen werden soll,
+oder auch an den Dispatcher der verbundenen anderen Anlage weitergeleitet werden soll.
+
+\subsection{hal}\label{subsec:hal}
+Die hal stellt die Schnittstelle der Software zu Sensorik und Aktorik der \gls{anlage} bereit.
+Sie besteht zum einen aus der sensors-Komponente, die bei Ereignissen an Sensoren, wie z.B.
+dem Drücken eines Tasters oder dem Unterbrechen einer Lichtschranke,
+ein entsprechendes Event an den Dispatcher schickt.
+Zum anderen besitzt die hal eine actuators-Komponente.
+Diese hat Events zur Hardwareansteuerung abboniert und führt bei Erhalt eines solchen Events die entsprechende Aktion durch.
+
+\subsection{embedded\_recorder}\label{subsec:embedded_recorder}
+Der Embedded Recorder erlaubt es Sequenzen von Ereignissen aufzunehmen und abzuspeichern, sowie diese Aufzeichnungen abzuspielen.
+Dafür hat er im Aufnahmemodus beim Dispatcher die Sensorikevents der hal abboniert.
+Erhaltene Events werden mit Zeitstempel in einer Datei abgelegt.
+Im Abspielmodus werden die aufgenommenen Events zu den jeweiligen Zeitpunkten an den Dispatcher gesendet und so auf dem Softwaresystem verteilt.
+
+\subsection{logic}\label{subsec:logic}
+Diese Komponente enthält die Steuerungslogik für die Verhaltenssteuerung, Betriebszustandsverwaltung sowie Fehlerbehandlung des \gls{system}.
+Die stm-Unterkomponente enthält die für die Anlagensteuerung zuständigen Zustandsautomaten. Die Zustandsautomaten interagieren über das
+UnitData-Interface mit dem datamodel, welches für die Verwaltung der Werkstücke, sowie die Speicherung von allen weiteren für den Betrieb der \gls{anlage} nötigen
+Informationen wie z.B. über den aktuellen Betriebszustand verantwortlich ist.
+
+\subsection{clients}\label{subsec:clients}
+Die Clients-Komponente stellt einen Adapter zwischen dispatcher und den Zustandsautomaten dar.
+Sie übersetzt vom Dispatcher eingehende Events in Methodenaufrufe im Kontext der Statemachines.
+Ebenso stellt sie den Zustandsautomaten eine Möglichkeit bereit, Events an den Dispatcher zu schicken.
+Zusätzlich enthält die Komponente noch kleinere Hilfsclients die.z.B. einen Heartbeat für die Erkennung
+von Verbindungsabbrüchen zwischen den Anlagen erzeugen.
+
+\section{Komponentendesign}\label{sec:komponentendesign}
+
+\subsection{hal\_actuators}\label{subsec:hal_actuators}
+
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage2/cd_hal}}
-    \caption{Klassendiagramm HAL}
+    \caption{Klassendiagramm der HAL Aktorik}
     \label{fig:cd-hal}
 \end{figure}
 
+Die Aktorik-Hal enthält Abstraktionen für die Ansteuerung der Aktorik-Hardware.
+Die Low-Level Hardwarezugriffe auf einzelne GPIO-Register werden von der GPIO Wrapper-Klasse gekapselt.
+Sie erlaubt es, gezielt die Funktionalität einzelner Pins der GPIO-Banks des BeagleBoneBlacks zu
+konfigurieren sowie einzelne Pins anzusteuern und auszulesen. Die einzelen Aktoren sind in Klassen unterteilt,
+welche Funktionalität zum Ansprechen von diesen bereitstellen.
+Das SortingMechanism-Interface stellt Methoden zum Versetzen in Auswerf- und Durchlassposition,
+sowie zum Zurücksetzten in Ruhelage bereit. Die HAL-Klasse entscheidet bei der Erzeugung mittels
+eines Reads auf den WeicheOffen Sensor-Pin des GPIOs, welche konkrete Ausprägung des \gls{sortierer}s erzeugt wird
+(1:Ejector, 0:Switch).
+Die CBMotor-Klasse enthält Methoden zum Setzen des Bewegungszustandes. Das Enum Direction gibt dafür mögliche Werte an.
+Die LEDs-Klasse erlaubt Zugriff auf die LEDs am \gls{ctrlp}. Über das Enum LED\_Type kann die gewünschte LED ausgewählt werden.
+Die Ansteuerung der \gls{ampel} wird von der Stoplight-Klasse übernommen. Sie erlaubt es, einzelne Farben der \gls{ampel} anzusteuern.
+Der Blink-Worker erlaubt es, als aktive Komponente die \gls{ampel} in einer gewünschten Farbe blinken zu lassen.
+Zusätzlich dazu gibt es noch eine HalManagerAct Klasse, die als Schnittstelle zum Dispatcher eingehende Events auf Methodenaufrüfe der Aktorik-Hal
+mappt und aus Übersichtlichkeitsgründen in diesem Diagramm weggelassen wurde.
+
+\subsection{hal\_sensors}\label{subsec:hal_sensors}
+
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/cd_hal_sens}}
-    \caption{}
+    \caption{Klassendiagramm der HAL Sensorik}
     \label{fig:cd-hal-sens}
 \end{figure}
+
+Die Sensorik\-Hal enthält Abstraktionen für das Auslesen der Sensorik.
+Für den Low-Level Zugriff nutzt sie dieselbe GPIO-Abstraktion wie die Aktorik\-Hal.
+Alle Sensorabstraktionen außer der \gls{he_sensor} stellen Methoden bereit, die Zustandsveränderungen
+seit dem letzten Auslesen erkennen.
+Lichtschranken werden über die LightBarriers-Klasse ausgelesen.
+Die Wahl der gewünschten Lichtschranke erfolgt über das LBType Enum.
+Die Knöpfe des \gls{ctrlp}s lassen sich über die Klasse CPButtons abfragen.
+Der gewünschte Knopf kann über das Enum CPButtonType ausgewählt werden.
+\Gls{me_sensor} und \gls{estop} können über die MetalSensor- bzw. EStop-Klasse ausgelesen werden.
+Eine in diesem Diagramm aus Übersichtlichkeitsgründen weggelassene HalManagerSen-Klasse wartet
+auf Interrupts vom GPIO, fragt dann alle Sensoren ab und sendet bei Veränderung das entsprechende
+Event an den Dispatcher.
+Der \gls{he_sensor} wird etwas anders verwaltet. Eine Messung lässt sich über sample() anfordern.
+Nach erfolgreicher Messung tritt ein Interrupt auf, welcher dem HalManagerSen mitteilt,
+dass ein neuer Wert über get\_value() abgefragt werden kann.
+Zu Kalibrierungszwecken kann ein neuer Nullwert mit set\_zero\_point() gesetzt werden.
+
 
 \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/cd_dispatcher}}
@@ -53,7 +133,86 @@ visualisiert.
 %% und deren wichtigsten Klassen und Methoden an.
 
 
+\FloatBarrier
 \section{Verhaltensmodellierung}\label{sec:verhaltensmodellierung}
+
+\subsection{Beschreibung des Servicemode}\label{subsec:beschreibung-des-servicemode}
+Die detaillierte Durchführung des Servicemode ist in untenstehende Schritte unterteilt.
+Dabei ist mit der Quittierung durch den Benutzer das Drücken des \gls{t_reset}s am \gls{ctrlp} gemeint.
+Sobald die Anlage einen Test als erfolgreich eingestuft hat, wird die LED am \gls{t_reset} aktiviert.
+Diese wird deaktiviert, sobald quittiert wurde.
+Alle nachfolgenden Tests sind an beiden \glspl{anlage} durchzuführen.
+\begin{enumerate}
+    \item Der \gls{lb_he} wird kalibriert
+    \item Testen der Sensoren
+    \begin{enumerate}
+        \item Die folgenden Lichtschranken werden überprüft.
+        Dafür legt der Benutzer jeweils ein beliebiges \gls{workpiece} in die zu testende Lichtschranke und
+        quittiert anschließend.
+        \begin{itemize}
+            \item \gls{lb_st}
+            \item \gls{lb_en}
+            \item \gls{lb_sw}
+            \item \gls{lb_ra}
+        \end{itemize}
+
+        \item \Gls{me_sensor}
+        \begin{itemize}
+            \item Benutzer legt \gls{workpiece_metall} unter den \gls{me_sensor}
+            \item Benutzer quittiert
+        \end{itemize}
+    \end{enumerate}
+
+    \item Testen der Aktoren
+    \begin{enumerate}
+        \item LED's am \gls{ctrlp}
+        \begin{itemize}
+            \item LED am \gls{t_start}, \gls{t_reset} blinken dreimal
+            \item Benutzer quittiert Funktion der LEDs
+        \end{itemize}
+        \item \Gls{ampel}
+        \begin{itemize}
+            \item Die folgenden \glspl{ampelled} blinken nacheinander schnell.
+            \begin{itemize}
+                \item 3x rot
+                \item 3x gelb
+                \item 3x grün
+            \end{itemize}
+            \item Benutzer quittiert Funktion der \gls{ampel}
+            \item Die grüne \Gls{ampelled} wird wieder auf schnell blinkend geschaltet.
+        \end{itemize}
+        \item \Gls{belt}
+        \begin{itemize}
+            \item Das \Gls{belt} führt die folgende Aktionen aus:
+            \begin{itemize}
+                \item fährt für eine Sekunde schnell vorwärts
+                \item fährt für eine Sekunde schnell rückwärts
+                \item stoppt
+            \end{itemize}
+            \item Benutzer quittiert korrekte Funktionsweise des \gls{belt}s
+        \end{itemize}
+        \item \Gls{sortierer}
+        \begin{enumerate}
+            \item \Gls{sortierer} ist \gls{weiche}
+            \begin{itemize}
+                \item \gls{weiche} wird für zwei Sekunden auf \gls{do_not_discard} gesetzt
+                \item \gls{weiche} wird auf \gls{discard} gesetzt
+                \item Benutzer quittiert korrekte Funktionsweise der \gls{weiche}
+            \end{itemize}
+            \item \gls{sortierer} ist \gls{ejector}
+            \begin{itemize}
+                \item \Gls{ejector} wird aktiviert
+                \item Benutzer quittiert korrekte Funktionsweise des \gls{ejector}s
+            \end{itemize}
+        \end{enumerate}
+    \end{enumerate}
+    \item Der Servicemodus wird beendet.
+\end{enumerate}
+Nach den oben genannten Schritten befindet sich das System wieder im Ruhezustand.
+
+\clearpage
+\subsection{Statemachines}\label{subsec:stm}
+In diesem Abschnitt werden die Statemachines aufgelistet.
 
 Die Top-Level-STM~\ref{fig:stm_top_level} stellt die allgemeine Logik einer Anlage dar.
 Diese State-Machine dient zur Veranschaulichung des der Logik und wurde nicht direkt implementiert.

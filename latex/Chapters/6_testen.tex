@@ -23,11 +23,65 @@
 %% Versuchen Sie, so gut wie möglich, Ihre Tests zu automatisieren.
 
 
-\section{Testszenarien}\label{sec:testszenarien}
+\section{Abdeckungsbäume}\label{sec:abdeckungsbaueme}
 
 %% <konkrete Beschreibungen der Test Szenarien. Bei Bedarf die Tabelle vervielfältigen>
+Für jede implementierte State-Machine wurden Unit-Tests geschrieben.
+Diese Tests basieren auf den Abdeckungsbaum der jeweiligen State-Machine.
+Mithilfe der Abdeckungsbäume wird sichergestellt, dass jeder Zustand getestet wird.
+Dementsprechend wird auch ein möglichst großer Abdeckungsgrad sichergestellt.
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/tt_operation_manager}}
+    \caption{Abdeckungsbaum der STM operation\_manager
+        (Abbildung~\ref{fig:stm_operation_manager})}
+    \label{fig:tt_operation_manager}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/tt_recieve_workpiece}}
+    \caption{Abdeckungsbaum der STM receive\_workpiece
+        (Abbildung~\ref{fig:stm_recieve_workpiece})}
+    \label{fig:tt_recieve_workpiece}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_height_measurement}}
+    \caption{Abdeckungsbaum der STM height\_measurement
+        (Abbildung~\ref{fig:stm_hoehe_messen})}
+    \label{fig:tt_height_measurement}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_sort_workpiece}}
+    \caption{Abdeckungsbaum der STM sort\_workpiece
+        (Abbildung~\ref{fig:stm_sort_workpiece})}
+    \label{fig:tt_sort_workpiece}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_workpiece_transfer}}
+    \caption{Abdeckungsbaum der STM workpiece\_transfer
+        (Abbildung~\ref{fig:stm_workpiece_transfer})}
+    \label{fig:tt_workpiece_transfer}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_workpiece_transfer_request}}
+    \caption{Abdeckungsbaum der STM workpiece\_transfer\_request
+        (Abbildung~\ref{fig:stm_workpiece_transfer_request})}
+    \label{fig:tt_workpiece_transfer_request}
+\end{figure}
+
+\begin{figure}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/tt_error_listener}}
+    \caption{Abdeckungsbaum der STM error\_listener
+        (Abbildung~\ref{fig:stm_error_listener})}
+    \label{fig:tt_error_listener}
+\end{figure}
 
 
+\FloatBarrier
 \section{Abnahmetests}\label{sec:abnahmetest}
 
 %% 6.3	Abnahmetest
