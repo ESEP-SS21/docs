@@ -7,6 +7,24 @@
 %% auch Anregungen für die Weiterentwicklung des Praktikums.
 
 
+\section{Bekannte Abweichung der Dokumentation von der Implementierung}
+\label{sec:bekannte-abweichung-der-dokumentation-von-der-implementierung}
+
+Die folgenden Events wurden als Hotfix hinzugefügt, und sind somit nicht in der Eventliste
+(Anhang~\ref{ch:signalliste})
+aufgeführt:
+\begin{itemize}
+    \item \textit{EVNT\_ACT\_CTRL\_Q1\_LED\_ON}
+    \item \textit{EVNT\_ACT\_CTRL\_Q1\_LED\_OFF}
+    \item \textit{EVNT\_ACT\_CTRL\_Q2\_LED\_ON}
+    \item \textit{EVNT\_ACT\_CTRL\_Q2\_LED\_OFF}
+\end{itemize}
+Diese werden in der STM sort\_wrpc beim Betreten bzw.\ Verlassen von \textit{RampFull} verschickt,
+um zu Signalisieren, an welcher der beiden Anlagen die Kapazität der Rampe ausgelastet ist.
+In Abbildung~\ref{fig:stm_werkstueck_sortieren} ist das Senden dieser Events ebenfalls nicht
+aufgeführt.
+
+
 \section{Limitationen des Systems}\label{sec:limitations}
 
 \begin{itemize}
