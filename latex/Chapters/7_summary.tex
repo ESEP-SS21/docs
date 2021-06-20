@@ -1,0 +1,54 @@
+\chapter{Evaluation}\label{ch:evaluation}
+
+%% Führen Sie ein Teammeeting durch, in dem gesammelt wird, was gut gelaufen war,
+%% was schlecht gelaufen war und was man im nächsten Projekt (z.B. im PO) besser machen will.
+%% Listen Sie für die Aspekte jeweils mindestens drei Punkte auf.
+%% Weitere Erfahrungen und Erkenntnisse können hier ebenso kommentiert werden,
+%% auch Anregungen für die Weiterentwicklung des Praktikums.
+
+
+\section{Bekannte Abweichung der Dokumentation von der Implementierung}
+\label{sec:bekannte-abweichung-der-dokumentation-von-der-implementierung}
+
+Die folgenden Events wurden als Hotfix hinzugefügt, und sind somit nicht in der Eventliste
+(Anhang~\ref{ch:signalliste})
+aufgeführt:
+\begin{itemize}
+    \item \textit{EVNT\_ACT\_CTRL\_Q1\_LED\_ON}
+    \item \textit{EVNT\_ACT\_CTRL\_Q1\_LED\_OFF}
+    \item \textit{EVNT\_ACT\_CTRL\_Q2\_LED\_ON}
+    \item \textit{EVNT\_ACT\_CTRL\_Q2\_LED\_OFF}
+\end{itemize}
+Diese werden in der STM sort\_wrpc beim Betreten bzw.\ Verlassen von \textit{RampFull} verschickt,
+um zu Signalisieren, an welcher der beiden Anlagen die Kapazität der Rampe ausgelastet ist.
+In Abbildung~\ref{fig:stm_sort_workpiece} ist das Senden dieser Events ebenfalls nicht
+aufgeführt.
+
+
+\section{Limitationen des Systems}\label{sec:limitations}
+
+\begin{itemize}
+    \item Im \refreq{28} wird beschrieben, dass der Betrieb, nachdem ein \gls{estop}-Schalter gedrückt wurde,
+    durch das Herausziehen aller \gls{estop}-Schalter und das Drücken des \gls{t_reset}
+    \textit{an der Anlage, an dem auch der \gls{estop} gedrückt wurde}, neu gestartet werden kann.
+    Die Implementierung weicht leicht davon ab.
+    Der Betrieb kann durch Drücken eines beliebigen \glspl{t_reset} erneut aufgenommen werden.
+    Die Sicherheit wird durch diese Limitation nicht gefährdet, da für das Verlassen des
+    \gls{estop}-Modus beide \gls{estop}-Schalter herausgezogen werden müssen und anschließend
+    bestätigt werden muss.
+    Die Änderung wurde aufgrund der Implementierung des Dispatchers vorgenommen:
+    Beim Broadcasten eines Events (hier des Tasters) kann nicht darauf geschlossen werden, an
+    welcher \gls{anlage} dieses Event verursacht wurde.
+    \item Wenn sich der Anlagenverbund aufgrund ausgeschöpfter Kapazität im Fehlerzustand befindet,
+    die Kapazität beider Rampen ausgelastet ist und anschließen die Rampe der zweiten Anlage
+    geleert wird, werden alle vorliegenden Warnungen gelöscht.
+    Um diesen Fehler zu verhindern, müssen bei Vorliegen eines Fehlers stets beide \glspl{rampe}
+    geleert werden.
+    \item Der \gls{durchsatz} des Systems ist auf das Einlegen von \glspl{workpiece}n im
+    Abstand von 20 cm beschränkt.
+    Werden \glspl{workpiece} im Abstand von weniger als 20 cm eingelegt, kann das korrekte Sortieren
+    nicht garantiert werden.
+\end{itemize}
+
+
+\section{Lessons Learned}\label{sec:lessons-learned}
