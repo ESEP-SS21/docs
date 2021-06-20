@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>420</x>
-      <y>520</y>
-      <w>200</w>
-      <h>60</h>
+      <x>473</x>
+      <y>506</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltRunning</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>730</x>
-      <y>270</y>
-      <w>200</w>
-      <h>60</h>
+      <x>473</x>
+      <y>341</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltNotRunning</panel_attributes>
     <additional_attributes/>
@@ -26,49 +26,49 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>780</x>
-      <y>320</y>
-      <w>200</w>
-      <h>220</h>
+      <x>682</x>
+      <y>352</y>
+      <w>264</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK
 [!belt_blocked&amp;sec mode]
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>290</y>
-      <w>240</w>
-      <h>250</h>
+      <x>572</x>
+      <y>396</y>
+      <w>198</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m2=EVNT_ACT_BELT_FWD</panel_attributes>
-    <additional_attributes>220.0;10.0;10.0;230.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
-      <y>320</y>
-      <w>280</w>
-      <h>370</h>
+      <x>671</x>
+      <y>374</y>
+      <w>319</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK
 [!belt_blocked&amp;prim mode]</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;350.0</additional_attributes>
+    <additional_attributes>10.0;10.0;270.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>200</x>
-      <y>670</y>
-      <w>200</w>
-      <h>60</h>
+      <x>231</x>
+      <y>671</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltNotRunning</panel_attributes>
     <additional_attributes/>
@@ -76,10 +76,10 @@ EVNT_SEN_LB_ST_BLCK
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>290</x>
-      <y>560</y>
-      <w>180</w>
-      <h>130</h>
+      <x>330</x>
+      <y>550</y>
+      <w>198</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_ACT_BELT_STOP</panel_attributes>
@@ -88,10 +88,10 @@ EVNT_ACT_BELT_STOP</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>690</x>
-      <y>520</y>
-      <w>200</w>
-      <h>60</h>
+      <x>924</x>
+      <y>341</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltRunning</panel_attributes>
     <additional_attributes/>
@@ -99,10 +99,10 @@ EVNT_ACT_BELT_STOP</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>910</x>
-      <y>670</y>
-      <w>200</w>
-      <h>60</h>
+      <x>858</x>
+      <y>506</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltRunning</panel_attributes>
     <additional_attributes/>
@@ -110,10 +110,10 @@ EVNT_ACT_BELT_STOP</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>160</x>
-      <y>250</y>
-      <w>1360</w>
-      <h>610</h>
+      <x>0</x>
+      <y>297</y>
+      <w>1166</w>
+      <h>550</h>
     </coordinates>
     <panel_attributes>tt Receive Workpiece</panel_attributes>
     <additional_attributes/>
@@ -121,36 +121,36 @@ EVNT_ACT_BELT_STOP</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>890</x>
-      <y>310</y>
-      <w>380</w>
-      <h>280</h>
+      <x>242</x>
+      <y>352</y>
+      <w>253</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK
 [belt_blocked&amp;sec mode]</panel_attributes>
-    <additional_attributes>10.0;10.0;360.0;260.0</additional_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>290</y>
-      <w>360</w>
-      <h>200</h>
+      <x>264</x>
+      <y>374</y>
+      <w>242</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK
 [belt_blocked&amp;prim mode]</panel_attributes>
-    <additional_attributes>10.0;10.0;340.0;180.0</additional_attributes>
+    <additional_attributes>200.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1150</x>
-      <y>570</y>
-      <w>200</w>
-      <h>60</h>
+      <x>33</x>
+      <y>341</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltNotRunning</panel_attributes>
     <additional_attributes/>
@@ -158,10 +158,10 @@ EVNT_SEN_LB_ST_BLCK
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1240</x>
-      <y>460</y>
-      <w>200</w>
-      <h>60</h>
+      <x>143</x>
+      <y>506</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltNotRunning</panel_attributes>
     <additional_attributes/>
@@ -169,10 +169,10 @@ EVNT_SEN_LB_ST_BLCK
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>560</y>
-      <w>200</w>
-      <h>130</h>
+      <x>649</x>
+      <y>550</y>
+      <w>220</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 EVNT_SEN_LB_ST_BLCK
@@ -183,10 +183,10 @@ EVNT_SEN_LB_ST_BLCK
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>570</y>
-      <w>200</w>
-      <h>200</h>
+      <x>572</x>
+      <y>561</y>
+      <w>220</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -197,10 +197,10 @@ EVNT_SEN_LB_ST_BLCK
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>420</x>
-      <y>750</y>
-      <w>200</w>
-      <h>60</h>
+      <x>473</x>
+      <y>759</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltRunning</panel_attributes>
     <additional_attributes/>
@@ -208,10 +208,10 @@ EVNT_SEN_LB_ST_BLCK
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>660</x>
-      <y>670</y>
-      <w>200</w>
-      <h>60</h>
+      <x>737</x>
+      <y>671</y>
+      <w>220</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>BeltRunning</panel_attributes>
     <additional_attributes/>
