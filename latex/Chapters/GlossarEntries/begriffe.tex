@@ -31,7 +31,8 @@
     type = {term},
     name = {Event},
     plural={Events},
-    description = {},
+    description = {Auftretendes Ereignis, dass unter den Komponenten mittels
+    Dispatcher hin- und hergeschickt werden kann},
 }
 
 \newglossaryentry{protokoll}{
@@ -41,22 +42,16 @@
     description = {Eine Aufzeichnung von \glspl{event}},
 }
 
-\newglossaryentry{recorder}{
-    type = {term},
-    name = {Eventrecorder},
-    description = {},
-}
-
 \newglossaryentry{replay-fn}{
     type = {term},
     name = {Replay-Funktion},
-    description = {},
+    description = {Funktion zum Abspielen der Aufzeichnung der Events},
 }
 
 \newglossaryentry{record-fn}{
     type = {term},
     name = {Record-Funktion},
-    description = {},
+    description = {Funktion zum Aufzeichnen der Events},
 }
 
 \newglossaryentry{primary}{
@@ -73,22 +68,23 @@
 \newglossaryentry{betrieb-zst}{
     type = {term},
     name = {Betriebszustand},
-    description = {},
+    description = {Normalzustand des Systems; Umfasst auch Ruhe- und Fehlerzustand},
 }
 \newglossaryentry{ruhe-zst}{
     type = {term},
     name = {Ruhezustand},
-    description = {},
+    description = {Betriebszustand, in dem beide Förderbänder still stehen, der aber nicht durch
+    einen Fehler hervorgerufen wurde},
 }
 \newglossaryentry{fehler-zst}{
     type = {term},
     name = {Fehlerzustand},
-    description = {},
+    description = {Betriebszustand nach Auslösen eines Fehlers},
 }
 \newglossaryentry{service-mode}{
     type = {term},
     name = {Service-Modus},
-    description = {},
+    description = {Modus, in dem das System Selbsttests und Kalibrierungen durchführt},
 }
 \newglossaryentry{system}{
     type = {term},
