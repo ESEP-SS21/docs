@@ -52,3 +52,56 @@ aufgeführt.
 
 
 \section{Lessons Learned}\label{sec:lessons-learned}
+
+\subsubsection{Repository}
+Ein eingänglich ausführliches Einrichten einer guten Repository-Infrastruktur ist für den Workflow
+Gold wert.
+In enger Zusammenarbeit mit Git nach GitFlow konnten wir von Anfang an unseren Workflow vereinheitlichen
+und optimieren.
+Auch die Aufteilung des Repositories in seperate in Code- und Dokumentations-Verzeichnisse hat sich als
+eine wertvolle Entscheidung herausgestellt.
+Beide Repositories konnte parallel und unabhängig voneinander genutzt werden.
+Außerdem hat uns beispielsweise das Erstellen von Pipelines, die sowohl unser PDF-Dokument, als auch unsere
+UML-Diagramme kompilieren mehrere Stunden Arbeit erspart.
+
+
+\subsubsection{Dynamische Dokumentation}
+Viele Abläufe wie Refactoring und Bugfixing erfordern eine nachträgliche Anpassung in ihrer entsprechenden
+Dokumentation.
+Ein Verschlafen der Anpassung in den Diagrammen und Modellierungen kann die Veränderung zu einem
+späteren Zeitpunkt umso schwieriger gestalten.
+Um zu verhindern, dass modellierte Änderungen im Code verloren gehen oder implementierte Änderungen
+in der Dokumentation nicht nachvollziehbar sind, wäre ein eingängliches Briefing aller Teammitglieder von Vorteil
+gewesen, welches die Wichtigkeit einer dynamischen Dokumentation klarstellt.
+
+\subsubsection{Anforderungsanalyse}
+Die Anforderungsanalyse setzte sich aus zwei wesentlichen Prozessen zusammen:
+Die Ermittlung der Anforderungen aus dem Dokument des Kunden und die anschließende Use-Case-Modellierung.
+Zweiteres erforderte viele Iterationen und hat mehrere Wochen des Projektes in Anspruch genommen.
+In unserer Anwendung beschreiben die Use-Cases ausschließlich Kommunikation mit Peripherie-Geräten,
+wodurch sie anfangs sehr technisch und zu nah an der späteren Logik-Modellierung erstellt wurden.
+Auch ein Use-Case-Diagramm in einem eingebetteten Echtzeit-System, wie dem unseren bietet wenig Mehrwert,
+da aufgrund der Menge an Beziehungen zwischen Akteuren und Use-Cases eine unübersichtliche Entschuldigung
+für ein Diagramm entsteht, das eigentlich Übersicht schaffen soll.
+Hier hätte man sich viel Frustration und Zeitaufwand sparen können.
+Die gelernte Lektion ist es, über Darstellungsmöglichkeiten der Anforderungen hinreichender zu reflektieren
+und sich auf Wesentliches zu konzentrieren.
+Keep it simple.
+
+\subsubsection{Due-Dates und Absprachen}
+Fünf Studenten haben unterschiedliche Tagesabläufe, Verpflichtungen und Produktivitätszeiten.
+Dies muss bei der Planung stets mit beachtet werden.
+Ein genaueres Einhalten von Due-Dates und Deadlines schafft zeitliche Puffer zwischen den Abgaben
+und macht die Projektentwicklung für alle Beteiligten angenehmer.
+Hier herrschte eindeutig noch Verbesserungsspielraum.
+Teilweise fanden große Änderungen statt, die von lediglich 1 oder 2 Gruppenmitgliedern
+implementiert wurden und den anderen Teilnehmern hinterher nicht ausreichend demonstriert wurden.
+Vor allem die Arbeitsweise mit für die Logik ausschlaggebenden Komponenten muss allen
+Gruppenmitgliedern klargemacht werden.
+Ein gründlicheres Miteinander hierbei hätte allen Beteiligten einige Debug-Stunden erspart.
+Über die Absprachen ist abschließend noch zu sagen, dass Discord
+als primäres Kommunikations-Tool bei jedem sehr positiv aufgefallen ist.
+Jedes Gruppenmitglied empfand den Umgang als angenehm und unkompliziert.
+Das Aufsetzen eines Discord-Servers ist kostenlos und bietet diverse Anpassungsmöglichkeiten.
+Beispielsweise bestand die Möglichkeit Git-Notifications automatisch in einen
+Textkanal auf dem Server zu senden.
