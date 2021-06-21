@@ -139,7 +139,7 @@ Diese Komponente ist essentiell für den Kontrollfluss des Anlagenverbundes.
 Fundamental besteht das Datenmodell aus folgenden vier Klassen: \textit{UnitData}, \textit{CBSection},
 \textit{Workpiece} und \textit{EncodedWorkpiece}.
 
-\subsection{Workpiece}
+\subsubsection{Workpiece}
 Ein Objekt der Klasse \textit{Workpiece} repräsentiert ein einzelnes \gls{workpiece} innerhalb des Systemablaufs.
 Das \gls{workpiece}-Daten setzen sich zusammen aus einer einzigartigen ID und dem Typ, der mit der \textit{determine_workpiece-type}-Operation
 festgelegt wird, sobald alle Subdaten, wie \textit{height_1} oder \textit{is_metallic} ermittelt worden sind.
@@ -149,14 +149,14 @@ Der Typ ist vom Typ \textit{WorkpieceType}.
 \textit{WRPC\_HB}, \textit{WPRC\_HM}, \textit{WRPC\_L} und \textit{unknown},
 repräsentativ für die verschiedenen existierenden \gls{workpiece}-Typen bzw. noch nicht bekannten Typen.
 
-\subsection{EncodedWorkpiece}
+\subsubsection{EncodedWorkpiece}
 Objekte der Klasse \textit{EncodedWorkpiece} repräsentieren ein kodiertes \gls{workpiece}.
 Die Kodierung eines \gls{workpiece} ist notwendig für das Übermitteln der Workpieces als Payload.
 Alle wichtigen Daten eines \gls{workpiece} werden in eine 32-bit Ganzzahl kodiert.
 Sie setzt sich zusammen aus der 21-bit großen ID, einer 9-bit großen Höhe in Millimeter und
 dem 2-bit großen \textit{WorkpieceType}.
 
-\subsection{CBSection}
+\subsubsection{CBSection}
 Zur Abbildung des Betriebes des Laufbandes werden \textit{CBSection}-Objekte erzeugt.
 Eine \textit{CBSection} ist als Wrapper für \textit{std::queue} realisiert und soll in \textit{UnitData}
 jeweils einen Abschnitt von der einen Lichtschranke zur nächsten abbilden.
@@ -164,7 +164,7 @@ In die Queues der \textit{CBSection} werden Objekte vom Typ Werkstück gelegt, a
 Lese-Zugriffen zugegriffen werden kann.
 Jede \textit{CBSection} referenziert ihren lokalen Nachfolger, der ebenfalls vom Typ \textit{CBSection} ist.
 
-\subsection{UnitData}
+\subsubsection{UnitData}
 Kernstück des Datenmodells ist die Klasse \textit{UnitData}. Pro Anlage wird ein \textit{UnitData}-Objekt
 erzeugt.
 Ein \textit{UnitData}-Objekt hat drei Member des Typs \textit{CBSection} und stellt somit die richtige
