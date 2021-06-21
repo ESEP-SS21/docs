@@ -133,6 +133,64 @@ Zu Kalibrierungszwecken kann ein neuer Nullwert mit set\_zero\_point() gesetzt w
     \label{fig:cd-datamodel}
 \end{figure}
 
+% Allgemein ueber die Modellierung der Daten
+Ziel der Datenmodellierung ist es, den Zustand und die Geschehenisse einer
+einzelnen Anlage auf eine unabhaengige logische Kompenente abzubilden.
+Diese Komponente ist essentiell für den Kontrollfluss des Anlagenverbundes.
+Fundamental besteht das Datenmodell aus folgenden vier Klassen: \textit{UnitData}, \textit{CBSection},
+\textit{Workpiece} und \textit{EncodedWorkpiece}.
+
+\subsubsection{Workpiece}
+Ein Objekt der Klasse \textit{Workpiece} repräsentiert ein einzelnes \gls{workpiece} innerhalb des Systemablaufs.
+Das \gls{workpiece}-Daten setzen sich zusammen aus einer einzigartigen ID und dem Typ, der mit der \textit{determine\_workpiece\_type}-Operation
+festgelegt wird, sobald alle Subdaten, wie \textit{height\_1} oder \textit{is\_metallic} ermittelt worden sind.
+Die ID ist ein globaler Zähler, der nach dem Erschaffen eines \gls{workpiece} inkrementiert wird.
+Der Typ ist vom Typ \textit{WorkpieceType}.
+\textit{WorkpieceType} ist ein Enum bestehend aus den fünf Konstanten \textit{WRPC\_H},
+\textit{WRPC\_HB}, \textit{WPRC\_HM}, \textit{WRPC\_L} und \textit{unknown},
+repräsentativ für die verschiedenen existierenden \gls{workpiece}-Typen bzw. noch nicht bekannten Typen.
+
+\subsubsection{EncodedWorkpiece}
+Objekte der Klasse \textit{EncodedWorkpiece} repräsentieren ein kodiertes \gls{workpiece}.
+Die Kodierung eines \gls{workpiece} ist notwendig für das Übermitteln der Workpieces als Payload.
+Alle wichtigen Daten eines \gls{workpiece} werden in eine 32-bit Ganzzahl kodiert.
+Sie setzt sich zusammen aus der 21-bit großen ID, einer 9-bit großen Höhe in Millimeter und
+dem 2-bit großen \textit{WorkpieceType}.
+
+\subsubsection{CBSection}
+Zur Abbildung des Betriebes des Laufbandes werden \textit{CBSection}-Objekte erzeugt.
+Eine \textit{CBSection} ist als Wrapper für \textit{std::queue} realisiert und soll in \textit{UnitData}
+jeweils einen Abschnitt von der einen Lichtschranke zur nächsten abbilden.
+In die Queue einer \textit{CBSection} werden Objekte vom Typ Werkstück gelegt.
+Jede \textit{CBSection} referenziert ihren lokalen Nachfolger, der ebenfalls vom Typ \textit{CBSection} ist.
+
+\subsubsection{UnitData}
+Kernstück des Datenmodells ist die Klasse \textit{UnitData}. Pro Anlage wird ein \textit{UnitData}-Objekt
+erzeugt.
+Ein \textit{UnitData}-Objekt hat drei Member des Typs \textit{CBSection} und stellt somit die
+Reihenfolge der Abschnitte her.
+In \textit{UnitData} gibt es Zähler zu Warnungen und E-Stopps.
+Außerdem werden hier Sortierreihenfolge, Rutschen-Kapazität und Status des Laufbandes verfolgt.
+
+\paragraph{UnitType}
+Jedes \textit{UnitData}-Objekt hat einen \textit{UnitType}. Dieser ist entweder \textit{PRIMARY} oder
+\textit{SECONDARY}.
+Hier findet die Unterscheidung von Anlagen im Primary- und im Secondary-Modus statt.
+Das Feld wird bei der Erzeugung gesetzt.
+
+\paragraph{Error}
+Das Feld \textit{pending\_error} vom Typ \textit{Error} bietet Informationen über die Natur des derzeitig
+bestehenden Fehlerzustandes. Möglich ist \textit{OTHER\_SYSTEM} für einen unerwarteten Abbruch der Kommunikation
+mit der zweiten Anlage, \textit{RAMP\_FULL} für eine volle Rutschenkapazität über beide Anlagen und \textit{NO\_ERROR},
+falls derzeitig kein Fehler besteht.
+
+\paragraph{OperatingMode}
+Der \textit{OperatingMode} ist der derzeitige Betriebsmodus der Anlage.
+Möglich sind \textit{IDLE}, \textit{RUNNING}, \textit{ERROR}, \textit{ESTOP} und \textit{SERVICE}.
+
+
+
+
 %% Bestimmen Sie das Datenmodell und dokumentieren Sie es hier mit Hilfe von UML Klassendiagrammen
 %% unter Beachtung der Designprinzipien. Die Modelle können mit Hilfe eines UML-Tools erstellt werden.
 %% Hier ist dann ein Übersichtsbild einzufügen.
