@@ -117,16 +117,16 @@ Dementsprechend wird auch ein möglichst großer Abdeckungsgrad sichergestellt.
 
 
 \FloatBarrier
-\section{Abnahmetests}\label{sec:abnahmetest}
+\section{Abnahmetests und Integrationstests}\label{sec:abnahmetest}
 
 %% 6.3	Abnahmetest
 %% Leiten Sie die Abnahmebedingungen aus den Kunden-Anforderungen her.
 %% Dokumentieren Sie hier, welche Schritte für die Abnahme erforderlich sind
 %% und welches Ergebnis jeweils erwartet wird (Test Cases).
 %\input{Chapters/6_x_abnahmetests}
-Die Abnahmetests liegen in einem
-\href{https://docs.google.com/spreadsheets/d/1FzOZ4AyaUKZ6hcOzm9CIS6r-4n3aabzFG-6NZyX3wJg/edit?usp=sharing}{Google Sheets}
-vor.
+Die Abnahmetests wurden so detalliert gestaltet, dass sie sämtliche Funktionalität
+des Softwaresystems abdecken und somit auch die Integrationstests darstellen.
+Eine genaue Beschreibung des Ablaufes der einzelnen Abnahmetests findet sich in
 
 
 \section{Testprotokolle und Auswertungen}\label{sec:testprotokolle-und-auswertungen}
@@ -137,6 +137,14 @@ vor.
 %% Das letzte Testprotokoll ist das Abnahmeprotokoll, das bei der abschließenden Vorführung erstellt wird.
 %% Es enthält eine Auflistung der erfolgreich vorgeführten Funktionen des Systems
 %% sowie eine Mängelliste mit Erklärungen der Ursachen der Fehlfunktionen und  Vorschlägen zur Abhilfe
+In diesem Kapitel sind die Abnahmetests, Unit-Test Ergebnisse und die Tests für die Hal zu finden.
+
+\includepdf[pages={1},pagecommand={ \subsection{Abnahmetest - Sortierung mit Fehlererkennung}}]{anhang/Abnahmetests.pdf}
+\includepdf[pages={2},pagecommand={ \subsection{Abnahmetest - Behandlung von Fehlern}}]{anhang/Abnahmetests.pdf}
+\includepdf[pages={3},pagecommand={ \subsection{Abnahmetest - Bedienung durch Taster}}]{anhang/Abnahmetests.pdf}
+\includepdf[pages={4},pagecommand={ \subsection{Abnahmetest - Eventrecorder}}]{anhang/Abnahmetests.pdf}
+\includepdf[pages={5},pagecommand={ \subsection{Abnahmetest - EStop und Verbindungsabbruch}}]{anhang/Abnahmetests.pdf}
+
 
 \subsection{Unit-Test Ergebnisse}\label{subsec:unit-tests-results}
 \begin{figure}[h]
