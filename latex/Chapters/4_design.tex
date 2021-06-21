@@ -16,14 +16,12 @@
 In Abbildung~\ref{fig:cmp} ist die Systemarchitektur mithilfe eines UML Komponentendiagramms
 visualisiert.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{../out/diagrams/stage1/cmp}}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage1/cmp}}
     \caption{Komponentendiagramm}
     \label{fig:cmp}
 \end{figure}
-
-Die Architektur der Software für eine \gls{anlage} ist in Abbildung~\ref{fig:cmp} abgebildet.
 
 \subsection{dispatcher}\label{subsec:dispatcher}
 Da das System auf größtenteils eventbasierte Kommunikation zwischen den einzelnen Komponenten setzt,
@@ -117,11 +115,13 @@ dass ein neuer Wert über get\_value() abgefragt werden kann.
 Zu Kalibrierungszwecken kann ein neuer Nullwert mit set\_zero\_point() gesetzt werden.
 
 
-\begin{figure}
+\begin{figure}[h]
     \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/cd_dispatcher}}
     \caption{Klassendiagramm Dispatcher}
     \label{fig:cd-dispatcher}
 \end{figure}
+
+
 
 
 \FloatBarrier
