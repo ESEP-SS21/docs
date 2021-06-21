@@ -25,7 +25,7 @@ visualisiert.
 
 Die Architektur der Software für eine \gls{anlage} ist in Abbildung~\ref{fig:cmp} abgebildet.
 
-\subsection{dispatcher}\label{subsec:dispatcher}
+\subsection{dispatcher}\label{subsec:cmp-dispatcher}
 Da das System auf größtenteils eventbasierte Kommunikation zwischen den einzelnen Komponenten setzt,
 ist der Dispatcher das Herzstück der Software. Der Dispatcher erlaubt es Clients bestimmte Events zu abonnieren
 und Events für die Verteilung auf dem System an den Dispatcher zu schicken. Erhält der Dispatcher ein Event von einem
@@ -63,6 +63,7 @@ Sie übersetzt vom Dispatcher eingehende Events in Methodenaufrufe im Kontext de
 Ebenso stellt sie den Zustandsautomaten eine Möglichkeit bereit, Events an den Dispatcher zu schicken.
 Zusätzlich enthält die Komponente noch kleinere Hilfsclients die.z.B.\ einen Heartbeat für die Erkennung
 von Verbindungsabbrüchen zwischen den Anlagen erzeugen.
+
 
 \section{Komponentendesign}\label{sec:komponentendesign}
 
@@ -116,14 +117,45 @@ Nach erfolgreicher Messung tritt ein Interrupt auf, welcher dem HalManagerSen mi
 dass ein neuer Wert über get\_value() abgefragt werden kann.
 Zu Kalibrierungszwecken kann ein neuer Nullwert mit set\_zero\_point() gesetzt werden.
 
+\FloatBarrier
+\subsection{dispatcher}\label{subsec:dispatcher2}
 
-\begin{figure}
-    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/cd_dispatcher}}
+Das dispatcher namespace (Abbildung~\ref{fig:cd-dispatcher}) enthält Abstraktionen
+für die Verteilung von \glspl{event}.
+Auf jeder \gls{anlage} wird dafür ein Dispatcher erstellt, welcher intern einen QnxChannel mit
+dem übergebenen Namen erzeugt.
+Mit der Methode \verb|connect_to_other| und des Namen des anderen Dispatchers wird
+eine Verbindung mit diesem hergestellt.
+Ein DispatcherClient kann über die Methode \verb|subscribe| \glspl{event} abonnieren.
+Hierfür überträgt er seine chid und den EventType, für der er die \glspl{event} erhalten möchte.
+Der Dispatcher stellt, falls noch nicht zuvor geschehen, eine QnxConnection mit diesem her und
+cached diese anschließend in der \verb|_chid_conn_map|.
+Die subscription wird in der \verb|_evnt_conn_multimap| abgelegt.
+Beim Erhalten eines \gls{event}s von einem DispatcherClient wird dieses an alle connections
+verteilt, die für diesen EventTyp in der \verb|_evnt_conn_multimap| vorliegen.
+Wenn das \gls{event} gebroadcastet werden soll, wird dieses außerdem an den anderen Dispatcher verteilt.
+\begin{figure}[h]
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/cd_dispatcher}}
     \caption{Klassendiagramm Dispatcher}
     \label{fig:cd-dispatcher}
 \end{figure}
+Der DispatcherClient wird mithilfe des Namen des Dispatcher erstellt.
+Intern wird damit eine QnxConnection für das Senden von \glspl{event} an den Dispatcher erstellt.
+Außerdem wird ein QnxChannel für das Empfangen von \glspl{event} vom Dispatcher erstellt.
+Ein DispatcherClient läuft jeweils in einem Thread und blockiert im Aufruf von \verb|msg_receive|,
+bis ein \gls{event} empfangen wird.
+Daraufhin wird die \verb|handle|-Methode aufgerufen, welche von der erbenden Klasse überschrieben
+werden kann, um auf das \gls{event} zu reagieren.
 
-
+\subsubsection{cnnMngmnt}
+Das cnnMngmnt namespace enthält Wrapper für QNX-Services.
+Ein QnxChannel stellt Methoden zum Empfangen von Nachrichten zur Verfügung.
+Dieser kann optional mit einem Namen erstellt werden, um von einer anderen \gls{anlage} auf
+diesen zugreifen zu können.
+Anschließend kann mithilfe der Methode msg\_receive eine Nachricht blockierend empfangen
+werden.
+Mithilfe einer QnxConnection werden Nachrichten an einen Channel verschickt.
+Dieser wird entweder mit der chid des Channels oder mit dem dessen Namen erstellt.
 \FloatBarrier
 \section{Datenmodellierung}\label{sec:datenmodellierung}
 
@@ -141,6 +173,8 @@ Zu Kalibrierungszwecken kann ein neuer Nullwert mit set\_zero\_point() gesetzt w
 
 
 \FloatBarrier
+
+
 \section{Verhaltensmodellierung}\label{sec:verhaltensmodellierung}
 
 \subsection{Beschreibung des Servicemode}\label{subsec:beschreibung-des-servicemode}
@@ -218,6 +252,7 @@ Alle nachfolgenden Tests sind an beiden \glspl{anlage} durchzuführen.
 Nach den oben genannten Schritten befindet sich das System wieder im Ruhezustand.
 
 \clearpage
+
 \subsection{Statemachines}\label{subsec:stm}
 In diesem Abschnitt werden die Statemachines aufgelistet.
 
