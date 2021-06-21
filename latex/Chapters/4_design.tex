@@ -23,7 +23,9 @@ visualisiert.
     \label{fig:cmp}
 \end{figure}
 
-\subsection{dispatcher}\label{subsec:dispatcher}
+Die Architektur der Software für eine \gls{anlage} ist in Abbildung~\ref{fig:cmp} abgebildet.
+
+\subsection{dispatcher}\label{subsec:cmp-dispatcher}
 Da das System auf größtenteils eventbasierte Kommunikation zwischen den einzelnen Komponenten setzt,
 ist der Dispatcher das Herzstück der Software. Der Dispatcher erlaubt es Clients bestimmte Events zu abonnieren
 und Events für die Verteilung auf dem System an den Dispatcher zu schicken. Erhält der Dispatcher ein Event von einem
@@ -114,14 +116,35 @@ Nach erfolgreicher Messung tritt ein Interrupt auf, welcher dem HalManagerSen mi
 dass ein neuer Wert über get\_value() abgefragt werden kann.
 Zu Kalibrierungszwecken kann ein neuer Nullwert mit set\_zero\_point() gesetzt werden.
 
+\FloatBarrier
+\subsection{dispatcher}\label{subsec:dispatcher2}
 
+Das dispatcher namespace (Abbildung~\ref{fig:cd-dispatcher}) enthält Abstraktionen
+für die Verteilung von \glspl{event}.
+Auf jeder \gls{anlage} wird dafür ein Dispatcher erstellt, welcher intern einen QnxChannel mit
+dem übergebenen Namen erzeugt.
+Mit der Methode \verb|connect_to_other| und des Namen des anderen Dispatchers wird
+eine Verbindung mit diesem hergestellt.
+Ein DispatcherClient kann über die Methode \verb|subscribe| \glspl{event} abonnieren.
+Hierfür überträgt er seine chid und den EventType, für der er die \glspl{event} erhalten möchte.
+Der Dispatcher stellt, falls noch nicht zuvor geschehen, eine QnxConnection mit diesem her und
+cached diese anschließend in der \verb|_chid_conn_map|.
+Die subscription wird in der \verb|_evnt_conn_multimap| abgelegt.
+Beim Erhalten eines \gls{event}s von einem DispatcherClient wird dieses an alle connections
+verteilt, die für diesen EventTyp in der \verb|_evnt_conn_multimap| vorliegen.
+Wenn das \gls{event} gebroadcastet werden soll, wird dieses außerdem an den anderen Dispatcher verteilt.
 \begin{figure}[h]
-    \makebox[\textwidth][c]{\includegraphics[width=1.25\textwidth]{../out/diagrams/stage3/cd_dispatcher}}
+    \makebox[\textwidth][c]{\includegraphics[scale=0.5]{../out/diagrams/stage3/cd_dispatcher}}
     \caption{Klassendiagramm Dispatcher}
     \label{fig:cd-dispatcher}
 \end{figure}
-
-
+Der DispatcherClient wird mithilfe des Namen des Dispatcher erstellt.
+Intern wird damit eine QnxConnection für das Senden von \glspl{event} an den Dispatcher erstellt.
+Außerdem wird ein QnxChannel für das Empfangen von \glspl{event} vom Dispatcher erstellt.
+Ein DispatcherClient läuft jeweils in einem Thread und blockiert im Aufruf von \verb|msg_receive|,
+bis ein \gls{event} empfangen wird.
+Daraufhin wird die \verb|handle|-Methode aufgerufen, welche von der erbenden Klasse überschrieben
+werden kann, um auf das \gls{event} zu reagieren.
 
 
 \FloatBarrier
