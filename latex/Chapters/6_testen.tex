@@ -26,15 +26,16 @@
 Für jede neu implementierte Klasse wurden direkt während der Implementation Unit-Tests realisiert.
 Automatisiert wurden die Tests mit dem GTest-Framework.
 Bei den Tests wird jede Funktionalität der öffentlichen Schnittstelle einer getesteten Einheit überprüft.
-Automatisiert getestet wurden alle State-Machines \ref{subsec:stm-tests}, das Datenmodell, der EmbeddedRecorder, das parsen von Startargumenten
+Automatisiert getestet wurden alle State-Machines (siehe Abschnitt~\ref{subsec:stm-tests}), das
+Datenmodell, der EmbeddedRecorder, das Parsen von Startargumenten,
 das Eventsystem mitsamt des Dispatchers, sowie der für die interne Funktionalität der State-Machines benötigte Timer.
 Besonderes umfassend wurde neben sicherheitskritischer Funktionalität, auch die Verwaltung der \glspl{workpiece} im Datenmodell getestet,
 da Fehler an diese Stelle kritisch für den korrekten Sortierprozess sind.
-Hierfür wurden konkrete abläufe mit unterschiedlichen \glspl{workpiece} simuliert
+Hierfür wurden konkrete Abläufe mit unterschiedlichen \glspl{workpiece} simuliert
 und das Datenmodell auf korrektes Verhalten kontrolliert.
-Das Testen der HAL wird in \ref{subsec:hal-tests} erläutert.
-Eine Ausgabe der Ausführung der Unit-Tests ist in \ref{fig:unit-test-execution} zu finden.
-Aus Gründen der Übersichtlichkeit sind die Tests der State-Machines, die durch die Abdeckungbäume in \ref{sec:abdeckungsbaueme} beschrieben werden, in diesem Protokoll eingeklappt.
+Das Testen der HAL wird in Abschnitt~\ref{subsec:hal-tests} erläutert.
+Eine Ausgabe der Ausführung der Unit-Tests ist in
+Abschnitt~\ref{subsec:unit-tests-results} dargestellt.
 
 
 \subsection{STM-Tests}\label{subsec:stm-tests}
@@ -124,9 +125,9 @@ Dementsprechend wird auch ein möglichst großer Abdeckungsgrad sichergestellt.
 %% Dokumentieren Sie hier, welche Schritte für die Abnahme erforderlich sind
 %% und welches Ergebnis jeweils erwartet wird (Test Cases).
 %\input{Chapters/6_x_abnahmetests}
-Die Abnahmetests wurden so detalliert gestaltet, dass sie sämtliche Funktionalität
-des Softwaresystems abdecken und somit auch die Integrationstests darstellen.
-Eine genaue Beschreibung des Ablaufes der einzelnen Abnahmetests findet sich in
+Die Abnahmetests wurden so detailliert gestaltet,
+dass sie sämtliche Funktionalität des Softwaresystems abdecken und somit auch die Integrationstests darstellen.
+Eine genaue Beschreibung des Ablaufes der einzelnen Abnahmetests findet sich in Abschnitt~\ref{sec:abnahmetest}
 
 
 \section{Testprotokolle und Auswertungen}\label{sec:testprotokolle-und-auswertungen}
@@ -139,21 +140,19 @@ Eine genaue Beschreibung des Ablaufes der einzelnen Abnahmetests findet sich in
 %% sowie eine Mängelliste mit Erklärungen der Ursachen der Fehlfunktionen und  Vorschlägen zur Abhilfe
 In diesem Kapitel sind die Abnahmetests, Unit-Test Ergebnisse und die Tests für die Hal zu finden.
 
+\subsection{Ergebnisse der Unit-Tests}\label{subsec:unit-tests-results}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.45]{anhang/unit-test-execution.png}
+    \caption{Ergebnisse der Unit-Tests. Aus Gründen der Übersichtlichkeit sind die Tests der STMs diesem Protokoll eingeklappt.}
+    \label{fig:unit-test-execution}
+\end{figure}
+
 \includepdf[pages={1},pagecommand={ \subsection{Abnahmetest - Sortierung mit Fehlererkennung}}]{anhang/Abnahmetests.pdf}
 \includepdf[pages={2},pagecommand={ \subsection{Abnahmetest - Behandlung von Fehlern}}]{anhang/Abnahmetests.pdf}
 \includepdf[pages={3},pagecommand={ \subsection{Abnahmetest - Bedienung durch Taster}}]{anhang/Abnahmetests.pdf}
 \includepdf[pages={4},pagecommand={ \subsection{Abnahmetest - Eventrecorder}}]{anhang/Abnahmetests.pdf}
 \includepdf[pages={5},pagecommand={ \subsection{Abnahmetest - EStop und Verbindungsabbruch}}]{anhang/Abnahmetests.pdf}
-
-
-\subsection{Ergebnisse der Unit-Tests}\label{subsec:unit-tests-results}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.45]{anhang/unit-test-execution.png}
-    \caption{Ergebnisse der Unit-Tests}
-    \label{fig:unit-test-execution}
-\end{figure}
-
 
 \subsection{Hal Tests}\label{subsec:hal-tests}
 
