@@ -22,8 +22,22 @@
 
 %% Versuchen Sie, so gut wie möglich, Ihre Tests zu automatisieren.
 
-\subsection{STM-Tests}\label{subsec:stm-tests}
+\subsection{Unit-Test}\label{subsec:unit-tests}
+Für jede neu implementierte Klasse wurden direkt während der Implementation Unit-Tests realisiert.
+Automatisiert wurden die Tests mit dem GTest-Framework.
+Bei den Tests wird jede Funktionalität der öffentlichen Schnittstelle einer getesteten Einheit überprüft.
+Automatisiert getestet wurden alle State-Machines \ref{subsec:stm-tests}, das Datenmodell, der EmbeddedRecorder, das parsen von Startargumenten
+das Eventsystem mitsamt des Dispatchers, sowie der für die interne Funktionalität der State-Machines benötigte Timer.
+Besonderes umfassend wurde neben sicherheitskritischer Funktionalität, auch die Verwaltung der \glspl{workpiece} im Datenmodell getestet,
+da Fehler an diese Stelle kritisch für den korrekten Sortierprozess sind.
+Hierfür wurden konkrete abläufe mit unterschiedlichen \glspl{workpiece} simuliert
+und das Datenmodell auf korrektes Verhalten kontrolliert.
+Das Testen der HAL wird in \ref{subsec:hal-tests} erläutert.
+Eine Ausgabe der Ausführung der Unit-Tests ist in \ref{fig:unit-test-execution} zu finden.
+Aus Gründen der Übersichtlichkeit sind die Tests der State-Machines, die durch die Abdeckungbäume in \ref{sec:abdeckungsbaueme} beschrieben werden, in diesem Protokoll eingeklappt.
 
+
+\subsection{STM-Tests}\label{subsec:stm-tests}
 
 \subsubsection{Implementation}
 Im \textit{StmTestClient} werden die von der STM über das Interface \textit{IEventSender}
@@ -123,6 +137,15 @@ vor.
 %% Das letzte Testprotokoll ist das Abnahmeprotokoll, das bei der abschließenden Vorführung erstellt wird.
 %% Es enthält eine Auflistung der erfolgreich vorgeführten Funktionen des Systems
 %% sowie eine Mängelliste mit Erklärungen der Ursachen der Fehlfunktionen und  Vorschlägen zur Abhilfe
+
+\subsection{Unit-Test Ergebnisse}\label{subsec:unit-tests-results}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.45]{anhang/unit-test-execution.png}
+    \caption{Ausführung der Unit-Tests}
+    \label{fig:unit-test-execution}
+\end{figure}
+
 
 \subsection{Hal Tests}\label{subsec:hal-tests}
 
