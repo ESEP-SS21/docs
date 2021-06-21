@@ -141,8 +141,8 @@ Fundamental besteht das Datenmodell aus folgenden vier Klassen: \textit{UnitData
 
 \subsubsection{Workpiece}
 Ein Objekt der Klasse \textit{Workpiece} repräsentiert ein einzelnes \gls{workpiece} innerhalb des Systemablaufs.
-Das \gls{workpiece}-Daten setzen sich zusammen aus einer einzigartigen ID und dem Typ, der mit der \textit{determine_workpiece-type}-Operation
-festgelegt wird, sobald alle Subdaten, wie \textit{height_1} oder \textit{is_metallic} ermittelt worden sind.
+Das \gls{workpiece}-Daten setzen sich zusammen aus einer einzigartigen ID und dem Typ, der mit der \textit{determine\_workpiece\_type}-Operation
+festgelegt wird, sobald alle Subdaten, wie \textit{height\_1} oder \textit{is\_metallic} ermittelt worden sind.
 Die ID ist ein globaler Zähler, der nach dem Erschaffen eines \gls{workpiece} inkrementiert wird.
 Der Typ ist vom Typ \textit{WorkpieceType}.
 \textit{WorkpieceType} ist ein Enum bestehend aus den fünf Konstanten \textit{WRPC\_H},
@@ -179,7 +179,7 @@ Hier findet die Unterscheidung von Anlagen im Primary- und im Secondary-Modus st
 Das Feld wird bei der Erzeugung gesetzt.
 
 \paragraph{Error}
-Das Feld \textit{pending_error} vom Typ \textit{Error} bietet Informationen über die Natur des derzeitig
+Das Feld \textit{pending\_error} vom Typ \textit{Error} bietet Informationen über die Natur des derzeitig
 bestehenden Fehlerzustandes. Möglich ist \textit{OTHER\_SYSTEM} für einen unerwarteten Abbruch der Kommunikation
 mit der zweiten Anlage, \textit{RAMP\_FULL} für eine volle Rutschenkapazität über beide Anlagen und \textit{NO\_ERROR},
 falls derzeitig kein Fehler besteht.
