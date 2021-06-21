@@ -140,19 +140,19 @@ Fundamental besteht das Datenmodell aus folgenden vier Klassen: \textit{UnitData
 \textit{Workpiece} und \textit{EncodedWorkpiece}.
 
 \subsection{Workpiece}
-Ein Objekt der Klasse \textit{Workpiece} repräsentiert ein einzelnes \gls{wrpc} innerhalb des Systemablaufs.
-Das \gls{wrpc}-Daten setzen sich zusammen aus einer einzigartigen ID und dem Typ, der mit der \textit{determine_workpiece-type}-Operation
+Ein Objekt der Klasse \textit{Workpiece} repräsentiert ein einzelnes \gls{workpiece} innerhalb des Systemablaufs.
+Das \gls{workpiece}-Daten setzen sich zusammen aus einer einzigartigen ID und dem Typ, der mit der \textit{determine_workpiece-type}-Operation
 festgelegt wird, sobald alle Subdaten, wie \textit{height_1} oder \textit{is_metallic} ermittelt worden sind.
-Die ID ist ein globaler Zähler, der nach dem Erschaffen eines \gls{wrpc} inkrementiert wird.
+Die ID ist ein globaler Zähler, der nach dem Erschaffen eines \gls{workpiece} inkrementiert wird.
 Der Typ ist vom Typ \textit{WorkpieceType}.
 \textit{WorkpieceType} ist ein Enum bestehend aus den fünf Konstanten \textit{WRPC_H},
 \textit{WRPC_HB}, \textit{WPRC_HM}, \textit{WRPC_L} und \textit{unknown},
-repräsentativ für die verschiedenen existierenden \gls{wrpc}-Typen bzw. noch nicht bekannten Typen.
+repräsentativ für die verschiedenen existierenden \gls{workpiece}-Typen bzw. noch nicht bekannten Typen.
 
 \subsection{EncodedWorkpiece}
-Objekte der Klasse \textit{EncodedWorkpiece} repräsentieren ein kodiertes \gls{wrpc}.
-Die Kodierung eines \gls{wrpc} ist notwendig für das Übermitteln der Workpieces als Payload.
-Alle wichtigen Daten eines \gls{wrpc} werden in eine 32-bit Ganzzahl kodiert.
+Objekte der Klasse \textit{EncodedWorkpiece} repräsentieren ein kodiertes \gls{workpiece}.
+Die Kodierung eines \gls{workpiece} ist notwendig für das Übermitteln der Workpieces als Payload.
+Alle wichtigen Daten eines \gls{workpiece} werden in eine 32-bit Ganzzahl kodiert.
 Sie setzt sich zusammen aus der 21-bit großen ID, einer 9-bit großen Höhe in Millimeter und
 dem 2-bit großen \textit{WorkpieceType}.
 
