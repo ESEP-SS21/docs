@@ -160,8 +160,7 @@ dem 2-bit großen \textit{WorkpieceType}.
 Zur Abbildung des Betriebes des Laufbandes werden \textit{CBSection}-Objekte erzeugt.
 Eine \textit{CBSection} ist als Wrapper für \textit{std::queue} realisiert und soll in \textit{UnitData}
 jeweils einen Abschnitt von der einen Lichtschranke zur nächsten abbilden.
-In die Queues der \textit{CBSection} werden Objekte vom Typ Werkstück gelegt, auf die dann mit synchronen
-Lese-Zugriffen zugegriffen werden kann.
+In die Queue einer \textit{CBSection} werden Objekte vom Typ Werkstück gelegt.
 Jede \textit{CBSection} referenziert ihren lokalen Nachfolger, der ebenfalls vom Typ \textit{CBSection} ist.
 
 \subsubsection{UnitData}
