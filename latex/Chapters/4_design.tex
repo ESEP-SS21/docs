@@ -145,8 +145,8 @@ Das \gls{workpiece}-Daten setzen sich zusammen aus einer einzigartigen ID und de
 festgelegt wird, sobald alle Subdaten, wie \textit{height_1} oder \textit{is_metallic} ermittelt worden sind.
 Die ID ist ein globaler Zähler, der nach dem Erschaffen eines \gls{workpiece} inkrementiert wird.
 Der Typ ist vom Typ \textit{WorkpieceType}.
-\textit{WorkpieceType} ist ein Enum bestehend aus den fünf Konstanten \textit{WRPC_H},
-\textit{WRPC_HB}, \textit{WPRC_HM}, \textit{WRPC_L} und \textit{unknown},
+\textit{WorkpieceType} ist ein Enum bestehend aus den fünf Konstanten \textit{WRPC\_H},
+\textit{WRPC\_HB}, \textit{WPRC\_HM}, \textit{WRPC\_L} und \textit{unknown},
 repräsentativ für die verschiedenen existierenden \gls{workpiece}-Typen bzw. noch nicht bekannten Typen.
 
 \subsection{EncodedWorkpiece}
@@ -180,8 +180,8 @@ Das Feld wird bei der Erzeugung gesetzt.
 
 \paragraph{Error}
 Das Feld \textit{pending_error} vom Typ \textit{Error} bietet Informationen über die Natur des derzeitig
-bestehenden Fehlerzustandes. Möglich ist \textit{OTHER_SYSTEM} für einen unerwarteten Abbruch der Kommunikation
-mit der zweiten Anlage, \textit{RAMP_FULL} für eine volle Rutschenkapazität über beide Anlagen und \textit{NO_ERROR},
+bestehenden Fehlerzustandes. Möglich ist \textit{OTHER\_SYSTEM} für einen unerwarteten Abbruch der Kommunikation
+mit der zweiten Anlage, \textit{RAMP\_FULL} für eine volle Rutschenkapazität über beide Anlagen und \textit{NO\_ERROR},
 falls derzeitig kein Fehler besteht.
 
 \paragraph{OperatingMode}
