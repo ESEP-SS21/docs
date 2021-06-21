@@ -227,9 +227,15 @@ einfachere Schnittstellen zum Ansteuern der Aktorik und für das Reagieren auf d
 Der Höhensensor ist am ADC des BeagleBoneBlack angeschlossen. Dieser kann über das Schreiben in ein
 bestimmtes GPIO-Register aktiviert werden und kann dann nach erfolgreicher Messung einen Interrupt auslösen.
 
-\subsection{Besonderheiten beim Systemaufbau}
-
-Bei genauerer Betrachtung des Systemaufbaus fallen folgende Eigenschaften und Zusammenhänge besonders auf.
+\subsection{Systemaufbau}\label{subsec:systemaufbau}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.9\textwidth]{anhang/festo.png}
+    \caption{Schematik des Systemaufbaus}
+    \label{fig:}
+\end{figure}
+\noindent Bei genauerer Betrachtung des Systemaufbaus fallen folgende Eigenschaften und
+Zusammenhänge besonders auf.
 Sie sind bei der Verhaltensmodellierung zu berücksichtigen und könnten das Erkennen von Szenarien vereinfachen.
 
 \subsubsection{Platzierung der \gls{lb_he} bei der Höhenmessung}
@@ -238,7 +244,6 @@ Die \gls{lb_he} an der Höhenmessung ist so platziert, dass sich die Mitte eines
 Unterbrechung genau unter dem Höhenmesser befindet.
 Auf diese Art lassen sich die unterschiedlichen Höhen von \Glspl{workpiece}n mittels einer einzelnen Messung unterscheiden.
 Die gemessenen Höhen bei unterschiedlichen \glspl{workpiece_type} gehen aus Tabelle~\ref{tab:werkstuecke} hervor.
-
 \begin{table}[h]
     \begin{center}
         \begin{tabular}{ |c|c| }
@@ -256,7 +261,6 @@ Die gemessenen Höhen bei unterschiedlichen \glspl{workpiece_type} gehen aus Tab
     \caption{Höhen der unterschiedlichen \glspl{workpiece_type}}
     \label{tab:werkstuecke}
 \end{table}
-
 Ebenso fällt auf, dass der Abstand der \gls{lb_he} für die Höhenmessung vom Anfang des Förderbands ca. 25 cm beträgt,
 was für die Bestimmung des Abstands bei der Werkstückübergabe zwischen zwei \glspl{anlage} wichtig ist.
 
