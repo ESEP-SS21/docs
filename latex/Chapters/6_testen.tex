@@ -22,8 +22,22 @@
 
 %% Versuchen Sie, so gut wie möglich, Ihre Tests zu automatisieren.
 
-\subsection{STM-Tests}\label{subsec:stm-tests}
+\subsection{Unit-Test}\label{subsec:unit-tests}
+Für jede neu implementierte Klasse wurden direkt während der Implementation Unit-Tests realisiert.
+Automatisiert wurden die Tests mit dem GTest-Framework.
+Bei den Tests wird jede Funktionalität der öffentlichen Schnittstelle einer getesteten Einheit überprüft.
+Automatisiert getestet wurden alle State-Machines \ref{subsec:stm-tests}, das Datenmodell, der EmbeddedRecorder, das parsen von Startargumenten
+das Eventsystem mitsamt des Dispatchers, sowie der für die interne Funktionalität der State-Machines benötigte Timer.
+Besonderes umfassend wurde neben sicherheitskritischer Funktionalität, auch die Verwaltung der \glspl{workpiece} im Datenmodell getestet,
+da Fehler an diese Stelle kritisch für den korrekten Sortierprozess sind.
+Hierfür wurden konkrete abläufe mit unterschiedlichen \glspl{workpiece} simuliert
+und das Datenmodell auf korrektes Verhalten kontrolliert.
+Das Testen der HAL wird in \ref{subsec:hal-tests} erläutert.
+Eine Ausgabe der Ausführung der Unit-Tests ist in \ref{fig:unit-test-execution} zu finden.
+Aus Gründen der Übersichtlichkeit sind die Tests der State-Machines, die durch die Abdeckungbäume in \ref{sec:abdeckungsbaueme} beschrieben werden, in diesem Protokoll eingeklappt.
 
+
+\subsection{STM-Tests}\label{subsec:stm-tests}
 
 \subsubsection{Implementation}
 Im \textit{StmTestClient} werden die von der STM über das Interface \textit{IEventSender}
@@ -103,16 +117,16 @@ Dementsprechend wird auch ein möglichst großer Abdeckungsgrad sichergestellt.
 
 
 \FloatBarrier
-\section{Abnahmetests}\label{sec:abnahmetest}
+\section{Abnahmetests und Integrationstests}\label{sec:abnahmetest}
 
 %% 6.3	Abnahmetest
 %% Leiten Sie die Abnahmebedingungen aus den Kunden-Anforderungen her.
 %% Dokumentieren Sie hier, welche Schritte für die Abnahme erforderlich sind
 %% und welches Ergebnis jeweils erwartet wird (Test Cases).
 %\input{Chapters/6_x_abnahmetests}
-Die Abnahmetests liegen in einem
-\href{https://docs.google.com/spreadsheets/d/1FzOZ4AyaUKZ6hcOzm9CIS6r-4n3aabzFG-6NZyX3wJg/edit?usp=sharing}{Google Sheets}
-vor.
+Die Abnahmetests wurden so detalliert gestaltet, dass sie sämtliche Funktionalität
+des Softwaresystems abdecken und somit auch die Integrationstests darstellen.
+Eine genaue Beschreibung des Ablaufes der einzelnen Abnahmetests findet sich in
 
 
 \section{Testprotokolle und Auswertungen}\label{sec:testprotokolle-und-auswertungen}
@@ -123,6 +137,23 @@ vor.
 %% Das letzte Testprotokoll ist das Abnahmeprotokoll, das bei der abschließenden Vorführung erstellt wird.
 %% Es enthält eine Auflistung der erfolgreich vorgeführten Funktionen des Systems
 %% sowie eine Mängelliste mit Erklärungen der Ursachen der Fehlfunktionen und  Vorschlägen zur Abhilfe
+In diesem Kapitel sind die Abnahmetests, Unit-Test Ergebnisse und die Tests für die Hal zu finden.
+
+\includepdf[pages={1},pagecommand={ \subsection{Abnahmetest - Sortierung mit Fehlererkennung}}]{anhang/Abnahmetests.pdf}
+\includepdf[pages={2},pagecommand={ \subsection{Abnahmetest - Behandlung von Fehlern}}]{anhang/Abnahmetests.pdf}
+\includepdf[pages={3},pagecommand={ \subsection{Abnahmetest - Bedienung durch Taster}}]{anhang/Abnahmetests.pdf}
+\includepdf[pages={4},pagecommand={ \subsection{Abnahmetest - Eventrecorder}}]{anhang/Abnahmetests.pdf}
+\includepdf[pages={5},pagecommand={ \subsection{Abnahmetest - EStop und Verbindungsabbruch}}]{anhang/Abnahmetests.pdf}
+
+
+\subsection{Ergebnisse der Unit-Tests}\label{subsec:unit-tests-results}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.45]{anhang/unit-test-execution.png}
+    \caption{Ergebnisse der Unit-Tests}
+    \label{fig:unit-test-execution}
+\end{figure}
+
 
 \subsection{Hal Tests}\label{subsec:hal-tests}
 
